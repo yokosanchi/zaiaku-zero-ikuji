@@ -58,6 +58,19 @@ jobs:
           cat data/last_result.json >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Check result
+        run: |
+          R=$(python -c "import json;print(json.load(open('data/last_result.json'))['result'])")
+          echo "result=$R"
+          if [ "$R" = "no_key" ]; then
+            echo "::error::GEMINI_API_KEY (Secret) が未設定です。Settings → Secrets and variables → Actions で登録してください。"
+            exit 1
+          fi
+          if [ "$R" = "error" ]; then
+            echo "::error::パイプラインでエラー。ログを確認してください。"
+            exit 1
+          fi
+
       - name: Verify build
         run: npm run build
 
@@ -69,6 +82,6 @@ jobs:
           fi
           git config user.name "kzi-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/content/blog public/images/thumb data REVIEW.md 2>/dev/null || true
+          git add src/content/blog public/images data REVIEW.md 2>/dev/null || true
           git commit -m "chore(content): 自動記事更新 $(date -u +%F) [skip ci]"
           git push
