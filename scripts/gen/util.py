@@ -15,8 +15,17 @@ PROMPTS = SCRIPTS / "prompts"
 
 # src/lib/site.ts と一致させること
 CATEGORIES = ["gohan", "nenne", "kokoro", "sango", "wanope", "hatsuiku", "kurashi"]
+STAGES = ["ninshin", "age0", "age1_2", "age3_pre", "gakudo"]
 ARTICLE_TYPES = ["trend", "basics", "service", "voice", "cheer"]
 ROTATION = ["trend", "basics", "service", "voice", "cheer"]
+
+STAGE_LABEL = {
+    "ninshin": "妊娠・出産",
+    "age0": "0歳",
+    "age1_2": "1〜2歳",
+    "age3_pre": "3歳〜未就学",
+    "gakudo": "小学生〜",
+}
 
 TYPE_LABEL = {
     "trend": "SNSで話題の深掘り",
@@ -101,6 +110,17 @@ def append_log(line: str) -> None:
     prefix = "" if path.exists() else "# 自動更新ログ\n\n"
     with path.open("a", encoding="utf-8") as f:
         f.write(f"{prefix}- {today()} {line}\n")
+
+
+def append_credit(line: str) -> None:
+    """public/images/CREDITS.md の「自動取得分」に写真クレジットを追記。"""
+    path = ROOT / "public" / "images" / "CREDITS.md"
+    text = path.read_text(encoding="utf-8") if path.exists() else "# 画像クレジット\n"
+    marker = "\n## 自動取得分（パイプライン）\n"
+    if marker not in text:
+        text += "\n" + marker
+    text = text.rstrip() + f"\n- {line}\n"
+    path.write_text(text, encoding="utf-8")
 
 
 def write_review(slug_hint: str, issues: list[str], body: str = "") -> None:

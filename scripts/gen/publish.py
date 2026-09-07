@@ -29,9 +29,11 @@ def publish(article: dict, topic: dict, og_image: str, *, model_label: str) -> s
         "description": article["description"],
         "pubDate": today(),
         "category": article["category"],
+        "stage": article["stage"],
         "articleType": article["articleType"],
         "tags": article.get("tags", [])[:5],
         "emoji": article.get("emoji", "") or "",
+        "heroImage": article.get("heroImage") or "",
         "ogImage": og_image,
         "sources": article.get("sources", []),
         "author": "編集部",
@@ -41,6 +43,8 @@ def publish(article: dict, topic: dict, og_image: str, *, model_label: str) -> s
         meta.pop("sources")
     if not meta["emoji"]:
         meta.pop("emoji")
+    if not meta["heroImage"]:
+        meta.pop("heroImage")
 
     md = frontmatter(meta) + "\n" + article["body_md"].strip() + "\n"
     (BLOG / f"{slug}.md").write_text(md, encoding="utf-8")

@@ -1,0 +1,36 @@
+---
+import { STAGES, ACCENT, type StageKey } from '../lib/site';
+
+interface Props {
+  current?: StageKey;
+  align?: 'start' | 'center';
+}
+
+const { current, align = 'start' } = Astro.props;
+---
+
+<nav
+  class:list={[
+    'flex flex-wrap items-center gap-2',
+    align === 'center' ? 'justify-center' : 'justify-start',
+  ]}
+>
+  {
+    STAGES.map((s, i) => (
+      <>
+        {i > 0 && <span aria-hidden="true" class="text-ink-soft/40">›</span>}
+        <a
+          href={`/stages/${s.key}`}
+          class:list={[
+            'rounded-full border-2 border-ink/5 px-3.5 py-1.5 text-sm font-bold shadow-pop transition-transform hover:-translate-y-0.5',
+            ACCENT[s.accent].softBg,
+            ACCENT[s.accent].text,
+            current === s.key ? 'ring-2 ring-ink/20' : '',
+          ]}
+        >
+          {s.emoji} {s.short}
+        </a>
+      </>
+    ))
+  }
+</nav>

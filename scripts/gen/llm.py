@@ -149,6 +149,8 @@ def _mock(prompt: str, json_mode: bool) -> str:
             "title": "（MOCK）自動生成のテスト記事",
             "description": "MOCK。GEMINI_API_KEY 未設定のため、配線確認用のダミーを返しています。実運用では競合の構成を参考にした完全オリジナル記事になります。",
             "category": "kokoro",
+            "stage": "age0",
+            "photo_query": "tired parent holding newborn at home soft light",
             "tags": ["MOCK", "テスト"],
             "emoji": "🧪",
             "body_md": _MOCK_BODY,

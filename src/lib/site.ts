@@ -92,6 +92,65 @@ export const CATEGORY_MAP = Object.fromEntries(
   CATEGORIES.map((c) => [c.key, c])
 ) as Record<CategoryKey, CategoryMeta>;
 
+/** もう1つの軸：子どもの成長ステージ（時系列。カテゴリと直交）。 */
+export type StageKey = 'ninshin' | 'age0' | 'age1_2' | 'age3_pre' | 'gakudo';
+
+export interface StageMeta {
+  key: StageKey;
+  label: string;
+  short: string;
+  emoji: string;
+  accent: AccentKey;
+  description: string;
+}
+
+export const STAGES: StageMeta[] = [
+  {
+    key: 'ninshin',
+    label: '妊娠・出産',
+    short: '妊娠・出産',
+    emoji: '🤰',
+    accent: 'coral',
+    description: '妊娠中の不安、出産準備、産後すぐの体と心。買いすぎない・がんばりすぎない準備。',
+  },
+  {
+    key: 'age0',
+    label: '0歳',
+    short: '0歳',
+    emoji: '👶',
+    accent: 'sun',
+    description: '授乳・離乳食・夜泣き・ワンオペ。眠れない毎日を、最低ラインでやり過ごす。',
+  },
+  {
+    key: 'age1_2',
+    label: '1〜2歳',
+    short: '1〜2歳',
+    emoji: '🧸',
+    accent: 'mint',
+    description: 'イヤイヤ期、手づかみ食べ、行きしぶり。正面から勝とうとしなくて大丈夫。',
+  },
+  {
+    key: 'age3_pre',
+    label: '3歳〜未就学',
+    short: '3歳〜',
+    emoji: '🖍️',
+    accent: 'sky',
+    description: 'トイレトレーニング、登園しぶり、集団生活。その子のタイミングを待っていい。',
+  },
+  {
+    key: 'gakudo',
+    label: '小学生〜',
+    short: '小学生〜',
+    emoji: '🎒',
+    accent: 'grape',
+    description: '小1の壁、学童、宿題。全部を完璧に整えなくても、親失格じゃない。',
+  },
+];
+
+export const STAGE_MAP = Object.fromEntries(
+  STAGES.map((s) => [s.key, s])
+) as Record<StageKey, StageMeta>;
+
 /** 毎日ローテーションで書く5つの記事タイプ。 */
 export interface ArticleTypeMeta {
   key: ArticleTypeKey;

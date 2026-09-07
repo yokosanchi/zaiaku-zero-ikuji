@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { STAGES, ACCENT } from '../../lib/site';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+const count = (key: string) => posts.filter((p) => p.data.stage === key).length;
+---
+
+<BaseLayout
+  title="月齢・年齢からさがす"
+  description="妊娠・出産 → 0歳 → 1〜2歳 → 3歳〜未就学 → 小学生〜。子どもの成長ステージごとに、いま必要な記事を選べます。"
+>
+  <div class="mx-auto max-w-5xl px-5">
+    <div class="mb-8 flex flex-wrap items-end gap-x-3 gap-y-1">
+      <h1 class="font-heading text-2xl font-bold text-ink">月齢・年齢からさがす</h1>
+      <span class="mb-1 -rotate-2 font-hand text-sm text-coral-deep">
+        いまのステージだけで大丈夫
+      </span>
+    </div>
+
+    <ol class="space-y-4">
+      {
+        STAGES.map((s, i) => (
+          <li>
+            <a
+              href={`/stages/${s.key}`}
+              class:list={[
+                'group flex items-start gap-4 rounded-[1.75rem] border-2 border-ink/5 p-6 shadow-pop transition-transform hover:-translate-y-1 hover:rotate-1',
+                ACCENT[s.accent].softBg,
+              ]}
+            >
+              <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white text-2xl shadow-pop">
+                {s.emoji}
+              </span>
+              <span class="flex flex-col">
+                <span class="font-heading text-lg font-bold text-ink">
+                  {i + 1}. {s.label}
+                </span>
+                <span class="mt-1 text-sm leading-relaxed text-ink-soft">
+                  {s.description}
+                </span>
+                <span class:list={['mt-2 font-hand text-sm', ACCENT[s.accent].text]}>
+                  {count(s.key)}記事 →
+                </span>
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</BaseLayout>

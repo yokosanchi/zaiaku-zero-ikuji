@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleList from '../../components/ArticleList.astro';
+import StageNav from '../../components/StageNav.astro';
+import CategoryNav from '../../components/CategoryNav.astro';
+import { STAGES, STAGE_MAP, ACCENT, type StageKey } from '../../lib/site';
+
+export function getStaticPaths() {
+  return STAGES.map((s) => ({ params: { stage: s.key } }));
+}
+
+const { stage } = Astro.params as { stage: StageKey };
+const meta = STAGE_MAP[stage];
+
+const posts = (
+  await getCollection('blog', ({ data }) => !data.draft && data.stage === stage)
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title={`${meta.label}の記事`} description={meta.description}>
+  <div class="mx-auto mb-8 max-w-5xl px-5">
+    <div
+      class:list={[
+        'rounded-[2rem] border-2 border-ink/5 p-6 shadow-pop sm:p-8',
+        ACCENT[meta.accent].softBg,
+      ]}
+    >
+      <div class="flex items-center gap-3">
+        <span
+          class="grid h-14 w-14 place-items-center rounded-2xl bg-white text-2xl shadow-pop"
+        >
+          {meta.emoji}
+        </span>
+        <h1 class="font-heading text-2xl font-bold text-ink">{meta.label}</h1>
+      </div>
+      <p class="mt-3 text-sm leading-relaxed text-ink/80">{meta.description}</p>
+    </div>
+
+    <div class="mt-6 space-y-3">
+      <StageNav current={stage} />
+      <CategoryNav />
+    </div>
+  </div>
+
+  {
+    posts.length === 0 ? (
+      <p class="mx-auto max-w-5xl px-5 text-sm text-ink-soft">
+        このステージの記事はまだ準備中です。もうすぐ届きます。
+      </p>
+    ) : (
+      <ArticleList posts={posts} />
+    )
+  }
+</BaseLayout>

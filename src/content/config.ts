@@ -22,6 +22,8 @@ const blog = defineCollection({
       'hatsuiku',
       'kurashi',
     ]),
+    /** 子どもの成長ステージ（src/lib/site.ts と一致・カテゴリと直交） */
+    stage: z.enum(['ninshin', 'age0', 'age1_2', 'age3_pre', 'gakudo']),
     /** ローテーションで書く記事タイプ */
     articleType: z
       .enum(['trend', 'basics', 'service', 'voice', 'cheer'])

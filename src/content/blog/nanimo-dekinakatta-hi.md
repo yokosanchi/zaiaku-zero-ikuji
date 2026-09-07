@@ -3,6 +3,7 @@ title: "今日、何もできなかったと思っている人へ"
 description: "洗い物は山積み、SNSはキラキラ、自分だけ止まっている気がする夜に。子どもを1日生かして、それだけで十分に働いた証拠です。何もできなかった日を責めないための、短い手紙。"
 pubDate: 2026-09-07
 category: "kokoro"
+stage: "age0"
 articleType: "cheer"
 tags: ["自己肯定感", "応援", "心のケア"]
 emoji: "💛"

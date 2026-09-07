@@ -1,10 +1,13 @@
 from __future__ import annotations
 
 import html
+import json
 import os
+import urllib.parse
+import urllib.request
 
 from .llm import generate, is_mock
-from .util import THUMBS, log
+from .util import THUMBS, append_credit, log
 
 _BG = {"sun": "#FFEFC9", "grape": "#EBE2FA", "coral": "#FFE1DB", "mint": "#D5F4E8", "sky": "#D6F1FA"}
 _INK = {"sun": "#F0A81F", "grape": "#9678CC", "coral": "#F2624D", "mint": "#3EB587", "sky": "#2FA7CC"}
@@ -99,24 +102,103 @@ def _maybe_ai_headline(article_title: str) -> str | None:
         return None
 
 
-def render(slug: str, headline: str, sub: str, emoji: str, accent: str) -> str:
+_UNSPLASH_API = "https://api.unsplash.com/search/photos"
+_UA = "kzi-bot/1.0 (+https://zaiaku-zero-ikuji.pages.dev)"
+
+
+def _unsplash_photo(query: str) -> dict | None:
+    """UNSPLASH_ACCESS_KEY があれば、クエリに合う横長写真を1枚返す。"""
+    key = os.environ.get("UNSPLASH_ACCESS_KEY")
+    if not key or not query or is_mock():
+        return None
+    qs = urllib.parse.urlencode(
+        {
+            "query": query,
+            "orientation": "landscape",
+            "content_filter": "high",
+            "per_page": "8",
+        }
+    )
+    req = urllib.request.Request(
+        f"{_UNSPLASH_API}?{qs}",
+        headers={"Authorization": f"Client-ID {key}", "Accept-Version": "v1", "User-Agent": _UA},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            data = json.loads(r.read().decode("utf-8"))
+    except Exception as e:  # noqa: BLE001
+        log(f"  Unsplash 検索失敗（{e}）→ カード生成にフォールバック")
+        return None
+    for res in data.get("results", []):
+        raw = (res.get("urls") or {}).get("raw")
+        if not raw:
+            continue
+        return {
+            "download": raw + "&w=1200&h=630&fit=crop&crop=faces,entropy&fm=jpg&q=72",
+            "credit_name": ((res.get("user") or {}).get("name")) or "Unsplash",
+            "credit_link": ((res.get("links") or {}).get("html")) or "https://unsplash.com",
+            "id": res.get("id", ""),
+        }
+    return None
+
+
+def _download(url: str, dest) -> bool:
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": _UA})
+        with urllib.request.urlopen(req, timeout=45) as r:
+            body = r.read()
+        if len(body) < 2000:
+            return False
+        dest.write_bytes(body)
+        return True
+    except Exception as e:  # noqa: BLE001
+        log(f"  写真ダウンロード失敗（{e}）")
+        return False
+
+
+def render(
+    slug: str,
+    headline: str,
+    sub: str,
+    emoji: str,
+    accent: str,
+    *,
+    photo_query: str | None = None,
+) -> dict:
+    """記事のメイン画像を用意する。
+
+    1. UNSPLASH_ACCESS_KEY + photo_query があれば、内容に合う写真をDLして heroImage に
+    2. 無ければ、カテゴリ色＋見出しの SVG カードを生成して OGP 画像に
+    戻り値: {"heroImage": <path|None>, "ogImage": <path>}
+    """
     THUMBS.mkdir(parents=True, exist_ok=True)
+
+    photo = _unsplash_photo(photo_query or "")
+    if photo:
+        dest = THUMBS / f"{slug}.jpg"
+        if _download(photo["download"], dest):
+            append_credit(
+                f"`{slug}` — photo by [{photo['credit_name']}]({photo['credit_link']}) on Unsplash"
+                f"（query: {photo_query!r}）"
+            )
+            log(f"  photo: public/images/thumb/{slug}.jpg  by {photo['credit_name']} (Unsplash)")
+            return {"heroImage": f"/images/thumb/{slug}.jpg", "ogImage": f"/images/thumb/{slug}.jpg"}
+
+    # フォールバック：SVG カード
     headline = _maybe_ai_headline(headline) or headline
     svg = build_svg(headline, sub, emoji, accent)
     (THUMBS / f"{slug}.svg").write_text(svg, encoding="utf-8")
-
-    png = THUMBS / f"{slug}.png"
     try:
         import cairosvg
 
         cairosvg.svg2png(
             bytestring=svg.encode("utf-8"),
-            write_to=str(png),
+            write_to=str(THUMBS / f"{slug}.png"),
             output_width=1200,
             output_height=630,
         )
-        log(f"  thumbnail: public/images/thumb/{slug}.png")
-        return f"/images/thumb/{slug}.png"
+        log(f"  thumbnail(card): public/images/thumb/{slug}.png")
+        return {"heroImage": None, "ogImage": f"/images/thumb/{slug}.png"}
     except Exception as e:  # noqa: BLE001
-        log(f"  cairosvg 未導入/失敗（{e}）→ SVG をそのまま OGP に使用")
-        return f"/images/thumb/{slug}.svg"
+        log(f"  cairosvg 未導入/失敗（{e}）→ SVG を OGP に使用")
+        return {"heroImage": None, "ogImage": f"/images/thumb/{slug}.svg"}

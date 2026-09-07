@@ -70,28 +70,32 @@ def run_daily(args) -> dict:
         return {"result": "needs_review", "labels": e.labels}
 
     art["category"] = d["category"]
+    art["stage"] = d["stage"]
     art["articleType"] = d["articleType"]
     art.setdefault("tags", d.get("tags", []))
     art.setdefault("emoji", d.get("emoji", ""))
     art["sources"] = _dedupe_sources(research["facts"])
 
     if args.dry_run:
-        preview = {k: art.get(k) for k in ("title", "description", "category", "articleType", "tags", "sources")}
+        preview = {k: art.get(k) for k in ("title", "description", "category", "stage", "articleType", "tags", "photo_query", "sources")}
         print(json.dumps(preview, ensure_ascii=False, indent=2))
         print("\n----- BODY -----\n" + art["body_md"][:1600])
         return {"result": "dry_run", "title": art["title"]}
 
     th = d.get("thumb") or {}
     slug_guess = tp.get("slug") or f"{art['articleType']}-{today().replace('-', '')}"
-    og = thumb_mod.render(
+    img = thumb_mod.render(
         slug_guess,
         th.get("headline") or art["title"],
         th.get("sub") or TYPE_LABEL.get(art["articleType"], ""),
         th.get("emoji") or art.get("emoji") or "💗",
         th.get("accent") or CATEGORY_ACCENT.get(art["category"], "coral"),
+        photo_query=d.get("photo_query") or tp.get("photo_query"),
     )
+    art["heroImage"] = img.get("heroImage")
+    art["ogImage"] = img["ogImage"]
 
-    slug = publish_mod.publish(art, tp, og, model_label=model_label())
+    slug = publish_mod.publish(art, tp, img["ogImage"], model_label=model_label())
 
     improve = {}
     if not args.no_improve:
