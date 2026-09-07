@@ -2,12 +2,25 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleList from '../components/ArticleList.astro';
+import ArticleCard from '../components/ArticleCard.astro';
 import CategoryNav from '../components/CategoryNav.astro';
 import StageNav from '../components/StageNav.astro';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+// きょう公開・更新された記事（ビルド日基準）
+const todayKey = new Date().toDateString();
+const todaysPosts = posts.filter(
+  (p) =>
+    p.data.pubDate.toDateString() === todayKey ||
+    p.data.updatedDate?.toDateString() === todayKey
+);
+const todayLabel = new Date().toLocaleDateString('ja-JP', {
+  month: 'long',
+  day: 'numeric',
+});
 
 const values = [
   {
@@ -111,6 +124,17 @@ const stickers = ['🍼', '🛁', '😴', '🧸', '☕'];
         </a>
       </div>
 
+      <p
+        data-hits
+        hidden
+        class="mt-4 font-hand text-sm text-ink-soft"
+      >
+        きょうここに来てくれた人：<span
+          data-hits-today
+          class="font-bold text-coral-deep">–</span
+        > 人
+      </p>
+
       <div class="relative mx-auto mt-10 max-w-2xl">
         <img
           src="/images/hero-laugh.jpg"
@@ -143,6 +167,28 @@ const stickers = ['🍼', '🛁', '😴', '🧸', '☕'];
       </div>
     </div>
   </section>
+
+  {
+    todaysPosts.length > 0 && (
+      <section class="mx-auto mt-12 max-w-5xl px-5">
+        <div class="rounded-[2rem] border-2 border-ink/5 bg-sun-soft/60 p-6 shadow-pop sm:p-8">
+          <div class="mb-5 flex flex-wrap items-end gap-x-3 gap-y-1">
+            <h2 class="font-heading text-xl font-bold text-ink">
+              🌅 {todayLabel}に届いた記事
+            </h2>
+            <span class="mb-0.5 -rotate-2 font-hand text-sm text-coral-deep">
+              毎朝ひとつ、更新しています
+            </span>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {todaysPosts.map((post) => (
+              <ArticleCard post={post} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   <div class="mx-auto mt-14 max-w-5xl px-5">
     <div class="grid gap-4 sm:grid-cols-3">

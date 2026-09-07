@@ -30,5 +30,38 @@ const { title, description, image, ogImage } = Astro.props;
       <slot />
     </main>
     <Footer />
+
+    <script is:inline>
+      // きょうの訪問者カウンタ。1 ブラウザ 1 日 1 回だけ加算。
+      // /api/hits（Cloudflare Pages Functions + KV）が未設定なら何も表示しない。
+      (function () {
+        try {
+          var day = new Date().toISOString().slice(0, 10);
+          var flag = 'kzi_hit_' + day;
+          var seen = false;
+          try {
+            seen = !!localStorage.getItem(flag);
+          } catch (e) {}
+          fetch('/api/hits' + (seen ? '' : '?bump=1'), { method: seen ? 'GET' : 'POST' })
+            .then(function (r) {
+              return r.ok ? r.json() : null;
+            })
+            .then(function (d) {
+              if (!d || typeof d.today !== 'number') return;
+              if (!seen) {
+                try {
+                  localStorage.setItem(flag, '1');
+                } catch (e) {}
+              }
+              document.querySelectorAll('[data-hits-today]').forEach(function (el) {
+                el.textContent = d.today.toLocaleString('ja-JP');
+                var box = el.closest('[data-hits]');
+                if (box) box.hidden = false;
+              });
+            })
+            .catch(function () {});
+        } catch (e) {}
+      })();
+    </script>
   </body>
 </html>

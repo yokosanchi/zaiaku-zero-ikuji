@@ -218,7 +218,17 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
 
 ---
 
-## 8. ロゴ
+## 8. トップページの動的パーツ
+
+- **「◯月◯日に届いた記事」**：ビルド日と `pubDate`/`updatedDate` が一致する記事だけ表示（`index.astro`）。毎朝の自動更新で1本増える前提。無い日はセクションごと非表示。
+- **きょうの訪問者数**：`functions/api/hits.js`（Cloudflare Pages Functions + KV）。`BaseLayout` のインラインスクリプトが 1 ブラウザ 1 日 1 回だけ `POST /api/hits?bump=1` して数を取得し、`[data-hits]` 要素を表示。
+  - **セットアップ（CF ダッシュボード、1回だけ）**：KV 名前空間を作成 → 対象 Pages プロジェクト → Settings → Functions → KV namespace bindings に **変数名 `HITS`** で割り当て。
+  - 未設定でも壊れない（`/api/hits` が使えない＝カウンタ非表示になるだけ）。`astro dev` では Functions が動かないので常に非表示。
+  - Cookie 不使用・PII なし。日次キーは3日で自動失効。KV 無料枠は 1,000 write/日 なので、伸びたら D1 等へ。
+
+---
+
+## 9. ロゴ
 
 - モチーフ：**ハート＋スマイル**（セルフ・コンパッション＝「自分を許していい」）。coral 角丸バッジに白いハートと笑顔。
 - 実体は `src/components/Logo.astro`（インライン SVG、Header/Footer が使用）。`public/favicon.svg` も同じ絵柄。
@@ -227,7 +237,7 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
 
 ---
 
-## 9. 現在の進捗
+## 10. 現在の進捗
 
 - [x] Phase 1：Astro + Tailwind 土台、Header、トップ、記事一覧、記事詳細、ダミー記事
 - [x] リデザイン：ポップ＆明るいトーン（coral+パステル、blob、手書きフォント、ハード影）＋写真（Unsplash）
