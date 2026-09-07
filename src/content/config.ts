@@ -13,7 +13,15 @@ const blog = defineCollection({
     /** 更新日（自動改善パスが更新する） */
     updatedDate: z.coerce.date().optional(),
     /** トピックの受け皿カテゴリ（src/lib/site.ts と一致） */
-    category: z.enum(['gohan', 'nenne', 'kokoro', 'hatsuiku', 'kurashi']),
+    category: z.enum([
+      'gohan',
+      'nenne',
+      'kokoro',
+      'sango',
+      'wanope',
+      'hatsuiku',
+      'kurashi',
+    ]),
     /** ローテーションで書く記事タイプ */
     articleType: z
       .enum(['trend', 'basics', 'service', 'voice', 'cheer'])

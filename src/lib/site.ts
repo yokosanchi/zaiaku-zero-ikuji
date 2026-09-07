@@ -3,7 +3,14 @@
  * ページ・コンポーネント・自動生成パイプラインが同じキーを参照する。
  */
 
-export type CategoryKey = 'gohan' | 'nenne' | 'kokoro' | 'hatsuiku' | 'kurashi';
+export type CategoryKey =
+  | 'gohan'
+  | 'nenne'
+  | 'kokoro'
+  | 'sango'
+  | 'wanope'
+  | 'hatsuiku'
+  | 'kurashi';
 export type ArticleTypeKey = 'trend' | 'basics' | 'service' | 'voice' | 'cheer';
 
 export type AccentKey = 'sun' | 'grape' | 'coral' | 'mint' | 'sky';
@@ -44,6 +51,24 @@ export const CATEGORIES: CategoryMeta[] = [
     accent: 'coral',
     description:
       '罪悪感、孤独、パートナーとのこと。あなたの心をまんなかに置く話。',
+  },
+  {
+    key: 'sango',
+    label: '産後うつ・こころの不調',
+    short: '産後うつ',
+    emoji: '⛅',
+    accent: 'grape',
+    description:
+      '涙が止まらない、眠れない、笑えない。それは甘えではなく、相談していいサイン。',
+  },
+  {
+    key: 'wanope',
+    label: 'ワンオペ育児',
+    short: 'ワンオペ',
+    emoji: '🤹',
+    accent: 'sky',
+    description:
+      'ひとりで全部を回す毎日に。「最低ライン」の決め方と、頼っていい先。',
   },
   {
     key: 'hatsuiku',

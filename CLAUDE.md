@@ -191,9 +191,12 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
 | `voice` | ブログ等のリアルな声 × 正確な情報での補正 |
 | `cheer` | 「子どもを育てていて、えらい」を手渡す応援メッセージ |
 
-### カテゴリ（受け皿。`src/lib/site.ts` が唯一の定義元）
+### カテゴリ（受け皿。`src/lib/site.ts` が唯一の定義元。7つ）
 
-`gohan`（ごはん・離乳食 / sun）｜`nenne`（ねんね・生活リズム / grape）｜`kokoro`（心のケア / coral）｜`hatsuiku`（発育・健康 / mint）｜`kurashi`（暮らし・便利グッズ / sky）
+`gohan`（ごはん・離乳食 / sun）｜`nenne`（ねんね・生活リズム / grape）｜`kokoro`（心のケア / coral）｜`sango`（産後うつ・こころの不調 / grape）｜`wanope`（ワンオペ育児 / sky）｜`hatsuiku`（発育・健康 / mint）｜`kurashi`（暮らし・便利グッズ / sky）
+
+- カテゴリ追加時に触る4か所：`src/lib/site.ts`（CATEGORIES）｜`src/content/config.ts`（category enum）｜`scripts/gen/util.py`（CATEGORIES / CATEGORY_ACCENT）｜色は5トークン（sun/grape/coral/mint/sky）から流用可、ナビ隣接で同色が並ばないようにする。
+- `sango` は YMYL 高感度。記事は自己診断させず、必ず相談窓口（厚労省「まもろうよ こころ」等）へ接続する。
 
 ページ：`/categories`（一覧）、`/categories/[key]`（カテゴリ別）。Header/Footer/トップ/記事一覧に `CategoryNav`。
 

@@ -14,7 +14,7 @@ THUMBS = ROOT / "public" / "images" / "thumb"
 PROMPTS = SCRIPTS / "prompts"
 
 # src/lib/site.ts と一致させること
-CATEGORIES = ["gohan", "nenne", "kokoro", "hatsuiku", "kurashi"]
+CATEGORIES = ["gohan", "nenne", "kokoro", "sango", "wanope", "hatsuiku", "kurashi"]
 ARTICLE_TYPES = ["trend", "basics", "service", "voice", "cheer"]
 ROTATION = ["trend", "basics", "service", "voice", "cheer"]
 
@@ -29,6 +29,8 @@ CATEGORY_ACCENT = {
     "gohan": "sun",
     "nenne": "grape",
     "kokoro": "coral",
+    "sango": "grape",
+    "wanope": "sky",
     "hatsuiku": "mint",
     "kurashi": "sky",
 }
