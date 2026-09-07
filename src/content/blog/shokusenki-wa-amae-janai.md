@@ -4,6 +4,7 @@ description: "「これくらい自分でやらないと」と後回しにしが
 pubDate: 2026-09-08
 category: "kurashi"
 stage: "age0"
+heroImage: "/images/dishwasher.jpg"
 articleType: "service"
 tags: ["時短家電", "食洗機", "便利グッズ"]
 emoji: "🧺"

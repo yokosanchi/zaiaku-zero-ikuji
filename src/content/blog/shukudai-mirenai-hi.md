@@ -4,6 +4,7 @@ description: "仕事から帰って、ごはんを作って、気づけば子ど
 pubDate: 2026-09-17
 category: "kokoro"
 stage: "gakudo"
+heroImage: "/images/homework.jpg"
 articleType: "cheer"
 tags: ["宿題", "小学生", "応援"]
 emoji: "🎒"

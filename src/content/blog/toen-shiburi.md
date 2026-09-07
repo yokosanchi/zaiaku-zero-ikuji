@@ -4,6 +4,7 @@ description: "玄関で泣いて動かない、園の前で抱きついて離れ
 pubDate: 2026-09-15
 category: "kokoro"
 stage: "age3_pre"
+heroImage: "/images/school-walk.jpg"
 articleType: "voice"
 tags: ["登園しぶり", "保育園", "幼稚園"]
 emoji: "🖍️"

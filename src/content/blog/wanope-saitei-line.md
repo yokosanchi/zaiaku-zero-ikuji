@@ -4,6 +4,7 @@ description: "パートナーは不在、頼れる家族も近くにいない。
 pubDate: 2026-09-10
 category: "wanope"
 stage: "age0"
+heroImage: "/images/wanope.jpg"
 articleType: "voice"
 tags: ["ワンオペ", "生活リズム", "心のケア"]
 emoji: "🤹"

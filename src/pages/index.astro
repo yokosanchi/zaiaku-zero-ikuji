@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleList from '../components/ArticleList.astro';
 import CategoryNav from '../components/CategoryNav.astro';
+import StageNav from '../components/StageNav.astro';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -175,6 +176,17 @@ const stickers = ['🍼', '🛁', '😴', '🧸', '☕'];
       </a>
     </div>
     <CategoryNav />
+
+    <div class="mb-5 mt-10 flex flex-wrap items-end gap-x-3 gap-y-1">
+      <h2 class="font-heading text-2xl font-bold text-ink">月齢・年齢からさがす</h2>
+      <a
+        href="/stages"
+        class="mb-1 -rotate-2 font-hand text-sm text-coral-deep hover:underline"
+      >
+        ぜんぶ見る →
+      </a>
+    </div>
+    <StageNav />
   </div>
 
   <div class="mt-14">

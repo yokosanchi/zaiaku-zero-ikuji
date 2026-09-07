@@ -4,6 +4,7 @@ description: "まわりはもう外れたのに、うちはまだ。焦って始
 pubDate: 2026-09-14
 category: "hatsuiku"
 stage: "age3_pre"
+heroImage: "/images/toddler-home.jpg"
 articleType: "basics"
 tags: ["トイトレ", "3歳", "発育"]
 emoji: "🖍️"

@@ -4,6 +4,7 @@ description: "保育園より預かり時間が短い、夏休みがある、宿
 pubDate: 2026-09-16
 category: "kurashi"
 stage: "gakudo"
+heroImage: "/images/schoolyard.jpg"
 articleType: "basics"
 tags: ["小1の壁", "学童", "小学生"]
 emoji: "🎒"

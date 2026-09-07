@@ -4,6 +4,7 @@ description: "床は食べこぼしだらけ、服も髪もベタベタ。1〜2�
 pubDate: 2026-09-13
 category: "gohan"
 stage: "age1_2"
+heroImage: "/images/messy-eating.jpg"
 articleType: "voice"
 tags: ["手づかみ食べ", "離乳食", "1歳"]
 emoji: "🍚"

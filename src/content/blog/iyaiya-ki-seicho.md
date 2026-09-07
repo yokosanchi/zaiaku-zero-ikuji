@@ -4,6 +4,7 @@ description: "何を言っても「イヤ！」、スーパーで寝そべって
 pubDate: 2026-09-12
 category: "kokoro"
 stage: "age1_2"
+heroImage: "/images/tantrum.jpg"
 articleType: "basics"
 tags: ["イヤイヤ期", "1歳", "2歳"]
 emoji: "🧸"

@@ -4,6 +4,7 @@ description: "ベビー用品の準備リストを見ると不安になって、
 pubDate: 2026-09-11
 category: "kurashi"
 stage: "ninshin"
+heroImage: "/images/pregnancy.jpg"
 articleType: "basics"
 tags: ["出産準備", "ベビーグッズ", "基本のき"]
 emoji: "🤰"

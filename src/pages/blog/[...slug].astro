@@ -16,7 +16,8 @@ interface Props {
 }
 
 const { post, posts } = Astro.props;
-const { Content } = await post.render();
+const { Content, headings } = await post.render();
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
 
 // 関連記事：同カテゴリ +2点 / 共通タグ +1点ずつ。上位3件。
 const related = posts
@@ -37,6 +38,6 @@ const related = posts
   .map((x) => x.p);
 ---
 
-<BlogPost post={post} related={related}>
+<BlogPost post={post} related={related} toc={toc}>
   <Content />
 </BlogPost>

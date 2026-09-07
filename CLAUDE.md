@@ -149,7 +149,9 @@ draft: boolean            # true はビルド除外
 - H2 / H3 を意味順に配置（H1 は 1 ページ 1 つ、タイトルのみ）
 - `description` は各記事で必ず固有に書く（`BaseHead.astro` が meta / OGP に反映）
 - 内部リンク：記事末から `/blog` へ、関連記事へ相互リンク
-- `astro.config.mjs` の `site` を本番 URL に合わせる（OGP の絶対 URL 生成に必要）
+- 記事詳細（`BlogPost.astro`）：見出し(H2/H3)から**もくじ(TOC)自動生成**（`post.render()` の `headings`）、
+  **SNSシェアボタン**（X / LINE / Facebook / リンクコピー）、関連記事、カテゴリ＋ステージ＋タイプのチップ
+- `astro.config.mjs` の `site` を本番 URL に合わせる（OGP・シェアの絶対 URL 生成に必要）
 - sitemap / RSS は Phase 3 で追加（`@astrojs/sitemap` は現行環境でビルドが不安定なため一旦保留）
 
 ---
@@ -168,7 +170,9 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
   `ref_urls`（大手競合の良質記事）は**見出し構成のシグナルだけ**取得し、本文は取り込まない（著作権配慮）。
 - **draft**：タイプ別プロンプト（`scripts/prompts/draft_<type>.md`）で下書き。競合は「読者の期待の把握」だけに使い、本文は公式ソース根拠の完全オリジナル。
 - **concept_rewrite**：サイトの声へリライト（§4）。禁止語を機械的に除去。
-- **thumbnail**：記事に合わせた 1200×630 OGP 画像を生成（カテゴリ色・見出し・絵文字）→ `public/images/thumb/<slug>.png`（`cairosvg` 不在時は SVG）。
+- **thumbnail**：`UNSPLASH_ACCESS_KEY` があれば、draft が出す英語 `photo_query` で Unsplash を検索し、
+  内容に合う横長写真を `public/images/thumb/<slug>.jpg` に保存して `heroImage` に採用（クレジットは `public/images/CREDITS.md` に追記）。
+  キー無し／該当なしのときだけ、カテゴリ色＋見出しの 1200×630 SVG カード（`cairosvg` で PNG 化、不在時は SVG）にフォールバック。
 - **publish**：`src/content/blog/<slug>.md` を書き出し、`topic-bank` / `data/state.json` / `data/improvement-log.md` を更新。
 - **improve**：毎回、既存記事を1本点検（リンク・画像切れ）。`IMPROVE_MODE=full` で軽い推敲も。
 
@@ -191,11 +195,23 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
 | `voice` | ブログ等のリアルな声 × 正確な情報での補正 |
 | `cheer` | 「子どもを育てていて、えらい」を手渡す応援メッセージ |
 
-### カテゴリ（受け皿。`src/lib/site.ts` が唯一の定義元。7つ）
+### 2軸タクソノミー（`src/lib/site.ts` が唯一の定義元）
+
+- **横軸＝話題別カテゴリ（7つ）** ＋ **縦軸＝成長ステージ（5つ）**。記事は必ず `category` と `stage` を1つずつ持つ。
+- 記事タイプ（trend/basics/service/voice/cheer）は分類ではなく「毎日どの切り口で書くか」のローテーション用ラベル。
+  ※ 2026-09 の「Ver 3.0」案（横軸を5テーマに統一 / 縦軸4段階）は不採用。横軸=話題別7・縦軸=5段階を維持。
+- ステージ：`/stages`（一覧）、`/stages/[key]`。`StageNav` をトップ/記事一覧/ステージ各ページに。
+
+### 横軸カテゴリ（7つ）
 
 `gohan`（ごはん・離乳食 / sun）｜`nenne`（ねんね・生活リズム / grape）｜`kokoro`（心のケア / coral）｜`sango`（産後うつ・こころの不調 / grape）｜`wanope`（ワンオペ育児 / sky）｜`hatsuiku`（発育・健康 / mint）｜`kurashi`（暮らし・便利グッズ / sky）
 
-- カテゴリ追加時に触る4か所：`src/lib/site.ts`（CATEGORIES）｜`src/content/config.ts`（category enum）｜`scripts/gen/util.py`（CATEGORIES / CATEGORY_ACCENT）｜色は5トークン（sun/grape/coral/mint/sky）から流用可、ナビ隣接で同色が並ばないようにする。
+### 縦軸ステージ（5つ）
+
+`ninshin`（妊娠・出産 / coral）｜`age0`（0歳 / sun）｜`age1_2`（1〜2歳 / mint）｜`age3_pre`（3歳〜未就学 / sky）｜`gakudo`（小学生〜 / grape）
+
+- カテゴリ／ステージ追加時に触る所：`src/lib/site.ts`（CATEGORIES / STAGES）｜`src/content/config.ts`（enum）｜`scripts/gen/util.py`（CATEGORIES / STAGES / *_ACCENT / STAGE_LABEL）。
+- 色は5トークン（sun/grape/coral/mint/sky）を流用。ナビ隣接で同色が並ばないように。
 - `sango` は YMYL 高感度。記事は自己診断させず、必ず相談窓口（厚労省「まもろうよ こころ」等）へ接続する。
 
 ページ：`/categories`（一覧）、`/categories/[key]`（カテゴリ別）。Header/Footer/トップ/記事一覧に `CategoryNav`。

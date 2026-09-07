@@ -4,6 +4,7 @@ description: "赤ちゃんはかわいいはずなのに涙が出る、眠れな
 pubDate: 2026-09-09
 category: "sango"
 stage: "ninshin"
+heroImage: "/images/window-calm.jpg"
 articleType: "voice"
 tags: ["産後うつ", "メンタル", "心のケア"]
 emoji: "⛅"

@@ -4,6 +4,7 @@ description: "洗い物は山積み、SNSはキラキラ、自分だけ止まっ
 pubDate: 2026-09-07
 category: "kokoro"
 stage: "age0"
+heroImage: "/images/tired-parent.jpg"
 articleType: "cheer"
 tags: ["自己肯定感", "応援", "心のケア"]
 emoji: "💛"

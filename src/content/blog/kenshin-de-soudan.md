@@ -4,6 +4,7 @@ description: "健診でほかの子と比べてしまう、指摘されるのが
 pubDate: 2026-09-06
 category: "hatsuiku"
 stage: "age0"
+heroImage: "/images/kenshin.jpg"
 articleType: "basics"
 tags: ["健診", "発育", "基本のき"]
 emoji: "🌱"
