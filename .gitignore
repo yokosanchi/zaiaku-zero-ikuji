@@ -28,3 +28,6 @@ __pycache__/
 .venv/
 scripts/.venv/
 data/last_result.json
+scripts/local-run.log
+scripts/local-run.out
+scripts/local-run.err

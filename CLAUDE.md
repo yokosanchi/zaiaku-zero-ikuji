@@ -187,8 +187,14 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
 ガードレール（`scripts/gen/guardrails.py`）：§4 の禁止語＋§5 の YMYL ハザード。
 **YMYL 検出時は公開せず**、リポジトリ直下 `REVIEW.md` に積んで人間に回す（当日は「見送り」）。
 
-自動実行：`.github/workflows/daily.yml`（毎日 06:00 JST）→ 生成 → `npm run build` で検証 → 通れば push → Cloudflare Pages が自動デプロイ。
-必要な Secret：`GEMINI_API_KEY`（未設定なら MOCK モードで空回り）。任意の Variables：`GEMINI_MODEL` / `IMPROVE_MODE` / `THUMB_HEADLINE`。
+**まだ自動実行は動いていない。回すための手順は `SETUP.md`。** 要約：
+
+- 共通：`cp .env.example .env` → `GEMINI_API_KEY` を入れる（`pipeline.py` は起動時に `.env` を読む）
+- 点検：`python scripts/pipeline.py --check`（READY 判定）／`--daily --dry-run`（保存せず中身確認）
+- キー無しで `--daily` は**何もしない**（`result: no_key`）。MOCKで保存テストしたいときだけ `--allow-mock`
+- **方法A（推奨・完全自動）**：GitHub へ push → Secrets に `GEMINI_API_KEY`（任意 `UNSPLASH_ACCESS_KEY`）→ `.github/workflows/daily.yml` が毎日 06:00 JST 実行 → `npm run build` 検証 → push → Cloudflare Pages 自動デプロイ
+- **方法B（この Mac で回す）**：`sh scripts/local-schedule.sh install`（launchd で毎日 06:15 に `scripts/run-local.sh`）。生成→ビルド検証→ローカルコミットまで（push はしない）
+- 任意 env：`GEMINI_MODEL` / `IMPROVE_MODE`(links|full) / `THUMB_HEADLINE`(ai)
 
 ネタの足し方：`data/topic-bank.yml` に `status: queued` で1行追加するだけ。`slug` は ASCII で一意、
 `official_sources` に公的URL、`ref_urls` に競合の良質記事URL（構成参考のみ・複製しない）。ネタ切れの日は何もしない。

@@ -22,10 +22,31 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import pathlib
 import sys
 import traceback
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+_ROOT = pathlib.Path(__file__).resolve().parents[1]
+
+
+def _load_dotenv() -> None:
+    """リポジトリ直下の .env を読み込む（既存の環境変数は上書きしない）。ローカル cron 用。"""
+    env = _ROOT / ".env"
+    if not env.exists():
+        return
+    for line in env.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, _, v = line.partition("=")
+        k, v = k.strip(), v.strip().strip('"').strip("'")
+        if k and k not in os.environ:
+            os.environ[k] = v
+
+
+_load_dotenv()
 
 from gen import draft as draft_mod  # noqa: E402
 from gen import improve as improve_mod  # noqa: E402
@@ -104,6 +125,44 @@ def run_daily(args) -> dict:
     return {"result": "published", "slug": slug, "type": art["articleType"], "improve": improve}
 
 
+def preflight() -> dict:
+    """公開はせず、動かせる状態か点検する。"""
+    import importlib
+
+    from gen.topic import pick as _pick
+
+    checks: list[tuple[str, bool, str]] = []
+
+    key = bool(os.environ.get("GEMINI_API_KEY"))
+    checks.append(("GEMINI_API_KEY", key, "未設定：.env か環境変数に入れると本番モードになる"))
+
+    for mod in ("yaml", "trafilatura", "cairosvg"):
+        try:
+            importlib.import_module(mod)
+            ok = True
+        except Exception:  # noqa: BLE001
+            ok = False
+        required = mod == "yaml"
+        note = "" if ok else "pip install -r scripts/requirements.txt"
+        checks.append((f"import {mod}" + ("（任意）" if not required else ""), ok or not required, note))
+
+    try:
+        tp = _pick()
+        checks.append(("topic-bank に未使用トピック", True, f"次: {tp.get('slug')}"))
+    except Exception as e:  # noqa: BLE001
+        checks.append(("topic-bank に未使用トピック", False, str(e)))
+
+    unsplash = bool(os.environ.get("UNSPLASH_ACCESS_KEY"))
+    checks.append(("UNSPLASH_ACCESS_KEY（任意）", True, "設定すると写真アイキャッチ、無ければカード生成" if not unsplash else "OK"))
+
+    all_ok = all(ok for _, ok, _ in checks)
+    for name, ok, note in checks:
+        mark = "OK " if ok and not note else ("-- " if ok else "NG ")
+        log(f"  [{mark}] {name}" + (f"  — {note}" if note else ""))
+    log(f"preflight: {'READY（本番モードで回せます）' if all_ok else '要確認あり'}")
+    return {"result": "check", "ready": all_ok, "checks": [[n, o, m] for n, o, m in checks]}
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--daily", action="store_true", help="今日の1記事を生成して公開")
@@ -111,10 +170,24 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true", help="生成物を表示するだけで保存しない")
     ap.add_argument("--improve-only", action="store_true", help="既存記事の点検・改善だけ実行")
     ap.add_argument("--no-improve", action="store_true", help="改善パスをスキップ")
+    ap.add_argument("--check", action="store_true", help="公開せず、動かせる状態か点検する")
+    ap.add_argument("--allow-mock", action="store_true", help="APIキー無し(MOCK)でも --daily で保存する（テスト用）")
     args = ap.parse_args()
 
+    # キーが無いのに --daily で本番実行 → MOCK 記事を量産しないよう止める
+    if args.daily and not args.dry_run and not args.allow_mock:
+        from gen.llm import is_mock
+
+        if is_mock() and os.environ.get("PIPELINE_MOCK") != "1":
+            log("GEMINI_API_KEY が無いため、記事は生成しません（--allow-mock でテスト実行は可能）。")
+            save_json(DATA / "last_result.json", {"result": "no_key", "at": today()})
+            print('PIPELINE_RESULT={"result": "no_key"}')
+            sys.exit(0)
+
     try:
-        if args.improve_only:
+        if args.check:
+            out = preflight()
+        elif args.improve_only:
             out = {"result": "improve", "improve": improve_mod.daily_improve(mode=os.environ.get("IMPROVE_MODE", "links"))}
         else:
             out = run_daily(args)
