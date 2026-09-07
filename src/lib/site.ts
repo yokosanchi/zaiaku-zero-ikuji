@@ -4,6 +4,7 @@
  */
 
 export type CategoryKey =
+  | 'sns'
   | 'gohan'
   | 'nenne'
   | 'kokoro'
@@ -24,8 +25,17 @@ export interface CategoryMeta {
   description: string;
 }
 
-/** 読者が「トピックで」記事を探すための受け皿。5つに固定。 */
+/** 読者が「トピックで」記事を探すための受け皿。 */
 export const CATEGORIES: CategoryMeta[] = [
+  {
+    key: 'sns',
+    label: 'SNSバズ・深掘り',
+    short: 'SNSバズ',
+    emoji: '📱',
+    accent: 'sky',
+    description:
+      'X・Instagram・TikTokで話題の悩みや投稿を、「わかる」で終わらせず事実で深掘り。',
+  },
   {
     key: 'gohan',
     label: 'ごはん・離乳食',

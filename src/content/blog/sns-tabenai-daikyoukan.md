@@ -2,7 +2,7 @@
 title: "「離乳食、全然食べない」の投稿がバズるたびに泣きそうになる人へ"
 description: "SNSで定期的に伸びる「離乳食を食べない」あるある。大量の共感リプがつくのは、それだけみんな同じところで悩んでいるから。食べムラが起きる理由、心配のいらない目安、相談したほうがいいサインを、公的データとともに深掘りします。"
 pubDate: 2026-09-18
-category: "gohan"
+category: "sns"
 stage: "age0"
 articleType: "trend"
 tags: ["離乳食", "食べない", "SNS"]
@@ -13,6 +13,16 @@ sources:
     url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html"
   - label: "こども家庭庁「母子保健」"
     url: "https://www.cfa.go.jp/policies/boshihoken"
+snsRefs:
+  - platform: "X"
+    label: "「離乳食 食べない」の投稿を見る"
+    url: "https://x.com/search?q=離乳食%20食べない&f=live"
+  - platform: "Instagram"
+    label: "#離乳食記録 の投稿を見る"
+    url: "https://www.instagram.com/explore/tags/離乳食記録/"
+  - platform: "TikTok"
+    label: "#離乳食食べない の動画を見る"
+    url: "https://www.tiktok.com/tag/離乳食食べない"
 author: "編集部"
 ---
 

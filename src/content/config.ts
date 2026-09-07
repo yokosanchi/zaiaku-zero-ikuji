@@ -14,6 +14,7 @@ const blog = defineCollection({
     updatedDate: z.coerce.date().optional(),
     /** トピックの受け皿カテゴリ（src/lib/site.ts と一致） */
     category: z.enum([
+      'sns',
       'gohan',
       'nenne',
       'kokoro',
@@ -39,6 +40,16 @@ const blog = defineCollection({
     /** 根拠にした公的情報など（記事末に出典として表示） */
     sources: z
       .array(z.object({ label: z.string(), url: z.string().url() }))
+      .default([]),
+    /** 元になったSNSの話題（ハッシュタグ検索ページ等へのリンク） */
+    snsRefs: z
+      .array(
+        z.object({
+          platform: z.string(),
+          label: z.string(),
+          url: z.string().url(),
+        })
+      )
       .default([]),
     /** 署名 */
     author: z.string().default('編集部'),

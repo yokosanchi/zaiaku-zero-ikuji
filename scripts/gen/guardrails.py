@@ -66,14 +66,35 @@ def check_banned(text: str) -> list[str]:
     return sorted(set(hits))
 
 
+# 「危険を避けよう」という文脈は安全側なので、危険語が近くにあっても除外する
+_SAFE_NEGATION = re.compile(
+    r"避け|さけ|しない|防ぐ|防止|危険|リスク|注意|控え|やめ|ではなく|NG|禁物|絶対に(?!安全)"
+)
+
+
+def _sentences(text: str) -> list[str]:
+    return re.split(r"(?<=[。！？\n])", text)
+
+
 def check_ymyl(text: str) -> list[str]:
     flags: list[str] = []
+    sents = _sentences(text)
     for label, must_any, ctx_any, danger_any in YMYL_RULES:
         if not any(re.search(p, text) for p in must_any):
             continue
-        if ctx_any and not any(re.search(p, text) for p in ctx_any):
-            continue
-        if danger_any and not any(re.search(p, text) for p in danger_any):
-            continue
-        flags.append(label)
+        hit = False
+        for s in sents:
+            if not any(re.search(p, s) for p in must_any):
+                continue
+            if ctx_any and not any(re.search(p, s) for p in ctx_any):
+                continue
+            if danger_any and not any(re.search(p, s) for p in danger_any):
+                continue
+            # 同じ文が「避ける／防ぐ／危険」等を含むなら安全側とみなす
+            if _SAFE_NEGATION.search(s):
+                continue
+            hit = True
+            break
+        if hit:
+            flags.append(label)
     return flags
