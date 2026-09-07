@@ -1,0 +1,42 @@
+---
+import { CATEGORIES, ACCENT, type CategoryKey } from '../lib/site';
+
+interface Props {
+  current?: CategoryKey;
+  align?: 'start' | 'center';
+}
+
+const { current, align = 'start' } = Astro.props;
+---
+
+<nav
+  class:list={[
+    'flex flex-wrap gap-2',
+    align === 'center' ? 'justify-center' : 'justify-start',
+  ]}
+>
+  <a
+    href="/blog"
+    class:list={[
+      'rounded-full border-2 border-ink/5 bg-white px-3.5 py-1.5 text-sm font-bold text-ink-soft shadow-pop transition-transform hover:-translate-y-0.5',
+      current ? '' : 'ring-2 ring-ink/10',
+    ]}
+  >
+    すべて
+  </a>
+  {
+    CATEGORIES.map((c) => (
+      <a
+        href={`/categories/${c.key}`}
+        class:list={[
+          'rounded-full border-2 border-ink/5 px-3.5 py-1.5 text-sm font-bold shadow-pop transition-transform hover:-translate-y-0.5',
+          ACCENT[c.accent].softBg,
+          ACCENT[c.accent].text,
+          current === c.key ? 'ring-2 ring-ink/20' : '',
+        ]}
+      >
+        {c.emoji} {c.short}
+      </a>
+    ))
+  }
+</nav>

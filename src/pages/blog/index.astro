@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleList from '../../components/ArticleList.astro';
+import CategoryNav from '../../components/CategoryNav.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<BaseLayout
+  title="記事一覧"
+  description="「罪悪感ゼロ育児」のすべての記事。ごはん・ねんね・心のケア・発育・暮らしまで、あなたを責めない育児の情報をまとめています。"
+>
+  <div class="mx-auto mb-8 max-w-5xl px-5">
+    <h1 class="font-heading text-2xl font-bold text-ink">記事一覧</h1>
+    <p class="mt-2 text-sm text-ink-soft">
+      読みたいものから、どうぞ。全部読まなくて大丈夫です。
+    </p>
+    <div class="mt-5">
+      <CategoryNav />
+    </div>
+  </div>
+
+  <ArticleList posts={posts} />
+</BaseLayout>

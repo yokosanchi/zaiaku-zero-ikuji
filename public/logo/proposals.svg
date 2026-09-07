@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" font-family="'Zen Maru Gothic','Hiragino Maru Gothic ProN',sans-serif">
+  <rect width="960" height="560" fill="#FFF9F0"/>
+  <text x="48" y="60" font-size="26" font-weight="700" fill="#3F3A4A">罪悪感ゼロ育児 — ロゴ案</text>
+  <text x="48" y="90" font-size="15" fill="#7E7994">採用：B（ハート＋スマイル＝セルフ・コンパッション）。A・C は予備案。</text>
+
+  <!-- A: chick -->
+  <g transform="translate(70,140)">
+    <rect x="0" y="0" width="140" height="140" rx="40" fill="#FF7E6B"/>
+    <circle cx="70" cy="78" r="39" fill="#FFE7A8"/>
+    <path d="M28 54 L39 36 L50 54 L60 33 L70 54 L80 33 L90 54 L101 36 L112 54 Z" fill="#FFFFFF"/>
+    <rect x="28" y="49" width="84" height="10" rx="5" fill="#FFFFFF"/>
+    <circle cx="56" cy="78" r="6" fill="#3F3A4A"/>
+    <circle cx="84" cy="78" r="6" fill="#3F3A4A"/>
+    <path d="M63 92 L77 92 L70 102 Z" fill="#F0A81F"/>
+    <circle cx="45" cy="88" r="5.5" fill="#FF7E6B" opacity="0.55"/>
+    <circle cx="95" cy="88" r="5.5" fill="#FF7E6B" opacity="0.55"/>
+  </g>
+  <text x="140" y="320" font-size="18" font-weight="700" fill="#3F3A4A" text-anchor="middle">A. ヒヨコ（予備）</text>
+  <text x="140" y="345" font-size="13" fill="#7E7994" text-anchor="middle">親しみ／生まれたての親子</text>
+
+  <!-- B: heart + smile -->
+  <g transform="translate(410,140)">
+    <rect x="0" y="0" width="140" height="140" rx="40" fill="#FF7E6B"/>
+    <path d="M70 116C70 116 24 88 24 61C24 47 35 36 48 36C57 36 65 41 70 49C75 41 83 36 92 36C105 36 116 47 116 61C116 88 70 116 70 116Z" fill="#FFFFFF"/>
+    <circle cx="58" cy="66" r="5.5" fill="#3F3A4A"/>
+    <circle cx="82" cy="66" r="5.5" fill="#3F3A4A"/>
+    <path d="M59 80C64 88 76 88 81 80" fill="none" stroke="#3F3A4A" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <text x="480" y="320" font-size="18" font-weight="700" fill="#F2624D" text-anchor="middle">B. ハート＋スマイル（採用）</text>
+  <text x="480" y="345" font-size="13" fill="#7E7994" text-anchor="middle">セルフ・コンパッション（自分を許す）</text>
+
+  <!-- C: speech bubble + heart -->
+  <g transform="translate(750,140)">
+    <rect x="0" y="0" width="140" height="140" rx="40" fill="#FF7E6B"/>
+    <path d="M45 96 L45 122 L77 96 Z" fill="#FFFFFF"/>
+    <rect x="22" y="30" width="96" height="74" rx="28" fill="#FFFFFF"/>
+    <path d="M70 88C70 88 46 74 46 56C46 47 53 40 61 40C65 40 68 42 70 46C72 42 75 40 79 40C87 40 94 47 94 56C94 74 70 88 70 88Z" fill="#FF7E6B"/>
+  </g>
+  <text x="820" y="320" font-size="18" font-weight="700" fill="#3F3A4A" text-anchor="middle">C. 吹き出し＋ハート</text>
+  <text x="820" y="345" font-size="13" fill="#7E7994" text-anchor="middle">「肯定の言葉を手渡す」メディア性</text>
+
+  <!-- lockup with A -->
+  <line x1="48" y1="400" x2="912" y2="400" stroke="#FFE1DB" stroke-width="2"/>
+  <text x="48" y="435" font-size="13" fill="#7E7994">ヨコ組み（共有・OGP用）:</text>
+  <g transform="translate(48,455)">
+    <rect x="0" y="0" width="64" height="64" rx="18" fill="#FF7E6B"/>
+    <path d="M32 55 C32 55 11 41 11 26.5 C11 19.5 16.2 14.4 22.6 14.4 C26.7 14.4 30.4 16.6 32 20 C33.6 16.6 37.3 14.4 41.4 14.4 C47.8 14.4 53 19.5 53 26.5 C53 41 32 55 32 55 Z" fill="#FFFFFF"/>
+    <circle cx="26.1" cy="28.5" r="2.6" fill="#3F3A4A"/>
+    <circle cx="37.9" cy="28.5" r="2.6" fill="#3F3A4A"/>
+    <path d="M26.6 33.7 C29 37.4 35 37.4 37.4 33.7" fill="none" stroke="#3F3A4A" stroke-width="2.8" stroke-linecap="round"/>
+  </g>
+  <text x="126" y="493" font-size="30" font-weight="700" fill="#3F3A4A">罪悪感ゼロ育児</text>
+  <text x="127" y="516" font-size="14" fill="#F2624D" font-family="'Yomogi','Zen Maru Gothic',sans-serif">あなたはダメな親じゃない。</text>
+</svg>

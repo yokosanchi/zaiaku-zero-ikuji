@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  ogImage?: string;
+}
+
+const { title, description, image, ogImage } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const siteName = '罪悪感ゼロ育児';
+const fullTitle = title === siteName ? title : `${title}｜${siteName}`;
+const share = ogImage ?? image;
+const shareURL = share ? new URL(share, Astro.site).href : undefined;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+<link rel="canonical" href={canonicalURL} />
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+{shareURL && <meta property="og:image" content={shareURL} />}
+<meta name="twitter:card" content={shareURL ? 'summary_large_image' : 'summary'} />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+{shareURL && <meta name="twitter:image" content={shareURL} />}
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap"
+  rel="stylesheet"
+/>

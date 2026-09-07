@@ -1,0 +1,41 @@
+---
+import Logo from './Logo.astro';
+import { CATEGORIES } from '../lib/site';
+---
+
+<header class="sticky top-0 z-30 border-b-2 border-coral-soft bg-cream/95 backdrop-blur">
+  <div
+    class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 py-3"
+  >
+    <a href="/" class="group flex items-center gap-2.5">
+      <Logo
+        class="h-10 w-10 shrink-0 drop-shadow-[3px_3px_0_rgba(63,58,74,0.12)] transition-transform group-hover:-rotate-12"
+      />
+      <span class="flex flex-col leading-none">
+        <span class="font-heading text-lg font-bold text-ink">罪悪感ゼロ育児</span>
+        <span class="mt-1 font-hand text-[11px] text-coral-deep">
+          あなたはダメな親じゃない。
+        </span>
+      </span>
+    </a>
+
+    <nav class="flex flex-wrap items-center gap-1 text-sm text-ink-soft">
+      {
+        CATEGORIES.map((c) => (
+          <a
+            href={`/categories/${c.key}`}
+            class="rounded-full px-3 py-1.5 font-medium transition-colors hover:bg-sun-soft hover:text-ink"
+          >
+            {c.short}
+          </a>
+        ))
+      }
+      <a
+        href="/about"
+        class="rounded-full px-3 py-1.5 font-medium transition-colors hover:bg-sun-soft hover:text-ink"
+      >
+        このサイトについて
+      </a>
+    </nav>
+  </div>
+</header>

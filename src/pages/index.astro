@@ -1,0 +1,183 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleList from '../components/ArticleList.astro';
+import CategoryNav from '../components/CategoryNav.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const values = [
+  {
+    emoji: '🫶',
+    title: '罪悪感を、置いていく',
+    body: '「〜すべき」より「〜で大丈夫」。読んだあとに少し肩の力が抜ける言葉を選んでいます。',
+    color: 'coral',
+  },
+  {
+    emoji: '📚',
+    title: '根拠は、公的機関から',
+    body: 'こども家庭庁や厚生労働省など、信頼できる情報をリアルな悩みに結びつけて解説します。',
+    color: 'sky',
+  },
+  {
+    emoji: '🧸',
+    title: '道具は、心を守るため',
+    body: '時短家電や便利サブスクは「サボり」ではなく「余裕をつくる投資」として紹介します。',
+    color: 'mint',
+  },
+];
+
+const cardBg = {
+  coral: 'bg-coral-soft',
+  sky: 'bg-sky-soft',
+  mint: 'bg-mint-soft',
+};
+
+const stickers = ['🍼', '🛁', '😴', '🧸', '☕'];
+---
+
+<BaseLayout
+  title="罪悪感ゼロ育児"
+  description="「手抜き」じゃなく「心を守る選択」。新米パパママが自分を責めなくていい育児のかたちを、リアルな声と公的なデータでお届けするメディアです。"
+>
+  <section class="relative overflow-hidden pb-6 pt-2">
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+    >
+      <div
+        class="absolute -left-20 top-0 h-64 w-64 rounded-blob bg-sun/40 animate-floaty"
+      >
+      </div>
+      <div
+        class="absolute -right-16 top-10 h-52 w-52 rounded-blob bg-sky/40 animate-floaty [animation-delay:1.5s]"
+      >
+      </div>
+      <div
+        class="absolute bottom-2 left-1/4 h-44 w-44 rounded-blob bg-mint/40 animate-floaty [animation-delay:3s]"
+      >
+      </div>
+    </div>
+
+    <div class="mx-auto max-w-3xl px-5 text-center">
+      <p
+        class="inline-flex -rotate-2 items-center gap-1.5 rounded-full border-2 border-ink/5 bg-white px-4 py-1.5 font-hand text-xs text-coral-deep shadow-pop"
+      >
+        <span>💗</span> プレパパ・プレママ / 新米パパママのための場所
+      </p>
+
+      <h1
+        class="relative mx-auto mt-6 max-w-xl font-heading text-4xl font-bold leading-[1.35] text-ink sm:text-5xl"
+      >
+        <span
+          aria-hidden="true"
+          class="absolute -left-9 -top-6 hidden text-2xl animate-wiggle lg:block"
+          >🍼</span
+        >
+        <span
+          aria-hidden="true"
+          class="absolute -right-9 top-2 hidden text-2xl animate-wiggle [animation-delay:1s] lg:block"
+          >😴</span
+        >
+        あなたは、<br class="sm:hidden" /><mark class="marker-sun text-ink"
+          >ダメな親じゃない。</mark
+        >
+      </h1>
+
+      <p
+        class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg"
+      >
+        「手抜き」でも「時短」でもなく、これは<mark
+          class="marker-sun font-bold text-ink">心と笑顔を守る選択</mark
+        >。<br class="hidden sm:block" />
+        うまくできない日があっても、ここでは誰もあなたを責めません。
+      </p>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a
+          href="/blog"
+          class="rounded-full bg-coral px-7 py-3 text-sm font-bold text-white shadow-pop transition-all hover:-translate-y-0.5 hover:bg-coral-deep hover:shadow-pop-lg"
+        >
+          記事を読む →
+        </a>
+        <a
+          href="/about"
+          class="rounded-full border-2 border-ink/10 bg-white px-7 py-3 text-sm font-bold text-ink shadow-pop transition-all hover:-translate-y-0.5 hover:shadow-pop-lg"
+        >
+          このサイトについて
+        </a>
+      </div>
+
+      <div class="relative mx-auto mt-10 max-w-2xl">
+        <img
+          src="/images/hero-laugh.jpg"
+          alt="ハイチェアで声をあげて笑っている赤ちゃん"
+          class="aspect-[16/10] w-full rotate-1 rounded-[2rem] border-2 border-ink/5 object-cover shadow-pop-lg"
+        />
+        <span
+          class="absolute -bottom-4 -left-3 -rotate-6 rounded-2xl border-2 border-ink/5 bg-white px-3 py-1.5 font-hand text-xs text-coral-deep shadow-pop sm:-left-6"
+        >
+          今日も、これで100点！
+        </span>
+      </div>
+
+      <div
+        aria-hidden="true"
+        class="mt-10 flex flex-wrap justify-center gap-2 sm:gap-3"
+      >
+        {
+          stickers.map((e, i) => (
+            <span
+              class:list={[
+                'grid h-12 w-12 place-items-center rounded-2xl border-2 border-ink/5 bg-white text-xl shadow-pop',
+                i % 2 ? 'rotate-3' : '-rotate-3',
+              ]}
+            >
+              {e}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <div class="mx-auto mt-14 max-w-5xl px-5">
+    <div class="grid gap-4 sm:grid-cols-3">
+      {
+        values.map((c) => (
+          <div
+            class:list={[
+              'rounded-3xl border-2 border-ink/5 p-6 shadow-pop transition-transform hover:-translate-y-1 hover:rotate-1',
+              cardBg[c.color as keyof typeof cardBg],
+            ]}
+          >
+            <span class="grid h-14 w-14 place-items-center rounded-2xl bg-white text-2xl shadow-pop">
+              {c.emoji}
+            </span>
+            <p class="mt-4 font-heading text-lg font-bold text-ink">{c.title}</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">{c.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="mx-auto mt-16 max-w-5xl px-5">
+    <div class="mb-5 flex flex-wrap items-end gap-x-3 gap-y-1">
+      <h2 class="font-heading text-2xl font-bold text-ink">カテゴリからさがす</h2>
+      <a
+        href="/categories"
+        class="mb-1 -rotate-2 font-hand text-sm text-coral-deep hover:underline"
+      >
+        ぜんぶ見る →
+      </a>
+    </div>
+    <CategoryNav />
+  </div>
+
+  <div class="mt-14">
+    <ArticleList posts={posts} heading="あたらしい記事" />
+  </div>
+</BaseLayout>

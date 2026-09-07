@@ -1,0 +1,74 @@
+name: daily-article
+
+on:
+  schedule:
+    - cron: "0 21 * * *" # 毎日 06:00 JST（UTC+9）
+  workflow_dispatch:
+    inputs:
+      type:
+        description: "記事タイプを指定（省略でローテーション）"
+        required: false
+        type: choice
+        options: ["", trend, basics, service, voice, cheer]
+        default: ""
+
+concurrency:
+  group: daily-article
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: System deps (SVG→PNG / 日本語フォント)
+        run: sudo apt-get update && sudo apt-get install -y libcairo2 fonts-noto-cjk
+
+      - run: pip install -r scripts/requirements.txt
+      - run: npm ci
+
+      - name: Generate today's article
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          IMPROVE_MODE: ${{ vars.IMPROVE_MODE }}
+          THUMB_HEADLINE: ${{ vars.THUMB_HEADLINE }}
+        run: |
+          ARGS="--daily"
+          if [ -n "${{ github.event.inputs.type }}" ]; then ARGS="$ARGS --type ${{ github.event.inputs.type }}"; fi
+          python scripts/pipeline.py $ARGS
+
+      - name: Show result
+        run: |
+          echo "### 生成結果" >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          cat data/last_result.json >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Verify build
+        run: npm run build
+
+      - name: Commit & push
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "変更なし（ネタ切れ等）。何もしない。"
+            exit 0
+          fi
+          git config user.name "kzi-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/blog public/images/thumb data REVIEW.md 2>/dev/null || true
+          git commit -m "chore(content): 自動記事更新 $(date -u +%F) [skip ci]"
+          git push

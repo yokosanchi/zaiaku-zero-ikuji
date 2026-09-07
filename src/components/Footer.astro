@@ -1,0 +1,64 @@
+---
+import Logo from './Logo.astro';
+import { CATEGORIES } from '../lib/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="relative mt-24">
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 1440 60"
+    preserveAspectRatio="none"
+    class="block h-12 w-full text-mint-soft"
+  >
+    <path
+      fill="currentColor"
+      d="M0,30 C180,60 360,4 720,20 C1080,36 1260,60 1440,26 L1440,60 L0,60 Z"></path>
+  </svg>
+
+  <div class="bg-mint-soft">
+    <div class="mx-auto max-w-5xl space-y-6 px-5 pb-12 pt-4 text-sm text-ink-soft">
+      <div class="flex items-center gap-2.5">
+        <Logo class="h-9 w-9" />
+        <p class="font-heading text-base font-bold text-ink">罪悪感ゼロ育児</p>
+      </div>
+
+      <p class="max-w-md leading-relaxed">
+        「手抜き」じゃなく「心を守る選択」。新米パパママが自分を責めなくていい育児のかたちを、リアルな声と公的なデータでお届けします。
+      </p>
+
+      <nav class="flex flex-wrap gap-x-4 gap-y-1 font-medium">
+        <a href="/" class="hover:text-coral-deep">ホーム</a>
+        <a href="/blog" class="hover:text-coral-deep">記事一覧</a>
+        <a href="/categories" class="hover:text-coral-deep">カテゴリ</a>
+        {
+          CATEGORIES.map((c) => (
+            <a href={`/categories/${c.key}`} class="hover:text-coral-deep">
+              {c.short}
+            </a>
+          ))
+        }
+        <a href="/about" class="hover:text-coral-deep">このサイトについて</a>
+      </nav>
+
+      <div
+        class="rounded-2xl border-2 border-ink/5 bg-white p-4 leading-relaxed shadow-pop"
+      >
+        <p class="font-bold text-ink">🏥 医療・健康に関する大切なお願い</p>
+        <p class="mt-1">
+          当サイトの内容は情報提供を目的としたもので、診断や治療にかわるものではありません。お子さまや心身の不調が気になるときは、かかりつけ医や自治体の相談窓口にご相談ください。
+        </p>
+      </div>
+
+      <p class="leading-relaxed">
+        ※
+        記事内で紹介する商品・サービスには広告（アフィリエイトリンク）を含む場合があります。「心の余裕を守る道具」として、編集部が納得したものだけを紹介しています。一部の記事は編集方針にそって自動作成し、公開前に禁止表現・安全性のチェックを通しています。
+      </p>
+
+      <p class="text-xs text-ink-soft/80">
+        © {year} 罪悪感ゼロ育児　/　写真: Unsplash
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,4 @@
+# 自動記事パイプラインの依存。GitHub Actions と手元で同じものを使う。
+PyYAML>=6.0
+trafilatura>=1.8        # 本文抽出（無ければ簡易ストリッパにフォールバック）
+cairosvg>=2.7           # サムネ SVG→PNG（無ければ SVG をそのまま使用）

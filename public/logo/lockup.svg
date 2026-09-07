@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" width="360" height="96" role="img" aria-label="罪悪感ゼロ育児">
+  <g transform="translate(8,20)">
+    <rect x="2" y="2" width="52" height="52" rx="15" fill="#FF7E6B"/>
+    <path d="M28 47 C28 47 10 35.5 10 23.4 C10 17.6 14.4 13.2 19.8 13.2 C23.3 13.2 26.4 15.1 28 18 C29.6 15.1 32.7 13.2 36.2 13.2 C41.6 13.2 46 17.6 46 23.4 C46 35.5 28 47 28 47 Z" fill="#FFFFFF"/>
+    <circle cx="22.8" cy="25.4" r="2.2" fill="#3F3A4A"/>
+    <circle cx="33.2" cy="25.4" r="2.2" fill="#3F3A4A"/>
+    <path d="M23.3 30 C25.4 33.3 30.6 33.3 32.7 30" fill="none" stroke="#3F3A4A" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+  <text x="78" y="46" font-family="'Zen Maru Gothic','Hiragino Maru Gothic ProN',sans-serif" font-size="30" font-weight="700" fill="#3F3A4A">罪悪感ゼロ育児</text>
+  <text x="79" y="70" font-family="'Yomogi','Zen Maru Gothic',sans-serif" font-size="14" fill="#F2624D">あなたはダメな親じゃない。</text>
+</svg>

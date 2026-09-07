@@ -1,0 +1,82 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { CATEGORY_MAP, ARTICLE_TYPES, ACCENT, type AccentKey } from '../lib/site';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  /** 通常はカテゴリ色を使う。明示指定で上書き可。 */
+  accent?: AccentKey;
+}
+
+const { post, accent } = Astro.props;
+const { title, description, pubDate, emoji, heroImage, category, articleType } =
+  post.data;
+
+const cat = CATEGORY_MAP[category];
+const type = ARTICLE_TYPES[articleType];
+const a = ACCENT[accent ?? cat.accent];
+
+const dateLabel = pubDate.toLocaleDateString('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<article class="group h-full">
+  <a
+    href={`/blog/${post.slug}`}
+    class="flex h-full flex-col overflow-hidden rounded-[1.75rem] border-2 border-ink/5 bg-white shadow-pop transition-all duration-200 group-hover:-translate-y-1.5 group-hover:shadow-pop-lg"
+  >
+    <div
+      class:list={[
+        'relative flex h-40 items-center justify-center bg-gradient-to-br',
+        a.grad,
+      ]}
+    >
+      {
+        heroImage ? (
+          <img
+            src={heroImage}
+            alt=""
+            loading="lazy"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : (
+          <span class="text-6xl transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110">
+            {emoji ?? cat.emoji}
+          </span>
+        )
+      }
+      <span
+        class="absolute left-3 top-3 -rotate-3 rounded-full border-2 border-ink/5 bg-white px-2.5 py-1 text-[11px] font-bold text-ink shadow-pop"
+      >
+        {cat.emoji} {cat.short}
+      </span>
+      <span
+        class="absolute right-3 top-3 rotate-2 rounded-full border-2 border-ink/5 bg-white px-2 py-1 text-[11px] font-bold text-ink-soft shadow-pop"
+      >
+        {type.emoji} {type.badge}
+      </span>
+    </div>
+
+    <div class="flex flex-1 flex-col gap-2.5 p-5">
+      <h3
+        class="font-heading text-lg font-bold leading-snug text-ink transition-colors group-hover:text-coral-deep"
+      >
+        {title}
+      </h3>
+      <p class="line-clamp-3 text-sm leading-relaxed text-ink-soft">
+        {description}
+      </p>
+      <div class="mt-auto flex items-center justify-between pt-1">
+        <span class="text-xs text-ink-soft/80">{dateLabel}</span>
+        <span
+          class="font-hand text-sm text-coral-deep transition-transform group-hover:translate-x-1"
+        >
+          よむ →
+        </span>
+      </div>
+    </div>
+  </a>
+</article>

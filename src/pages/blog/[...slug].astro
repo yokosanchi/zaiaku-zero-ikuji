@@ -1,0 +1,42 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post, posts },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { post, posts } = Astro.props;
+const { Content } = await post.render();
+
+// 関連記事：同カテゴリ +2点 / 共通タグ +1点ずつ。上位3件。
+const related = posts
+  .filter((p) => p.slug !== post.slug)
+  .map((p) => ({
+    p,
+    score:
+      (p.data.category === post.data.category ? 2 : 0) +
+      p.data.tags.filter((t) => post.data.tags.includes(t)).length,
+  }))
+  .filter((x) => x.score > 0)
+  .sort(
+    (a, b) =>
+      b.score - a.score ||
+      b.p.data.pubDate.valueOf() - a.p.data.pubDate.valueOf()
+  )
+  .slice(0, 3)
+  .map((x) => x.p);
+---
+
+<BlogPost post={post} related={related}>
+  <Content />
+</BlogPost>

@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ArticleCard from './ArticleCard.astro';
+
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+  heading?: string;
+}
+
+const { posts, heading } = Astro.props;
+const accents = ['sun', 'sky', 'mint', 'coral', 'grape'] as const;
+---
+
+<section class="mx-auto max-w-5xl px-5">
+  {
+    heading && (
+      <div class="mb-7 flex flex-wrap items-end gap-x-3 gap-y-1">
+        <h2 class="font-heading text-2xl font-bold text-ink">{heading}</h2>
+        <span class="mb-1 -rotate-2 font-hand text-sm text-coral-deep">
+          ぜんぶ読まなくてOK
+        </span>
+      </div>
+    )
+  }
+
+  {
+    posts.length === 0 ? (
+      <p class="text-sm text-ink-soft">
+        まだ記事がありません。もうすぐ最初の記事が届きます。
+      </p>
+    ) : (
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {posts.map((post, i) => (
+          <ArticleCard post={post} accent={accents[i % accents.length]} />
+        ))}
+      </div>
+    )
+  }
+</section>

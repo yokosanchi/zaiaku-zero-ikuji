@@ -1,0 +1,191 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { CATEGORY_MAP, ARTICLE_TYPES, ACCENT } from '../lib/site';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  related?: CollectionEntry<'blog'>[];
+}
+
+const { post, related = [] } = Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  tags,
+  emoji,
+  author,
+  heroImage,
+  ogImage,
+  sources,
+  category,
+  articleType,
+  generatedBy,
+} = post.data;
+
+const cat = CATEGORY_MAP[category];
+const type = ARTICLE_TYPES[articleType];
+
+const dateLabel = pubDate.toLocaleDateString('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+const updatedLabel = updatedDate?.toLocaleDateString('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={heroImage}
+  ogImage={ogImage}
+>
+  <article class="mx-auto max-w-2xl px-5">
+    <div class="relative">
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center"
+      >
+        <div
+          class:list={[
+            'h-56 w-56 rounded-blob animate-floaty',
+            ACCENT[cat.accent].softBg,
+          ]}
+        >
+        </div>
+      </div>
+      {
+        heroImage ? (
+          <img
+            src={heroImage}
+            alt=""
+            class="mb-6 aspect-[16/9] w-full rotate-1 rounded-[2rem] border-2 border-ink/5 object-cover shadow-pop-lg"
+          />
+        ) : (
+          <div class="mb-6 grid h-44 place-items-center text-7xl">
+            <span class="animate-floaty">{emoji ?? cat.emoji}</span>
+          </div>
+        )
+      }
+    </div>
+
+    <div class="flex flex-wrap items-center gap-2">
+      <a
+        href={`/categories/${cat.key}`}
+        class:list={[
+          'rounded-full border-2 border-ink/5 px-3 py-1 text-xs font-bold shadow-pop transition-transform hover:-translate-y-0.5',
+          ACCENT[cat.accent].softBg,
+          ACCENT[cat.accent].text,
+        ]}
+      >
+        {cat.emoji} {cat.label}
+      </a>
+      <span
+        class="rounded-full border-2 border-ink/5 bg-white px-3 py-1 text-xs font-bold text-ink-soft shadow-pop"
+      >
+        {type.emoji} {type.label}
+      </span>
+    </div>
+
+    <div class="mt-3 flex flex-wrap gap-2">
+      {
+        tags.map((tag) => (
+          <span class="rounded-full bg-cream-deep px-2.5 py-0.5 text-xs font-medium text-ink-soft">
+            #{tag}
+          </span>
+        ))
+      }
+    </div>
+
+    <h1
+      class="mt-4 font-heading text-2xl font-bold leading-tight text-ink sm:text-3xl"
+    >
+      {title}
+    </h1>
+    <p class="mt-3 font-hand text-sm text-ink-soft">
+      {dateLabel} 公開{updatedLabel && ` ・ ${updatedLabel} 更新`} ・ {author}
+    </p>
+
+    <div
+      class="mt-8 rounded-[2rem] border-2 border-ink/5 bg-white p-6 shadow-pop-lg sm:p-9"
+    >
+      <div
+        class="prose max-w-none prose-headings:font-heading prose-headings:font-bold prose-h2:mt-10 prose-h2:inline-block prose-h2:rounded-2xl prose-h2:bg-sun-soft prose-h2:px-4 prose-h2:py-1.5 prose-h2:text-xl prose-h2:leading-snug prose-h2:shadow-pop prose-h3:mt-8 prose-h3:text-lg prose-h3:text-coral-deep prose-a:font-bold prose-a:decoration-sun prose-a:decoration-2 prose-a:underline-offset-2 prose-strong:text-ink prose-blockquote:rounded-2xl prose-blockquote:border-0 prose-blockquote:bg-sky-soft prose-blockquote:p-5 prose-blockquote:font-medium prose-blockquote:not-italic prose-blockquote:text-ink prose-blockquote:shadow-pop prose-li:marker:text-coral"
+      >
+        <slot />
+      </div>
+    </div>
+
+    {
+      sources.length > 0 && (
+        <section class="mt-8 rounded-[1.75rem] border-2 border-ink/5 bg-sky-soft/60 p-5 shadow-pop">
+          <p class="flex items-center gap-2 font-heading text-sm font-bold text-ink">
+            <span>📊</span> 根拠にした情報
+          </p>
+          <ul class="mt-2 space-y-1 text-sm text-ink-soft">
+            {sources.map((s) => (
+              <li>
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-medium text-sky-deep underline decoration-2 underline-offset-2"
+                >
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <aside
+      class="mt-8 -rotate-1 rounded-[2rem] border-2 border-ink/5 bg-coral-soft p-6 shadow-pop sm:p-8"
+    >
+      <p class="flex items-center gap-2 font-heading text-base font-bold text-ink">
+        <span class="text-xl">💛</span> 最後に、あなたへ
+      </p>
+      <p class="mt-2 text-sm leading-relaxed text-ink/80">
+        今日ここまで読んでくれた時点で、あなたはもう十分にお子さんのことを考えています。うまくいかない日があっても全然大丈夫。あなたと赤ちゃんの笑顔が、いちばん大切な「正解」です。
+      </p>
+    </aside>
+
+    <p class="mt-6 text-xs leading-relaxed text-ink-soft/80">
+      ※
+      この記事の内容は情報提供を目的としたものです。気になる症状や不安があるときは、かかりつけ医・お住まいの自治体の相談窓口をご利用ください。記事内のリンクには広告を含む場合があります。
+      {generatedBy && <span>この記事は編集方針にそって作成し、公開前に安全性チェックを通しています（{generatedBy}）。</span>}
+    </p>
+
+    {
+      related.length > 0 && (
+        <section class="mt-12">
+          <h2 class="mb-5 font-heading text-xl font-bold text-ink">
+            あわせて読みたい
+          </h2>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {related.map((r) => (
+              <ArticleCard post={r} />
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <div class="mt-12">
+      <a
+        href="/blog"
+        class="inline-block rounded-full border-2 border-ink/10 bg-white px-5 py-2.5 text-sm font-bold text-ink shadow-pop transition-transform hover:-translate-y-0.5"
+      >
+        ← 記事一覧にもどる
+      </a>
+    </div>
+  </article>
+</BaseLayout>

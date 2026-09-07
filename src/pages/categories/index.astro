@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { CATEGORIES, ACCENT } from '../../lib/site';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+const count = (key: string) =>
+  posts.filter((p) => p.data.category === key).length;
+---
+
+<BaseLayout
+  title="カテゴリからさがす"
+  description="「罪悪感ゼロ育児」の記事をトピックごとに。ごはん・ねんね・心のケア・発育・暮らしの5つの受け皿から、いま必要なものを選べます。"
+>
+  <div class="mx-auto max-w-5xl px-5">
+    <div class="mb-8 flex flex-wrap items-end gap-x-3 gap-y-1">
+      <h1 class="font-heading text-2xl font-bold text-ink">カテゴリからさがす</h1>
+      <span class="mb-1 -rotate-2 font-hand text-sm text-coral-deep">
+        いま気になるところだけで大丈夫
+      </span>
+    </div>
+
+    <div class="grid gap-5 sm:grid-cols-2">
+      {
+        CATEGORIES.map((c) => (
+          <a
+            href={`/categories/${c.key}`}
+            class:list={[
+              'group flex items-start gap-4 rounded-[1.75rem] border-2 border-ink/5 p-6 shadow-pop transition-transform hover:-translate-y-1 hover:rotate-1',
+              ACCENT[c.accent].softBg,
+            ]}
+          >
+            <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white text-2xl shadow-pop">
+              {c.emoji}
+            </span>
+            <span class="flex flex-col">
+              <span class="font-heading text-lg font-bold text-ink">
+                {c.label}
+              </span>
+              <span class="mt-1 text-sm leading-relaxed text-ink-soft">
+                {c.description}
+              </span>
+              <span
+                class:list={[
+                  'mt-2 font-hand text-sm',
+                  ACCENT[c.accent].text,
+                ]}
+              >
+                {count(c.key)}記事 →
+              </span>
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>
