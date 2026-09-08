@@ -88,7 +88,9 @@
   category: kokoro
   official_sources: []
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: hikakutte-shimau-hi-cheer
+  published: '2026-09-08'
 - slug: gohan-tekitou-datta-hi-cheer
   type: cheer
   title_seed: 今日のごはんが「適当」だったと落ち込んでいる人へ

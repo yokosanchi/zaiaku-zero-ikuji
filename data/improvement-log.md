@@ -9,3 +9,5 @@
 - 2026-09-08 🔧 点検 `kenshin-de-soudan` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-08 ➕ 新規 `yakan-dannyu-yattemita-voice` (voice / nenne) — 夜間断乳のブログ体験談に焦らないで！リアルな声と我が家のペースで守る睡眠
 - 2026-09-08 🔧 点検 `nanimo-dekinakatta-hi` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-08 ➕ 新規 `hikakutte-shimau-hi-cheer` (cheer / kokoro) — よその子と比べて落ち込んでしまった今日、あなたに伝えたいこと
+- 2026-09-08 🔧 点検 `hikakutte-shimau-hi-cheer` — 問題なし
