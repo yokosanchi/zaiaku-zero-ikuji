@@ -40,7 +40,7 @@ python scripts/pipeline.py --improve-only       # 既存記事の点検だけ
 | 変数 | 既定 | 説明 |
 | --- | --- | --- |
 | `GEMINI_API_KEY` | （必須） | 未設定なら自動で MOCK モード |
-| `GEMINI_MODEL` | `gemini-2.5-flash` | 生成モデル |
+| `GEMINI_MODEL` | `gemini-2.0-flash` | 生成モデル |
 | `IMPROVE_MODE` | `links` | `full` にすると improve で LLM 推敲も |
 | `THUMB_HEADLINE` | （なし） | `ai` でサムネの惹句を LLM 生成 |
 | `PIPELINE_MOCK` | （なし） | `1` で LLM を呼ばずダミー出力 |

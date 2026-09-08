@@ -8,7 +8,9 @@ import urllib.request
 
 from .util import log
 
-DEFAULT_MODEL = "gemini-2.5-flash"
+# 無料枠で安定して使えるものを既定に。上げたい場合は GitHub の
+# Settings → Secrets and variables → Actions → Variables に GEMINI_MODEL=gemini-2.5-flash 等
+DEFAULT_MODEL = "gemini-2.0-flash"
 _ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
 
@@ -20,8 +22,13 @@ def is_mock() -> bool:
     return os.environ.get("PIPELINE_MOCK") == "1" or not os.environ.get("GEMINI_API_KEY")
 
 
+def _model() -> str:
+    # 環境変数が「空文字で存在」しても既定にフォールバックする（CI で vars 未設定のとき対策）
+    return (os.environ.get("GEMINI_MODEL") or "").strip() or DEFAULT_MODEL
+
+
 def model_label() -> str:
-    return "mock" if is_mock() else os.environ.get("GEMINI_MODEL", DEFAULT_MODEL)
+    return "mock" if is_mock() else _model()
 
 
 def generate(prompt: str, *, system: str | None = None, json_mode: bool = False,
@@ -30,7 +37,7 @@ def generate(prompt: str, *, system: str | None = None, json_mode: bool = False,
         return _mock(prompt, json_mode=json_mode)
 
     key = os.environ["GEMINI_API_KEY"]
-    model = os.environ.get("GEMINI_MODEL", DEFAULT_MODEL)
+    model = _model()
     url = _ENDPOINT.format(model=model) + f"?key={key}"
 
     body: dict = {
@@ -53,7 +60,7 @@ def generate(prompt: str, *, system: str | None = None, json_mode: bool = False,
                 payload = json.loads(resp.read().decode("utf-8"))
             return _extract_text(payload)
         except urllib.error.HTTPError as e:
-            last = f"HTTP {e.code}: {e.read().decode('utf-8', 'ignore')[:300]}"
+            last = f"HTTP {e.code} (model={model}): {e.read().decode('utf-8', 'ignore')[:300]}"
             if e.code in (408, 429, 500, 502, 503, 504):
                 wait = min(2 ** attempt, 30)
                 log(f"  LLM retry {attempt} in {wait}s ({e.code})")
