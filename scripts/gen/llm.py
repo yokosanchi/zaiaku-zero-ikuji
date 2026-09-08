@@ -2,15 +2,17 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import time
 import urllib.error
 import urllib.request
 
 from .util import log
 
-# 無料枠で安定して使えるものを既定に。上げたい場合は GitHub の
-# Settings → Secrets and variables → Actions → Variables に GEMINI_MODEL=gemini-2.5-flash 等
-DEFAULT_MODEL = "gemini-2.0-flash"
+# 既定モデル。変えたい場合は GitHub の
+# Settings → Secrets and variables → Actions → Variables に GEMINI_MODEL=... を追加。
+# モデルが廃止された場合は、API のエラーメッセージが案内する後継へ自動で切り替える（下記）。
+DEFAULT_MODEL = "gemini-3.6-flash"
 _ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
 
@@ -51,6 +53,7 @@ def generate(prompt: str, *, system: str | None = None, json_mode: bool = False,
 
     data = json.dumps(body).encode("utf-8")
     last = ""
+    swapped = False
     for attempt in range(1, 6):
         try:
             req = urllib.request.Request(
@@ -60,7 +63,17 @@ def generate(prompt: str, *, system: str | None = None, json_mode: bool = False,
                 payload = json.loads(resp.read().decode("utf-8"))
             return _extract_text(payload)
         except urllib.error.HTTPError as e:
-            last = f"HTTP {e.code} (model={model}): {e.read().decode('utf-8', 'ignore')[:300]}"
+            raw = e.read().decode("utf-8", "ignore")
+            last = f"HTTP {e.code} (model={model}): {raw[:300]}"
+            # モデル廃止 → API が案内する後継モデルに1回だけ自動で切り替える
+            if e.code == 404 and not swapped:
+                m = re.search(r"use\s+models/([A-Za-z0-9.\-]+)", raw)
+                if m and m.group(1) != model:
+                    model = m.group(1)
+                    url = _ENDPOINT.format(model=model) + f"?key={key}"
+                    swapped = True
+                    log(f"  LLM: モデルを {model} に自動切替（廃止の案内による）")
+                    continue
             if e.code in (408, 429, 500, 502, 503, 504):
                 wait = min(2 ** attempt, 30)
                 log(f"  LLM retry {attempt} in {wait}s ({e.code})")
