@@ -109,20 +109,14 @@ def _auth_header(method: str, url: str, c: dict) -> str:
     return "OAuth " + ", ".join(f'{_pct(k)}="{_pct(v)}"' for k, v in sorted(oauth.items()))
 
 
-def post_tweet(text: str) -> str | None:
-    """投稿する。成功でツイートID、キー未設定や失敗で None。"""
-    c = _creds()
-    if not c:
-        log("  X: キー未設定 → 投稿スキップ")
-        return None
-
+def _try_post(url: str, text: str, c: dict) -> tuple[str | None, str]:
     body = json.dumps({"text": text}, ensure_ascii=False).encode("utf-8")
     req = urllib.request.Request(
-        _ENDPOINT,
+        url,
         data=body,
         method="POST",
         headers={
-            "Authorization": _auth_header("POST", _ENDPOINT, c),
+            "Authorization": _auth_header("POST", url, c),
             "Content-Type": "application/json",
             "User-Agent": "kzi-bot/1.0",
         },
@@ -130,13 +124,32 @@ def post_tweet(text: str) -> str | None:
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
             data = json.loads(r.read().decode("utf-8"))
-        tid = ((data.get("data") or {}).get("id"))
-        log(f"  X: 投稿しました id={tid}")
-        return tid
+        return ((data.get("data") or {}).get("id")), "ok"
     except urllib.error.HTTPError as e:
-        detail = e.read().decode("utf-8", "ignore")[:400]
-        log(f"  X: 投稿失敗 HTTP {e.code}: {detail}")
-        return None
+        hdrs = {k.lower(): v for k, v in (e.headers.items() if e.headers else [])}
+        interesting = {k: hdrs[k] for k in ("www-authenticate", "x-rate-limit-limit", "x-access-level") if k in hdrs}
+        return None, f"HTTP {e.code} {e.read().decode('utf-8', 'ignore')[:300]} hdr={interesting}"
     except Exception as e:  # noqa: BLE001
-        log(f"  X: 投稿失敗 {e}")
+        return None, f"{type(e).__name__}: {e}"
+
+
+def post_tweet(text: str) -> str | None:
+    """投稿する。成功でツイートID、キー未設定や失敗で None。"""
+    c = _creds()
+    if not c:
+        log("  X: キー未設定 → 投稿スキップ")
         return None
+
+    # 診断: 値の長さだけ出す（中身は出さない）。空/取り違え/切れを見分けるため。
+    lens = " ".join(f"{k.split('_', 1)[1].lower()}={len(v)}" for k, v in c.items())
+    log(f"  X: creds len {lens} / access_token先頭 {'数値ID形式OK' if c['X_ACCESS_TOKEN'][:1].isdigit() and '-' in c['X_ACCESS_TOKEN'] else '形式が怪しい'}")
+
+    for url in (_ENDPOINT, "https://api.x.com/2/tweets"):
+        tid, msg = _try_post(url, text, c)
+        if tid:
+            log(f"  X: 投稿しました id={tid} ({url})")
+            return tid
+        log(f"  X: 投稿失敗 {url} → {msg}")
+        if msg.startswith("HTTP 4") and "HTTP 401" not in msg:
+            break  # 401 以外の 4xx は別ホストでも同じなので打ち切り
+    return None
