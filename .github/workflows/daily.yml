@@ -81,12 +81,15 @@ jobs:
 
       - name: Commit & push
         run: |
-          if git diff --quiet && git diff --cached --quiet; then
+          git config user.name "kzi-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # 生成物をステージ（存在しないパスがあっても止まらないよう1つずつ）
+          for p in src/content/blog public/images data REVIEW.md; do
+            [ -e "$p" ] && git add -A "$p"
+          done
+          if git diff --cached --quiet; then
             echo "変更なし（ネタ切れ等）。何もしない。"
             exit 0
           fi
-          git config user.name "kzi-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/content/blog public/images data REVIEW.md 2>/dev/null || true
           git commit -m "chore(content): 自動記事更新 $(date -u +%F) [skip ci]"
           git push
