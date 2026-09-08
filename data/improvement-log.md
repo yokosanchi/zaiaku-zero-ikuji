@@ -7,3 +7,5 @@
 - 2026-09-08 🔧 点検 `iyaiya-ki-seicho` — 問題なし
 - 2026-09-08 ➕ 新規 `netsuper-hikaku-kokoro` (service / kurashi) — ネットスーパーを使うのは甘えじゃない！買い出しをやめて心が軽くなる方法
 - 2026-09-08 🔧 点検 `kenshin-de-soudan` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-08 ➕ 新規 `yakan-dannyu-yattemita-voice` (voice / nenne) — 夜間断乳のブログ体験談に焦らないで！リアルな声と我が家のペースで守る睡眠
+- 2026-09-08 🔧 点検 `nanimo-dekinakatta-hi` — 問題なし（導入を軽くリライト・updatedDate 更新）

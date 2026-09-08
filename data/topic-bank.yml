@@ -69,7 +69,9 @@
   - https://www.jpeds.or.jp/
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: yakan-dannyu-yattemita-voice
+  published: '2026-09-08'
 - slug: hoikuen-narashi-voice
   type: voice
   title_seed: 慣らし保育で毎日泣かれる、行きしぶりがつらい体験談
