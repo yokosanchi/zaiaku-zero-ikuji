@@ -33,7 +33,7 @@
 | コンテンツ | Markdown / MDX（`src/content/blog/` 配下、content collections） |
 | ホスティング | Cloudflare Pages（GitHub 連携・無料枠） |
 | 記事生成 AI | Gemini 1.5 Flash API（無料枠）※Phase 2 |
-| 自動化 | GitHub Actions（毎朝 1 記事を自動生成）※Phase 2 |
+| 自動化 | GitHub Actions（1日2〜3本を自動生成・公開）※Phase 2 |
 
 ### コマンド
 
@@ -166,7 +166,7 @@ draft: boolean            # true はビルド除外
 
 ## 7. 自動記事生成パイプライン（実装済み / `scripts/`）
 
-**完全自動・毎朝1本。LLM の一発出しにはしない多段構成。** 詳細は `scripts/README.md`。
+**完全自動・1日2〜3本（各カテゴリ10本まで積み増し中は3本、以降2本）。LLM の一発出しにはしない多段構成。** 詳細は `scripts/README.md`。
 
 ```
 pick_topic → research → draft → concept_rewrite → thumbnail → publish → improve
@@ -180,9 +180,9 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
 - **concept_rewrite**：サイトの声へリライト（§4）。禁止語を機械的に除去。
 - **thumbnail**：`UNSPLASH_ACCESS_KEY` があれば、draft が出す英語 `photo_query` で Unsplash を検索し、
   内容に合う横長写真を `public/images/thumb/<slug>.jpg` に保存して `heroImage` に採用（クレジットは `public/images/CREDITS.md` に追記）。
-  無ければ「カテゴリ色＋見出し」のデザインカード（`<slug>.png`）を生成し、これも `heroImage` に採用する。
-  **どちらの経路でも必ず画像を返す。絵文字だけのサムネは出さない。**
-  キー無し／該当なしのときだけ、カテゴリ色＋見出しの 1200×630 SVG カード（`cairosvg` で PNG 化、不在時は SVG）にフォールバック。
+  無ければ「カテゴリ色＋見出し」の 1200×630 デザインカードを **Pillow で直接 PNG 描画**（`public/images/thumb/<slug>.png`）し、これも `heroImage` に採用。
+  CJK フォントは CI=Noto Sans CJK / mac=ヒラギノ を自動検出（`scripts/gen/thumbnail.py::_font_path`）。
+  **どちらの経路でも必ず画像を返す。絵文字だけのサムネは禁止。**
 - **publish**：`src/content/blog/<slug>.md` を書き出し、`topic-bank` / `data/state.json` / `data/improvement-log.md` を更新。
 - **X 投稿**（任意）：`scripts/gen/post_x.py`。`X_API_KEY`/`X_API_SECRET`/`X_ACCESS_TOKEN`/`X_ACCESS_SECRET` が4つ揃うと、公開直後に X へ自動ポスト（OAuth1.0a、標準ライブラリのみ）。無ければスキップ。`--no-x` で無効化。文面は `compose_tweet`（275字重み以内）。MOCK 実行時は投稿しない。
 - **improve**：毎回、既存記事を1本点検（リンク・画像切れ）。`IMPROVE_MODE=full` で軽い推敲も。
@@ -241,7 +241,7 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
 
 ## 8. トップページの動的パーツ
 
-- **「◯月◯日に届いた記事」**：ビルド日と `pubDate`/`updatedDate` が一致する記事だけ表示（`index.astro`）。毎朝の自動更新で1本増える前提。無い日はセクションごと非表示。
+- **「◯月◯日に届いた記事」**：ビルド日と `pubDate`/`updatedDate` が一致する記事だけ表示（`index.astro`）。自動更新でその日の分が並ぶ。無い日はセクションごと非表示。
 - **きょうの訪問者数**：`functions/api/hits.js`（Cloudflare Pages Functions + KV）。`BaseLayout` のインラインスクリプトが 1 ブラウザ 1 日 1 回だけ `POST /api/hits?bump=1` して数を取得し、`[data-hits]` 要素を表示。
   - **セットアップ（CF ダッシュボード、1回だけ）**：KV 名前空間を作成 → 対象 Pages プロジェクト → Settings → Functions → KV namespace bindings に **変数名 `HITS`** で割り当て。
   - 未設定でも壊れない（`/api/hits` が使えない＝カウンタ非表示になるだけ）。`astro dev` では Functions が動かないので常に非表示。
