@@ -161,3 +161,91 @@
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
   status: queued
+- slug: sns-mrs-lunch-plate-trend
+  type: trend
+  title_seed: バズる「豪華すぎる園弁当」を見て落ち込む必要がない話
+  angle: 映える弁当は非日常のイベント投稿／栄養は1日〜1週間単位でならせばいい／冷凍・市販は正攻法
+  category: gohan
+  official_sources:
+  - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+  ref_urls: []
+  status: queued
+- slug: sns-newborn-routine-trend
+  type: trend
+  title_seed: 「新生児の理想スケジュール」投稿どおりにいかなくて当然の理由
+  angle: 月齢が同じでも個人差が大きい／授乳間隔は幅がある／“崩れる前提”で組む
+  category: nenne
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.jpeds.or.jp/
+  ref_urls: []
+  status: queued
+- slug: shogakko-asa-junbi-basics
+  type: basics
+  title_seed: 小学生の朝の支度が回らない、まず外していい「完璧」の基本
+  angle: 忘れ物は仕組みで減らす／親が全部やらない移行期／学校と共有していい情報
+  category: kurashi
+  official_sources:
+  - https://www.mext.go.jp/
+  - https://www.cfa.go.jp/
+  ref_urls: []
+  status: queued
+- slug: ninshin-tsuwari-tenuki-basics
+  type: basics
+  title_seed: つわりで動けない時期、家事も食事も削っていい基本
+  angle: 食べられるものだけでいい時期がある／頼れる制度と宅配／完璧な栄養は後で取り返せる
+  category: kokoro
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/boshi-hoken.html
+  ref_urls: []
+  status: queued
+- slug: kyodai-wanpaku-cheer
+  type: cheer
+  title_seed: きょうだいゲンカの仲裁で疲れ果てた夜のあなたへ
+  angle: 全部を裁かなくていい／親が完璧でなくても子に伝わらない／今日の自分を責めない
+  category: kokoro
+  official_sources:
+  - https://www.cfa.go.jp/
+  ref_urls: []
+  status: queued
+- slug: yakan-taiou-kotsu-voice
+  type: voice
+  title_seed: 夜間対応がしんどかった時期、みんなどう乗り切ったか
+  angle: 交代制・耳栓・翌日の予定を削る／“寝られない自分”を責めない／頼れる先の実例
+  category: nenne
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.jpeds.or.jp/
+  ref_urls: []
+  status: queued
+- slug: hoikuen-okuri-namida-cheer
+  type: cheer
+  title_seed: 登園で泣かれて後ろ髪を引かれるまま出勤するあなたへ
+  angle: 泣くのは愛着が育っている証とされる／園で切り替えている子は多い／自分の罪悪感に線を引く
+  category: kokoro
+  official_sources:
+  - https://www.cfa.go.jp/
+  ref_urls: []
+  status: queued
+- slug: jido-teate-seido-service
+  type: service
+  title_seed: 使い忘れがちな子育て支援・手当・割引をまとめて確認する
+  angle: 申請しないともらえないもの／自治体独自の上乗せ／情報の探し方の型
+  category: kurashi
+  official_sources:
+  - https://www.cfa.go.jp/policies/kokoseido
+  - https://www.cfa.go.jp/
+  ref_urls: []
+  status: queued
+- slug: sns-toilet-training-trend
+  type: trend
+  title_seed: 「2歳でトイトレ完了」投稿に焦らされているあなたへ
+  angle: 完了時期の幅は広い／夏スタート神話に縛られない／後戻りは失敗ではない
+  category: hatsuiku
+  official_sources:
+  - https://www.jpeds.or.jp/
+  - https://www.cfa.go.jp/policies/boshihoken
+  ref_urls: []
+  status: queued

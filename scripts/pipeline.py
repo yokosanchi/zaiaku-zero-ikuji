@@ -12,8 +12,8 @@
 
 環境変数:
     GEMINI_API_KEY   必須（未設定なら自動で MOCK モード）
-    GEMINI_MODEL     既定 gemini-2.5-flash
-    IMPROVE_MODE     links(既定) | full
+    GEMINI_MODEL     既定 gemini-3.6-flash
+    IMPROVE_MODE     full(既定) | links
     THUMB_HEADLINE   ai を指定するとサムネ惹句を LLM で作る
 """
 
@@ -126,7 +126,7 @@ def run_daily(args) -> dict:
 
     improve = {}
     if not args.no_improve:
-        improve = improve_mod.daily_improve(mode=os.environ.get("IMPROVE_MODE", "links"))
+        improve = improve_mod.daily_improve(mode=os.environ.get("IMPROVE_MODE") or "full")
 
     return {
         "result": "published",
@@ -204,7 +204,7 @@ def main() -> None:
         if args.check:
             out = preflight()
         elif args.improve_only:
-            out = {"result": "improve", "improve": improve_mod.daily_improve(mode=os.environ.get("IMPROVE_MODE", "links"))}
+            out = {"result": "improve", "improve": improve_mod.daily_improve(mode=os.environ.get("IMPROVE_MODE") or "full")}
         else:
             out = run_daily(args)
     except Exception as e:  # noqa: BLE001

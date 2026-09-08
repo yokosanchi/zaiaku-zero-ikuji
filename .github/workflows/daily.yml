@@ -2,7 +2,8 @@ name: daily-article
 
 on:
   schedule:
-    - cron: "0 21 * * *" # 毎日 06:00 JST（UTC+9）
+    - cron: "0 21 * * *" # 毎日 06:00 JST（UTC+9）— 朝の1本
+    - cron: "0 9 * * *"  # 毎日 18:00 JST（UTC+9）— 夕方の1本
   workflow_dispatch:
     inputs:
       type:
@@ -44,7 +45,8 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
-          IMPROVE_MODE: ${{ vars.IMPROVE_MODE }}
+          # 既存記事を毎回1本、軽くリライト（導入をペインに寄せて締める）。Variable で上書き可。
+          IMPROVE_MODE: ${{ vars.IMPROVE_MODE || 'full' }}
           THUMB_HEADLINE: ${{ vars.THUMB_HEADLINE }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           X_API_KEY: ${{ secrets.X_API_KEY }}

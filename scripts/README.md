@@ -14,7 +14,7 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
 | concept_rewrite | `gen/rewrite.py` + `prompts/concept_rewrite.md` | サイトの声へリライト＋**禁止語を機械的に除去**＋**YMYL 危険表現を検出したら公開中止** |
 | thumbnail | `gen/thumbnail.py` | 記事に合わせた 1200×630 の OGP 画像を生成（カテゴリ色・見出し・絵文字）。`public/images/thumb/<slug>.png` |
 | publish | `gen/publish.py` | `src/content/blog/<slug>.md` を書き出し、`topic-bank` と `state.json` を更新、ログ追記 |
-| improve | `gen/improve.py` | 既存記事を1本点検（リンク・画像切れ）。`IMPROVE_MODE=full` で軽い推敲も |
+| improve | `gen/improve.py` | 既存記事を1本、点検（リンク・画像切れ）＋**軽いリライト**（導入をペインに寄せて締める・`updatedDate` 更新）。`IMPROVE_MODE=links` で点検のみに |
 
 ガードレールは `gen/guardrails.py`（禁止語＝CLAUDE.md準拠、YMYL＝はちみつ/うつ伏せ寝/断薬 等）。
 検出時は公開せず、リポジトリ直下の `REVIEW.md` に積まれる。
@@ -41,7 +41,7 @@ python scripts/pipeline.py --improve-only       # 既存記事の点検だけ
 | --- | --- | --- |
 | `GEMINI_API_KEY` | （必須） | 未設定なら自動で MOCK モード |
 | `GEMINI_MODEL` | `gemini-3.6-flash` | 生成モデル |
-| `IMPROVE_MODE` | `links` | `full` にすると improve で LLM 推敲も |
+| `IMPROVE_MODE` | `full` | `links` にすると improve は点検のみ（リライトしない） |
 | `THUMB_HEADLINE` | （なし） | `ai` でサムネの惹句を LLM 生成 |
 | `PIPELINE_MOCK` | （なし） | `1` で LLM を呼ばずダミー出力 |
 
@@ -49,11 +49,13 @@ python scripts/pipeline.py --improve-only       # 既存記事の点検だけ
 
 `data/topic-bank.yml` にエントリを追加するだけ（`status: queued`）。
 `slug` は ASCII で一意、`official_sources` に公的機関のURL、`ref_urls` に競合の良質記事URL
-（※構成の参考にするだけ。本文は複製しない）。ネタが尽きると当日は「何もしない」で終わる。
+（※構成の参考にするだけ。本文は複製しない）。
+バンクが尽きたら `gen/topic.py` が LLM に新ネタを1件起案させて `topic-bank.yml` に追記する
+（`generated: true` が付く）。止まらないが、手で良質な種を足しておく方が精度は高い。
 
 ## 自動実行
 
-`.github/workflows/daily.yml` が毎日 06:00 JST に実行 → 生成 → `npm run build` で検証 →
+`.github/workflows/daily.yml` が毎日 **06:00 と 18:00 JST（1日2本）** に実行 → 生成 → `npm run build` で検証 →
 `main` に push → **その場で `wrangler pages deploy` して Cloudflare Pages に直接公開**。
 （Cloudflare の GitHub 連携には依存しない。連携が切れても確実に出る）
 
