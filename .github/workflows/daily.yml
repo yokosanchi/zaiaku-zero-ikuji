@@ -95,3 +95,13 @@ jobs:
           # このワークフローは push では起動しない（schedule / workflow_dispatch のみ）ので自己ループはしない。
           git commit -m "chore(content): 自動記事更新 $(date -u +%F)"
           git push
+
+      # Cloudflare の GitHub 連携に依存せず、ここから直接デプロイする（連携が切れても確実に公開される）。
+      # 必要な Secrets: CLOUDFLARE_API_TOKEN（テンプレート「Edit Cloudflare Workers」）, CLOUDFLARE_ACCOUNT_ID
+      - name: Deploy to Cloudflare Pages
+        if: ${{ env.CF_TOKEN != '' }}
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx --yes wrangler@3 pages deploy dist --project-name=zaiaku-zero-ikuji --branch=main --commit-dirty=true

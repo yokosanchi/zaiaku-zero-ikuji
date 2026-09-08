@@ -54,5 +54,16 @@ python scripts/pipeline.py --improve-only       # 既存記事の点検だけ
 ## 自動実行
 
 `.github/workflows/daily.yml` が毎日 06:00 JST に実行 → 生成 → `npm run build` で検証 →
-問題なければ `main` に push → Cloudflare Pages が自動デプロイ。
-GitHub の **Settings → Secrets and variables → Actions** に `GEMINI_API_KEY` を登録すること。
+`main` に push → **その場で `wrangler pages deploy` して Cloudflare Pages に直接公開**。
+（Cloudflare の GitHub 連携には依存しない。連携が切れても確実に出る）
+
+GitHub の **Settings → Secrets and variables → Actions → Secrets** に登録するもの:
+
+| Secret | 取得元 |
+| --- | --- |
+| `GEMINI_API_KEY` | https://aistudio.google.com/apikey |
+| `CLOUDFLARE_API_TOKEN` | dash.cloudflare.com → My Profile → API Tokens → テンプレート「Edit Cloudflare Workers」 |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare ダッシュボード右サイドの Account ID |
+| `X_API_KEY` / `X_API_SECRET` / `X_ACCESS_TOKEN` / `X_ACCESS_SECRET` | X Developer Portal（App 権限 Read and write）※未設定なら X 投稿だけスキップ |
+
+`CLOUDFLARE_*` が未設定なら Deploy 段はスキップされる（生成とコミットは実行される）。
