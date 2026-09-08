@@ -7,7 +7,6 @@ stage: "age0"
 articleType: "trend"
 tags: ["ワンオペ", "SNS", "X"]
 emoji: "📱"
-heroImage: "/images/sns-phone-night.jpg"
 sources:
   - label: "こども家庭庁「母子保健」（産後ケア・一時預かり）"
     url: "https://www.cfa.go.jp/policies/boshihoken"

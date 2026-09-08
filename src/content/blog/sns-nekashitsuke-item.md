@@ -7,7 +7,7 @@ stage: "age0"
 articleType: "trend"
 tags: ["寝かしつけ", "SNS", "TikTok"]
 emoji: "📱"
-heroImage: "/images/sns-scroll-bed.jpg"
+heroImage: "/images/sns-phone.jpg"
 sources:
   - label: "こども家庭庁「母子保健」"
     url: "https://www.cfa.go.jp/policies/boshihoken"

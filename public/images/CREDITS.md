@@ -23,6 +23,11 @@
 | `schoolyard.jpg` | 小1の壁（※差し替え候補） | `photo-1549522757-8d50c0f9c224` |
 | `homework.jpg` | 宿題を見てあげられない日があっても | `photo-1758612898701-e2f2958f219d` |
 | `tabenai.jpg` | 「離乳食、全然食べない」の投稿がバズるたびに | `photo-1544632561-0f8a895a2b08` |
+| `sns-irodori.jpg` | Instagramの「彩り離乳食プレート」に落ち込む必要がない理由 | `photo-1543353071-873f17a7a088` |
+| `sns-debate.jpg` | 「3歳児神話」がXで議論になるたび | `photo-1517245386807-bb43f82c33c4` |
+| `sns-phone.jpg` | TikTokの「これで寝た！」寝かしつけ神アイテム | `photo-1512941937669-90a1b58e7e9c` |
+
+※ `sns-wanope-genkai` と `sns-iyaiya-zenbu-dame` は写真未設定（📱アイコン表示）。差し替え候補。
 
 ## 自動取得分（パイプライン）
 

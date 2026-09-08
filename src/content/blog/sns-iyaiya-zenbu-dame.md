@@ -7,7 +7,6 @@ stage: "age1_2"
 articleType: "trend"
 tags: ["イヤイヤ期", "SNS", "TikTok"]
 emoji: "📱"
-heroImage: "/images/sns-iyaiya.jpg"
 sources:
   - label: "こども家庭庁「母子保健」"
     url: "https://www.cfa.go.jp/policies/boshihoken"
