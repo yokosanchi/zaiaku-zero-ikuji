@@ -11,3 +11,5 @@
 - 2026-09-08 🔧 点検 `nanimo-dekinakatta-hi` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-08 ➕ 新規 `hikakutte-shimau-hi-cheer` (cheer / kokoro) — よその子と比べて落ち込んでしまった今日、あなたに伝えたいこと
 - 2026-09-08 🔧 点検 `hikakutte-shimau-hi-cheer` — 問題なし
+- 2026-09-08 ➕ 新規 `sns-wanope-timeline` (trend / kokoro) — SNSのワンオペ密着動画を見て落ち込む人へ。完璧と比べなくて大丈夫な理由
+- 2026-09-08 🔧 点検 `nentore-shinai` — 問題なし（導入を軽くリライト・updatedDate 更新）

@@ -39,7 +39,9 @@
   official_sources:
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: sns-wanope-timeline
+  published: '2026-09-08'
 - slug: netsuper-hikaku-kokoro
   type: service
   title_seed: ネットスーパー・食材宅配で「買い物に行く」をやめる
