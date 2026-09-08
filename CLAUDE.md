@@ -182,6 +182,7 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
   内容に合う横長写真を `public/images/thumb/<slug>.jpg` に保存して `heroImage` に採用（クレジットは `public/images/CREDITS.md` に追記）。
   キー無し／該当なしのときだけ、カテゴリ色＋見出しの 1200×630 SVG カード（`cairosvg` で PNG 化、不在時は SVG）にフォールバック。
 - **publish**：`src/content/blog/<slug>.md` を書き出し、`topic-bank` / `data/state.json` / `data/improvement-log.md` を更新。
+- **X 投稿**（任意）：`scripts/gen/post_x.py`。`X_API_KEY`/`X_API_SECRET`/`X_ACCESS_TOKEN`/`X_ACCESS_SECRET` が4つ揃うと、公開直後に X へ自動ポスト（OAuth1.0a、標準ライブラリのみ）。無ければスキップ。`--no-x` で無効化。文面は `compose_tweet`（275字重み以内）。MOCK 実行時は投稿しない。
 - **improve**：毎回、既存記事を1本点検（リンク・画像切れ）。`IMPROVE_MODE=full` で軽い推敲も。
 
 ガードレール（`scripts/gen/guardrails.py`）：§4 の禁止語＋§5 の YMYL ハザード。

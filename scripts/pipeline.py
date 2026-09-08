@@ -55,7 +55,7 @@ from gen import research as research_mod  # noqa: E402
 from gen import rewrite as rewrite_mod  # noqa: E402
 from gen import thumbnail as thumb_mod  # noqa: E402
 from gen import topic as topic_mod  # noqa: E402
-from gen.llm import model_label  # noqa: E402
+from gen.llm import is_mock, model_label  # noqa: E402
 from gen.util import CATEGORY_ACCENT, DATA, TYPE_LABEL, log, save_json, today, write_review  # noqa: E402
 
 
@@ -118,11 +118,23 @@ def run_daily(args) -> dict:
 
     slug = publish_mod.publish(art, tp, img["ogImage"], model_label=model_label())
 
+    tweet_id = None
+    if not args.no_x and not is_mock():
+        from gen import post_x as x_mod
+
+        tweet_id = x_mod.post_tweet(x_mod.compose_tweet(art, slug))
+
     improve = {}
     if not args.no_improve:
         improve = improve_mod.daily_improve(mode=os.environ.get("IMPROVE_MODE", "links"))
 
-    return {"result": "published", "slug": slug, "type": art["articleType"], "improve": improve}
+    return {
+        "result": "published",
+        "slug": slug,
+        "type": art["articleType"],
+        "tweet_id": tweet_id,
+        "improve": improve,
+    }
 
 
 def preflight() -> dict:
@@ -155,6 +167,9 @@ def preflight() -> dict:
     unsplash = bool(os.environ.get("UNSPLASH_ACCESS_KEY"))
     checks.append(("UNSPLASH_ACCESS_KEY（任意）", True, "設定すると写真アイキャッチ、無ければカード生成" if not unsplash else "OK"))
 
+    x_keys = all(os.environ.get(k) for k in ("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET"))
+    checks.append(("X 投稿キー4種（任意）", True, "4つ揃うと新着記事を X へ自動投稿" if not x_keys else "OK"))
+
     all_ok = all(ok for _, ok, _ in checks)
     for name, ok, note in checks:
         mark = "OK " if ok and not note else ("-- " if ok else "NG ")
@@ -170,6 +185,7 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true", help="生成物を表示するだけで保存しない")
     ap.add_argument("--improve-only", action="store_true", help="既存記事の点検・改善だけ実行")
     ap.add_argument("--no-improve", action="store_true", help="改善パスをスキップ")
+    ap.add_argument("--no-x", action="store_true", help="X（Twitter）への自動投稿をスキップ")
     ap.add_argument("--check", action="store_true", help="公開せず、動かせる状態か点検する")
     ap.add_argument("--allow-mock", action="store_true", help="APIキー無し(MOCK)でも --daily で保存する（テスト用）")
     args = ap.parse_args()

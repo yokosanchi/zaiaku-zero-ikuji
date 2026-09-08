@@ -46,6 +46,11 @@ jobs:
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           IMPROVE_MODE: ${{ vars.IMPROVE_MODE }}
           THUMB_HEADLINE: ${{ vars.THUMB_HEADLINE }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
         run: |
           ARGS="--daily"
           if [ -n "${{ github.event.inputs.type }}" ]; then ARGS="$ARGS --type ${{ github.event.inputs.type }}"; fi

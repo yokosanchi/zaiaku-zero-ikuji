@@ -76,6 +76,25 @@ sh scripts/local-schedule.sh uninstall  # 解除
 
 ---
 
+## X（Twitter）へ新着記事を自動投稿する（任意）
+
+パイプラインが記事を公開した直後に、タイトル＋要約＋URL＋ハッシュタグを X へポストします。
+キーが無ければ黙ってスキップするので、不要なら何もしなくてOK。
+
+1. https://developer.x.com で開発者アカウント → **Project** と **App** を作成
+2. App の **User authentication settings** で権限を **Read and write** に設定
+3. **Keys and tokens** で取得：
+   - API Key / API Key Secret（＝Consumer key）
+   - Access Token / Access Token Secret（**権限を write にした後に生成**すること）
+4. GitHub → Settings → Secrets and variables → Actions に4つ登録：
+   `X_API_KEY` `X_API_SECRET` `X_ACCESS_TOKEN` `X_ACCESS_SECRET`
+5. `sh push-once.sh` でコードを反映（初回のみ）
+
+- ローカルで試す: `.env` に4つ入れて `python scripts/pipeline.py --daily --dry-run`（dry-run では投稿しません）
+- 投稿を止めたい日: `--no-x`
+- 無料枠は月500ポストまで書き込み可（1日1本なら十分）
+- 文面テンプレは `scripts/gen/post_x.py` の `compose_tweet` / `DEFAULT_TAGS`
+
 ## 記事のネタを足す
 
 `data/topic-bank.yml` に `status: queued` で追記するだけ（1日1件消費）。
