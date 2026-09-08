@@ -168,8 +168,9 @@ def render(
     """記事のメイン画像を用意する。
 
     1. UNSPLASH_ACCESS_KEY + photo_query があれば、内容に合う写真をDLして heroImage に
-    2. 無ければ、カテゴリ色＋見出しの SVG カードを生成して OGP 画像に
-    戻り値: {"heroImage": <path|None>, "ogImage": <path>}
+    2. 無ければ、カテゴリ色＋見出しの SVG カードを生成して heroImage / OGP 画像に
+    戻り値: {"heroImage": <path>, "ogImage": <path>}
+    ※ 絵文字だけのサムネは禁止。必ず写真かデザインカードを返す。
     """
     THUMBS.mkdir(parents=True, exist_ok=True)
 
@@ -198,7 +199,7 @@ def render(
             output_height=630,
         )
         log(f"  thumbnail(card): public/images/thumb/{slug}.png")
-        return {"heroImage": None, "ogImage": f"/images/thumb/{slug}.png"}
+        return {"heroImage": f"/images/thumb/{slug}.png", "ogImage": f"/images/thumb/{slug}.png"}
     except Exception as e:  # noqa: BLE001
-        log(f"  cairosvg 未導入/失敗（{e}）→ SVG を OGP に使用")
-        return {"heroImage": None, "ogImage": f"/images/thumb/{slug}.svg"}
+        log(f"  cairosvg 未導入/失敗（{e}）→ SVG カードを heroImage/OGP に使用")
+        return {"heroImage": f"/images/thumb/{slug}.svg", "ogImage": f"/images/thumb/{slug}.svg"}

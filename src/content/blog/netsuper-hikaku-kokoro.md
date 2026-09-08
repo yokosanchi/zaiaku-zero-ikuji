@@ -12,6 +12,7 @@ tags:
 - 家事負担軽減
 - 罪悪感ゼロ
 emoji: 🛒
+heroImage: "/images/thumb/netsuper-hikaku-kokoro.png"
 ogImage: /images/thumb/netsuper-hikaku-kokoro.png
 sources:
 - label: 消費者庁「こどもの事故防止」

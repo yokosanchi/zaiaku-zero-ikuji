@@ -81,8 +81,15 @@ const share = {
             class="mb-6 aspect-[16/9] w-full rotate-1 rounded-[2rem] border-2 border-ink/5 object-cover shadow-pop-lg"
           />
         ) : (
-          <div class="mb-6 grid h-44 place-items-center text-7xl">
-            <span class="animate-floaty">{emoji ?? cat.emoji}</span>
+          <div
+            class:list={[
+              'mb-6 grid aspect-[16/9] w-full place-items-center rounded-[2rem] border-2 border-ink/5 bg-gradient-to-br px-8 text-center shadow-pop-lg',
+              ACCENT[cat.accent].grad,
+            ]}
+          >
+            <span class="font-heading text-2xl font-bold leading-snug text-white/95 drop-shadow sm:text-3xl">
+              {post.data.title}
+            </span>
           </div>
         )
       }

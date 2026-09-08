@@ -95,9 +95,9 @@ title: string            # 必須。H1 / OGP
 description: string       # 必須。メタディスクリプション（120〜160字目安）
 pubDate: YYYY-MM-DD       # 必須
 updatedDate: YYYY-MM-DD   # 任意
-heroImage: string        # 任意。無ければ emoji のグラデ背景を表示
+heroImage: string        # 実質必須。写真 or デザインカード。**絵文字だけのサムネは禁止**
 tags: [string]            # カテゴリ／タグ
-emoji: string             # カード・ヒーローの絵文字
+emoji: string             # チップ等の装飾用（サムネの代わりにはしない）
 author: string            # 既定 "編集部"
 draft: boolean            # true はビルド除外
 ```
@@ -180,6 +180,8 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
 - **concept_rewrite**：サイトの声へリライト（§4）。禁止語を機械的に除去。
 - **thumbnail**：`UNSPLASH_ACCESS_KEY` があれば、draft が出す英語 `photo_query` で Unsplash を検索し、
   内容に合う横長写真を `public/images/thumb/<slug>.jpg` に保存して `heroImage` に採用（クレジットは `public/images/CREDITS.md` に追記）。
+  無ければ「カテゴリ色＋見出し」のデザインカード（`<slug>.png`）を生成し、これも `heroImage` に採用する。
+  **どちらの経路でも必ず画像を返す。絵文字だけのサムネは出さない。**
   キー無し／該当なしのときだけ、カテゴリ色＋見出しの 1200×630 SVG カード（`cairosvg` で PNG 化、不在時は SVG）にフォールバック。
 - **publish**：`src/content/blog/<slug>.md` を書き出し、`topic-bank` / `data/state.json` / `data/improvement-log.md` を更新。
 - **X 投稿**（任意）：`scripts/gen/post_x.py`。`X_API_KEY`/`X_API_SECRET`/`X_ACCESS_TOKEN`/`X_ACCESS_SECRET` が4つ揃うと、公開直後に X へ自動ポスト（OAuth1.0a、標準ライブラリのみ）。無ければスキップ。`--no-x` で無効化。文面は `compose_tweet`（275字重み以内）。MOCK 実行時は投稿しない。

@@ -12,6 +12,7 @@ tags:
 - 育児の悩み
 - 心のエステ
 emoji: 🌙
+heroImage: "/images/thumb/sns-neteru-aida-ni-kaji.png"
 ogImage: /images/thumb/sns-neteru-aida-ni-kaji.png
 sources:
 - label: こども家庭庁「トップページ」

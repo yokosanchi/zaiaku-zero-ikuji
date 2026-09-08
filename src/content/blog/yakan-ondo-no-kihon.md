@@ -12,6 +12,7 @@ tags:
 - 基本のき
 - 育児の不安
 emoji: 🌡️
+heroImage: "/images/thumb/yakan-ondo-no-kihon.png"
 ogImage: /images/thumb/yakan-ondo-no-kihon.png
 sources:
 - label: こども家庭庁「母子保健・不妊症・不育症など」

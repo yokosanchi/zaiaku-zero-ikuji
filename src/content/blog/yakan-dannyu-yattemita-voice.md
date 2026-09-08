@@ -12,6 +12,7 @@ tags:
 - 赤ちゃんの睡眠
 - ワンオペ育児
 emoji: 🌙
+heroImage: "/images/thumb/yakan-dannyu-yattemita-voice.png"
 ogImage: /images/thumb/yakan-dannyu-yattemita-voice.png
 sources:
 - label: 日本小児科学会「お知らせ」
