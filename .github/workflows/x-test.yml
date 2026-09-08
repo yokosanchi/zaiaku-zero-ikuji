@@ -1,0 +1,36 @@
+name: x-post-test
+
+# 手動専用。Gemini を一切呼ばず、最新記事の内容で X 投稿だけを試す（401 の切り分け用）。
+on:
+  workflow_dispatch:
+    inputs:
+      text:
+        description: "投稿する本文（省略時は最新記事から自動生成）"
+        required: false
+        type: string
+      post:
+        description: "実際に投稿する？（false なら本文を表示するだけ）"
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  x-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: X post test
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.text }}" ]; then ARGS="$ARGS --text \"${{ inputs.text }}\""; fi
+          if [ "${{ inputs.post }}" = "true" ]; then ARGS="$ARGS --post"; fi
+          eval python scripts/x_check.py $ARGS
