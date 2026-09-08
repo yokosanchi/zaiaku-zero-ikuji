@@ -7,7 +7,9 @@
   - https://www.cfa.go.jp/policies/boshihoken
   - https://www.jpeds.or.jp/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: yakan-ondo-no-kihon
+  published: '2026-09-08'
 - slug: rinyushoku-hajimekata-kihon
   type: basics
   title_seed: 離乳食の始めどきと最初のひとさじ、力を抜いていい基本

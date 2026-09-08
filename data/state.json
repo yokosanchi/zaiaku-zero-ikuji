@@ -1,5 +1,5 @@
 {
-  "rotation_index": 1,
+  "rotation_index": 2,
   "last_run": "2026-09-08",
   "published": [
     {
@@ -7,9 +7,16 @@
       "type": "trend",
       "category": "kokoro",
       "date": "2026-09-08"
+    },
+    {
+      "slug": "yakan-ondo-no-kihon",
+      "type": "basics",
+      "category": "hatsuiku",
+      "date": "2026-09-08"
     }
   ],
   "improve": {
-    "babyfood-100points": "2026-09-08"
+    "babyfood-100points": "2026-09-08",
+    "iyaiya-ki-seicho": "2026-09-08"
   }
 }
