@@ -48,7 +48,9 @@
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: netsuper-hikaku-kokoro
+  published: '2026-09-08'
 - slug: kansouki-jikan-wo-kau
   type: service
   title_seed: 乾燥機付き洗濯機は「干す・取り込む」を丸ごと消す
