@@ -91,5 +91,7 @@ jobs:
             echo "変更なし（ネタ切れ等）。何もしない。"
             exit 0
           fi
-          git commit -m "chore(content): 自動記事更新 $(date -u +%F) [skip ci]"
+          # 注意: [skip ci] は付けない。Cloudflare Pages がその文字列でデプロイを丸ごとスキップするため。
+          # このワークフローは push では起動しない（schedule / workflow_dispatch のみ）ので自己ループはしない。
+          git commit -m "chore(content): 自動記事更新 $(date -u +%F)"
           git push
