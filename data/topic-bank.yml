@@ -1,103 +1,80 @@
-# 自動記事パイプラインのネタ帳（キュレーション型）
-# ------------------------------------------------------------------
-# ここに「書きたいトピック」を貯めておくと、pipeline.py が毎日ローテーション
-# （trend → basics → service → voice → cheer）で1件ずつ選んで記事化する。
-#
-# 各エントリ:
-#   slug             : 記事URL。ASCII・ハイフン区切り・サイト内で一意（必須）
-#   type             : trend | basics | service | voice | cheer（必須）
-#   title_seed       : タイトルの種（日本語でOK。LLMが整える）
-#   angle            : 切り口メモ。どの視点で書くか
-#   category         : gohan | nenne | kokoro | hatsuiku | kurashi（省略可。省略時はLLMが判断）
-#   official_sources : 事実の根拠にする公的機関等のURL（本文はここから取る）
-#   ref_urls         : 大手競合の“良質な記事”URL。※見出し構成の参考のみ。本文は取り込まない
-#   seed_facts       : （任意）自分で書いた確かな事実。official_sources が弱いとき用
-#   status           : queued（未使用） / candidate（自動収集分） / published（使用済み・自動更新）
-# ------------------------------------------------------------------
-
 - slug: yakan-ondo-no-kihon
   type: basics
   title_seed: 赤ちゃんの平熱と「発熱かも」の見きわめの基本
   angle: 平熱の個人差／測り方でぶれる／数字より“ふだんとの違い”／受診の目安は自治体・かかりつけへ
   category: hatsuiku
   official_sources:
-    - https://www.cfa.go.jp/policies/boshihoken
-    - https://www.jpeds.or.jp/
+  - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.jpeds.or.jp/
   ref_urls: []
   status: queued
-
 - slug: rinyushoku-hajimekata-kihon
   type: basics
   title_seed: 離乳食の始めどきと最初のひとさじ、力を抜いていい基本
   angle: 目安はあるが幅がある／進まなくて当たり前／市販活用は公式に推奨／完璧な栄養計算はいらない
   category: gohan
   official_sources:
-    - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
-    - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
+  - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
   status: queued
-
 - slug: sns-neteru-aida-ni-kaji
   type: trend
   title_seed: 「子が寝てる間に家事」ができない問題
   angle: 寝落ちハック／“寝たら自分も休む”は正解／完璧な家では回らない前提を共有
   category: kokoro
   official_sources:
-    - https://www.cfa.go.jp/
+  - https://www.cfa.go.jp/
   ref_urls: []
-  status: queued
-
+  status: published
+  published_slug: sns-neteru-aida-ni-kaji
+  published: '2026-09-08'
 - slug: sns-wanope-timeline
   type: trend
   title_seed: バズる「ワンオペ密着タイムライン」を見てしんどくなる人へ
   angle: 切り取りと自分のノーカットを比べない／助けを前提に設計していい／地域の預け先
   category: kokoro
   official_sources:
-    - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
   status: queued
-
 - slug: netsuper-hikaku-kokoro
   type: service
   title_seed: ネットスーパー・食材宅配で「買い物に行く」をやめる
   angle: 初期費用ゼロで試せる／献立と移動の負担が消える／使い分けの目安
   category: kurashi
   official_sources:
-    - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
   status: queued
-
 - slug: kansouki-jikan-wo-kau
   type: service
   title_seed: 乾燥機付き洗濯機は「干す・取り込む」を丸ごと消す
   angle: 家事の“判断の回数”を減らす／親世代と条件が違う／賃貸でも置ける選択肢
   category: kurashi
   official_sources:
-    - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
   status: queued
-
 - slug: yakan-dannyu-yattemita-voice
   type: voice
   title_seed: 「夜間断乳やってみた」ブログのリアルと、事実の補正
   angle: つらさに共感／体験談は幅がある／月齢が進むとまとまって眠りやすくなる説明／無理しない撤退ライン
   category: nenne
   official_sources:
-    - https://www.jpeds.or.jp/
-    - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.jpeds.or.jp/
+  - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
   status: queued
-
 - slug: hoikuen-narashi-voice
   type: voice
   title_seed: 慣らし保育で毎日泣かれる、行きしぶりがつらい体験談
   angle: よくある声として一般化／慣れるまでの幅／親の罪悪感を外す／連絡帳より口頭相談
   category: kokoro
   official_sources:
-    - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
   status: queued
-
 - slug: hikakutte-shimau-hi-cheer
   type: cheer
   title_seed: よその子と比べて落ち込んだ日へ
@@ -106,87 +83,79 @@
   official_sources: []
   ref_urls: []
   status: queued
-
 - slug: gohan-tekitou-datta-hi-cheer
   type: cheer
   title_seed: 今日のごはんが「適当」だったと落ち込んでいる人へ
   angle: 栄養は数日単位でならせばいい／市販もごはん／一緒に食べた時間の価値
   category: gohan
   official_sources:
-    - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
+  - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
   ref_urls: []
   status: queued
-
 - slug: guzzu-anzen-kihon
   type: basics
   title_seed: ベビーグッズ選びで見落としがちな「安全」の基本
   angle: 誤飲・転落・やけどの動線／SGマークやリコール情報／“便利”より先に“危なくない”
   category: kurashi
   official_sources:
-    - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
   status: queued
-
 - slug: sns-tabenai-daikyoukan-trend
   type: trend
   title_seed: 「離乳食を食べない」投稿への大量の共感、実際どうする
   angle: 食べムラは普通／体重が増えていれば大きな心配は少ない／遊び食べ対策／相談の目安
   category: gohan
   official_sources:
-    - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
-    - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
+  - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
   status: queued
-
 - slug: sanpu-kenshin-epds-kihon
   type: basics
   title_seed: 産婦健康診査とEPDS（産後うつ質問票）の基本
   angle: 産後2週間・1か月の健診で心の状態も見る／点数は診断ではなく相談の入り口／正直に答えていい
   category: sango
   official_sources:
-    - https://www.cfa.go.jp/policies/boshihoken
-    - https://www.mhlw.go.jp/mamorouyokokoro/
+  - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.mhlw.go.jp/mamorouyokokoro/
   ref_urls: []
   status: queued
-
 - slug: kawaii-to-omoenai-cheer
   type: cheer
   title_seed: 赤ちゃんを「かわいい」と思えない自分を責めている人へ
   angle: 愛着はゆっくり育つこともある／睡眠不足で感情は鈍る／それでも世話をしている時点で十分
   category: sango
   official_sources:
-    - https://www.mhlw.go.jp/mamorouyokokoro/soudan/
+  - https://www.mhlw.go.jp/mamorouyokokoro/soudan/
   ref_urls: []
   status: queued
-
 - slug: sango-kaifuku-voice
   type: voice
   title_seed: 「産後うつ、こうやって抜けた」体験談のリアルと受診の流れ
   angle: 体験は人それぞれ／受診・服薬・休息・周囲のサポートの組み合わせ／回復までの時間差
   category: sango
   official_sources:
-    - https://www.mhlw.go.jp/mamorouyokokoro/soudan/
-    - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.mhlw.go.jp/mamorouyokokoro/soudan/
+  - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
   status: queued
-
 - slug: wanope-genkai-trend
   type: trend
   title_seed: 「ワンオペ限界」の投稿がバズる、そこから抜け出す現実的な道
   angle: 精神論で終わらせない／預け先・宅配・行政サービスの棚卸し／助けを前提に設計する
   category: wanope
   official_sources:
-    - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
   status: queued
-
 - slug: wanope-tasukeru-service
   type: service
   title_seed: ワンオペを助ける宅食・見守り・預かりサービスの選び方
   angle: 「休息」を理由に使っていい／初期費用ゼロで試せるものから／自治体の一時預かり・ファミサポ
   category: wanope
   official_sources:
-    - https://www.cfa.go.jp/policies/boshihoken
-    - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+  - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
   status: queued
