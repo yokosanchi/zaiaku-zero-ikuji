@@ -154,7 +154,7 @@ def preflight() -> dict:
     key = bool(os.environ.get("GEMINI_API_KEY"))
     checks.append(("GEMINI_API_KEY", key, "未設定：.env か環境変数に入れると本番モードになる"))
 
-    for mod in ("yaml", "trafilatura", "cairosvg"):
+    for mod in ("yaml", "trafilatura", "PIL"):
         try:
             importlib.import_module(mod)
             ok = True

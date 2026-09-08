@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import html
+import glob
 import json
 import os
 import urllib.parse
@@ -9,11 +9,54 @@ import urllib.request
 from .llm import generate, is_mock
 from .util import THUMBS, append_credit, log
 
+# カテゴリ色（site.ts と対応）
 _BG = {"sun": "#FFEFC9", "grape": "#EBE2FA", "coral": "#FFE1DB", "mint": "#D5F4E8", "sky": "#D6F1FA"}
 _INK = {"sun": "#F0A81F", "grape": "#9678CC", "coral": "#F2624D", "mint": "#3EB587", "sky": "#2FA7CC"}
-_FONT = "'Zen Maru Gothic','Noto Sans CJK JP','Hiragino Maru Gothic ProN',sans-serif"
+_HEAD = "#3F3A4A"
+_SITE = "#7E7994"
+
+# CJK が確実に出るフォントを探す（cairosvg は CJK フォールバックが弱く豆腐になるため Pillow で描く）
+_FONT_CANDIDATES = [
+    os.environ.get("KZI_CARD_FONT", ""),
+    # CI (ubuntu, fonts-noto-cjk)
+    "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
+    "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+    "/usr/share/fonts/opentype/noto/NotoSansCJKjp-Regular.otf",
+    "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
+    # macOS
+    "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc",
+    "/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc",
+    "/System/Library/Fonts/Hiragino Sans GB.ttc",
+    "/Library/Fonts/Arial Unicode.ttf",
+    "/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
+]
 
 
+def _font_path() -> str | None:
+    for p in _FONT_CANDIDATES:
+        if p and os.path.exists(p):
+            return p
+    for pat in ("/usr/share/fonts/**/*NotoSansCJK*", "/usr/share/fonts/**/*NotoSerifCJK*"):
+        hits = glob.glob(pat, recursive=True)
+        if hits:
+            return sorted(hits)[0]
+    return None
+
+
+def _font(size: int):
+    from PIL import ImageFont
+
+    p = _font_path()
+    if not p:
+        log("  サムネ: CJK フォントが見つからず既定フォント（豆腐の可能性）")
+        return ImageFont.load_default()
+    try:
+        return ImageFont.truetype(p, size)
+    except Exception:  # noqa: BLE001
+        return ImageFont.truetype(p, size, index=0)
+
+
+# ---------------------------------------------------------------- 見出しの折り返し
 def _greedy_wrap(text: str, n: int, max_lines: int = 3) -> list[str]:
     prefer = set("、。，．・！？!?」』）)")
     lines: list[str] = []
@@ -30,7 +73,7 @@ def _greedy_wrap(text: str, n: int, max_lines: int = 3) -> list[str]:
     if cur and len(lines) < max_lines:
         lines.append(cur.strip())
         cur = ""
-    if i < len(text):  # 行数が足りない → 最終行を省略記号で締める
+    if i < len(text):
         rest = (cur + text[i:]).strip()
         if lines:
             lines[-1] = (lines[-1] + rest)[: n - 1].rstrip() + "…"
@@ -40,7 +83,6 @@ def _greedy_wrap(text: str, n: int, max_lines: int = 3) -> list[str]:
 
 
 def _balance2(text: str) -> list[str]:
-    """長い1行を、中央付近の切れ目で2行に割る。"""
     mid = len(text) // 2
     good = set("、。，・！？!?」』）)")
     particle = set("はがをにでとへやもの")
@@ -52,72 +94,80 @@ def _balance2(text: str) -> list[str]:
 
 
 def _layout(headline: str) -> tuple[list[str], int]:
-    """カード幅に収まる行数・フォントサイズを選ぶ。"""
     text = headline.replace("\n", " ").strip()
     for chars, fs in ((14, 66), (16, 58), (19, 52), (23, 44)):
         lines = _greedy_wrap(text, chars, max_lines=3)
         if lines and max(len(ln) for ln in lines) <= chars + 1:
             if len(lines) == 1 and len(lines[0]) >= 15:
-                lines = _balance2(lines[0])
-                fs = 58
+                return _balance2(lines[0]), 58
             return lines, fs
     return _greedy_wrap(text, 23, max_lines=3), 44
 
 
-def build_svg(headline: str, sub: str, emoji: str, accent: str, site: str = "罪悪感ゼロ育児") -> str:
+# ---------------------------------------------------------------- カード描画（Pillow）
+def _render_card(slug: str, headline: str, sub: str, accent: str) -> str:
+    from PIL import Image, ImageDraw
+
     bg = _BG.get(accent, "#FFEFC9")
     ink = _INK.get(accent, "#F0A81F")
+    W, H = 1200, 630
+
+    img = Image.new("RGB", (W, H), bg)
+    d = ImageDraw.Draw(img, "RGBA")
+
+    d.ellipse((820, -120, 1280, 340), fill=(255, 255, 255, 115))
+    d.ellipse((-40, 380, 320, 740), fill=(255, 255, 255, 100))
+    d.rounded_rectangle((56, 56, 1144, 574), radius=48, fill="#FFFFFF")
+
+    d.text((100, 120), sub.strip(), font=_font(34), fill=ink)
+
     lines, fs = _layout(headline)
-    lh = int(fs * 1.34)
-    block_h = lh * (len(lines) - 1)
-    y0 = 330 - block_h // 2
-    tspans = "".join(
-        f'<tspan x="100" y="{y0 + i * lh}">{html.escape(ln)}</tspan>' for i, ln in enumerate(lines)
-    )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="{bg}"/>
-  <circle cx="1040" cy="110" r="230" fill="#ffffff" opacity="0.45"/>
-  <circle cx="140" cy="560" r="170" fill="#ffffff" opacity="0.4"/>
-  <rect x="56" y="56" width="1088" height="518" rx="48" fill="#ffffff"/>
-  <text x="100" y="156" font-family="{_FONT}" font-size="34" fill="{ink}">{html.escape((emoji + '  ' + sub).strip())}</text>
-  <text font-family="{_FONT}" font-size="{fs}" font-weight="700" fill="#3F3A4A">{tspans}</text>
-  <rect x="100" y="500" width="18" height="18" rx="5" fill="{ink}"/>
-  <text x="130" y="516" font-family="{_FONT}" font-size="30" fill="#7E7994">{html.escape(site)}</text>
-</svg>"""
+    lh = int(fs * 1.36)
+    y = 315 - lh * (len(lines) - 1) // 2 - fs // 2
+    hf = _font(fs)
+    for ln in lines:
+        d.text((100, y), ln, font=hf, fill=_HEAD)
+        y += lh
+
+    d.rounded_rectangle((100, 500, 118, 518), radius=5, fill=ink)
+    d.text((132, 496), "罪悪感ゼロ育児", font=_font(30), fill=_SITE)
+
+    THUMBS.mkdir(parents=True, exist_ok=True)
+    out = THUMBS / f"{slug}.png"
+    img.save(out, "PNG")
+    return f"/images/thumb/{slug}.png"
 
 
 def _maybe_ai_headline(article_title: str) -> str | None:
-    """THUMB_HEADLINE=ai のとき、サムネ用に短い惹句を作る（任意）。"""
     if os.environ.get("THUMB_HEADLINE") != "ai" or is_mock():
         return None
     try:
-        h = generate(
-            "次の記事タイトルを、サムネイル用に12〜16字の短い惹句へ言い換えて。"
-            "煽らず、やさしく、肯定的に。1案だけ、記号なしで返す。\n\n" + article_title,
-            temperature=0.7,
-        ).strip().splitlines()[0][:20]
+        h = (
+            generate(
+                "次の記事タイトルを、サムネイル用に12〜16字の短い惹句へ言い換えて。"
+                "煽らず、やさしく、肯定的に。1案だけ、記号なしで返す。\n\n" + article_title,
+                temperature=0.7,
+            )
+            .strip()
+            .splitlines()[0][:20]
+        )
         return h or None
     except Exception as e:  # noqa: BLE001
         log(f"  サムネ惹句生成失敗（{e}）→ タイトルを使用")
         return None
 
 
+# ---------------------------------------------------------------- 写真（Unsplash）
 _UNSPLASH_API = "https://api.unsplash.com/search/photos"
 _UA = "kzi-bot/1.0 (+https://zaiaku-zero-ikuji.pages.dev)"
 
 
 def _unsplash_photo(query: str) -> dict | None:
-    """UNSPLASH_ACCESS_KEY があれば、クエリに合う横長写真を1枚返す。"""
     key = os.environ.get("UNSPLASH_ACCESS_KEY")
     if not key or not query or is_mock():
         return None
     qs = urllib.parse.urlencode(
-        {
-            "query": query,
-            "orientation": "landscape",
-            "content_filter": "high",
-            "per_page": "8",
-        }
+        {"query": query, "orientation": "landscape", "content_filter": "high", "per_page": "8"}
     )
     req = urllib.request.Request(
         f"{_UNSPLASH_API}?{qs}",
@@ -168,9 +218,9 @@ def render(
     """記事のメイン画像を用意する。
 
     1. UNSPLASH_ACCESS_KEY + photo_query があれば、内容に合う写真をDLして heroImage に
-    2. 無ければ、カテゴリ色＋見出しの SVG カードを生成して heroImage / OGP 画像に
+    2. 無ければ「カテゴリ色＋見出し」のデザインカード（PNG）を Pillow で描く
     戻り値: {"heroImage": <path>, "ogImage": <path>}
-    ※ 絵文字だけのサムネは禁止。必ず写真かデザインカードを返す。
+    ※ 絵文字だけのサムネは出さない。必ず写真かカードを返す。
     """
     THUMBS.mkdir(parents=True, exist_ok=True)
 
@@ -185,21 +235,11 @@ def render(
             log(f"  photo: public/images/thumb/{slug}.jpg  by {photo['credit_name']} (Unsplash)")
             return {"heroImage": f"/images/thumb/{slug}.jpg", "ogImage": f"/images/thumb/{slug}.jpg"}
 
-    # フォールバック：SVG カード
     headline = _maybe_ai_headline(headline) or headline
-    svg = build_svg(headline, sub, emoji, accent)
-    (THUMBS / f"{slug}.svg").write_text(svg, encoding="utf-8")
     try:
-        import cairosvg
-
-        cairosvg.svg2png(
-            bytestring=svg.encode("utf-8"),
-            write_to=str(THUMBS / f"{slug}.png"),
-            output_width=1200,
-            output_height=630,
-        )
+        path = _render_card(slug, headline, sub, accent)
         log(f"  thumbnail(card): public/images/thumb/{slug}.png")
-        return {"heroImage": f"/images/thumb/{slug}.png", "ogImage": f"/images/thumb/{slug}.png"}
+        return {"heroImage": path, "ogImage": path}
     except Exception as e:  # noqa: BLE001
-        log(f"  cairosvg 未導入/失敗（{e}）→ SVG カードを heroImage/OGP に使用")
-        return {"heroImage": f"/images/thumb/{slug}.svg", "ogImage": f"/images/thumb/{slug}.svg"}
+        log(f"  カード生成失敗（{e}）")
+        raise
