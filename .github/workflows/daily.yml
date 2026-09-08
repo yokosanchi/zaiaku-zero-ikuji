@@ -68,7 +68,8 @@ jobs:
       - name: Check result
         run: |
           R=$(python -c "import json;print(json.load(open('data/last_result.json'))['result'])")
-          echo "result=$R"
+          X=$(python -c "import json;print(json.load(open('data/last_result.json')).get('x',''))")
+          echo "result=$R  x=$X"
           if [ "$R" = "no_key" ]; then
             echo "::error::GEMINI_API_KEY (Secret) が未設定です。Settings → Secrets and variables → Actions で登録してください。"
             exit 1
@@ -76,6 +77,12 @@ jobs:
           if [ "$R" = "error" ]; then
             echo "::error::パイプラインでエラー。ログを確認してください。"
             exit 1
+          fi
+          if [ "$X" = "no_keys" ]; then
+            echo "::warning::X 投稿キー4種が未設定のため投稿をスキップしました（記事公開には影響なし）。"
+          fi
+          if [ "$X" = "failed" ]; then
+            echo "::warning::X 投稿に失敗しました（記事公開には影響なし）。ログの 'X: 投稿失敗' を確認してください。"
           fi
 
       - name: Verify build

@@ -119,10 +119,15 @@ def run_daily(args) -> dict:
     slug = publish_mod.publish(art, tp, img["ogImage"], model_label=model_label())
 
     tweet_id = None
+    x_status = "disabled" if args.no_x else "skipped"
     if not args.no_x and not is_mock():
         from gen import post_x as x_mod
 
-        tweet_id = x_mod.post_tweet(x_mod.compose_tweet(art, slug))
+        if x_mod._creds():
+            tweet_id = x_mod.post_tweet(x_mod.compose_tweet(art, slug))
+            x_status = "posted" if tweet_id else "failed"
+        else:
+            x_status = "no_keys"
 
     improve = {}
     if not args.no_improve:
@@ -133,6 +138,7 @@ def run_daily(args) -> dict:
         "slug": slug,
         "type": art["articleType"],
         "tweet_id": tweet_id,
+        "x": x_status,
         "improve": improve,
     }
 
