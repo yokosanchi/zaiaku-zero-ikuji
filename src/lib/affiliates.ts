@@ -21,6 +21,11 @@ export const AFFILIATES: Record<string, Affiliate> = {
     label: 'キャリーオンで子供服を見てみる',
     note: '子供服のUSED通販。新規会員登録で300ポイント、3,900円以上で送料無料。',
   },
-  // elmo:   { link: '', pixel: '', label: 'ELMO for Family を見てみる' },
-  // novakid:{ link: '', pixel: '', label: 'NovaKid の無料お試しを見る' },
+  novakid: {
+    link: 'https://px.a8.net/svt/ejp?a8mat=4BC4QV+FRZKNU+4KYW+65U41',
+    pixel: 'https://www11.a8.net/0.gif?a8mat=4BC4QV+FRZKNU+4KYW+65U41',
+    label: 'NovaKid の無料お試しレッスンを見てみる',
+    note: '4〜12歳向けのオンライン英会話。自宅から、都合のいい時間に。まずは無料で1回試せます。',
+  },
+  // elmo: { link: '', pixel: '', label: 'ELMO for Family を見てみる' },
 };
