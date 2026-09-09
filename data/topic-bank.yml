@@ -139,7 +139,8 @@
   official_sources:
   - https://www.mhlw.go.jp/mamorouyokokoro/soudan/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: kawaii-to-omoenai
 - slug: sango-kaifuku-voice
   type: voice
   title_seed: 「産後うつ、こうやって抜けた」体験談のリアルと受診の流れ
