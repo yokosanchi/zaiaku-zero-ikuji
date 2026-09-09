@@ -1,0 +1,41 @@
+---
+import { AFFILIATES } from '../lib/affiliates';
+
+interface Props {
+  /** src/lib/affiliates.ts のキー */
+  name: keyof typeof AFFILIATES | string;
+  /** ボタン文言の上書き（任意） */
+  label?: string;
+}
+
+const { name, label } = Astro.props;
+const a = AFFILIATES[name as string];
+---
+
+{
+  a && a.link ? (
+    <div class="not-prose my-8 rounded-[1.75rem] border-2 border-ink/5 bg-coral-soft/50 p-5 text-center shadow-pop sm:p-6">
+      <span class="mb-2 inline-block rounded-full bg-white/80 px-2.5 py-0.5 text-[11px] font-bold tracking-wide text-ink-soft">
+        広告 / PR
+      </span>
+      {a.note && (
+        <p class="mb-3 text-sm leading-relaxed text-ink-soft">{a.note}</p>
+      )}
+      <a
+        href={a.link}
+        target="_blank"
+        rel="sponsored nofollow noopener"
+        class="inline-block rounded-full bg-coral px-7 py-3.5 font-heading text-base font-bold text-white shadow-pop transition-transform hover:-translate-y-0.5"
+      >
+        {label ?? a.label} →
+      </a>
+      {a.pixel && (
+        <img src={a.pixel} width="1" height="1" alt="" loading="lazy" style="display:none" />
+      )}
+    </div>
+  ) : (
+    <div class="not-prose my-8 rounded-2xl border-2 border-dashed border-ink/15 p-4 text-center text-sm text-ink-soft">
+      （アフィリエイトリンク未設定: <code>{name}</code> — <code>src/lib/affiliates.ts</code> に貼ると表示されます）
+    </div>
+  )
+}

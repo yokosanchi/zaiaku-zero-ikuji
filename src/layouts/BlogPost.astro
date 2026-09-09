@@ -95,6 +95,15 @@ const share = {
       }
     </div>
 
+    {
+      post.data.sponsored && (
+        <p class="mb-3 flex items-center gap-2 rounded-xl bg-cream-deep px-3 py-2 text-xs text-ink-soft">
+          <span class="rounded-full bg-ink/10 px-2 py-0.5 font-bold">PR</span>
+          この記事は広告（アフィリエイト）を含みます。掲載順や内容は広告主から対価を受けて調整していません。
+        </p>
+      )
+    }
+
     <div class="flex flex-wrap items-center gap-2">
       <a
         href={`/categories/${cat.key}`}

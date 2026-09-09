@@ -53,6 +53,8 @@ const blog = defineCollection({
       .default([]),
     /** 署名 */
     author: z.string().default('編集部'),
+    /** 広告（アフィリエイト）を含む記事。true で記事上部に PR 表示を出す（ステマ規制・ASP要件） */
+    sponsored: z.boolean().default(false),
     /** true はビルド対象外 */
     draft: z.boolean().default(false),
     /** 自動生成の透明性表示用（例: "pipeline gemini-2.5-flash / 2026-09-08"） */
