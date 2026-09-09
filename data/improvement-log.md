@@ -15,3 +15,5 @@
 - 2026-09-08 🔧 点検 `nentore-shinai` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-09 ➕ 新規 `rinyushoku-hajimekata-kihon` (basics / gohan) — 離乳食の始めどきと最初のひとさじ｜肩の力を抜いていい基本
 - 2026-09-09 🔧 点検 `kawaii-to-omoenai` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-09 ➕ 新規 `kansouki-jikan-wo-kau` (service / kurashi) — 「洗濯物を干す・取り込む」をやめていい。ドラム式洗濯乾燥機で心と時間を守る方法
+- 2026-09-09 🔧 点検 `kansouki-jikan-wo-kau` — 問題なし（導入を軽くリライト・updatedDate 更新）

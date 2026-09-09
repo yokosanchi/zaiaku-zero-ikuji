@@ -1,5 +1,5 @@
 {
-  "rotation_index": 7,
+  "rotation_index": 8,
   "last_run": "2026-09-09",
   "published": [
     {
@@ -43,6 +43,12 @@
       "type": "basics",
       "category": "gohan",
       "date": "2026-09-09"
+    },
+    {
+      "slug": "kansouki-jikan-wo-kau",
+      "type": "service",
+      "category": "kurashi",
+      "date": "2026-09-09"
     }
   ],
   "improve": {
@@ -52,6 +58,7 @@
     "nanimo-dekinakatta-hi": "2026-09-08",
     "hikakutte-shimau-hi-cheer": "2026-09-08",
     "nentore-shinai": "2026-09-08",
-    "kawaii-to-omoenai": "2026-09-09"
+    "kawaii-to-omoenai": "2026-09-09",
+    "kansouki-jikan-wo-kau": "2026-09-09"
   }
 }

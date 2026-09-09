@@ -63,7 +63,9 @@
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: kansouki-jikan-wo-kau
+  published: '2026-09-09'
 - slug: yakan-dannyu-yattemita-voice
   type: voice
   title_seed: 「夜間断乳やってみた」ブログのリアルと、事実の補正
