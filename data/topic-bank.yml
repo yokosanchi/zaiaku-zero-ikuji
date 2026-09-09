@@ -574,7 +574,6 @@
   - https://www.mext.go.jp/a_menu/kokusai/gaikokugo/
   ref_urls: []
   status: queued
-# --- ステージ補完（妊娠期・未就学・小学生を厚くする。2026-09-10）---
 - slug: tsuwari-nete-bakari-cheer
   type: cheer
   title_seed: つわりで一日中横になっている自分を、責めている人へ
@@ -585,6 +584,7 @@
   - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/boshi-hoken.html
   ref_urls: []
   status: queued
+  stage: ninshin
 - slug: shussan-junbi-atode-ii-basics
   type: basics
   title_seed: 出産準備品、実は「産んでから」買えばいいもの
@@ -594,6 +594,7 @@
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
   status: queued
+  stage: ninshin
 - slug: satogaeri-suru-shinai-voice
   type: voice
   title_seed: 里帰りする・しない、みんなどう決めたか
@@ -603,6 +604,7 @@
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
   status: queued
+  stage: ninshin
 - slug: sns-kanpeki-nyuinbag-trend
   type: trend
   title_seed: SNSの「完璧な入院バッグ」を見て焦っている妊婦さんへ
@@ -612,6 +614,7 @@
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
   status: queued
+  stage: ninshin
 - slug: ninshin-kaji-tayori-service
   type: service
   title_seed: 妊娠中、家事がしんどい時期の宅配・時短の頼り方
@@ -621,6 +624,7 @@
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
   status: queued
+  stage: ninshin
 - slug: shussan-kowai-fuan-cheer
   type: cheer
   title_seed: 出産が怖い、うまく産めるか不安なあなたへ
@@ -631,6 +635,7 @@
   - https://www.mhlw.go.jp/mamorouyokokoro/
   ref_urls: []
   status: queued
+  stage: ninshin
 - slug: toen-shiburi-nukedashi-voice
   type: voice
   title_seed: 登園しぶりで毎朝バトル、そこを抜けた家庭の話
@@ -640,6 +645,7 @@
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
   status: queued
+  stage: age3_pre
 - slug: nando-ittemo-tsutawaranai-cheer
   type: cheer
   title_seed: 何度言っても伝わらない、で消耗している年少〜年長期の親へ
@@ -649,6 +655,7 @@
   - https://www.cfa.go.jp/
   ref_urls: []
   status: queued
+  stage: age3_pre
 - slug: omutsu-torenai-nyuen-basics
   type: basics
   title_seed: おむつが外れないまま入園、でも大丈夫の基本
@@ -659,6 +666,7 @@
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
   status: queued
+  stage: age3_pre
 - slug: sns-happyoukai-dekinai-trend
   type: trend
   title_seed: 「うちの子だけできない」発表会・行事のSNS投稿に落ち込む人へ
@@ -668,6 +676,7 @@
   - https://www.cfa.go.jp/
   ref_urls: []
   status: queued
+  stage: age3_pre
 - slug: tomodachi-tataku-kamitsuku-voice
   type: voice
   title_seed: 友だちを叩く・かみつく、で悩んだ時期にどう対応したか
@@ -678,6 +687,7 @@
   - https://www.jpeds.or.jp/
   ref_urls: []
   status: queued
+  stage: age3_pre
 - slug: hoikuen-ikitakunai-asa-cheer
   type: cheer
   title_seed: 「行きたくない」と泣かれた朝に、後ろ髪を引かれているあなたへ
@@ -687,6 +697,7 @@
   - https://www.cfa.go.jp/
   ref_urls: []
   status: queued
+  stage: age3_pre
 - slug: shou1-no-kabe-hazusu-basics
   type: basics
   title_seed: 小1の壁、まず外していい「完璧」の基本
@@ -697,6 +708,7 @@
   - https://www.cfa.go.jp/
   ref_urls: []
   status: queued
+  stage: gakudo
 - slug: gakudo-houkago-mawashikata-voice
   type: voice
   title_seed: 学童・放課後をどう回したか、共働き家庭の1週間
@@ -707,6 +719,7 @@
   - https://www.mext.go.jp/
   ref_urls: []
   status: queued
+  stage: gakudo
 - slug: ondoku-shukudai-tsurai-cheer
   type: cheer
   title_seed: 音読・宿題チェックがしんどい夜へ
@@ -716,6 +729,7 @@
   - https://www.mext.go.jp/
   ref_urls: []
   status: queued
+  stage: gakudo
 - slug: sns-shougakusei-game-jikan-trend
   type: trend
   title_seed: 「小学生のスマホ・ゲーム時間」論争で疲れたら
@@ -726,6 +740,7 @@
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
   status: queued
+  stage: gakudo
 - slug: gakuyouhin-namae-tsuke-service
   type: service
   title_seed: 学用品・名前つけ・提出物を回すラクな道具
@@ -735,6 +750,7 @@
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
   status: queued
+  stage: gakudo
 - slug: toukou-shiburi-hajimattara-voice
   type: voice
   title_seed: 登校しぶり・行き渋りが始まった時、どうしたか
@@ -745,3 +761,4 @@
   - https://www.cfa.go.jp/
   ref_urls: []
   status: queued
+  stage: gakudo

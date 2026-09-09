@@ -8,7 +8,7 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
 
 | 段 | ファイル | やること |
 | --- | --- | --- |
-| pick_topic | `gen/topic.py` | `data/topic-bank.yml` からローテーション（trend→basics→service→voice→cheer）で1件選ぶ |
+| pick_topic | `gen/topic.py` | ローテーション（trend→basics→service→voice→cheer）でタイプを決め、その中から**記事が不足しているカテゴリ／ステージを優先**して1件選ぶ。バンクが尽きたら不足枠を狙って LLM が起案 |
 | research | `gen/research.py` | `official_sources` を取得して「事実メモ」に要約。`ref_urls`(競合)は**見出し構成だけ**取得（本文は取らない） |
 | draft | `gen/draft.py` + `prompts/draft_<type>.md` | タイプ別プロンプトで下書き（本文は事実メモ根拠の完全オリジナル） |
 | concept_rewrite | `gen/rewrite.py` + `prompts/concept_rewrite.md` | サイトの声へリライト＋**禁止語を機械的に除去**＋**YMYL 危険表現を検出したら公開中止** |
