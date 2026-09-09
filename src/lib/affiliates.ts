@@ -39,5 +39,10 @@ export const AFFILIATES: Record<string, Affiliate> = {
     label: 'Hariti でベビーグッズを見てみる',
     note: '子どもの安全グッズや親の負担を減らすアイテムのショップ。高価な育児用品はレンタルでも試せます。2週間返品保証あり（利用すると成果対象外）。',
   },
+  worldeyekids: {
+    link: 'https://px.a8.net/svt/ejp?a8mat=4BC736+9TNIVU+4MZ4+5YZ77',
+    label: 'ワールドアイキッズの無料体験を見てみる',
+    note: '「楽しさ」を重視した子ども向けオンライン英会話。自宅から、無料で体験できます。',
+  },
   // elmo: { link: '', pixel: '', label: 'ELMO for Family を見てみる' },
 };

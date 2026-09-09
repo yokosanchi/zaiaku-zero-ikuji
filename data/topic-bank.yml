@@ -562,3 +562,13 @@
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
   status: queued
+- slug: online-eikaiwa-erabikata-service
+  type: service
+  title_seed: 子どものオンライン英会話、体験してから決める。楽しく続けられるかの見極め方
+  angle: 始める前提ではなく“合うか試す”／複数の無料体験を受けて子どもの食いつきを比べる／「楽しさ重視」型は英語ぎらいを作りにくい／送迎なし・合わなければやめていい／スクリーンタイムとの兼ね合い
+  category: kurashi
+  affiliate: worldeyekids
+  official_sources:
+  - https://www.mext.go.jp/a_menu/kokusai/gaikokugo/
+  ref_urls: []
+  status: queued
