@@ -93,7 +93,7 @@ def slugify(text: str, fallback: str) -> str:
 
 def unique_slug(base: str) -> str:
     slug, n = base, 2
-    while (BLOG / f"{slug}.md").exists():
+    while (BLOG / f"{slug}.md").exists() or (BLOG / f"{slug}.mdx").exists():
         slug = f"{base}-{n}"
         n += 1
     return slug

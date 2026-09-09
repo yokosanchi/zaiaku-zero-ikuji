@@ -24,6 +24,8 @@ def publish(article: dict, topic: dict, og_image: str, *, model_label: str) -> s
     )
     slug = unique_slug(base)
 
+    affiliate = (topic.get("affiliate") or "").strip()
+
     meta = {
         "title": article["title"],
         "description": article["description"],
@@ -36,9 +38,11 @@ def publish(article: dict, topic: dict, og_image: str, *, model_label: str) -> s
         "heroImage": article.get("heroImage") or "",
         "ogImage": og_image,
         "sources": article.get("sources", []),
-        "author": "編集部",
+        "author": "管理人",
         "generatedBy": f"pipeline {model_label} / {today()}",
     }
+    if affiliate:
+        meta["sponsored"] = True  # BlogPost がファーストビュー付近に PR 表示を出す
     if not meta["sources"]:
         meta.pop("sources")
     if not meta["emoji"]:
@@ -46,9 +50,24 @@ def publish(article: dict, topic: dict, og_image: str, *, model_label: str) -> s
     if not meta["heroImage"]:
         meta.pop("heroImage")
 
-    md = frontmatter(meta) + "\n" + article["body_md"].strip() + "\n"
-    (BLOG / f"{slug}.md").write_text(md, encoding="utf-8")
-    log(f"  publish: src/content/blog/{slug}.md")
+    body = article["body_md"].strip()
+    if affiliate:
+        # .mdx で書き出し、CTA コンポーネントを本文へ差し込む（まとめの直前 / 無ければ末尾）
+        ext = "mdx"
+        cta = f'<AffiliateCTA name="{affiliate}" />'
+        imp = "import AffiliateCTA from '../../components/AffiliateCTA.astro';"
+        marker = "\n## まとめ"
+        if marker in body:
+            body = body.replace(marker, f"\n{cta}\n{marker}", 1)
+        else:
+            body = f"{body}\n\n{cta}"
+        body = f"{imp}\n\n{body}"
+    else:
+        ext = "md"
+
+    md = frontmatter(meta) + "\n" + body + "\n"
+    (BLOG / f"{slug}.{ext}").write_text(md, encoding="utf-8")
+    log(f"  publish: src/content/blog/{slug}.{ext}" + ("  [PR/affiliate]" if affiliate else ""))
 
     # topic-bank を published に
     bank = load_yaml(DATA / "topic-bank.yml") or []
