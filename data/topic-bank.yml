@@ -542,3 +542,23 @@
   - https://www.jpeds.or.jp/
   ref_urls: []
   status: queued
+- slug: takai-babygoods-rental-service
+  type: service
+  title_seed: 高いベビー用品は「買う前に借りる」。合わなかった時の損を減らす
+  angle: ハイローチェア・バウンサー・ベビーカー等“合うか分からない高額品”はレンタルで試す／使う期間が短いものほどレンタル向き／返品保証のある店なら新品購入のハードルも下がる／サイズ・安全基準は購入時と同じく確認
+  category: kurashi
+  affiliate: hariti
+  official_sources:
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+  ref_urls: []
+  status: queued
+- slug: chairbelt-gaishoku-raku-service
+  type: service
+  title_seed: 子ども用の椅子がない場所での食事を、チェアベルトでラクにする
+  angle: 外食・帰省・友人宅で大人用の椅子に子どもを座らせる携帯ベルト／抱っこで食べさせる負担が減る／必ず保護者がそばで見る・椅子の形状と対象月齢を確認・過信しない
+  category: kurashi
+  affiliate: hariti
+  official_sources:
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+  ref_urls: []
+  status: queued

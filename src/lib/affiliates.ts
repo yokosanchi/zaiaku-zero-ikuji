@@ -33,5 +33,11 @@ export const AFFILIATES: Record<string, Affiliate> = {
     label: 'マジカルシェリーを見てみる',
     note: '産後・子育て世代向けの着圧インナー（骨盤まわりをサポートするタイプ）。医療器具ではなく、体の負担をやわらげる道具のひとつです。',
   },
+  hariti: {
+    link: 'https://px.a8.net/svt/ejp?a8mat=4BC6AW+1ZG256+5EV0+5ZEMP',
+    pixel: 'https://www18.a8.net/0.gif?a8mat=4BC6AW+1ZG256+5EV0+5ZEMP',
+    label: 'Hariti でベビーグッズを見てみる',
+    note: '子どもの安全グッズや親の負担を減らすアイテムのショップ。高価な育児用品はレンタルでも試せます。2週間返品保証あり（利用すると成果対象外）。',
+  },
   // elmo: { link: '', pixel: '', label: 'ELMO for Family を見てみる' },
 };
