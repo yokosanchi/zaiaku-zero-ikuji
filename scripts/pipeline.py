@@ -97,6 +97,14 @@ def run_daily(args) -> dict:
     art.setdefault("emoji", d.get("emoji", ""))
     art["sources"] = _dedupe_sources(research["facts"])
 
+    # ガバナンス方針 §2：「対で書く」ルールの未充足は公開を止めず REVIEW.md に記録
+    from gen.guardrails import check_governance
+
+    governance = check_governance(art["title"] + "\n" + art["body_md"])
+    if governance and not args.dry_run:
+        write_review(tp.get("slug", d.get("title", "draft")), [f"ガバナンス確認: {g}" for g in governance])
+        log(f"  ガバナンス: {governance} → REVIEW.md に記録（公開は継続）")
+
     if args.dry_run:
         preview = {k: art.get(k) for k in ("title", "description", "category", "stage", "articleType", "tags", "photo_query", "sources")}
         print(json.dumps(preview, ensure_ascii=False, indent=2))
@@ -139,6 +147,7 @@ def run_daily(args) -> dict:
         "type": art["articleType"],
         "tweet_id": tweet_id,
         "x": x_status,
+        "governance": governance,
         "improve": improve,
     }
 
