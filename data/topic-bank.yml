@@ -531,3 +531,14 @@
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
   status: queued
+- slug: dakko-koshi-tsurai-chakuatsu-service
+  type: service
+  title_seed: 抱っこや授乳で腰・骨盤まわりがつらい時期の、体をラクにする道具
+  angle: 体型を戻さなきゃ、ではなく“つらい部位をラクにする”枠／着圧インナー(骨盤サポート型)は選択肢の一つ／医療器具ではない・効果に個人差・痛みが続くなら整形外科や産婦人科へ・産褥期は医師に相談／痩せる・歪みを治すとは書かない
+  category: kurashi
+  affiliate: magicalsherry
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.jpeds.or.jp/
+  ref_urls: []
+  status: queued

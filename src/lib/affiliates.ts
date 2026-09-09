@@ -27,5 +27,11 @@ export const AFFILIATES: Record<string, Affiliate> = {
     label: 'NovaKid の無料お試しレッスンを見てみる',
     note: '4〜12歳向けのオンライン英会話。自宅から、都合のいい時間に。まずは無料で1回試せます。',
   },
+  magicalsherry: {
+    link: 'https://px.a8.net/svt/ejp?a8mat=4BC6AW+218CYI+43OO+15P77L',
+    pixel: 'https://www16.a8.net/0.gif?a8mat=4BC6AW+218CYI+43OO+15P77L',
+    label: 'マジカルシェリーを見てみる',
+    note: '産後・子育て世代向けの着圧インナー（骨盤まわりをサポートするタイプ）。医療器具ではなく、体の負担をやわらげる道具のひとつです。',
+  },
   // elmo: { link: '', pixel: '', label: 'ELMO for Family を見てみる' },
 };
