@@ -13,3 +13,5 @@
 - 2026-09-08 🔧 点検 `hikakutte-shimau-hi-cheer` — 問題なし
 - 2026-09-08 ➕ 新規 `sns-wanope-timeline` (trend / kokoro) — SNSのワンオペ密着動画を見て落ち込む人へ。完璧と比べなくて大丈夫な理由
 - 2026-09-08 🔧 点検 `nentore-shinai` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-09 ➕ 新規 `rinyushoku-hajimekata-kihon` (basics / gohan) — 離乳食の始めどきと最初のひとさじ｜肩の力を抜いていい基本
+- 2026-09-09 🔧 点検 `kawaii-to-omoenai` — 問題なし（導入を軽くリライト・updatedDate 更新）

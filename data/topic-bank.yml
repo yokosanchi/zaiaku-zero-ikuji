@@ -19,7 +19,9 @@
   - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: rinyushoku-hajimekata-kihon
+  published: '2026-09-09'
 - slug: sns-neteru-aida-ni-kaji
   type: trend
   title_seed: 「子が寝てる間に家事」ができない問題
