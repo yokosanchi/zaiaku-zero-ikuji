@@ -185,7 +185,7 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
   **どちらの経路でも必ず画像を返す。絵文字だけのサムネは禁止。**
 - **publish**：`src/content/blog/<slug>.md` を書き出し、`topic-bank` / `data/state.json` / `data/improvement-log.md` を更新。
 - **X 投稿**（任意）：`scripts/gen/post_x.py`。`X_API_KEY`/`X_API_SECRET`/`X_ACCESS_TOKEN`/`X_ACCESS_SECRET` が4つ揃うと、公開直後に X へ自動ポスト（OAuth1.0a、標準ライブラリのみ）。無ければスキップ。`--no-x` で無効化。文面は `compose_tweet`（275字重み以内）。MOCK 実行時は投稿しない。
-- **improve**：毎回、既存記事を1本点検（リンク・画像切れ）。`IMPROVE_MODE=full` で軽い推敲も。
+- **improve**：毎回、既存記事を1本点検（リンク・画像切れ）＋ `full` で導入を軽くリライト。**`category: sango`（産後うつ）は LLM リライト対象外**（点検のみ）。
 
 ガードレール（`scripts/gen/guardrails.py`）：§4 の禁止語＋§5 の YMYL ハザード。
 **YMYL 検出時は公開せず**、リポジトリ直下 `REVIEW.md` に積んで人間に回す（当日は「見送り」）。

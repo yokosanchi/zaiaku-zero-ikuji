@@ -103,7 +103,10 @@ def daily_improve(mode: str = "full") -> dict:
 
     issues = _link_check(text)
     changed = False
-    if mode == "full" and not issues:
+    # YMYL 最重要カテゴリ（産後うつ）は LLM リライトの対象外。リンク点検のみ。
+    fm = text.split("---", 2)[1] if text.startswith("---") else ""
+    ymyl_locked = bool(re.search(r'^category:\s*"?sango"?\s*$', fm, re.M))
+    if mode == "full" and not issues and not ymyl_locked:
         edited = _editor_pass(text)
         if edited and edited != text:
             target.write_text(edited, encoding="utf-8")
@@ -115,6 +118,8 @@ def daily_improve(mode: str = "full") -> dict:
     if issues:
         write_review(slug, [f"{slug}: {i}" for i in issues])
         append_log(f"🔧 点検 `{slug}` — 要確認: {'; '.join(issues)}")
+    elif ymyl_locked:
+        append_log(f"🔧 点検 `{slug}` — 問題なし（産後うつカテゴリのためリライトは行わず）")
     else:
         append_log(f"🔧 点検 `{slug}` — 問題なし{'（導入を軽くリライト・updatedDate 更新）' if changed else ''}")
 
