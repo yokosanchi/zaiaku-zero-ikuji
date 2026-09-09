@@ -574,3 +574,174 @@
   - https://www.mext.go.jp/a_menu/kokusai/gaikokugo/
   ref_urls: []
   status: queued
+# --- ステージ補完（妊娠期・未就学・小学生を厚くする。2026-09-10）---
+- slug: tsuwari-nete-bakari-cheer
+  type: cheer
+  title_seed: つわりで一日中横になっている自分を、責めている人へ
+  angle: つわりの重さは人それぞれ／動けない時期があって当然／家事は削っていい・頼っていい／体を守ることが最優先
+  category: kokoro
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/boshi-hoken.html
+  ref_urls: []
+  status: queued
+- slug: shussan-junbi-atode-ii-basics
+  type: basics
+  title_seed: 出産準備品、実は「産んでから」買えばいいもの
+  angle: 事前に要る最小限と、様子を見て買えばよいもの／レンタルで足りるもの／SNSの完璧リストに合わせない／退院後にネット注文で間に合う
+  category: kurashi
+  official_sources:
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+  ref_urls: []
+  status: queued
+- slug: satogaeri-suru-shinai-voice
+  type: voice
+  title_seed: 里帰りする・しない、みんなどう決めたか
+  angle: 正解はない／それぞれのメリットと大変さ／里帰りしない場合の支援(産後ケア・家事代行)／夫婦で決めていい
+  category: kokoro
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+  ref_urls: []
+  status: queued
+- slug: sns-kanpeki-nyuinbag-trend
+  type: trend
+  title_seed: SNSの「完璧な入院バッグ」を見て焦っている妊婦さんへ
+  angle: 病院の売店・貸出でどうにかなる／本当に要るものは少数／映えるパッキングは非日常／足りなければ家族に届けてもらえる
+  category: kurashi
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+  ref_urls: []
+  status: queued
+- slug: ninshin-kaji-tayori-service
+  type: service
+  title_seed: 妊娠中、家事がしんどい時期の宅配・時短の頼り方
+  angle: 重いもの運び・立ち仕事を減らす／ネットスーパー・食材宅配・家事代行を早めに試す／つわり期は食べられるものだけでいい
+  category: kurashi
+  official_sources:
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+  ref_urls: []
+  status: queued
+- slug: shussan-kowai-fuan-cheer
+  type: cheer
+  title_seed: 出産が怖い、うまく産めるか不安なあなたへ
+  angle: 怖いと思って当然／不安は産科スタッフに具体的に相談していい／バースプランは希望であって義務ではない／どんなお産でも十分がんばっている
+  category: kokoro
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.mhlw.go.jp/mamorouyokokoro/
+  ref_urls: []
+  status: queued
+- slug: toen-shiburi-nukedashi-voice
+  type: voice
+  title_seed: 登園しぶりで毎朝バトル、そこを抜けた家庭の話
+  angle: よくある時期として一般化／慣れるまでの幅／連絡帳より口頭で相談／親の罪悪感に線を引く／数週間〜数か月で落ち着く例
+  category: kokoro
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+  ref_urls: []
+  status: queued
+- slug: nando-ittemo-tsutawaranai-cheer
+  type: cheer
+  title_seed: 何度言っても伝わらない、で消耗している年少〜年長期の親へ
+  angle: この時期は伝わらなくて当たり前／短く・具体的に・一度に一つ／できない日は仕切り直す／親の忍耐の問題ではない
+  category: kokoro
+  official_sources:
+  - https://www.cfa.go.jp/
+  ref_urls: []
+  status: queued
+- slug: omutsu-torenai-nyuen-basics
+  type: basics
+  title_seed: おむつが外れないまま入園、でも大丈夫の基本
+  angle: 完了時期の幅は広い／園と連携して進める／後戻りは失敗ではない／焦らせないことが結果的に近道
+  category: hatsuiku
+  official_sources:
+  - https://www.jpeds.or.jp/
+  - https://www.cfa.go.jp/policies/boshihoken
+  ref_urls: []
+  status: queued
+- slug: sns-happyoukai-dekinai-trend
+  type: trend
+  title_seed: 「うちの子だけできない」発表会・行事のSNS投稿に落ち込む人へ
+  angle: 切り取りと比べない／園行事での姿は一場面／発達には幅がある／できた・できないより、参加できたことを見る
+  category: sns
+  official_sources:
+  - https://www.cfa.go.jp/
+  ref_urls: []
+  status: queued
+- slug: tomodachi-tataku-kamitsuku-voice
+  type: voice
+  title_seed: 友だちを叩く・かみつく、で悩んだ時期にどう対応したか
+  angle: 言葉が追いつかない時期に出やすい／その場で短く止める＋落ち着いてから話す／園と情報共有／親を責めない
+  category: kokoro
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+  - https://www.jpeds.or.jp/
+  ref_urls: []
+  status: queued
+- slug: hoikuen-ikitakunai-asa-cheer
+  type: cheer
+  title_seed: 「行きたくない」と泣かれた朝に、後ろ髪を引かれているあなたへ
+  angle: 泣くのは愛着が育っている証とされる／園で切り替えている子は多い／自分の罪悪感に線を引く／今日も連れて行けたら十分
+  category: kokoro
+  official_sources:
+  - https://www.cfa.go.jp/
+  ref_urls: []
+  status: queued
+- slug: shou1-no-kabe-hazusu-basics
+  type: basics
+  title_seed: 小1の壁、まず外していい「完璧」の基本
+  angle: 学童・預け先の選択肢／持ち物と提出物は仕組みで／親が全部やらない移行期／学校と共有していい家庭事情
+  category: kurashi
+  official_sources:
+  - https://www.mext.go.jp/
+  - https://www.cfa.go.jp/
+  ref_urls: []
+  status: queued
+- slug: gakudo-houkago-mawashikata-voice
+  type: voice
+  title_seed: 学童・放課後をどう回したか、共働き家庭の1週間
+  angle: 民間学童・ファミサポ・習い事の送迎問題／全部やらない割り切り／子どもと相談して決める／長期休みの昼ごはん
+  category: wanope
+  official_sources:
+  - https://www.cfa.go.jp/
+  - https://www.mext.go.jp/
+  ref_urls: []
+  status: queued
+- slug: ondoku-shukudai-tsurai-cheer
+  type: cheer
+  title_seed: 音読・宿題チェックがしんどい夜へ
+  angle: 毎日完璧に見なくていい／できない日は先生に一言／親の関わりが薄い日があっても学力は決まらない／今日の自分を責めない
+  category: kokoro
+  official_sources:
+  - https://www.mext.go.jp/
+  ref_urls: []
+  status: queued
+- slug: sns-shougakusei-game-jikan-trend
+  type: trend
+  title_seed: 「小学生のスマホ・ゲーム時間」論争で疲れたら
+  angle: 家庭ごとに合う形が違う／時間のメリハリと中身の選定／頭ごなしに取り上げない／親も一緒にルールを決める
+  category: sns
+  official_sources:
+  - https://www.mext.go.jp/
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+  ref_urls: []
+  status: queued
+- slug: gakuyouhin-namae-tsuke-service
+  type: service
+  title_seed: 学用品・名前つけ・提出物を回すラクな道具
+  angle: お名前スタンプ・シール／提出物の定位置／朝の支度チェック表／“判断の回数”を減らす
+  category: kurashi
+  official_sources:
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+  ref_urls: []
+  status: queued
+- slug: toukou-shiburi-hajimattara-voice
+  type: voice
+  title_seed: 登校しぶり・行き渋りが始まった時、どうしたか
+  angle: 無理に行かせない選択も／担任・スクールカウンセラー・教育支援センターへ相談／原因を一つに決めない／親が抱え込まない
+  category: kokoro
+  official_sources:
+  - https://www.mext.go.jp/
+  - https://www.cfa.go.jp/
+  ref_urls: []
+  status: queued
