@@ -56,52 +56,62 @@ def _font(size: int):
         return ImageFont.truetype(p, size, index=0)
 
 
-# ---------------------------------------------------------------- 見出しの折り返し
-def _greedy_wrap(text: str, n: int, max_lines: int = 3) -> list[str]:
-    prefer = set("、。，．・！？!?」』）)")
+# ---------------------------------------------------------------- 見出しの折り返し（実測ベース）
+# 折り返してよい区切り（この直後で改行できる）。句読点・助詞・閉じ括弧など。
+_BREAK_AFTER = set("、。，．・！？!?」』）)】〕〉》")
+_BREAK_BEFORE = set("「『（(【〔〈《")
+
+
+def _wrap_measured(draw, text: str, font, max_w: int, max_lines: int) -> list[str] | None:
+    """font で描いたとき各行が max_w 以内に収まるよう折り返す。
+    max_lines を超える／1文字も入らない場合は None。"""
     lines: list[str] = []
     cur = ""
-    i = 0
-    while i < len(text):
-        cur += text[i]
-        i += 1
-        if len(cur) >= n and (text[i - 1] in prefer or len(cur) >= n + 2):
-            lines.append(cur.strip())
-            cur = ""
-            if len(lines) >= max_lines:
-                break
-    if cur and len(lines) < max_lines:
-        lines.append(cur.strip())
-        cur = ""
-    if i < len(text):
-        rest = (cur + text[i:]).strip()
-        if lines:
-            lines[-1] = (lines[-1] + rest)[: n - 1].rstrip() + "…"
-        else:
-            lines = [rest[: n - 1] + "…"]
-    return [ln for ln in lines if ln]
+    for ch in text:
+        trial = cur + ch
+        if draw.textlength(trial, font=font) <= max_w:
+            cur = trial
+            continue
+        # cur が現在行。区切りの良い位置まで戻して改行する
+        cut = cur
+        if cur and cur[-1] not in _BREAK_AFTER and ch not in _BREAK_BEFORE:
+            for k in range(len(cur) - 1, max(0, len(cur) - 8), -1):
+                if cur[k - 1] in _BREAK_AFTER or cur[k] in _BREAK_BEFORE:
+                    cut = cur[:k]
+                    break
+        rest = cur[len(cut):] + ch
+        if not cut:  # 1文字も入らない
+            return None
+        lines.append(cut)
+        cur = rest
+        if len(lines) >= max_lines:
+            # まだ文字が残る → 最終行を省略記号で締める
+            remaining = cur + text[text.index(ch) + 1:] if ch in text else cur
+            last = lines[-1]
+            while last and draw.textlength(last + "…", font=font) > max_w:
+                last = last[:-1]
+            lines[-1] = (last + "…") if remaining.strip() else last
+            return lines
+    if cur:
+        lines.append(cur)
+    return lines[:max_lines] if lines else None
 
 
-def _balance2(text: str) -> list[str]:
-    mid = len(text) // 2
-    good = set("、。，・！？!?」』）)")
-    particle = set("はがをにでとへやもの")
-    for off in range(0, mid - 2):
-        for j in (mid - off, mid + off):
-            if 4 <= j <= len(text) - 4 and (text[j - 1] in good or text[j - 1] in particle):
-                return [text[:j].strip(), text[j:].strip()]
-    return [text[:mid].strip(), text[mid:].strip()]
-
-
-def _layout(headline: str) -> tuple[list[str], int]:
-    text = headline.replace("\n", " ").strip()
-    for chars, fs in ((14, 66), (16, 58), (19, 52), (23, 44)):
-        lines = _greedy_wrap(text, chars, max_lines=3)
-        if lines and max(len(ln) for ln in lines) <= chars + 1:
-            if len(lines) == 1 and len(lines[0]) >= 15:
-                return _balance2(lines[0]), 58
-            return lines, fs
-    return _greedy_wrap(text, 23, max_lines=3), 44
+def _layout_card(draw, headline: str, max_w: int, max_h: int):
+    """収まる中で最大のフォントサイズと行を返す。必ず max_w×max_h に収める。"""
+    text = " ".join(headline.split())
+    for fs in (66, 60, 54, 48, 44, 40, 36, 32):
+        font = _font(fs)
+        lines = _wrap_measured(draw, text, font, max_w, max_lines=3)
+        if not lines:
+            continue
+        lh = int(fs * 1.34)
+        if lh * len(lines) <= max_h and all(draw.textlength(ln, font=font) <= max_w for ln in lines):
+            return lines, fs, lh
+    # 最小でも収まらない（極端に長い）→ 32px で3行に強制詰め
+    font = _font(32)
+    lines = _wrap_measured(draw, text, font, max_w, max_lines=3) or [text[:20] + "…"]
+    return lines, 32, 43
 
 
 # ---------------------------------------------------------------- カード描画（Pillow）
@@ -119,18 +129,32 @@ def _render_card(slug: str, headline: str, sub: str, accent: str) -> str:
     d.ellipse((-40, 380, 320, 740), fill=(255, 255, 255, 100))
     d.rounded_rectangle((56, 56, 1144, 574), radius=48, fill="#FFFFFF")
 
-    d.text((100, 120), sub.strip(), font=_font(34), fill=ink)
+    # レイアウト定数（白パネル内の描画可能域）
+    PAD_L = 104
+    TEXT_W = 992  # 104 〜 1096
+    SUB_Y = 118
+    SITE_Y = 498
+    HEAD_TOP = SUB_Y + 66
+    HEAD_BOTTOM = SITE_Y - 24  # 見出しはこの範囲に必ず収める
 
-    lines, fs = _layout(headline)
-    lh = int(fs * 1.36)
-    y = 315 - lh * (len(lines) - 1) // 2 - fs // 2
+    # サブ（タイプ名）— 長すぎたら縮める
+    sub = " ".join((sub or "").split())
+    sf = _font(32)
+    while sub and d.textlength(sub, font=sf) > TEXT_W:
+        sub = sub[:-1]
+    d.text((PAD_L, SUB_Y), sub, font=sf, fill=ink)
+
+    # 見出し — 実測で必ず枠内に収める
+    lines, fs, lh = _layout_card(d, headline, TEXT_W, HEAD_BOTTOM - HEAD_TOP)
     hf = _font(fs)
+    block_h = lh * len(lines)
+    y = HEAD_TOP + max(0, (HEAD_BOTTOM - HEAD_TOP - block_h) // 2)
     for ln in lines:
-        d.text((100, y), ln, font=hf, fill=_HEAD)
+        d.text((PAD_L, y), ln, font=hf, fill=_HEAD)
         y += lh
 
-    d.rounded_rectangle((100, 500, 118, 518), radius=5, fill=ink)
-    d.text((132, 496), "罪悪感ゼロ育児", font=_font(30), fill=_SITE)
+    d.rounded_rectangle((PAD_L, SITE_Y + 2, PAD_L + 18, SITE_Y + 20), radius=5, fill=ink)
+    d.text((PAD_L + 32, SITE_Y - 2), "罪悪感ゼロ育児", font=_font(30), fill=_SITE)
 
     THUMBS.mkdir(parents=True, exist_ok=True)
     out = THUMBS / f"{slug}.png"
