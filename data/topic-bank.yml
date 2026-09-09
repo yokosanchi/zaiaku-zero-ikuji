@@ -130,7 +130,8 @@
   - https://www.cfa.go.jp/policies/boshihoken
   - https://www.mhlw.go.jp/mamorouyokokoro/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: sanpu-kenshin-epds
 - slug: kawaii-to-omoenai-cheer
   type: cheer
   title_seed: 赤ちゃんを「かわいい」と思えない自分を責めている人へ
@@ -150,7 +151,8 @@
   - https://www.mhlw.go.jp/mamorouyokokoro/soudan/
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: sango-kaifuku-taikendan
 - slug: wanope-genkai-trend
   type: trend
   title_seed: 「ワンオペ限界」の投稿がバズる、そこから抜け出す現実的な道
