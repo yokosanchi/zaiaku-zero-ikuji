@@ -711,8 +711,8 @@
   stage: gakudo
 - slug: gakudo-houkago-mawashikata-voice
   type: voice
-  title_seed: 学童・放課後をどう回したか、共働き家庭の1週間
-  angle: 民間学童・ファミサポ・習い事の送迎問題／全部やらない割り切り／子どもと相談して決める／長期休みの昼ごはん
+  title_seed: 学童の長期休み、昼ごはんと預け先をどう回したか
+  angle: 弁当・昼食問題／午前だけ・午後だけの預け先／習い事の送迎をどう回すか／全部やらない割り切り
   category: wanope
   official_sources:
   - https://www.cfa.go.jp/
@@ -983,3 +983,64 @@
   official_sources:
   - https://www.cfa.go.jp/policies/jidougyakutai
   published_slug: kizutsuketa-to-kizuitara-soudan
+- slug: wanope-yoru-jibun-jikan-zero
+  type: basics
+  stage: age1_2
+  category: wanope
+  status: queued
+  ref_urls: []
+  title_seed: ワンオペの夜、寝かしつけ後に自分の時間がゼロになる問題
+  angle: 寝落ち前提で1日を組む／夜にやることを昼や翌朝に移す／完璧な家では回らない前提を共有／5分でも意識的に確保
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+- slug: wanope-tanshin-funin-shucchou
+  type: voice
+  stage: age1_2
+  category: wanope
+  status: queued
+  ref_urls: []
+  title_seed: パートナーの単身赴任・長期出張中、ワンオペをどう乗り切ったか
+  angle: 期間限定と割り切る／要求水準を全部下げる／宅配とベビーシッター・一時預かりを先に手配／頼る前提で設計
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+- slug: wanope-hatsunetsu-ji-kea
+  type: basics
+  stage: age1_2
+  category: wanope
+  status: queued
+  ref_urls: []
+  title_seed: ワンオペで子どもが発熱、自分も限界の時のケアの回し方
+  angle: 受診の目安（機嫌・水分・呼吸）と#8000／自分の体調も守る／病児保育・ファミサポの事前登録／無理に家事はしない
+  official_sources:
+  - https://www.jpeds.or.jp/
+  - https://www.mhlw.go.jp/topics/kodomo/kyukyu/
+- slug: wanope-2nin-ikuji-mawashikata
+  type: basics
+  stage: age0
+  category: wanope
+  status: queued
+  ref_urls: []
+  title_seed: ワンオペ2人育児（上の子＋新生児）を回す最低ライン
+  angle: 上の子の赤ちゃん返りは想定内／同時に泣いても順番でいい／上の子優先の時間を短くつくる／宅配・時短家電フル活用
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+- slug: wanope-tayoru-yotei-ni-ireru
+  type: cheer
+  stage: age0
+  category: wanope
+  status: queued
+  ref_urls: []
+  title_seed: ワンオペの「頼る」を、罪悪感なく予定に組み込む
+  angle: 休息は必要経費／限界が来てからでは遅い／週1で預ける枠を先にカレンダーに入れる／頼るのは家族を守る行動
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+- slug: wanope-gaishoku-gaisyutsu-genjitsu
+  type: voice
+  stage: age1_2
+  category: wanope
+  status: queued
+  ref_urls: []
+  title_seed: 子ども連れワンオペの外食・外出、みんなどうしてる
+  angle: 期待値を下げる／キッズスペースやフードコートを選ぶ／滞在は短く／うまくいかなくても外に出られたら十分
+  official_sources:
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
