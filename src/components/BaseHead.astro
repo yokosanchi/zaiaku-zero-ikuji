@@ -4,14 +4,58 @@ interface Props {
   description: string;
   image?: string;
   ogImage?: string;
+  /** 記事ページのとき、構造化データ用のメタ */
+  article?: {
+    datePublished?: string;
+    dateModified?: string;
+    section?: string;
+    tags?: string[];
+  };
 }
 
-const { title, description, image, ogImage } = Astro.props;
+const { title, description, image, ogImage, article } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const siteName = '罪悪感ゼロ育児';
 const fullTitle = title === siteName ? title : `${title}｜${siteName}`;
 const share = ogImage ?? image;
 const shareURL = share ? new URL(share, Astro.site).href : undefined;
+const origin = Astro.site?.origin ?? 'https://zaiaku-zero-ikuji.pages.dev';
+
+const publisher = {
+  '@type': 'Organization',
+  name: siteName,
+  url: origin,
+  logo: { '@type': 'ImageObject', url: `${origin}/favicon.svg` },
+};
+
+const jsonLd: unknown[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteName,
+    url: origin,
+    inLanguage: 'ja',
+  },
+  { '@context': 'https://schema.org', ...publisher },
+];
+
+if (article) {
+  jsonLd.push({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    inLanguage: 'ja',
+    mainEntityOfPage: canonicalURL.href,
+    ...(shareURL ? { image: shareURL } : {}),
+    ...(article.datePublished ? { datePublished: article.datePublished } : {}),
+    ...(article.dateModified ? { dateModified: article.dateModified } : {}),
+    ...(article.section ? { articleSection: article.section } : {}),
+    ...(article.tags?.length ? { keywords: article.tags.join(', ') } : {}),
+    author: { '@type': 'Person', name: '管理人', url: `${origin}/about` },
+    publisher,
+  });
+}
 ---
 
 <meta charset="utf-8" />
@@ -33,6 +77,12 @@ const shareURL = share ? new URL(share, Astro.site).href : undefined;
 <meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={description} />
 {shareURL && <meta name="twitter:image" content={shareURL} />}
+
+{
+  jsonLd.map((obj) => (
+    <script type="application/ld+json" set:html={JSON.stringify(obj)} />
+  ))
+}
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

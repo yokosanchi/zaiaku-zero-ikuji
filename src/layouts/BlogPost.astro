@@ -58,6 +58,14 @@ const share = {
   description={description}
   image={heroImage}
   ogImage={ogImage}
+  article={{
+    datePublished: pubDate.toISOString(),
+    dateModified: new Date(
+      Math.max(pubDate.getTime(), (updatedDate ?? pubDate).getTime())
+    ).toISOString(),
+    section: cat.label,
+    tags,
+  }}
 >
   <article class="mx-auto max-w-2xl px-5">
     <div class="relative">
@@ -247,11 +255,18 @@ const share = {
       </p>
     </aside>
 
-    <p class="mt-6 text-xs leading-relaxed text-ink-soft/80">
-      ※
-      この記事の内容は情報提供を目的としたものです。気になる症状や不安があるときは、かかりつけ医・お住まいの自治体の相談窓口をご利用ください。記事内のリンクには広告を含む場合があります。
-      {generatedBy && <span>この記事は管理人の方針にそって作成し、公開前に禁止表現・安全性のチェックを通しています（{generatedBy}）。</span>}
-    </p>
+    <div class="mt-6 rounded-2xl bg-cream-deep/60 p-4 text-xs leading-relaxed text-ink-soft/90">
+      <p class="font-bold text-ink-soft">書き手と、つくり方</p>
+      <p class="mt-1">
+        書き手：<a href="/about" class="underline">管理人</a>（身体に障害を負い、家族のために「知っておきたかった育児情報」をまとめている運営者）。
+        記事はこども家庭庁・厚生労働省・日本小児科学会などの公的情報と、当事者のリアルな声をもとに作成し、公開前に
+        <a href="/about" class="underline">禁止表現・医療/安全リスク・ガバナンス方針</a>のチェックを通しています。
+        更新頻度を保つため作成の一部を自動化していますが、方針とチェック基準は管理人が決めています{generatedBy && <span>（{generatedBy}）</span>}。
+      </p>
+      <p class="mt-2">
+        ※ 本記事は情報提供が目的で、診断や治療にかわるものではありません。気になる症状や不安があるときは、かかりつけ医・お住まいの自治体の相談窓口をご利用ください。記事内のリンクには広告を含む場合があります。
+      </p>
+    </div>
 
     <section class="mt-8">
       <p class="font-heading text-sm font-bold text-ink">この記事をシェア</p>

@@ -9,9 +9,15 @@ interface Props {
   description: string;
   image?: string;
   ogImage?: string;
+  article?: {
+    datePublished?: string;
+    dateModified?: string;
+    section?: string;
+    tags?: string[];
+  };
 }
 
-const { title, description, image, ogImage } = Astro.props;
+const { title, description, image, ogImage, article } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,6 +28,7 @@ const { title, description, image, ogImage } = Astro.props;
       description={description}
       image={image}
       ogImage={ogImage}
+      article={article}
     />
   </head>
   <body class="flex min-h-screen flex-col overflow-x-hidden">
