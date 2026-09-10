@@ -605,8 +605,10 @@
   - https://www.cfa.go.jp/policies/boshihoken
   - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/boshi-hoken.html
   ref_urls: []
-  status: queued
+  status: published
   stage: ninshin
+  published_slug: tsuwari-nete-bakari-cheer
+  published: '2026-09-10'
 - slug: shussan-junbi-atode-ii-basics
   type: basics
   title_seed: 出産準備品、実は「産んでから」買えばいいもの

@@ -1,5 +1,5 @@
 {
-  "rotation_index": 9,
+  "rotation_index": 10,
   "last_run": "2026-09-10",
   "published": [
     {
@@ -55,6 +55,12 @@
       "type": "voice",
       "category": "kokoro",
       "date": "2026-09-10"
+    },
+    {
+      "slug": "tsuwari-nete-bakari-cheer",
+      "type": "cheer",
+      "category": "kokoro",
+      "date": "2026-09-10"
     }
   ],
   "improve": {
@@ -66,6 +72,7 @@
     "nentore-shinai": "2026-09-08",
     "kawaii-to-omoenai": "2026-09-09",
     "kansouki-jikan-wo-kau": "2026-09-09",
-    "aujiru-torianezu-basics": "2026-09-10"
+    "aujiru-torianezu-basics": "2026-09-10",
+    "gohan-tekitou-datta-hi-cheer": "2026-09-10"
   }
 }

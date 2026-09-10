@@ -19,3 +19,5 @@
 - 2026-09-09 🔧 点検 `kansouki-jikan-wo-kau` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-10 ➕ 新規 `satogaeri-suru-shinai-voice` (voice / kokoro) — 里帰りする？しない？どちらを選んでも大丈夫｜夫婦で選ぶ安心の準備
 - 2026-09-10 🔧 点検 `aujiru-torianezu-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-10 ➕ 新規 `tsuwari-nete-bakari-cheer` (cheer / kokoro) — つわりで一日中横になっている自分を責めているあなたへ
+- 2026-09-10 🔧 点検 `gohan-tekitou-datta-hi-cheer` — 問題なし（導入を軽くリライト・updatedDate 更新）
