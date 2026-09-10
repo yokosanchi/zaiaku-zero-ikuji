@@ -20,6 +20,10 @@ class LLMError(Exception):
     pass
 
 
+class LLMRateLimited(LLMError):
+    """無料枠の1日上限など、時間をおけば回復する 429。ジョブを赤にしない扱いにする。"""
+
+
 def is_mock() -> bool:
     return os.environ.get("PIPELINE_MOCK") == "1" or not os.environ.get("GEMINI_API_KEY")
 
@@ -83,6 +87,8 @@ def generate(prompt: str, *, system: str | None = None, json_mode: bool = False,
         except (urllib.error.URLError, TimeoutError) as e:  # noqa: PERF203
             last = str(e)
             time.sleep(min(2 ** attempt, 30))
+    if "HTTP 429" in last:
+        raise LLMRateLimited(f"LLM rate limited: {last}")
     raise LLMError(f"LLM failed after retries: {last}")
 
 

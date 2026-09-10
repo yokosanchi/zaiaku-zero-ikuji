@@ -240,8 +240,15 @@ def main() -> None:
         else:
             out = run_daily(args)
     except Exception as e:  # noqa: BLE001
-        traceback.print_exc()
-        out = {"result": "error", "error": str(e)}
+        from gen.llm import LLMRateLimited
+
+        if isinstance(e, LLMRateLimited):
+            # 無料枠の1日上限。時間をおけば回復するのでジョブは赤にしない
+            log("Gemini の無料枠上限に達しました。次回の実行で回復します（今回は何もしません）。")
+            out = {"result": "rate_limited", "detail": str(e)[:200]}
+        else:
+            traceback.print_exc()
+            out = {"result": "error", "error": str(e)}
 
     save_json(DATA / "last_result.json", {**out, "model": model_label(), "at": today()})
     print("PIPELINE_RESULT=" + json.dumps(out, ensure_ascii=False))

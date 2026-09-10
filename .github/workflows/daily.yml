@@ -2,9 +2,7 @@ name: daily-article
 
 on:
   schedule:
-    # 各カテゴリ10本まで積み増し中は 1日3本。埋まったら朝夕2本へ戻す。
     - cron: "0 21 * * *" # 毎日 06:00 JST（UTC+9）
-    - cron: "0 3 * * *"  # 毎日 12:00 JST（UTC+9）
     - cron: "0 9 * * *"  # 毎日 18:00 JST（UTC+9）
   workflow_dispatch:
     inputs:
@@ -81,6 +79,9 @@ jobs:
           if [ "$R" = "error" ]; then
             echo "::error::パイプラインでエラー。ログを確認してください。"
             exit 1
+          fi
+          if [ "$R" = "rate_limited" ]; then
+            echo "::warning::Gemini の無料枠上限に達したため今回は記事を作りませんでした。次回の実行で回復します。"
           fi
           if [ "$X" = "no_keys" ]; then
             echo "::warning::X 投稿キー4種が未設定のため投稿をスキップしました（記事公開には影響なし）。"
