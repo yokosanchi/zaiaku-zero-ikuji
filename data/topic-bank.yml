@@ -625,8 +625,10 @@
   official_sources:
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: published
   stage: ninshin
+  published_slug: satogaeri-suru-shinai-voice
+  published: '2026-09-10'
 - slug: sns-kanpeki-nyuinbag-trend
   type: trend
   title_seed: SNSの「完璧な入院バッグ」を見て焦っている妊婦さんへ
@@ -1072,19 +1074,153 @@
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   published_slug: wanope-gaishoku-gaisyutsu-genjitsu
-# --- 差別化コンテンツ増（バズ考察の構造分析・管理人視点。2026-09-10）---
-- {slug: sns-wanope-genkai-naze-bazuru, type: trend, category: sns, stage: age0, status: queued, ref_urls: [], title_seed: なぜ「ワンオペ限界」の投稿は毎回バズるのか、構造で読む, angle: 共感で終わらせず「なぜ拡散するか」を分析／孤立の構造・共有される痛み・変わらない社会／読者が巻き込まれず情報だけ持ち帰る方法, official_sources: [https://www.cfa.go.jp/policies/boshihoken]}
-- {slug: sns-kosodate-tataki-shikumi, type: trend, category: sns, stage: age1_2, status: queued, ref_urls: [], title_seed: 「子育て叩き」がSNSで燃える仕組みと、巻き込まれない距離, angle: 正義感・切り取り・アルゴリズムが燃料／当事者が消耗するだけの構図／通知を切る・反応しない・見る時間を決める, official_sources: [https://www.cfa.go.jp/]}
-- {slug: sns-lifehack-sono-katei-dakara, type: trend, category: sns, stage: age1_2, status: queued, ref_urls: [], title_seed: バズる育児ライフハックの多くが「その家庭だから」回る理由, angle: 住環境・きょうだい構成・親の働き方が前提として抜けている／再現できなくて当然／自分の条件に合うものだけ拾う, official_sources: [https://www.cfa.go.jp/]}
-- {slug: sns-kanpeki-na-ichinichi-uragawa, type: trend, category: sns, stage: age0, status: queued, ref_urls: [], title_seed: インフルエンサーの「完璧な1日」が非日常な理由、撮影と編集の話, angle: 撮れた瞬間だけが投稿される／段取り・小道具・複数テイク／日常の8割は映さない／比較対象として不適切, official_sources: [https://www.cfa.go.jp/]}
-- {slug: sns-hikaku-no-rensa-tachikata, type: trend, category: sns, stage: age1_2, status: queued, ref_urls: [], title_seed: 「#育児垢」で見かける比較の連鎖と、その断ち方, angle: 比較→不安→さらに検索→さらに比較のループ／フォロー整理・ミュート・見る時間の固定／情報は公的サイトから直接, official_sources: [https://www.cfa.go.jp/]}
-- {slug: sns-enjou-toukou-kara-manabu, type: trend, category: sns, stage: age1_2, status: queued, ref_urls: [], title_seed: 炎上した育児投稿から学ぶ、書いてはいけない一線, angle: 他者下げ・安全軽視の断定・専門家領域の言い切り／自分が発信する時のチェックリスト／このサイトの方針とも重なる, official_sources: [https://www.cfa.go.jp/]}
-- {slug: dekiru-koto-sukunai-kara-wakatta, type: cheer, category: kokoro, stage: age0, status: queued, ref_urls: [], title_seed: できることが少ないからこそ分かった「やらなくても回る」こと, angle: 管理人視点／手を動かせない立場で見えた家事の"やらなくていい"リスト／回っている事実が答え, official_sources: [https://www.cfa.go.jp/]}
-- {slug: te-wo-ugokasenai-oya-no-ichiban, type: cheer, category: kokoro, stage: age0, status: queued, ref_urls: [], title_seed: 手を動かせない親にできる、いちばん大事なこと, angle: 管理人視点／調べて整理して置いておく・決める・見守る・言葉をかける／作業量＝愛情ではない, official_sources: [https://www.cfa.go.jp/]}
-- {slug: tayoru-wo-oboeru-jikan-ga-kakatta, type: voice, category: kokoro, stage: age0, status: queued, ref_urls: [], title_seed: 「頼る」を覚えるのに時間がかかった、という話, angle: 管理人視点／頼れなかった理由・最初の一歩・頼ったあとの変化／頼るのは技術, official_sources: [https://www.cfa.go.jp/policies/boshihoken]}
-- {slug: kanpeki-akirameta-hi-kara, type: cheer, category: kokoro, stage: age1_2, status: queued, ref_urls: [], title_seed: 完璧をあきらめた日から、家族がラクになった, angle: 管理人視点／何をあきらめたか・家族の反応・自分の変化／あきらめ＝選択, official_sources: [https://www.cfa.go.jp/]}
-- {slug: chanto-shita-oya-no-zou-doko-kara, type: basics, category: kokoro, stage: age1_2, status: queued, ref_urls: [], title_seed: 「ちゃんとした親」の像を、どこで刷り込まれたか, angle: メディア・親世代・SNSがつくる理想像／その多くは現実離れ／自分の基準を意識的に下げ直す, official_sources: [https://www.cfa.go.jp/]}
-- {slug: ikuji-no-kodoku-yowasa-to-yobanai, type: cheer, category: kokoro, stage: age0, status: queued, ref_urls: [], title_seed: 育児の孤独を「弱さ」と呼ぶのをやめる, angle: 孤立は構造の問題・核家族化と地域の希薄化／つながりを持つのは対策であって甘えではない, official_sources: [https://www.mhlw.go.jp/mamorouyokokoro/]}
-- {slug: partner-ni-kitai-yameta-hanashi, type: voice, category: kokoro, stage: age1_2, status: queued, ref_urls: [], title_seed: パートナーに期待するのをやめたら、少しラクになった話, angle: 期待→落胆の消耗／「察して」をやめて具体で頼む・外注も選択肢／諦めではなく仕組み化, official_sources: [https://www.cfa.go.jp/]}
-- {slug: uchi-wa-uchi-karada-de-omoeru-made, type: cheer, category: kokoro, stage: age1_2, status: queued, ref_urls: [], title_seed: 「うちはうち」を、頭ではなく体で思えるようになるまで, angle: 言い聞かせても比べてしまう／SNS断ち・比較対象の管理・小さな成功体験の積み上げ, official_sources: [https://www.cfa.go.jp/]}
-- {slug: benri-goods-kau-zaiakukan-tebanasu, type: basics, category: kurashi, stage: age1_2, status: queued, ref_urls: [], title_seed: 便利グッズを「買う罪悪感」を手放すための考え方, angle: お金＝時間と心の余裕を買う投資／親世代と条件が違う／全部買う必要はない・効く一点から, official_sources: [https://www.caa.go.jp/policies/policy/consumer_safety/child/]}
+- slug: sns-wanope-genkai-naze-bazuru
+  type: trend
+  category: sns
+  stage: age0
+  status: queued
+  ref_urls: []
+  title_seed: なぜ「ワンオペ限界」の投稿は毎回バズるのか、構造で読む
+  angle: 共感で終わらせず「なぜ拡散するか」を分析／孤立の構造・共有される痛み・変わらない社会／読者が巻き込まれず情報だけ持ち帰る方法
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+- slug: sns-kosodate-tataki-shikumi
+  type: trend
+  category: sns
+  stage: age1_2
+  status: queued
+  ref_urls: []
+  title_seed: 「子育て叩き」がSNSで燃える仕組みと、巻き込まれない距離
+  angle: 正義感・切り取り・アルゴリズムが燃料／当事者が消耗するだけの構図／通知を切る・反応しない・見る時間を決める
+  official_sources:
+  - https://www.cfa.go.jp/
+- slug: sns-lifehack-sono-katei-dakara
+  type: trend
+  category: sns
+  stage: age1_2
+  status: queued
+  ref_urls: []
+  title_seed: バズる育児ライフハックの多くが「その家庭だから」回る理由
+  angle: 住環境・きょうだい構成・親の働き方が前提として抜けている／再現できなくて当然／自分の条件に合うものだけ拾う
+  official_sources:
+  - https://www.cfa.go.jp/
+- slug: sns-kanpeki-na-ichinichi-uragawa
+  type: trend
+  category: sns
+  stage: age0
+  status: queued
+  ref_urls: []
+  title_seed: インフルエンサーの「完璧な1日」が非日常な理由、撮影と編集の話
+  angle: 撮れた瞬間だけが投稿される／段取り・小道具・複数テイク／日常の8割は映さない／比較対象として不適切
+  official_sources:
+  - https://www.cfa.go.jp/
+- slug: sns-hikaku-no-rensa-tachikata
+  type: trend
+  category: sns
+  stage: age1_2
+  status: queued
+  ref_urls: []
+  title_seed: 「#育児垢」で見かける比較の連鎖と、その断ち方
+  angle: 比較→不安→さらに検索→さらに比較のループ／フォロー整理・ミュート・見る時間の固定／情報は公的サイトから直接
+  official_sources:
+  - https://www.cfa.go.jp/
+- slug: sns-enjou-toukou-kara-manabu
+  type: trend
+  category: sns
+  stage: age1_2
+  status: queued
+  ref_urls: []
+  title_seed: 炎上した育児投稿から学ぶ、書いてはいけない一線
+  angle: 他者下げ・安全軽視の断定・専門家領域の言い切り／自分が発信する時のチェックリスト／このサイトの方針とも重なる
+  official_sources:
+  - https://www.cfa.go.jp/
+- slug: dekiru-koto-sukunai-kara-wakatta
+  type: cheer
+  category: kokoro
+  stage: age0
+  status: queued
+  ref_urls: []
+  title_seed: できることが少ないからこそ分かった「やらなくても回る」こと
+  angle: 管理人視点／手を動かせない立場で見えた家事の"やらなくていい"リスト／回っている事実が答え
+  official_sources:
+  - https://www.cfa.go.jp/
+- slug: te-wo-ugokasenai-oya-no-ichiban
+  type: cheer
+  category: kokoro
+  stage: age0
+  status: queued
+  ref_urls: []
+  title_seed: 手を動かせない親にできる、いちばん大事なこと
+  angle: 管理人視点／調べて整理して置いておく・決める・見守る・言葉をかける／作業量＝愛情ではない
+  official_sources:
+  - https://www.cfa.go.jp/
+- slug: tayoru-wo-oboeru-jikan-ga-kakatta
+  type: voice
+  category: kokoro
+  stage: age0
+  status: queued
+  ref_urls: []
+  title_seed: 「頼る」を覚えるのに時間がかかった、という話
+  angle: 管理人視点／頼れなかった理由・最初の一歩・頼ったあとの変化／頼るのは技術
+  official_sources:
+  - https://www.cfa.go.jp/policies/boshihoken
+- slug: kanpeki-akirameta-hi-kara
+  type: cheer
+  category: kokoro
+  stage: age1_2
+  status: queued
+  ref_urls: []
+  title_seed: 完璧をあきらめた日から、家族がラクになった
+  angle: 管理人視点／何をあきらめたか・家族の反応・自分の変化／あきらめ＝選択
+  official_sources:
+  - https://www.cfa.go.jp/
+- slug: chanto-shita-oya-no-zou-doko-kara
+  type: basics
+  category: kokoro
+  stage: age1_2
+  status: queued
+  ref_urls: []
+  title_seed: 「ちゃんとした親」の像を、どこで刷り込まれたか
+  angle: メディア・親世代・SNSがつくる理想像／その多くは現実離れ／自分の基準を意識的に下げ直す
+  official_sources:
+  - https://www.cfa.go.jp/
+- slug: ikuji-no-kodoku-yowasa-to-yobanai
+  type: cheer
+  category: kokoro
+  stage: age0
+  status: queued
+  ref_urls: []
+  title_seed: 育児の孤独を「弱さ」と呼ぶのをやめる
+  angle: 孤立は構造の問題・核家族化と地域の希薄化／つながりを持つのは対策であって甘えではない
+  official_sources:
+  - https://www.mhlw.go.jp/mamorouyokokoro/
+- slug: partner-ni-kitai-yameta-hanashi
+  type: voice
+  category: kokoro
+  stage: age1_2
+  status: queued
+  ref_urls: []
+  title_seed: パートナーに期待するのをやめたら、少しラクになった話
+  angle: 期待→落胆の消耗／「察して」をやめて具体で頼む・外注も選択肢／諦めではなく仕組み化
+  official_sources:
+  - https://www.cfa.go.jp/
+- slug: uchi-wa-uchi-karada-de-omoeru-made
+  type: cheer
+  category: kokoro
+  stage: age1_2
+  status: queued
+  ref_urls: []
+  title_seed: 「うちはうち」を、頭ではなく体で思えるようになるまで
+  angle: 言い聞かせても比べてしまう／SNS断ち・比較対象の管理・小さな成功体験の積み上げ
+  official_sources:
+  - https://www.cfa.go.jp/
+- slug: benri-goods-kau-zaiakukan-tebanasu
+  type: basics
+  category: kurashi
+  stage: age1_2
+  status: queued
+  ref_urls: []
+  title_seed: 便利グッズを「買う罪悪感」を手放すための考え方
+  angle: お金＝時間と心の余裕を買う投資／親世代と条件が違う／全部買う必要はない・効く一点から
+  official_sources:
+  - https://www.caa.go.jp/policies/policy/consumer_safety/child/
