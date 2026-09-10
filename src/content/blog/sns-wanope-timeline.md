@@ -13,6 +13,7 @@ tags:
 - 産後ケア
 emoji: 📱
 heroImage: /images/thumb/sns-wanope-timeline.png
+thumbHook: "SNSのワンオペ密着を見て、しんどくなる"
 ogImage: /images/thumb/sns-wanope-timeline.png
 sources:
 - label: こども家庭庁「母子保健・不妊症・不育症など」

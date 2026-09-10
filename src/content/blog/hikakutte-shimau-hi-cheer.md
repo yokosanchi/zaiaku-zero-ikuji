@@ -12,6 +12,7 @@ tags:
 - 子どもの成長
 emoji: 💛
 heroImage: "/images/thumb/hikakutte-shimau-hi-cheer.png"
+thumbHook: "「よその子はできるのに」と落ち込んだ夜に"
 ogImage: /images/thumb/hikakutte-shimau-hi-cheer.png
 author: 編集部
 generatedBy: pipeline gemini-3.6-flash / 2026-09-08

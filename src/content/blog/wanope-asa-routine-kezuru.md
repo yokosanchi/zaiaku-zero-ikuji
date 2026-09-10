@@ -7,6 +7,7 @@ stage: "age1_2"
 articleType: "basics"
 tags: ["ワンオペ", "朝の支度", "時短", "暮らしの工夫"]
 heroImage: "/images/thumb/wanope-asa-routine-kezuru.png"
+thumbHook: "ワンオペの朝、毎日ギリギリで回らない"
 ogImage: "/images/thumb/wanope-asa-routine-kezuru.png"
 author: "管理人"
 sources:

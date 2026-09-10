@@ -7,6 +7,7 @@ stage: "age1_2"
 articleType: "voice"
 tags: ["ワンオペ", "外食", "お出かけ", "暮らしの工夫"]
 heroImage: "/images/thumb/wanope-gaishoku-gaisyutsu-genjitsu.png"
+thumbHook: "子連れの外食、味もわからず半分残して帰る"
 ogImage: "/images/thumb/wanope-gaishoku-gaisyutsu-genjitsu.png"
 author: "管理人"
 sources:

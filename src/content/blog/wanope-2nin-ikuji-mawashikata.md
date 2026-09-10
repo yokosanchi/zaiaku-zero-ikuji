@@ -7,6 +7,7 @@ stage: "age0"
 articleType: "basics"
 tags: ["ワンオペ", "2人育児", "きょうだい", "新生児"]
 heroImage: "/images/thumb/wanope-2nin-ikuji-mawashikata.png"
+thumbHook: "ふたり同時に泣かれて、どっちも中途半端"
 ogImage: "/images/thumb/wanope-2nin-ikuji-mawashikata.png"
 author: "管理人"
 sources:

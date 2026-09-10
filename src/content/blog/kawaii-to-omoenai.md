@@ -8,6 +8,7 @@ stage: "age0"
 articleType: "cheer"
 tags: ["産後うつ", "愛着", "こころのケア", "自己肯定"]
 heroImage: "/images/thumb/kawaii-to-omoenai.png"
+thumbHook: "わが子を「かわいい」と思えない自分がこわい"
 ogImage: "/images/thumb/kawaii-to-omoenai.png"
 author: "管理人"
 sources:

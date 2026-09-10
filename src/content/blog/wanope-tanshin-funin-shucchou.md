@@ -7,6 +7,7 @@ stage: "age1_2"
 articleType: "voice"
 tags: ["ワンオペ", "単身赴任", "出張", "頼る"]
 heroImage: "/images/thumb/wanope-tanshin-funin-shucchou.png"
+thumbHook: "「その間ワンオペか」と気が重いあなたへ"
 ogImage: "/images/thumb/wanope-tanshin-funin-shucchou.png"
 author: "管理人"
 sources:

@@ -7,6 +7,7 @@ stage: "age0"
 articleType: "cheer"
 tags: ["ワンオペ", "頼る", "休息", "こころのケア"]
 heroImage: "/images/thumb/wanope-tayoru-yotei-ni-ireru.png"
+thumbHook: "「まだ頑張れる」で、ある日ぷつんと切れる前に"
 ogImage: "/images/thumb/wanope-tayoru-yotei-ni-ireru.png"
 author: "管理人"
 sources:

@@ -34,6 +34,8 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     /** 記事上部の写真（任意。無ければ絵文字ブロック） */
     heroImage: z.string().optional(),
+    /** デザインカードのサムネに出す1行。読み手のペイン起点のキャッチ（無ければタイトルを使う） */
+    thumbHook: z.string().optional(),
     /** OGP/サムネ画像（1200x630。パイプラインが記事ごとに生成） */
     ogImage: z.string().optional(),
     /** カード等に出す絵文字 */

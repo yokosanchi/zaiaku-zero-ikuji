@@ -13,6 +13,7 @@ tags:
 - 生後6ヶ月
 emoji: 🥣
 heroImage: /images/thumb/rinyushoku-hajimekata-kihon.png
+thumbHook: "離乳食、いつから？何から？が不安なあなたへ"
 ogImage: /images/thumb/rinyushoku-hajimekata-kihon.png
 sources:
 - label: 厚生労働省「平成27年度 乳幼児栄養調査結果の概要」

@@ -13,6 +13,7 @@ tags:
 - 罪悪感ゼロ
 emoji: 🛒
 heroImage: "/images/thumb/netsuper-hikaku-kokoro.png"
+thumbHook: "子連れの買い物、もう限界かもしれない"
 ogImage: /images/thumb/netsuper-hikaku-kokoro.png
 sources:
 - label: 消費者庁「こどもの事故防止」

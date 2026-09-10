@@ -7,6 +7,7 @@ stage: "age0"
 articleType: "cheer"
 tags: ["関わり方", "こころのケア", "自己肯定", "毒親"]
 heroImage: "/images/thumb/oya-kara-aisareta-jikkan-nai.png"
+thumbHook: "愛し方がわからないまま、親になった"
 ogImage: "/images/thumb/oya-kara-aisareta-jikkan-nai.png"
 author: "管理人"
 sources:

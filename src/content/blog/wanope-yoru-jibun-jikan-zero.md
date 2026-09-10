@@ -7,6 +7,7 @@ stage: "age1_2"
 articleType: "basics"
 tags: ["ワンオペ", "寝かしつけ", "自分時間", "暮らしの工夫"]
 heroImage: "/images/thumb/wanope-yoru-jibun-jikan-zero.png"
+thumbHook: "やっと寝たのに、自分も寝落ちして朝だった"
 ogImage: "/images/thumb/wanope-yoru-jibun-jikan-zero.png"
 author: "管理人"
 sources:

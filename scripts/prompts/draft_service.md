@@ -38,5 +38,5 @@
   "tags": ["3〜5個"],
   "emoji": "絵文字1つ",
   "body_md": "本文。## と ### のみ。基本構成＋『心の余裕を守る道具として』の節を含む",
-  "thumb": { "headline": "12〜16字の惹句", "sub": "使ってよかった", "emoji": "絵文字1つ", "accent": "sun|grape|coral|mint|sky" }
+  "thumb": { "headline": "読み手のペイン(不安・限界・自己否定・こわさ)を起点にした12〜18字。問いかけや気持ちの言葉で。答え/結論は書かない", "sub": "使ってよかった", "emoji": "絵文字1つ", "accent": "sun|grape|coral|mint|sky" }
 }

@@ -7,6 +7,7 @@ stage: "age1_2"
 articleType: "basics"
 tags: ["関わり方", "相談先", "こころのケア", "つらいとき"]
 heroImage: "/images/thumb/kizutsuketa-to-kizuitara-soudan.png"
+thumbHook: "手が出そうになる。止められない気がする"
 ogImage: "/images/thumb/kizutsuketa-to-kizuitara-soudan.png"
 author: "管理人"
 sources:

@@ -13,6 +13,7 @@ tags:
 - 時短家事
 emoji: 🧺
 heroImage: /images/thumb/kansouki-jikan-wo-kau.png
+thumbHook: "洗濯物を干して取り込むだけで、一日が終わる"
 ogImage: /images/thumb/kansouki-jikan-wo-kau.png
 sources:
 - label: 消費者庁「こどもの事故防止」

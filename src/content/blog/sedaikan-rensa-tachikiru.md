@@ -7,6 +7,7 @@ stage: "age1_2"
 articleType: "voice"
 tags: ["関わり方", "世代間連鎖", "こころのケア", "毒親"]
 heroImage: "/images/thumb/sedaikan-rensa-tachikiru.png"
+thumbHook: "されて嫌だったことを、子どもにしている"
 ogImage: "/images/thumb/sedaikan-rensa-tachikiru.png"
 author: "管理人"
 sources:

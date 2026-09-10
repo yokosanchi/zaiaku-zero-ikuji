@@ -7,6 +7,7 @@ stage: "age0"
 articleType: "cheer"
 tags: ["ワンオペ", "孤独", "こころのケア", "産後"]
 heroImage: "/images/thumb/wanope-kodoku-otona-to-hanasanai.png"
+thumbHook: "今日も、大人と一度も話していない"
 ogImage: "/images/thumb/wanope-kodoku-otona-to-hanasanai.png"
 author: "管理人"
 sources:

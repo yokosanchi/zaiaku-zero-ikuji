@@ -7,6 +7,7 @@ stage: "age1_2"
 articleType: "basics"
 tags: ["産後うつ", "こころのケア", "卒乳", "職場復帰"]
 heroImage: "/images/thumb/sango-utsu-atokara.png"
+thumbHook: "1歳を過ぎて、なぜか気持ちが晴れない"
 ogImage: "/images/thumb/sango-utsu-atokara.png"
 author: "管理人"
 sources:

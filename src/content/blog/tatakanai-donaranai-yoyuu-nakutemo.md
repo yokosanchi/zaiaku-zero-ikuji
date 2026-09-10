@@ -7,6 +7,7 @@ stage: "age1_2"
 articleType: "basics"
 tags: ["関わり方", "しつけ", "体罰によらない子育て"]
 heroImage: "/images/thumb/tatakanai-donaranai-yoyuu-nakutemo.png"
+thumbHook: "わかっていても、手が出そうになる"
 ogImage: "/images/thumb/tatakanai-donaranai-yoyuu-nakutemo.png"
 author: "管理人"
 sources:

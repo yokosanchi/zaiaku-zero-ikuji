@@ -7,6 +7,7 @@ stage: "age0"
 articleType: "cheer"
 tags: ["産後うつ", "こころのケア", "相談先", "つらいとき"]
 heroImage: "/images/thumb/kienaku-naritai-yoru.png"
+thumbHook: "「消えてしまいたい」と思ってしまう夜に"
 ogImage: "/images/thumb/kienaku-naritai-yoru.png"
 author: "管理人"
 sources:

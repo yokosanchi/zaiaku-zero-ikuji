@@ -13,6 +13,7 @@ tags:
 - 心のエステ
 emoji: 🌙
 heroImage: "/images/thumb/sns-neteru-aida-ni-kaji.png"
+thumbHook: "子どもと一緒に寝落ち。今日も何もできなかった"
 ogImage: /images/thumb/sns-neteru-aida-ni-kaji.png
 sources:
 - label: こども家庭庁「トップページ」

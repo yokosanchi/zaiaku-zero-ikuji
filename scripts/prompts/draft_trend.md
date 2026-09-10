@@ -37,5 +37,5 @@ SNS（X・Instagram・TikTok など）でよく話題になる育児の悩み・
   "tags": ["3〜5個"],
   "emoji": "内容に合う絵文字1つ",
   "body_md": "本文。## と ### のみ。基本構成に従う",
-  "thumb": { "headline": "12〜16字の惹句", "sub": "話題", "emoji": "絵文字1つ", "accent": "sun|grape|coral|mint|sky" }
+  "thumb": { "headline": "読み手のペイン(不安・限界・自己否定・こわさ)を起点にした12〜18字。問いかけや気持ちの言葉で。答え/結論は書かない", "sub": "話題", "emoji": "絵文字1つ", "accent": "sun|grape|coral|mint|sky" }
 }

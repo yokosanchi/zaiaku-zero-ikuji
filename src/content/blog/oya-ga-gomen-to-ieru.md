@@ -7,6 +7,7 @@ stage: "age1_2"
 articleType: "basics"
 tags: ["関わり方", "しつけ", "自己肯定"]
 heroImage: "/images/thumb/oya-ga-gomen-to-ieru.png"
+thumbHook: "言いすぎた。でも今さら謝れない、と思ったら"
 ogImage: "/images/thumb/oya-ga-gomen-to-ieru.png"
 author: "管理人"
 sources:

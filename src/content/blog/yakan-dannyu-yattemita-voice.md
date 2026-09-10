@@ -13,6 +13,7 @@ tags:
 - ワンオペ育児
 emoji: 🌙
 heroImage: "/images/thumb/yakan-dannyu-yattemita-voice.png"
+thumbHook: "夜間断乳、ブログ通りにいかなくて焦る"
 ogImage: /images/thumb/yakan-dannyu-yattemita-voice.png
 sources:
 - label: 日本小児科学会「お知らせ」

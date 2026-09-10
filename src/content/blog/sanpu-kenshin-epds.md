@@ -7,6 +7,7 @@ stage: "age0"
 articleType: "basics"
 tags: ["産後うつ", "産婦健診", "EPDS", "こころのケア"]
 heroImage: "/images/thumb/sanpu-kenshin-epds.png"
+thumbHook: "健診の質問票、正直に書くのがこわい"
 ogImage: "/images/thumb/sanpu-kenshin-epds.png"
 author: "管理人"
 sources:

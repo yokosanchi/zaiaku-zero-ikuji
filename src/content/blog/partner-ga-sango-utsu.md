@@ -7,6 +7,7 @@ stage: "age0"
 articleType: "voice"
 tags: ["産後うつ", "パートナー", "家族", "サポート"]
 heroImage: "/images/thumb/partner-ga-sango-utsu.png"
+thumbHook: "最近、パートナーの様子がおかしい"
 ogImage: "/images/thumb/partner-ga-sango-utsu.png"
 author: "管理人"
 sources:

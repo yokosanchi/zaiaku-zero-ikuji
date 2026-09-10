@@ -7,6 +7,7 @@ stage: "age0"
 articleType: "basics"
 tags: ["関わり方", "マルトリートメント", "こころのケア", "相談先"]
 heroImage: "/images/thumb/maltreatment-toha-nanika.png"
+thumbHook: "気づかないうちに、傷つけているかもしれない"
 ogImage: "/images/thumb/maltreatment-toha-nanika.png"
 author: "管理人"
 sources:

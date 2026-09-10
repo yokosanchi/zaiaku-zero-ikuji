@@ -7,6 +7,7 @@ stage: "age1_2"
 articleType: "basics"
 tags: ["ワンオペ", "発熱", "看病", "相談先"]
 heroImage: "/images/thumb/wanope-hatsunetsu-ji-kea.png"
+thumbHook: "ワンオペで発熱。自分もうつりそうなのに"
 ogImage: "/images/thumb/wanope-hatsunetsu-ji-kea.png"
 author: "管理人"
 sources:

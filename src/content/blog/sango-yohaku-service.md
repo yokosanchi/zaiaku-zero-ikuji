@@ -7,6 +7,7 @@ stage: "age0"
 articleType: "service"
 tags: ["産後ケア", "家事支援", "こころのケア", "産後"]
 heroImage: "/images/thumb/sango-yohaku-service.png"
+thumbHook: "「休んでいい」と言われても、休み方がわからない"
 ogImage: "/images/thumb/sango-yohaku-service.png"
 author: "管理人"
 sources:
