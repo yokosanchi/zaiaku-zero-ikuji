@@ -105,7 +105,8 @@
   official_sources:
   - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: gohan-tekitou-datta-hi-cheer
 - slug: guzzu-anzen-kihon
   type: basics
   title_seed: ベビーグッズ選びで見落としがちな「安全」の基本
@@ -124,7 +125,8 @@
   - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: sns-tabenai-daikyoukan-trend
 - slug: sanpu-kenshin-epds-kihon
   type: basics
   title_seed: 産婦健康診査とEPDS（産後うつ質問票）の基本
@@ -185,7 +187,8 @@
   - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: sns-mrs-lunch-plate-trend
 - slug: sns-newborn-routine-trend
   type: trend
   title_seed: 「新生児の理想スケジュール」投稿どおりにいかなくて当然の理由
@@ -195,7 +198,8 @@
   - https://www.cfa.go.jp/policies/boshihoken
   - https://www.jpeds.or.jp/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: sns-newborn-routine-trend
 - slug: shogakko-asa-junbi-basics
   type: basics
   title_seed: 小学生の朝の支度が回らない、まず外していい「完璧」の基本
@@ -234,7 +238,8 @@
   - https://www.cfa.go.jp/policies/boshihoken
   - https://www.jpeds.or.jp/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: yakan-taiou-kotsu-voice
 - slug: hoikuen-okuri-namida-cheer
   type: cheer
   title_seed: 登園で泣かれて後ろ髪を引かれるまま出勤するあなたへ
@@ -263,7 +268,8 @@
   - https://www.jpeds.or.jp/
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: sns-toilet-training-trend
 - slug: sns-mokuyoku-ittai-trend
   type: trend
   title_seed: 「毎日お風呂に入れないなんて」バズ議論で落ち込む人へ
@@ -312,7 +318,8 @@
   - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: rinyushoku-freezing-basics
 - slug: aujiru-torianezu-basics
   type: basics
   title_seed: 「毎食手作り」をやめる。市販・惣菜・レトルトの上手な使いどころ
@@ -322,7 +329,8 @@
   - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: aujiru-torianezu-basics
 - slug: henshoku-yougo-basics
   type: basics
   title_seed: 幼児の偏食・遊び食べ、待っていい部分と相談の目安
@@ -332,7 +340,8 @@
   - https://www.jpeds.or.jp/
   - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: henshoku-yougo-basics
 - slug: obento-shogaku-tenuki-service
   type: service
   title_seed: 小学生の長期休みの昼ごはん・弁当を回す時短の道具と手
@@ -341,7 +350,8 @@
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: obento-shogaku-tenuki-service
 - slug: nenne-yofukashi-modori-basics
   type: basics
   title_seed: 生活リズムが乱れた・夜更かしに戻った時の立て直しの基本
@@ -351,7 +361,8 @@
   - https://www.jpeds.or.jp/
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: nenne-yofukashi-modori-basics
 - slug: nenne-hirune-ikou-basics
   type: basics
   title_seed: 昼寝の回数が減る時期・卒業のサインと、親がラクになる考え方
@@ -361,7 +372,8 @@
   - https://www.jpeds.or.jp/
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: nenne-hirune-ikou-basics
 - slug: nenne-soine-anzen-basics
   type: basics
   title_seed: 添い寝・寝かしつけがつらい時期の、安全と省エネの基本
@@ -371,7 +383,8 @@
   - https://www.cfa.go.jp/policies/boshihoken
   - https://www.jpeds.or.jp/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: nenne-soine-anzen-basics
 - slug: nenne-yonaki-piiku-voice
   type: voice
   title_seed: 夜泣きのピークを越えた人たちの「やってよかった／やらなくてよかった」
@@ -380,7 +393,8 @@
   official_sources:
   - https://www.jpeds.or.jp/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: nenne-yonaki-piiku-voice
 - slug: nenne-hoikuen-seikatsu-service
   type: service
   title_seed: 保育園入園後の生活リズム崩壊を助けるグッズ・段取り
@@ -390,7 +404,8 @@
   - https://www.cfa.go.jp/policies/boshihoken
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: nenne-hoikuen-seikatsu-service
 - slug: nenne-shogaku-asagata-cheer
   type: cheer
   title_seed: 小学生がなかなか寝ない・朝起きない、で疲れ果てた夜へ
@@ -399,7 +414,8 @@
   official_sources:
   - https://www.mext.go.jp/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: nenne-shogaku-asagata-cheer
 - slug: wanope-homehelp-support-service
   type: service
   title_seed: 産後ヘルパー・家事代行・産後ケア施設の使い方と探し方
@@ -466,7 +482,8 @@
   - https://www.jpeds.or.jp/
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: hatsuiku-kotoba-osoi-basics
 - slug: hatsuiku-shincho-taiju-basics
   type: basics
   title_seed: 成長曲線から外れている気がする、で不安な時の見方
@@ -476,7 +493,8 @@
   - https://www.jpeds.or.jp/
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: hatsuiku-shincho-taiju-basics
 - slug: hatsuiku-hokou-osoi-basics
   type: basics
   title_seed: 歩き始めが遅い・つかまり立ちしない、の目安と考え方
@@ -485,7 +503,8 @@
   official_sources:
   - https://www.jpeds.or.jp/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: hatsuiku-hokou-osoi-basics
 - slug: hatsuiku-yobou-sesshu-basics
   type: basics
   title_seed: 予防接種スケジュールが崩れた時の立て直しの基本
@@ -495,7 +514,8 @@
   - https://www.jpeds.or.jp/
   - https://www.mhlw.go.jp/bunya/kenkou/kekkaku-kansenshou/yobou-sesshu/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: hatsuiku-yobou-sesshu-basics
 - slug: hatsuiku-hatsunetsu-taiou-voice
   type: voice
   title_seed: 子どもの発熱、受診するか迷った時にみんなが見ているサイン
@@ -505,7 +525,8 @@
   - https://www.jpeds.or.jp/
   - https://www.mhlw.go.jp/topics/kodomo/kyukyu/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: hatsuiku-hatsunetsu-taiou-voice
 - slug: hatsuiku-hadare-skincare-service
   type: service
   title_seed: 乳児湿疹・乾燥肌のスキンケアでラクになった道具と考え方
@@ -514,7 +535,8 @@
   official_sources:
   - https://www.jpeds.or.jp/
   ref_urls: []
-  status: queued
+  status: manual
+  published_slug: hatsuiku-hadare-skincare-service
 - slug: kurashi-kataduke-akirame-basics
   type: basics
   title_seed: 「片付かない家」を責めない。子育て期の部屋との付き合い方の基本
