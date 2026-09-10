@@ -19,6 +19,7 @@ const blog = defineCollection({
       'nenne',
       'kokoro',
       'sango',
+      'kakawari',
       'wanope',
       'hatsuiku',
       'kurashi',

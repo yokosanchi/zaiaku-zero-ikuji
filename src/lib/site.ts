@@ -9,6 +9,7 @@ export type CategoryKey =
   | 'nenne'
   | 'kokoro'
   | 'sango'
+  | 'kakawari'
   | 'wanope'
   | 'hatsuiku'
   | 'kurashi';
@@ -70,6 +71,15 @@ export const CATEGORIES: CategoryMeta[] = [
     accent: 'grape',
     description:
       '涙が止まらない、眠れない、笑えない。それは甘えではなく、相談していいサイン。',
+  },
+  {
+    key: 'kakawari',
+    label: '関わり方',
+    short: '関わり方',
+    emoji: '🫂',
+    accent: 'grape',
+    description:
+      '叱り方・ほめ方、そして親から受け継いだもの。目を背けたくなる話も、根拠をもって扱います。',
   },
   {
     key: 'wanope',

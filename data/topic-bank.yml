@@ -762,3 +762,224 @@
   ref_urls: []
   status: queued
   stage: gakudo
+- slug: oya-ga-gomen-to-ieru
+  type: basics
+  stage: age1_2
+  category: kakawari
+  status: manual
+  ref_urls: []
+  title_seed: 親が「ごめん」と言える姿が、子どもに残すもの
+  angle: 完璧な親を演じない／間違えたら訂正する背中／謝り方の型／できない日は翌日でいい
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: oya-ga-gomen-to-ieru
+- slug: kanjou-ni-namae-wo-tsukeru
+  type: basics
+  stage: age1_2
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 感情に名前をつける関わり（「くやしかったね」）と、疲れた日の最小版
+  angle: 気持ちを言葉にして返すだけでいい／正論やアドバイスは後回し／余裕がない日は「そっか」だけでも
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+- slug: hanashi-wo-saigo-made-kiku
+  type: basics
+  stage: age3_pre
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 話を最後まで聞く・約束を守る。小さな信頼の積み方
+  angle: 途中でさえぎらない／守れない約束はしない／小さな一貫性が安心をつくる／できなかった時は説明する
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+- slug: dame-no-tsutaekata-koudou
+  type: basics
+  stage: age1_2
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 「ダメ」の伝え方 — 人格ではなく行動を指す
+  angle: 「あなたはダメ」ではなく「その行動は危ない」／代わりの行動を示す／短く具体的に
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+- slug: kodomo-no-mae-de-hitei-shiai
+  type: basics
+  stage: age3_pre
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 子どもの前で親同士が否定し合わない理由と、つい言ってしまった時
+  angle: 子は板ばさみで自分を責めやすい／言い合いは別室で／言ってしまったらフォローする
+  official_sources:
+  - https://www.cfa.go.jp/policies/jidougyakutai
+- slug: iru-dake-de-ureshii-cheer
+  type: cheer
+  stage: age0
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 「〜だからえらい」より「いてくれてうれしい」を言えない日へ
+  angle: 条件つきでない肯定を言葉に／言えなくても態度で伝わる／自分がされてこなかった人ほど難しくて当然
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+- slug: kyou-dekinakatta-kakawari-cheer
+  type: cheer
+  stage: age1_2
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 今日できなかった関わりは、明日から戻せる
+  angle: 一日の失敗で関係は決まらない／修復可能性／完璧な親は存在しない
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+- slug: kibun-de-shikaru-kijun
+  type: basics
+  stage: age1_2
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 気分で叱る基準が変わってしまう時の、立て直し方
+  angle: 誰でも疲れると起きる／「昨日はよくて今日ダメ」を減らす工夫／変わってしまった時は認めて伝える
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+- slug: jinkaku-hitei-shita-ato-iinaoshi
+  type: basics
+  stage: age3_pre
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: つい人格を否定した（「だからあなたはダメ」）後の、言い直し方
+  angle: 気づいた時点で十分／「さっきの言い方はよくなかった」と伝える／行動の指摘に置き換える
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+- slug: batsu-toshite-mushi-yametai
+  type: basics
+  stage: age3_pre
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 罰として長く無視する、をやめたい時に代わりにできること
+  angle: 長時間の無視は不安を与える／クールダウンは短く・予告して／戻ってきたら受け止める
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+- slug: jouken-tsuki-no-aijou-voice
+  type: voice
+  stage: age1_2
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 「条件つきの愛情」に気づいた人が、どう変えたか
+  angle: 「できたら好き」を無意識に言っていた気づき／言い換えの実例／自分も条件つきで育った場合の難しさ
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+- slug: tatakanai-donaranai-yoyuu-nakutemo
+  type: basics
+  stage: age1_2
+  category: kakawari
+  status: manual
+  ref_urls: []
+  title_seed: 叩かない・怒鳴らない子育て（こども家庭庁の方針）を、余裕がなくても回す
+  angle: 体罰は法律で禁止／その場を離れる・深呼吸・人に代わる／できなかった日を責めない
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+  - https://www.cfa.go.jp/policies/jidougyakutai
+  published_slug: tatakanai-donaranai-yoyuu-nakutemo
+- slug: kyou-okorisugita-nakaonori-cheer
+  type: cheer
+  stage: age1_2
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 「今日は怒りすぎた」と落ち込む夜の、仲直りのしかた
+  angle: 落ち込めるのは大切に思っている証／短く謝る／スキンシップで戻す／次への準備を1つだけ
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+- slug: maltreatment-toha-nanika
+  type: basics
+  stage: age0
+  category: kakawari
+  status: manual
+  ref_urls: []
+  title_seed: マルトリートメント（不適切な養育）とは何か。「虐待」だけではない
+  angle: しんどい時は読まないで＋相談窓口／殴る蹴るだけでなく暴言・無視・面前DVも含む／誰にでも起こりうる／気づきが第一歩
+  official_sources:
+  - https://www.cfa.go.jp/policies/jidougyakutai
+  - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: maltreatment-toha-nanika
+- slug: bougen-izon-jiko-koutei-kan
+  type: basics
+  stage: age1_2
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 暴言・威圧が続くと、子どもの自己肯定感に何が起きるか（公的研究の範囲で）
+  angle: しんどい時は読まないで＋窓口／自己否定が内在化しやすい／回復は可能／気づいたら関わりを変えられる
+  official_sources:
+  - https://www.cfa.go.jp/policies/jidougyakutai
+- slug: neglect-aichaku-kaifuku
+  type: basics
+  stage: age0
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: ネグレクト（放置）が愛着に残すもの、と回復の可能性
+  angle: しんどい時は読まないで＋窓口／安定した応答の積み重ねで愛着は育て直せる／保健センター・児相に相談していい
+  official_sources:
+  - https://www.cfa.go.jp/policies/jidougyakutai
+- slug: sedaikan-rensa-tachikiru-voice
+  type: voice
+  stage: age1_2
+  category: kakawari
+  status: manual
+  ref_urls: []
+  title_seed: 「自分がされて嫌だったこと」を繰り返しそうになる — 世代間連鎖と断ち切り方
+  angle: しんどい時は読まないで＋窓口／連鎖は運命ではない／引き金に気づく・代わりの反応を用意する・専門家に頼る
+  official_sources:
+  - https://www.cfa.go.jp/policies/jidougyakutai
+  - https://www.mhlw.go.jp/kokoro/
+  published_slug: sedaikan-rensa-tachikiru
+- slug: taibatsu-gyakukouka-riyuu
+  type: basics
+  stage: age1_2
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 体罰が「効いて見えて」実は逆効果な理由
+  angle: しんどい時は読まないで＋窓口／その場は止まっても学びにならない・恐怖で覚える・関係が損なわれる／代わりの方法
+  official_sources:
+  - https://www.cfa.go.jp/policies/taibatsu
+- slug: menzen-dv-shinriteki-gyakutai
+  type: basics
+  stage: age0
+  category: kakawari
+  status: queued
+  ref_urls: []
+  title_seed: 面前DV（子どもの前での夫婦げんか）が心理的虐待にあたる、という話
+  angle: しんどい時は読まないで＋窓口／子は見て強い不安を抱える／DV相談ナビ・児相／別室で・第三者を入れる
+  official_sources:
+  - https://www.cfa.go.jp/policies/jidougyakutai
+  - https://www.gender.go.jp/policy/no_violence/
+- slug: oya-kara-aisareta-jikkan-nai-cheer
+  type: cheer
+  stage: age0
+  category: kakawari
+  status: manual
+  ref_urls: []
+  title_seed: 親から愛された実感がないまま親になった人へ
+  angle: しんどい時は読まないで＋窓口／お手本がないのに育てているのは十分すごい／今から学び直していい／頼れる支援
+  official_sources:
+  - https://www.mhlw.go.jp/kokoro/
+  - https://www.cfa.go.jp/policies/jidougyakutai
+  published_slug: oya-kara-aisareta-jikkan-nai
+- slug: kizutsuketa-to-kizuitara-soudan
+  type: basics
+  stage: age1_2
+  category: kakawari
+  status: manual
+  ref_urls: []
+  title_seed: 子どもを傷つけてしまったと気づいた時、まずどこに相談するか
+  angle: しんどい時は読まないで／児童相談所虐待対応ダイヤル189・こども家庭センター・かかりつけ／相談は罰ではなく支援の入り口／責める前に休む
+  official_sources:
+  - https://www.cfa.go.jp/policies/jidougyakutai
+  published_slug: kizutsuketa-to-kizuitara-soudan
