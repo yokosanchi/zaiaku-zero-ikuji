@@ -137,6 +137,18 @@ def run_daily(args) -> dict:
         else:
             x_status = "no_keys"
 
+    threads_id = None
+    threads_status = "disabled" if args.no_threads else "skipped"
+    if not args.no_threads and not is_mock():
+        from gen import post_threads as th_mod
+
+        if th_mod._creds():
+            threads_id = th_mod.post(th_mod.compose_post(art, slug), image_url=art.get("ogImage"))
+            threads_status = "posted" if threads_id else "failed"
+            th_mod.refresh_token()  # 60日期限の延長（best effort）
+        else:
+            threads_status = "no_keys"
+
     improve = {}
     if not args.no_improve:
         improve = improve_mod.daily_improve(mode=os.environ.get("IMPROVE_MODE") or "full")
@@ -147,6 +159,8 @@ def run_daily(args) -> dict:
         "type": art["articleType"],
         "tweet_id": tweet_id,
         "x": x_status,
+        "threads_id": threads_id,
+        "threads": threads_status,
         "governance": governance,
         "improve": improve,
     }
@@ -184,6 +198,8 @@ def preflight() -> dict:
 
     x_keys = all(os.environ.get(k) for k in ("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET"))
     checks.append(("X 投稿キー4種（任意）", True, "4つ揃うと新着記事を X へ自動投稿" if not x_keys else "OK"))
+    th_keys = all(os.environ.get(k) for k in ("THREADS_USER_ID", "THREADS_ACCESS_TOKEN"))
+    checks.append(("Threads キー2種（任意）", True, "2つ揃うと新着記事を Threads へ自動投稿" if not th_keys else "OK"))
 
     all_ok = all(ok for _, ok, _ in checks)
     for name, ok, note in checks:
@@ -201,6 +217,7 @@ def main() -> None:
     ap.add_argument("--improve-only", action="store_true", help="既存記事の点検・改善だけ実行")
     ap.add_argument("--no-improve", action="store_true", help="改善パスをスキップ")
     ap.add_argument("--no-x", action="store_true", help="X（Twitter）への自動投稿をスキップ")
+    ap.add_argument("--no-threads", action="store_true", help="Threads への自動投稿をスキップ")
     ap.add_argument("--check", action="store_true", help="公開せず、動かせる状態か点検する")
     ap.add_argument("--allow-mock", action="store_true", help="APIキー無し(MOCK)でも --daily で保存する（テスト用）")
     args = ap.parse_args()

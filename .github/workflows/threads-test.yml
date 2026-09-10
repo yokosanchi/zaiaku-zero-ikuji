@@ -1,0 +1,34 @@
+name: threads-post-test
+
+# 手動専用。Gemini を呼ばず、最新記事の内容で Threads 投稿だけを試す。
+on:
+  workflow_dispatch:
+    inputs:
+      text:
+        description: "投稿する本文（省略時は最新記事から自動生成）"
+        required: false
+        type: string
+      post:
+        description: "実際に投稿する？（false なら本文を表示するだけ）"
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  threads-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Threads post test
+        env:
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.text }}" ]; then ARGS="$ARGS --text \"${{ inputs.text }}\""; fi
+          if [ "${{ inputs.post }}" = "true" ]; then ARGS="$ARGS --post"; fi
+          eval python scripts/threads_check.py $ARGS

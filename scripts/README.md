@@ -67,5 +67,6 @@ GitHub の **Settings → Secrets and variables → Actions → Secrets** に登
 | `CLOUDFLARE_API_TOKEN` | dash.cloudflare.com → My Profile → API Tokens → テンプレート「Edit Cloudflare Workers」 |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare ダッシュボード右サイドの Account ID |
 | `X_API_KEY` / `X_API_SECRET` / `X_ACCESS_TOKEN` / `X_ACCESS_SECRET` | X Developer Portal（App 権限 Read and write）※未設定なら X 投稿だけスキップ |
+| `THREADS_USER_ID` / `THREADS_ACCESS_TOKEN` | Meta（Threads API）。長期トークンは約60日で要リフレッシュ。未設定なら Threads 投稿だけスキップ |
 
 `CLOUDFLARE_*` が未設定なら Deploy 段はスキップされる（生成とコミットは実行される）。
