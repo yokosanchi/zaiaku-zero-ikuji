@@ -113,13 +113,22 @@ def _loads_loose(raw: str) -> dict:
         raw = raw.strip("`")
         if raw.lower().startswith("json"):
             raw = raw[4:]
-    try:
-        return json.loads(raw)
-    except json.JSONDecodeError:
-        s, e = raw.find("{"), raw.rfind("}")
-        if s != -1 and e != -1 and e > s:
-            return json.loads(raw[s : e + 1])
-        raise
+    # Gemini は JSON 文字列内に生の改行/タブを混ぜてくることがある → strict=False で許容
+    for candidate in (raw, _slice_braces(raw)):
+        if candidate is None:
+            continue
+        try:
+            return json.loads(candidate, strict=False)
+        except json.JSONDecodeError:
+            pass
+    # 最後の手段：文字列値の外にある制御文字だけ潰して再挑戦
+    cleaned = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", " ", raw)
+    return json.loads(_slice_braces(cleaned) or cleaned, strict=False)
+
+
+def _slice_braces(raw: str) -> str | None:
+    s, e = raw.find("{"), raw.rfind("}")
+    return raw[s : e + 1] if s != -1 and e != -1 and e > s else None
 
 
 # ---------------------------------------------------------------- mock

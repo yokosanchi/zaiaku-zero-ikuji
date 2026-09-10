@@ -2,8 +2,9 @@ name: daily-article
 
 on:
   schedule:
-    - cron: "0 21 * * *" # 毎日 06:00 JST（UTC+9）
-    - cron: "0 9 * * *"  # 毎日 18:00 JST（UTC+9）
+    # 混雑を避けて毎時00分ではなくズラす。JST 07:23 / 21:23
+    - cron: "23 22 * * *" # 07:23 JST（UTC+9）
+    - cron: "23 12 * * *" # 21:23 JST（UTC+9）
   workflow_dispatch:
     inputs:
       type:
