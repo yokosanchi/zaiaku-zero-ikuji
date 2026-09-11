@@ -10,6 +10,7 @@ export type CategoryKey =
   | 'kokoro'
   | 'sango'
   | 'kakawari'
+  | 'saino'
   | 'wanope'
   | 'hatsuiku'
   | 'kurashi';
@@ -80,6 +81,15 @@ export const CATEGORIES: CategoryMeta[] = [
     accent: 'grape',
     description:
       '叱り方・ほめ方、そして親から受け継いだもの。目を背けたくなる話も、根拠をもって扱います。',
+  },
+  {
+    key: 'saino',
+    label: '才能と教育のホント',
+    short: '才能・教育',
+    emoji: '🔍',
+    accent: 'mint',
+    description:
+      '「東大に入った子の子育て法」を鵜呑みにしなくていい理由。成功の物語の裏側を、研究ベースで検証します。',
   },
   {
     key: 'wanope',

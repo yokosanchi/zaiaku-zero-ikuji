@@ -1228,3 +1228,12 @@
   angle: お金＝時間と心の余裕を買う投資／親世代と条件が違う／全部買う必要はない・効く一点から
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+# --- 新カテゴリ「才能と教育のホント」saino（成功神話の反証）。2026-09-12 ---
+- {slug: hininchi-nouryoku-toha, type: basics, category: saino, stage: age1_2, status: queued, ref_urls: [], title_seed: 「非認知能力」って結局なに？親ができる範囲で, angle: 意欲・粘り強さ・自制心などを指す言葉の整理／特別なメソッドではなく日常の関わりが土台とされる／過度な専用教材は不要, official_sources: [https://www.mext.go.jp/]}
+- {slug: narai goto tokubetsu na ko dake, type: basics, category: saino, stage: age3_pre, status: queued, ref_urls: [], title_seed: 習い事は「才能がある子だけ伸びる」という誤解, angle: 早期の上達差は個人差・体格差が大きい／継続の可否は環境と関わり方の影響が大きいとされる／比べる相手を変える, official_sources: [https://www.mext.go.jp/]}
+- {slug: uchi-no-ko-sainou-nai-tachidomaru, type: cheer, category: saino, stage: age1_2, status: queued, ref_urls: [], title_seed: 「うちの子には才能がない」と感じた時に、立ち止まりたいこと, angle: 才能は多様な形で現れ比較しにくい／早熟・晩熟の差は大きい／「ない」と決めつける必要はない, official_sources: [https://www.mext.go.jp/]}
+- {slug: okane-kakeru-hodo-yuuri-gokai, type: basics, category: saino, stage: age3_pre, status: queued, ref_urls: [], title_seed: 音楽・スポーツの早期教育、お金をかけるほど有利という誤解, angle: 高額投資と継続・成果は必ずしも比例しないとされる／本人の意欲と機会の質が重要／家計を犠牲にする必要はない, official_sources: [https://www.mext.go.jp/]}
+- {slug: dilligence-doryoku-shinwa-gokai, type: basics, category: saino, stage: age1_2, status: queued, ref_urls: [], title_seed: 「努力すれば報われる」論の使われ方に気をつけたい理由, angle: 努力の大切さを説く言説が、うまくいかない時に本人を追い詰める方向に使われがち／環境要因も大きい／努力を"評価"の道具にしない, official_sources: [https://www.mext.go.jp/]}
+- {slug: kyoudai-sainou-sa-kanjiru, type: voice, category: saino, stage: age1_2, status: queued, ref_urls: [], title_seed: きょうだいで「できる・できない」の差を感じた時の考え方, angle: 比較は無意識に起きやすい／それぞれのペースと得意分野が違う前提／親が言葉にする比較を減らす工夫, official_sources: [https://www.mext.go.jp/]}
+- {slug: suki-na-koto-mitsukaranai-futsuu, type: cheer, category: saino, stage: age3_pre, status: queued, ref_urls: [], title_seed: 「好きなことが見つからない子」は、じゅうぶん普通です, angle: 早期に夢中になれるものが見つかる子は一部／興味は移り変わって育つ／焦って探させなくていい, official_sources: [https://www.mext.go.jp/]}
+- {slug: seikousha-interview-goudoku, type: trend, category: saino, stage: age3_pre, status: queued, ref_urls: [], title_seed: 「成功者インタビュー」の子育てエピソードを読むときの注意点, angle: 実在の個人名は出さず"ジャンルとしての特徴"を扱う／後付けの物語化・記憶の美化が起きやすい／再現性の証拠にはならない, official_sources: [https://www.mext.go.jp/]}

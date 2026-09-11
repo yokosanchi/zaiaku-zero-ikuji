@@ -20,6 +20,7 @@ const blog = defineCollection({
       'kokoro',
       'sango',
       'kakawari',
+      'saino',
       'wanope',
       'hatsuiku',
       'kurashi',

@@ -46,6 +46,7 @@ _DEFAULT_SOURCES = {
     "kokoro": ["https://www.cfa.go.jp/", "https://www.mhlw.go.jp/kokoro/"],
     "sango": ["https://www.mhlw.go.jp/kokoro/", "https://www.cfa.go.jp/policies/boshihoken"],
     "kakawari": ["https://www.cfa.go.jp/policies/taibatsu", "https://www.cfa.go.jp/policies/jidougyakutai"],
+    "saino": ["https://www.mext.go.jp/", "https://www.cfa.go.jp/"],
     "wanope": ["https://www.cfa.go.jp/policies/boshihoken"],
     "hatsuiku": ["https://www.cfa.go.jp/policies/boshihoken", "https://www.jpeds.or.jp/"],
     "kurashi": ["https://www.caa.go.jp/policies/policy/consumer_safety/child/"],
