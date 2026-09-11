@@ -765,8 +765,10 @@
   - https://www.mext.go.jp/
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
   stage: gakudo
+  published_slug: sns-shougakusei-game-jikan-trend
+  published: '2026-09-11'
 - slug: gakuyouhin-namae-tsuke-service
   type: service
   title_seed: 学用品・名前つけ・提出物を回すラクな道具
