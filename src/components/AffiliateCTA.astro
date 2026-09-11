@@ -10,6 +10,8 @@ interface Props {
 
 const { name, label } = Astro.props;
 const a = AFFILIATES[name as string];
+// クリック計測用（/api/aff-click）。記事URLから slug を拾う。
+const slug = Astro.url.pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
 ---
 
 {
@@ -25,6 +27,8 @@ const a = AFFILIATES[name as string];
         href={a.link}
         target="_blank"
         rel="sponsored nofollow noopener"
+        data-aff-key={name}
+        data-aff-slug={slug}
         class="inline-block rounded-full bg-coral px-7 py-3.5 font-heading text-base font-bold text-white shadow-pop transition-transform hover:-translate-y-0.5"
       >
         {label ?? a.label} →
@@ -32,6 +36,24 @@ const a = AFFILIATES[name as string];
       {a.pixel && (
         <img src={a.pixel} width="1" height="1" alt="" loading="lazy" style="display:none" />
       )}
+      <script>
+        // クリックだけ自前でも計測（A8側の成果反映は数日〜1か月ラグがあるため）
+        document.querySelectorAll('a[data-aff-key]').forEach((el) => {
+          if ((el as HTMLElement).dataset.affBound) return;
+          (el as HTMLElement).dataset.affBound = '1';
+          el.addEventListener('click', () => {
+            try {
+              const key = (el as HTMLElement).dataset.affKey || '';
+              const slug = (el as HTMLElement).dataset.affSlug || '';
+              navigator.sendBeacon(
+                `/api/aff-click?key=${encodeURIComponent(key)}&slug=${encodeURIComponent(slug)}`
+              );
+            } catch {
+              /* 計測失敗してもリンク遷移は止めない */
+            }
+          });
+        });
+      </script>
     </div>
   ) : (
     <div class="not-prose my-8 rounded-2xl border-2 border-dashed border-ink/15 p-4 text-center text-sm text-ink-soft">
