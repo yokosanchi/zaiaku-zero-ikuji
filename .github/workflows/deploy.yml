@@ -4,6 +4,13 @@ name: deploy
 # 「記事以外の修正を push したのを今すぐ反映したい」時に使う。
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/topic-bank.yml'
+      - 'data/state.json'
+      - 'data/improvement-log.md'
+      - 'REVIEW.md'
 
 concurrency:
   group: daily-article # daily と同じグループ（同時デプロイを避ける）
