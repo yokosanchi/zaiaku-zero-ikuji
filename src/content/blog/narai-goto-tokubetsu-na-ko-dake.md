@@ -12,8 +12,8 @@ tags:
 - 比較
 - 自己肯定感
 emoji: 🎨
-heroImage: /images/thumb/narai goto tokubetsu na ko dake.png
-ogImage: /images/thumb/narai goto tokubetsu na ko dake.png
+heroImage: /images/thumb/narai-goto-tokubetsu-na-ko-dake.png
+ogImage: /images/thumb/narai-goto-tokubetsu-na-ko-dake.png
 sources:
 - label: 文部科学省「公式ウェブサイト」
   url: https://www.mext.go.jp/

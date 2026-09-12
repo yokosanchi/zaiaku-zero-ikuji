@@ -1238,7 +1238,7 @@
   angle: 意欲・粘り強さ・自制心などを指す言葉の整理／特別なメソッドではなく日常の関わりが土台とされる／過度な専用教材は不要
   official_sources:
   - https://www.mext.go.jp/
-- slug: narai goto tokubetsu na ko dake
+- slug: narai-goto-tokubetsu-na-ko-dake
   type: basics
   category: saino
   stage: age3_pre
@@ -1248,7 +1248,7 @@
   angle: 早期の上達差は個人差・体格差が大きい／継続の可否は環境と関わり方の影響が大きいとされる／比べる相手を変える
   official_sources:
   - https://www.mext.go.jp/
-  published_slug: narai goto tokubetsu na ko dake
+  published_slug: narai-goto-tokubetsu-na-ko-dake
   published: '2026-09-12'
 - slug: uchi-no-ko-sainou-nai-tachidomaru
   type: cheer
@@ -1343,4 +1343,17 @@
   title_seed: 年齢別お出かけ定番スポットまとめ
   angle: 年齢別の定番お出かけ先ジャンルと2026年の新規オープン情報
   official_sources:
+  - https://www.cfa.go.jp/
+- slug: kosodate-okane-nenreibetsu-mokuyasu
+  type: basics
+  category: kurashi
+  stage: gakudo
+  status: manual
+  published_slug: kosodate-okane-nenreibetsu-mokuyasu
+  ref_urls: []
+  title_seed: 子育てにかかるお金の年齢別目安
+  angle: 18年間合計2000万円超の内訳を年齢別に整理し不安を実態に合わせる
+  official_sources:
+  - https://www.ncchd.go.jp/
+  - https://www.mext.go.jp/
   - https://www.cfa.go.jp/
