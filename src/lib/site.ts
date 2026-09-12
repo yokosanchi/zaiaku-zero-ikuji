@@ -13,7 +13,8 @@ export type CategoryKey =
   | 'saino'
   | 'wanope'
   | 'hatsuiku'
-  | 'kurashi';
+  | 'kurashi'
+  | 'shinmama';
 export type ArticleTypeKey = 'trend' | 'basics' | 'service' | 'voice' | 'cheer';
 
 export type AccentKey = 'sun' | 'grape' | 'coral' | 'mint' | 'sky';
@@ -115,6 +116,15 @@ export const CATEGORIES: CategoryMeta[] = [
     emoji: '🧺',
     accent: 'sky',
     description: '家事を減らす家電やサービス。「時間を買う」という選択の話。',
+  },
+  {
+    key: 'shinmama',
+    label: 'シンママ',
+    short: 'シンママ',
+    emoji: '🌻',
+    accent: 'sun',
+    description:
+      '養育費、児童扶養手当、面会交流、「かわいそう」という視線。ひとりで抱えなくていい情報と、頼っていい窓口をまとめます。',
   },
 ];
 

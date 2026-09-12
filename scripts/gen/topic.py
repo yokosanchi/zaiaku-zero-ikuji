@@ -51,6 +51,7 @@ _DEFAULT_SOURCES = {
     "hatsuiku": ["https://www.cfa.go.jp/policies/boshihoken", "https://www.jpeds.or.jp/"],
     "kurashi": ["https://www.caa.go.jp/policies/policy/consumer_safety/child/"],
     "sns": ["https://www.cfa.go.jp/"],
+    "shinmama": ["https://www.cfa.go.jp/policies/hitori-oya", "https://support-hitorioya.cfa.go.jp/support/"],
 }
 
 
