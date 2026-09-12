@@ -1,6 +1,6 @@
 {
-  "rotation_index": 11,
-  "last_run": "2026-09-11",
+  "rotation_index": 12,
+  "last_run": "2026-09-12",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -67,6 +67,12 @@
       "type": "trend",
       "category": "sns",
       "date": "2026-09-11"
+    },
+    {
+      "slug": "narai goto tokubetsu na ko dake",
+      "type": "basics",
+      "category": "saino",
+      "date": "2026-09-12"
     }
   ],
   "improve": {
@@ -80,6 +86,7 @@
     "kansouki-jikan-wo-kau": "2026-09-09",
     "aujiru-torianezu-basics": "2026-09-10",
     "gohan-tekitou-datta-hi-cheer": "2026-09-10",
-    "hatsuiku-hadare-skincare-service": "2026-09-11"
+    "hatsuiku-hadare-skincare-service": "2026-09-11",
+    "hatsuiku-hatsunetsu-taiou-voice": "2026-09-12"
   }
 }
