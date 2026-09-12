@@ -1,0 +1,29 @@
+name: refresh-threads-token
+
+# Threads長期アクセストークン（60日で失効）を月2回自動更新し、
+# THREADS_ACCESS_TOKEN シークレットをその場で上書きする。
+# th_refresh_token は「発行から24時間以上経過したトークン」でないと使えないため、
+# 手動でトークンを再生成した直後の実行では失敗する（24時間空けてから手動実行するか、
+# 次回の定期実行を待つ）。
+
+on:
+  schedule:
+    - cron: "0 0 1,15 * *" # 毎月1日・15日 00:00 UTC
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests pynacl
+      - name: Refresh Threads access token
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python .github/scripts/refresh_token.py
