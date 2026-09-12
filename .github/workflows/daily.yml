@@ -2,8 +2,12 @@ name: daily-article
 
 on:
   schedule:
-    # 混雑を避けて毎時00分ではなくズラす。JST 07:23 / 21:23
+    # 混雑を避けて毎時00分ではなくズラす。JST 07:23 / 14:23 / 21:23
+    # 2026-09-12: shinmama新設＋saino/kakawari/sns/kurashi/kokoroがまだ目標(10)未達のため、
+    # 一時的に2→3本/日に増量（既存の「credibility上限3本/日」の範囲内）。
+    # 各カテゴリが9〜10に揃ったら2本/日（07:23・21:23）に戻す。
     - cron: "23 22 * * *" # 07:23 JST（UTC+9）
+    - cron: "23 5 * * *"  # 14:23 JST（UTC+9）— 一時追加分
     - cron: "23 12 * * *" # 21:23 JST（UTC+9）
   workflow_dispatch:
     inputs:
