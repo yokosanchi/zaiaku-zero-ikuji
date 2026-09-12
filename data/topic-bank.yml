@@ -649,8 +649,10 @@
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
   stage: ninshin
+  published_slug: ninshin-kaji-tayori-service
+  published: '2026-09-12'
 - slug: shussan-kowai-fuan-cheer
   type: cheer
   title_seed: 出産が怖い、うまく産めるか不安なあなたへ
@@ -1357,31 +1359,265 @@
   - https://www.ncchd.go.jp/
   - https://www.mext.go.jp/
   - https://www.cfa.go.jp/
-# --- 新カテゴリ「シンママ」shinmama。2026-09-12。手書き3本は上記published、残り7本は自動パイプライン用にキュー ---
-- {slug: shinmama-hoikuen-yuusen-kouryo, type: basics, category: shinmama, stage: age0, status: queued, ref_urls: [], title_seed: 保育園に「入りやすい」と言われることの実態と、後ろめたさの手放し方, angle: 選考の点数制度は生活状況を反映したもので優遇ではない／後ろめたく思わなくていい, official_sources: [https://www.cfa.go.jp/policies/hitori-oya]}
-- {slug: shinmama-otousan-wa-kikareta, type: cheer, category: shinmama, stage: age3_pre, status: queued, ref_urls: [], title_seed: 子どもに「お父さんは？」と聞かれた時、なんて答えるか迷ったら, angle: 唯一の正解はない前提／年齢に応じた伝え方の考え方の枠組み／専門家への相談窓口も紹介, official_sources: [https://www.cfa.go.jp/policies/hitori-oya]}
-- {slug: shinmama-renai-saikon-zaiakukan, type: cheer, category: shinmama, stage: gakudo, status: queued, ref_urls: [], title_seed: シンママの恋愛・再婚、子どもに申し訳ないと感じてしまう気持ちについて, angle: 親が満たされていることは子どもにとってもマイナスではないとされる／タイミングやペースに正解はない, official_sources: [https://www.cfa.go.jp/policies/hitori-oya]}
-- {slug: shinmama-hataraki-kata-genjitsuteki, type: basics, category: shinmama, stage: age3_pre, status: queued, ref_urls: [], title_seed: シンママの働き方、今のままでいいのか迷った時に整理したいこと, angle: 収入・時間・キャリアのトレードオフの整理軸／資格取得支援制度の存在に触れる, official_sources: [https://www.cfa.go.jp/policies/hitori-oya]}
-- {slug: shinmama-mensetsu-kouryu-sen-hiki, type: basics, category: shinmama, stage: age1_2, status: queued, ref_urls: [], title_seed: 元パートナーとの面会交流がしんどい時の考え方と線引き, angle: 子どものための制度である一方、無理をしてまで続ける必要はない／第三者機関の存在, official_sources: [https://www.moj.go.jp/content/001399926.pdf]}
-- {slug: shinmama-kodoku-soudan-madoguchi, type: cheer, category: shinmama, stage: ninshin, status: queued, ref_urls: [], title_seed: 実家も頼れない、話す相手がいない。シンママの孤独を抱え込まなくていい理由, angle: ワンオペとは違う法的・制度的な孤立感／母子・父子自立支援員やひとり親交流会という頼り先, official_sources: [https://www.cfa.go.jp/policies/hitori-oya]}
-- {slug: shinmama-kyouikuhi-shougakukin-fuan, type: basics, category: shinmama, stage: gakudo, status: queued, ref_urls: [], title_seed: シンママの教育費・貯金の不安と、知っておきたい奨学金・就学援助制度, angle: ひとりで全額備える前提にしない／奨学金・就学援助・自治体の支援制度の存在, official_sources: [https://www.jasso.go.jp/, https://www.mext.go.jp/]}
-- {slug: shinmama-yoikuhi-todokoru-kihon, type: basics, category: shinmama, stage: age1_2, status: manual, published_slug: shinmama-yoikuhi-todokoru-kihon, ref_urls: [], title_seed: 養育費が振り込まれなくなった時、まず知っておきたいこと, angle: 取り決めの書面化と法テラス等の窓口を案内, official_sources: [https://www.moj.go.jp/content/001399926.pdf, https://www.houterasu.or.jp/]}
-- {slug: shinmama-kouteki-shien-matome, type: basics, category: shinmama, stage: age0, status: manual, published_slug: shinmama-kouteki-shien-matome, ref_urls: [], title_seed: ひとり親家庭が使える公的支援まとめ, angle: 4つの柱の整理と自治体窓口への接続, official_sources: [https://www.cfa.go.jp/policies/hitori-oya, https://support-hitorioya.cfa.go.jp/support/]}
-- {slug: shinmama-kawaisou-shisen-tsurai, type: cheer, category: shinmama, stage: age3_pre, status: manual, published_slug: shinmama-kawaisou-shisen-tsurai, ref_urls: [], title_seed: 「かわいそう」と言われる視線への向き合い方, angle: 多様な家族のかたちという位置づけ・相談窓口の案内, official_sources: [https://www.cfa.go.jp/policies/hitori-oya]}
-# --- 新カテゴリ「子どもとお金」okane。2026-09-12。手書き3本(うち1本kurashiから移設)は上記published、残り7本は自動パイプライン用にキュー ---
-- {slug: okane-kyoudai-heikin-nayami, type: cheer, category: okane, stage: age1_2, status: queued, ref_urls: [], title_seed: きょうだいでお小遣いやお年玉に差をつけることの悩み, angle: 年齢差があれば金額差があって当然という前提の整理／平等より納得感, official_sources: [https://www.shiruporuto.jp/]}
-- {slug: jidoulate-tsukaimichi-seikai-nai, type: basics, category: okane, stage: age0, status: queued, ref_urls: [], title_seed: 児童手当、結局何に使うのが正解か, angle: 使い道に唯一の正解はない／貯蓄も生活費充当もどちらも妥当という整理, official_sources: [https://www.cfa.go.jp/]}
-- {slug: okane-nai-kodomo-tsutaekata, type: basics, category: okane, stage: age3_pre, status: queued, ref_urls: [], title_seed: 子どもへの「お金がない」の伝え方、言っていいのか, angle: 家計状況を隠しすぎず不安にさせすぎない伝え方の考え方, official_sources: [https://www.j-flec.go.jp/]}
-- {slug: shingaku-juken-okane-junbi-jiki, type: basics, category: okane, stage: gakudo, status: queued, ref_urls: [], title_seed: 進学・受験にかかるお金、いつから準備すればいいか, angle: 塾・受験費用は幅が大きい前提の整理／早すぎる焦りは不要, official_sources: [https://www.mext.go.jp/]}
-- {slug: otoshidama-souba-shinseki-nayami, type: trend, category: okane, stage: age3_pre, status: queued, ref_urls: [], title_seed: お年玉、いくらが相場？親戚間の金額の悩み, angle: 地域・親戚間の慣習差が大きい／管理方法(本人管理か親管理か)の考え方, official_sources: [https://www.shiruporuto.jp/]}
-- {slug: cashless-kodomo-okane-kyouiku, type: trend, category: okane, stage: gakudo, status: queued, ref_urls: [], title_seed: キャッシュレス時代の子どものお金教育、現金じゃなくてもいい理由, angle: 見える化の工夫があれば電子マネーでも金銭感覚は育てられるとされる, official_sources: [https://www.j-flec.go.jp/]}
-- {slug: nisa_furusato_kosodate_muzukashiku_nai, type: basics, category: okane, stage: ninshin, status: queued, ref_urls: [], title_seed: ふるさと納税・NISA、子育て世帯は難しく考えなくていい理由, angle: 制度の存在を知るだけで十分／中立的な相談窓口の案内, official_sources: [https://www.j-flec.go.jp/]}
-- {slug: okozukai-itsukara-ikura-mokuyasu, type: basics, category: okane, stage: gakudo, status: manual, published_slug: okozukai-itsukara-ikura-mokuyasu, ref_urls: [], title_seed: お小遣い、いつから・いくらが目安か, angle: 学年別の実際の目安と金額より使い方を重視する考え方, official_sources: [https://www.shiruporuto.jp/, https://www.j-flec.go.jp/]}
-- {slug: gakushi-hoken-hitsuyou-ka, type: basics, category: okane, stage: ninshin, status: manual, published_slug: gakushi-hoken-hitsuyou-ka, ref_urls: [], title_seed: 学資保険・こども名義の貯金は必須ではない, angle: 特定商品の断定的推奨を避け中立的な考え方の軸を示す, official_sources: [https://www.j-flec.go.jp/]}
-# --- シンママの「子育ての不安」寄りを追加。2026-09-12。ユーザー指摘：養育費だけでなく子育て不安にも寄り添う ---
-- {slug: shinmama-hitori-de-kimeru-fuan, type: cheer, category: shinmama, stage: age1_2, status: manual, published_slug: shinmama-hitori-de-kimeru-fuan, ref_urls: [], title_seed: しつけも進路もひとりで決めるプレッシャー, angle: 判断を分かち合う相手がいない重さを軽くする考え方, official_sources: [https://www.cfa.go.jp/policies/hitori-oya]}
-- {slug: shinmama-taichou-fuan-taisaku, type: basics, category: shinmama, stage: age0, status: manual, published_slug: shinmama-taichou-fuan-taisaku, ref_urls: [], title_seed: 自分が倒れたら子どもを見る人がいない不安への備え, angle: 生活支援制度と複数の預け先確保の具体策, official_sources: [https://www.cfa.go.jp/policies/hitori-oya]}
-- {slug: shinmama-danjo-sodatekata-fuan, type: cheer, category: shinmama, stage: age3_pre, status: manual, published_slug: shinmama-danjo-sodatekata-fuan, ref_urls: [], title_seed: 異性の親がいないことへの罪悪感, angle: ロールモデルは複数の関わりから育まれるという考え方, official_sources: [https://www.cfa.go.jp/policies/hitori-oya]}
-- {slug: shinmama-hansei-hankouki-hitori, type: basics, category: shinmama, stage: gakudo, status: queued, ref_urls: [], title_seed: 思春期・反抗期に、ひとりで向き合う不安, angle: 相談相手がいない中での対応の重さと相談窓口の案内, official_sources: [https://www.cfa.go.jp/policies/hitori-oya]}
-- {slug: shinmama-yowane-mieru-zaiakukan, type: cheer, category: shinmama, stage: age3_pre, status: queued, ref_urls: [], title_seed: 子どもの前で弱音や涙を見せてしまうことへの罪悪感, angle: 完璧に見せ続けなくていい／それも子どもに伝わる誠実さという捉え方, official_sources: [https://www.cfa.go.jp/policies/hitori-oya]}
-- {slug: shinmama_aijou_tarinai_fuan, type: cheer, category: shinmama, stage: age1_2, status: queued, ref_urls: [], title_seed: 「愛情、足りているかな」という漠然とした不安について, angle: 愛情は量より関わりの質・安心感が土台とされる, official_sources: [https://www.cfa.go.jp/policies/hitori-oya]}
+- slug: shinmama-hoikuen-yuusen-kouryo
+  type: basics
+  category: shinmama
+  stage: age0
+  status: queued
+  ref_urls: []
+  title_seed: 保育園に「入りやすい」と言われることの実態と、後ろめたさの手放し方
+  angle: 選考の点数制度は生活状況を反映したもので優遇ではない／後ろめたく思わなくていい
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya
+- slug: shinmama-otousan-wa-kikareta
+  type: cheer
+  category: shinmama
+  stage: age3_pre
+  status: queued
+  ref_urls: []
+  title_seed: 子どもに「お父さんは？」と聞かれた時、なんて答えるか迷ったら
+  angle: 唯一の正解はない前提／年齢に応じた伝え方の考え方の枠組み／専門家への相談窓口も紹介
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya
+- slug: shinmama-renai-saikon-zaiakukan
+  type: cheer
+  category: shinmama
+  stage: gakudo
+  status: queued
+  ref_urls: []
+  title_seed: シンママの恋愛・再婚、子どもに申し訳ないと感じてしまう気持ちについて
+  angle: 親が満たされていることは子どもにとってもマイナスではないとされる／タイミングやペースに正解はない
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya
+- slug: shinmama-hataraki-kata-genjitsuteki
+  type: basics
+  category: shinmama
+  stage: age3_pre
+  status: queued
+  ref_urls: []
+  title_seed: シンママの働き方、今のままでいいのか迷った時に整理したいこと
+  angle: 収入・時間・キャリアのトレードオフの整理軸／資格取得支援制度の存在に触れる
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya
+- slug: shinmama-mensetsu-kouryu-sen-hiki
+  type: basics
+  category: shinmama
+  stage: age1_2
+  status: queued
+  ref_urls: []
+  title_seed: 元パートナーとの面会交流がしんどい時の考え方と線引き
+  angle: 子どものための制度である一方、無理をしてまで続ける必要はない／第三者機関の存在
+  official_sources:
+  - https://www.moj.go.jp/content/001399926.pdf
+- slug: shinmama-kodoku-soudan-madoguchi
+  type: cheer
+  category: shinmama
+  stage: ninshin
+  status: queued
+  ref_urls: []
+  title_seed: 実家も頼れない、話す相手がいない。シンママの孤独を抱え込まなくていい理由
+  angle: ワンオペとは違う法的・制度的な孤立感／母子・父子自立支援員やひとり親交流会という頼り先
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya
+- slug: shinmama-kyouikuhi-shougakukin-fuan
+  type: basics
+  category: shinmama
+  stage: gakudo
+  status: queued
+  ref_urls: []
+  title_seed: シンママの教育費・貯金の不安と、知っておきたい奨学金・就学援助制度
+  angle: ひとりで全額備える前提にしない／奨学金・就学援助・自治体の支援制度の存在
+  official_sources:
+  - https://www.jasso.go.jp/
+  - https://www.mext.go.jp/
+- slug: shinmama-yoikuhi-todokoru-kihon
+  type: basics
+  category: shinmama
+  stage: age1_2
+  status: manual
+  published_slug: shinmama-yoikuhi-todokoru-kihon
+  ref_urls: []
+  title_seed: 養育費が振り込まれなくなった時、まず知っておきたいこと
+  angle: 取り決めの書面化と法テラス等の窓口を案内
+  official_sources:
+  - https://www.moj.go.jp/content/001399926.pdf
+  - https://www.houterasu.or.jp/
+- slug: shinmama-kouteki-shien-matome
+  type: basics
+  category: shinmama
+  stage: age0
+  status: manual
+  published_slug: shinmama-kouteki-shien-matome
+  ref_urls: []
+  title_seed: ひとり親家庭が使える公的支援まとめ
+  angle: 4つの柱の整理と自治体窓口への接続
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya
+  - https://support-hitorioya.cfa.go.jp/support/
+- slug: shinmama-kawaisou-shisen-tsurai
+  type: cheer
+  category: shinmama
+  stage: age3_pre
+  status: manual
+  published_slug: shinmama-kawaisou-shisen-tsurai
+  ref_urls: []
+  title_seed: 「かわいそう」と言われる視線への向き合い方
+  angle: 多様な家族のかたちという位置づけ・相談窓口の案内
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya
+- slug: okane-kyoudai-heikin-nayami
+  type: cheer
+  category: okane
+  stage: age1_2
+  status: queued
+  ref_urls: []
+  title_seed: きょうだいでお小遣いやお年玉に差をつけることの悩み
+  angle: 年齢差があれば金額差があって当然という前提の整理／平等より納得感
+  official_sources:
+  - https://www.shiruporuto.jp/
+- slug: jidoulate-tsukaimichi-seikai-nai
+  type: basics
+  category: okane
+  stage: age0
+  status: queued
+  ref_urls: []
+  title_seed: 児童手当、結局何に使うのが正解か
+  angle: 使い道に唯一の正解はない／貯蓄も生活費充当もどちらも妥当という整理
+  official_sources:
+  - https://www.cfa.go.jp/
+- slug: okane-nai-kodomo-tsutaekata
+  type: basics
+  category: okane
+  stage: age3_pre
+  status: queued
+  ref_urls: []
+  title_seed: 子どもへの「お金がない」の伝え方、言っていいのか
+  angle: 家計状況を隠しすぎず不安にさせすぎない伝え方の考え方
+  official_sources:
+  - https://www.j-flec.go.jp/
+- slug: shingaku-juken-okane-junbi-jiki
+  type: basics
+  category: okane
+  stage: gakudo
+  status: queued
+  ref_urls: []
+  title_seed: 進学・受験にかかるお金、いつから準備すればいいか
+  angle: 塾・受験費用は幅が大きい前提の整理／早すぎる焦りは不要
+  official_sources:
+  - https://www.mext.go.jp/
+- slug: otoshidama-souba-shinseki-nayami
+  type: trend
+  category: okane
+  stage: age3_pre
+  status: queued
+  ref_urls: []
+  title_seed: お年玉、いくらが相場？親戚間の金額の悩み
+  angle: 地域・親戚間の慣習差が大きい／管理方法(本人管理か親管理か)の考え方
+  official_sources:
+  - https://www.shiruporuto.jp/
+- slug: cashless-kodomo-okane-kyouiku
+  type: trend
+  category: okane
+  stage: gakudo
+  status: queued
+  ref_urls: []
+  title_seed: キャッシュレス時代の子どものお金教育、現金じゃなくてもいい理由
+  angle: 見える化の工夫があれば電子マネーでも金銭感覚は育てられるとされる
+  official_sources:
+  - https://www.j-flec.go.jp/
+- slug: nisa_furusato_kosodate_muzukashiku_nai
+  type: basics
+  category: okane
+  stage: ninshin
+  status: queued
+  ref_urls: []
+  title_seed: ふるさと納税・NISA、子育て世帯は難しく考えなくていい理由
+  angle: 制度の存在を知るだけで十分／中立的な相談窓口の案内
+  official_sources:
+  - https://www.j-flec.go.jp/
+- slug: okozukai-itsukara-ikura-mokuyasu
+  type: basics
+  category: okane
+  stage: gakudo
+  status: manual
+  published_slug: okozukai-itsukara-ikura-mokuyasu
+  ref_urls: []
+  title_seed: お小遣い、いつから・いくらが目安か
+  angle: 学年別の実際の目安と金額より使い方を重視する考え方
+  official_sources:
+  - https://www.shiruporuto.jp/
+  - https://www.j-flec.go.jp/
+- slug: gakushi-hoken-hitsuyou-ka
+  type: basics
+  category: okane
+  stage: ninshin
+  status: manual
+  published_slug: gakushi-hoken-hitsuyou-ka
+  ref_urls: []
+  title_seed: 学資保険・こども名義の貯金は必須ではない
+  angle: 特定商品の断定的推奨を避け中立的な考え方の軸を示す
+  official_sources:
+  - https://www.j-flec.go.jp/
+- slug: shinmama-hitori-de-kimeru-fuan
+  type: cheer
+  category: shinmama
+  stage: age1_2
+  status: manual
+  published_slug: shinmama-hitori-de-kimeru-fuan
+  ref_urls: []
+  title_seed: しつけも進路もひとりで決めるプレッシャー
+  angle: 判断を分かち合う相手がいない重さを軽くする考え方
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya
+- slug: shinmama-taichou-fuan-taisaku
+  type: basics
+  category: shinmama
+  stage: age0
+  status: manual
+  published_slug: shinmama-taichou-fuan-taisaku
+  ref_urls: []
+  title_seed: 自分が倒れたら子どもを見る人がいない不安への備え
+  angle: 生活支援制度と複数の預け先確保の具体策
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya
+- slug: shinmama-danjo-sodatekata-fuan
+  type: cheer
+  category: shinmama
+  stage: age3_pre
+  status: manual
+  published_slug: shinmama-danjo-sodatekata-fuan
+  ref_urls: []
+  title_seed: 異性の親がいないことへの罪悪感
+  angle: ロールモデルは複数の関わりから育まれるという考え方
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya
+- slug: shinmama-hansei-hankouki-hitori
+  type: basics
+  category: shinmama
+  stage: gakudo
+  status: queued
+  ref_urls: []
+  title_seed: 思春期・反抗期に、ひとりで向き合う不安
+  angle: 相談相手がいない中での対応の重さと相談窓口の案内
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya
+- slug: shinmama-yowane-mieru-zaiakukan
+  type: cheer
+  category: shinmama
+  stage: age3_pre
+  status: queued
+  ref_urls: []
+  title_seed: 子どもの前で弱音や涙を見せてしまうことへの罪悪感
+  angle: 完璧に見せ続けなくていい／それも子どもに伝わる誠実さという捉え方
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya
+- slug: shinmama_aijou_tarinai_fuan
+  type: cheer
+  category: shinmama
+  stage: age1_2
+  status: queued
+  ref_urls: []
+  title_seed: 「愛情、足りているかな」という漠然とした不安について
+  angle: 愛情は量より関わりの質・安心感が土台とされる
+  official_sources:
+  - https://www.cfa.go.jp/policies/hitori-oya

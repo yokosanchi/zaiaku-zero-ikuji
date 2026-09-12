@@ -1,5 +1,5 @@
 {
-  "rotation_index": 12,
+  "rotation_index": 13,
   "last_run": "2026-09-12",
   "published": [
     {
@@ -73,6 +73,12 @@
       "type": "basics",
       "category": "saino",
       "date": "2026-09-12"
+    },
+    {
+      "slug": "ninshin-kaji-tayori-service",
+      "type": "service",
+      "category": "kurashi",
+      "date": "2026-09-12"
     }
   ],
   "improve": {
@@ -87,6 +93,7 @@
     "aujiru-torianezu-basics": "2026-09-10",
     "gohan-tekitou-datta-hi-cheer": "2026-09-10",
     "hatsuiku-hadare-skincare-service": "2026-09-11",
-    "hatsuiku-hatsunetsu-taiou-voice": "2026-09-12"
+    "hatsuiku-hatsunetsu-taiou-voice": "2026-09-12",
+    "gakushi-hoken-hitsuyou-ka": "2026-09-12"
   }
 }
