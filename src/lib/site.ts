@@ -14,7 +14,8 @@ export type CategoryKey =
   | 'wanope'
   | 'hatsuiku'
   | 'kurashi'
-  | 'shinmama';
+  | 'shinmama'
+  | 'okane';
 export type ArticleTypeKey = 'trend' | 'basics' | 'service' | 'voice' | 'cheer';
 
 export type AccentKey = 'sun' | 'grape' | 'coral' | 'mint' | 'sky';
@@ -125,6 +126,15 @@ export const CATEGORIES: CategoryMeta[] = [
     accent: 'sun',
     description:
       '養育費、児童扶養手当、面会交流、「かわいそう」という視線。ひとりで抱えなくていい情報と、頼っていい窓口をまとめます。',
+  },
+  {
+    key: 'okane',
+    label: '子どもとお金',
+    short: '子どもとお金',
+    emoji: '💰',
+    accent: 'coral',
+    description:
+      '教育費、お小遣い、学資保険。「うちは大丈夫？」という漠然とした不安に、実際の数字と考え方で向き合います。',
   },
 ];
 

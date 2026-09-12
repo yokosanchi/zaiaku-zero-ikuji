@@ -251,9 +251,9 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
   ※ 2026-09 の「Ver 3.0」案（横軸を5テーマに統一 / 縦軸4段階）は不採用。横軸=話題別・縦軸=5段階を維持。
 - ステージ：`/stages`（一覧）、`/stages/[key]`。`StageNav` をトップ/記事一覧/ステージ各ページに。
 
-### 横軸カテゴリ（11）
+### 横軸カテゴリ（12）
 
-`sns`（SNSバズ・深掘り / sky）｜`gohan`（ごはん・離乳食 / sun）｜`nenne`（ねんね・生活リズム / grape）｜`kokoro`（心のケア / coral）｜`sango`（産後うつ・こころの不調 / grape）｜`kakawari`（関わり方 / grape・叱り方ほめ方＋"目を背けたくなる話"担当）｜`saino`（才能と教育のホント / mint・成功神話の反証。生存者バイアス／早期教育の煽り／比べない、を実在の個人名を出さず研究ベースで扱う）｜`wanope`（ワンオペ育児 / sky）｜`hatsuiku`（発育・健康 / mint）｜`kurashi`（暮らし・便利グッズ / sky）｜`shinmama`（シンママ / sun・養育費・児童扶養手当・面会交流・偏見への対処。法律/制度がらみは法テラス等の公的窓口への接続を必須にする）
+`sns`（SNSバズ・深掘り / sky）｜`gohan`（ごはん・離乳食 / sun）｜`nenne`（ねんね・生活リズム / grape）｜`kokoro`（心のケア / coral）｜`sango`（産後うつ・こころの不調 / grape）｜`kakawari`（関わり方 / grape・叱り方ほめ方＋"目を背けたくなる話"担当）｜`saino`（才能と教育のホント / mint・成功神話の反証。生存者バイアス／早期教育の煽り／比べない、を実在の個人名を出さず研究ベースで扱う）｜`wanope`（ワンオペ育児 / sky）｜`hatsuiku`（発育・健康 / mint）｜`kurashi`（暮らし・便利グッズ / sky）｜`shinmama`（シンママ / sun・養育費・児童扶養手当・面会交流・偏見への対処。法律/制度がらみは法テラス等の公的窓口への接続を必須にする）｜`okane`（子どもとお金 / coral・教育費、お小遣い、学資保険。特定の金融商品を断定的に推奨しない、金額は必ず出典付きの調査データを引用する）
 
 - `sns` は SNS で話題の悩み・投稿を事実で深掘りするカテゴリ。記事は基本 `articleType: trend`。
   実在の投稿は丸写しせず要約・一般化。`snsRefs`（frontmatter）で X / Instagram / TikTok のハッシュタグ検索ページへリンクし、記事末に「元になったSNSの話題」ボックスを表示。

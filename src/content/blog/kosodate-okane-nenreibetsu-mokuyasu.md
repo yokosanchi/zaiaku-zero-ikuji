@@ -2,7 +2,7 @@
 title: "子育てにかかるお金、年齢別の目安まとめ（総額2000万円超の中身）"
 description: "「子育ては2000万円かかる」という見出しを見て不安になる前に。国の調査をもとに、実際どの時期に何の費用がかかるのかを年齢別に整理しました。一度に必要な金額ではありません。"
 pubDate: 2026-10-30
-category: "kurashi"
+category: "okane"
 stage: "gakudo"
 articleType: "basics"
 tags: ["教育費", "育児費用", "年齢別", "お金"]

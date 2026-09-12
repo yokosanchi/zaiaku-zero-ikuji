@@ -52,6 +52,7 @@ _DEFAULT_SOURCES = {
     "kurashi": ["https://www.caa.go.jp/policies/policy/consumer_safety/child/"],
     "sns": ["https://www.cfa.go.jp/"],
     "shinmama": ["https://www.cfa.go.jp/policies/hitori-oya", "https://support-hitorioya.cfa.go.jp/support/"],
+    "okane": ["https://www.j-flec.go.jp/", "https://www.shiruporuto.jp/"],
 }
 
 
