@@ -29,3 +29,5 @@
 - 2026-09-12 🔧 点検 `gakushi-hoken-hitsuyou-ka` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-13 ➕ 新規 `kyoudai-sainou-sa-kanjiru` (voice / saino) — きょうだいの「できる・できない」を比べて落ち込む夜に。それぞれのペースを愛おしむ考え方
 - 2026-09-13 🔧 点検 `hatsuiku-hokou-osoi-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-13 ➕ 新規 `shinmama-kodoku-soudan-madoguchi` (cheer / shinmama) — 実家も頼れない夜へ。シンママの孤独を抱え込なくていい理由
+- 2026-09-13 🔧 点検 `hatsuiku-kotoba-osoi-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）

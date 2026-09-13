@@ -1415,12 +1415,14 @@
   type: cheer
   category: shinmama
   stage: ninshin
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 実家も頼れない、話す相手がいない。シンママの孤独を抱え込まなくていい理由
   angle: ワンオペとは違う法的・制度的な孤立感／母子・父子自立支援員やひとり親交流会という頼り先
   official_sources:
   - https://www.cfa.go.jp/policies/hitori-oya
+  published_slug: shinmama-kodoku-soudan-madoguchi
+  published: '2026-09-13'
 - slug: shinmama-kyouikuhi-shougakukin-fuan
   type: basics
   category: shinmama
