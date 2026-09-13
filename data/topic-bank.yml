@@ -1286,12 +1286,14 @@
   type: voice
   category: saino
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: きょうだいで「できる・できない」の差を感じた時の考え方
   angle: 比較は無意識に起きやすい／それぞれのペースと得意分野が違う前提／親が言葉にする比較を減らす工夫
   official_sources:
   - https://www.mext.go.jp/
+  published_slug: kyoudai-sainou-sa-kanjiru
+  published: '2026-09-13'
 - slug: suki-na-koto-mitsukaranai-futsuu
   type: cheer
   category: saino

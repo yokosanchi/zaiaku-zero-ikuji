@@ -27,3 +27,5 @@
 - 2026-09-12 🔧 点検 `hatsuiku-hatsunetsu-taiou-voice` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-12 ➕ 新規 `ninshin-kaji-tayori-service` (service / kurashi) — 妊娠中の家事がつらい時は頼って大丈夫。宅配や時短で心が軽くなる選択
 - 2026-09-12 🔧 点検 `gakushi-hoken-hitsuyou-ka` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-13 ➕ 新規 `kyoudai-sainou-sa-kanjiru` (voice / saino) — きょうだいの「できる・できない」を比べて落ち込む夜に。それぞれのペースを愛おしむ考え方
+- 2026-09-13 🔧 点検 `hatsuiku-hokou-osoi-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
