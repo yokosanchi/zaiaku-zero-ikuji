@@ -31,3 +31,5 @@
 - 2026-09-13 🔧 点検 `hatsuiku-hokou-osoi-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-13 ➕ 新規 `shinmama-kodoku-soudan-madoguchi` (cheer / shinmama) — 実家も頼れない夜へ。シンママの孤独を抱え込なくていい理由
 - 2026-09-13 🔧 点検 `hatsuiku-kotoba-osoi-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-13 ➕ 新規 `cashless-kodomo-okane-kyouiku` (trend / okane) — キャッシュレスでお小遣いはダメ？現金じゃなくても子どもの金銭感覚が育つ考え方
+- 2026-09-13 🔧 点検 `cashless-kodomo-okane-kyouiku` — 問題なし（導入を軽くリライト・updatedDate 更新）

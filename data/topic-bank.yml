@@ -1523,12 +1523,14 @@
   type: trend
   category: okane
   stage: gakudo
-  status: queued
+  status: published
   ref_urls: []
   title_seed: キャッシュレス時代の子どものお金教育、現金じゃなくてもいい理由
   angle: 見える化の工夫があれば電子マネーでも金銭感覚は育てられるとされる
   official_sources:
   - https://www.j-flec.go.jp/
+  published_slug: cashless-kodomo-okane-kyouiku
+  published: '2026-09-13'
 - slug: nisa_furusato_kosodate_muzukashiku_nai
   type: basics
   category: okane
