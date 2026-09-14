@@ -35,3 +35,5 @@
 - 2026-09-13 🔧 点検 `cashless-kodomo-okane-kyouiku` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-14 ➕ 新規 `nisa_furusato_kosodate_muzukashiku_nai` (basics / okane) — 子育て中のふるさと納税・NISAは難しく考えなくて大丈夫！後回しでも問題ない基本の考え方
 - 2026-09-14 🔧 点検 `hatsuiku-shincho-taiju-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-14 ➕ 新規 `gakuyouhin-namae-tsuke-service` (service / kurashi) — 名前付けと提出物に追われる日々から卒業。便利グッズで心が軽くなる方法
+- 2026-09-14 🔧 点検 `gakuyouhin-namae-tsuke-service` — 問題なし（導入を軽くリライト・updatedDate 更新）

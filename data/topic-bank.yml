@@ -779,8 +779,10 @@
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
   stage: gakudo
+  published_slug: gakuyouhin-namae-tsuke-service
+  published: '2026-09-14'
 - slug: toukou-shiburi-hajimattara-voice
   type: voice
   title_seed: 登校しぶり・行き渋りが始まった時、どうしたか
