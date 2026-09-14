@@ -33,3 +33,5 @@
 - 2026-09-13 🔧 点検 `hatsuiku-kotoba-osoi-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-13 ➕ 新規 `cashless-kodomo-okane-kyouiku` (trend / okane) — キャッシュレスでお小遣いはダメ？現金じゃなくても子どもの金銭感覚が育つ考え方
 - 2026-09-13 🔧 点検 `cashless-kodomo-okane-kyouiku` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-14 ➕ 新規 `nisa_furusato_kosodate_muzukashiku_nai` (basics / okane) — 子育て中のふるさと納税・NISAは難しく考えなくて大丈夫！後回しでも問題ない基本の考え方
+- 2026-09-14 🔧 点検 `hatsuiku-shincho-taiju-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）

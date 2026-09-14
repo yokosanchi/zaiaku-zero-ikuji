@@ -1535,12 +1535,14 @@
   type: basics
   category: okane
   stage: ninshin
-  status: queued
+  status: published
   ref_urls: []
   title_seed: ふるさと納税・NISA、子育て世帯は難しく考えなくていい理由
   angle: 制度の存在を知るだけで十分／中立的な相談窓口の案内
   official_sources:
   - https://www.j-flec.go.jp/
+  published_slug: nisa_furusato_kosodate_muzukashiku_nai
+  published: '2026-09-14'
 - slug: okozukai-itsukara-ikura-mokuyasu
   type: basics
   category: okane
