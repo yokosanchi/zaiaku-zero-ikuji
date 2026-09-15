@@ -1,6 +1,6 @@
 {
-  "rotation_index": 18,
-  "last_run": "2026-09-14",
+  "rotation_index": 19,
+  "last_run": "2026-09-15",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -109,6 +109,12 @@
       "type": "service",
       "category": "kurashi",
       "date": "2026-09-14"
+    },
+    {
+      "slug": "jouken-tsuki-no-aijou-voice",
+      "type": "voice",
+      "category": "kakawari",
+      "date": "2026-09-15"
     }
   ],
   "improve": {
@@ -129,6 +135,7 @@
     "hatsuiku-kotoba-osoi-basics": "2026-09-13",
     "cashless-kodomo-okane-kyouiku": "2026-09-13",
     "hatsuiku-shincho-taiju-basics": "2026-09-14",
-    "gakuyouhin-namae-tsuke-service": "2026-09-14"
+    "gakuyouhin-namae-tsuke-service": "2026-09-14",
+    "hatsuiku-yobou-sesshu-basics": "2026-09-15"
   }
 }

@@ -37,3 +37,5 @@
 - 2026-09-14 🔧 点検 `hatsuiku-shincho-taiju-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-14 ➕ 新規 `gakuyouhin-namae-tsuke-service` (service / kurashi) — 名前付けと提出物に追われる日々から卒業。便利グッズで心が軽くなる方法
 - 2026-09-14 🔧 点検 `gakuyouhin-namae-tsuke-service` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-15 ➕ 新規 `jouken-tsuki-no-aijou-voice` (voice / kakawari) — 「できたら好き」と言っちゃった…条件つきの愛情に気づいた時の向き合い方
+- 2026-09-15 🔧 点検 `hatsuiku-yobou-sesshu-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）

@@ -899,12 +899,14 @@
   type: voice
   stage: age1_2
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「条件つきの愛情」に気づいた人が、どう変えたか
   angle: 「できたら好き」を無意識に言っていた気づき／言い換えの実例／自分も条件つきで育った場合の難しさ
   official_sources:
   - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: jouken-tsuki-no-aijou-voice
+  published: '2026-09-15'
 - slug: tatakanai-donaranai-yoyuu-nakutemo
   type: basics
   stage: age1_2
