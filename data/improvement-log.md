@@ -41,3 +41,5 @@
 - 2026-09-15 🔧 点検 `hatsuiku-yobou-sesshu-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-15 ➕ 新規 `suki-na-koto-mitsukaranai-futsuu` (cheer / saino) — 「好きなことが見つからない」と焦るあなたへ
 - 2026-09-15 🔧 点検 `henshoku-yougo-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-15 ➕ 新規 `otoshidama-souba-shinseki-nayami` (trend / okane) — お年玉の相場に悩んだら。親戚間の金額や管理方法を気楽に考えるヒント
+- 2026-09-15 🔧 点検 `hoikuen-youchien-erabikata` — 問題なし（導入を軽くリライト・updatedDate 更新）

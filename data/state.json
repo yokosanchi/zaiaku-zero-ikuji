@@ -1,5 +1,5 @@
 {
-  "rotation_index": 20,
+  "rotation_index": 21,
   "last_run": "2026-09-15",
   "published": [
     {
@@ -121,6 +121,12 @@
       "type": "cheer",
       "category": "saino",
       "date": "2026-09-15"
+    },
+    {
+      "slug": "otoshidama-souba-shinseki-nayami",
+      "type": "trend",
+      "category": "okane",
+      "date": "2026-09-15"
     }
   ],
   "improve": {
@@ -143,6 +149,7 @@
     "hatsuiku-shincho-taiju-basics": "2026-09-14",
     "gakuyouhin-namae-tsuke-service": "2026-09-14",
     "hatsuiku-yobou-sesshu-basics": "2026-09-15",
-    "henshoku-yougo-basics": "2026-09-15"
+    "henshoku-yougo-basics": "2026-09-15",
+    "hoikuen-youchien-erabikata": "2026-09-15"
   }
 }

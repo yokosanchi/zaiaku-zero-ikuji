@@ -1519,12 +1519,14 @@
   type: trend
   category: okane
   stage: age3_pre
-  status: queued
+  status: published
   ref_urls: []
   title_seed: お年玉、いくらが相場？親戚間の金額の悩み
   angle: 地域・親戚間の慣習差が大きい／管理方法(本人管理か親管理か)の考え方
   official_sources:
   - https://www.shiruporuto.jp/
+  published_slug: otoshidama-souba-shinseki-nayami
+  published: '2026-09-15'
 - slug: cashless-kodomo-okane-kyouiku
   type: trend
   category: okane
