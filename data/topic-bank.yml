@@ -1302,12 +1302,14 @@
   type: cheer
   category: saino
   stage: age3_pre
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「好きなことが見つからない子」は、じゅうぶん普通です
   angle: 早期に夢中になれるものが見つかる子は一部／興味は移り変わって育つ／焦って探させなくていい
   official_sources:
   - https://www.mext.go.jp/
+  published_slug: suki-na-koto-mitsukaranai-futsuu
+  published: '2026-09-15'
 - slug: seikousha-interview-goudoku
   type: trend
   category: saino

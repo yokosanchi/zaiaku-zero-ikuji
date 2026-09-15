@@ -39,3 +39,5 @@
 - 2026-09-14 🔧 点検 `gakuyouhin-namae-tsuke-service` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-15 ➕ 新規 `jouken-tsuki-no-aijou-voice` (voice / kakawari) — 「できたら好き」と言っちゃった…条件つきの愛情に気づいた時の向き合い方
 - 2026-09-15 🔧 点検 `hatsuiku-yobou-sesshu-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-15 ➕ 新規 `suki-na-koto-mitsukaranai-futsuu` (cheer / saino) — 「好きなことが見つからない」と焦るあなたへ
+- 2026-09-15 🔧 点検 `henshoku-yougo-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
