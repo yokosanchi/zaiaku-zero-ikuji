@@ -1,6 +1,6 @@
 {
-  "rotation_index": 21,
-  "last_run": "2026-09-15",
+  "rotation_index": 22,
+  "last_run": "2026-09-16",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -127,6 +127,12 @@
       "type": "trend",
       "category": "okane",
       "date": "2026-09-15"
+    },
+    {
+      "slug": "shingaku-juken-okane-junbi-jiki",
+      "type": "basics",
+      "category": "okane",
+      "date": "2026-09-16"
     }
   ],
   "improve": {
@@ -150,6 +156,7 @@
     "gakuyouhin-namae-tsuke-service": "2026-09-14",
     "hatsuiku-yobou-sesshu-basics": "2026-09-15",
     "henshoku-yougo-basics": "2026-09-15",
-    "hoikuen-youchien-erabikata": "2026-09-15"
+    "hoikuen-youchien-erabikata": "2026-09-15",
+    "jouken-tsuki-no-aijou-voice": "2026-09-16"
   }
 }

@@ -1509,12 +1509,14 @@
   type: basics
   category: okane
   stage: gakudo
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 進学・受験にかかるお金、いつから準備すればいいか
   angle: 塾・受験費用は幅が大きい前提の整理／早すぎる焦りは不要
   official_sources:
   - https://www.mext.go.jp/
+  published_slug: shingaku-juken-okane-junbi-jiki
+  published: '2026-09-16'
 - slug: otoshidama-souba-shinseki-nayami
   type: trend
   category: okane

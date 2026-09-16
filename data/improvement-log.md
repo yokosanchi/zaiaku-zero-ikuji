@@ -43,3 +43,5 @@
 - 2026-09-15 🔧 点検 `henshoku-yougo-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-15 ➕ 新規 `otoshidama-souba-shinseki-nayami` (trend / okane) — お年玉の相場に悩んだら。親戚間の金額や管理方法を気楽に考えるヒント
 - 2026-09-15 🔧 点検 `hoikuen-youchien-erabikata` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-16 ➕ 新規 `shingaku-juken-okane-junbi-jiki` (basics / okane) — 進学や受験のお金はいつから？焦らず整える教育費準備の基本
+- 2026-09-16 🔧 点検 `jouken-tsuki-no-aijou-voice` — 問題なし（導入を軽くリライト・updatedDate 更新）
