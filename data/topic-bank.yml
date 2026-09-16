@@ -794,8 +794,10 @@
   - https://www.mext.go.jp/
   - https://www.cfa.go.jp/
   ref_urls: []
-  status: queued
+  status: published
   stage: gakudo
+  published_slug: toukou-shiburi-hajimattara-voice
+  published: '2026-09-16'
 - slug: oya-ga-gomen-to-ieru
   type: basics
   stage: age1_2
