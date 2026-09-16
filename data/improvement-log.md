@@ -45,3 +45,5 @@
 - 2026-09-15 🔧 点検 `hoikuen-youchien-erabikata` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-16 ➕ 新規 `shingaku-juken-okane-junbi-jiki` (basics / okane) — 進学や受験のお金はいつから？焦らず整える教育費準備の基本
 - 2026-09-16 🔧 点検 `jouken-tsuki-no-aijou-voice` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-16 ➕ 新規 `wanope-tasukeru-service` (service / wanope) — ワンオペ育児でサービスを使うのは甘えじゃない！心を守るサポートの選び方
+- 2026-09-16 🔧 点検 `kienaku-naritai-yoru` — 問題なし（産後うつカテゴリのためリライトは行わず）

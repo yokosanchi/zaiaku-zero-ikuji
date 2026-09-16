@@ -177,7 +177,9 @@
   - https://www.cfa.go.jp/policies/boshihoken
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: wanope-tasukeru-service
+  published: '2026-09-16'
 - slug: sns-mrs-lunch-plate-trend
   type: trend
   title_seed: バズる「豪華すぎる園弁当」を見て落ち込む必要がない話
