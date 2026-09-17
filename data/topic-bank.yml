@@ -825,12 +825,14 @@
   type: basics
   stage: age3_pre
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 話を最後まで聞く・約束を守る。小さな信頼の積み方
   angle: 途中でさえぎらない／守れない約束はしない／小さな一貫性が安心をつくる／できなかった時は説明する
   official_sources:
   - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: hanashi-wo-saigo-made-kiku
+  published: '2026-09-17'
 - slug: dame-no-tsutaekata-koudou
   type: basics
   stage: age1_2

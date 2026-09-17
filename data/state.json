@@ -1,5 +1,5 @@
 {
-  "rotation_index": 26,
+  "rotation_index": 27,
   "last_run": "2026-09-17",
   "published": [
     {
@@ -157,6 +157,12 @@
       "type": "trend",
       "category": "sns",
       "date": "2026-09-17"
+    },
+    {
+      "slug": "hanashi-wo-saigo-made-kiku",
+      "type": "basics",
+      "category": "kakawari",
+      "date": "2026-09-17"
     }
   ],
   "improve": {
@@ -185,6 +191,7 @@
     "kienaku-naritai-yoru": "2026-09-16",
     "kizutsuketa-to-kizuitara-soudan": "2026-09-16",
     "kosodate-okane-nenreibetsu-mokuyasu": "2026-09-17",
-    "kyoudai-sainou-sa-kanjiru": "2026-09-17"
+    "kyoudai-sainou-sa-kanjiru": "2026-09-17",
+    "hanashi-wo-saigo-made-kiku": "2026-09-17"
   }
 }

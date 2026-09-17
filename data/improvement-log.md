@@ -53,3 +53,5 @@
 - 2026-09-17 🔧 点検 `kosodate-okane-nenreibetsu-mokuyasu` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-17 ➕ 新規 `sns-happyoukai-dekinai-trend` (trend / sns) — SNSで見る園行事と比べて落ち込む夜に。他人の切り取りと比べなくて大丈夫
 - 2026-09-17 🔧 点検 `kyoudai-sainou-sa-kanjiru` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-17 ➕ 新規 `hanashi-wo-saigo-made-kiku` (basics / kakawari) — 話を最後まで聞く・約束を守る基本｜小さな信頼の積み方
+- 2026-09-17 🔧 点検 `hanashi-wo-saigo-made-kiku` — 問題なし（導入を軽くリライト・updatedDate 更新）
