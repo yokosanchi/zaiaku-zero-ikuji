@@ -51,3 +51,5 @@
 - 2026-09-16 🔧 点検 `kizutsuketa-to-kizuitara-soudan` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-17 ➕ 新規 `shinmama-renai-saikon-zaiakukan` (cheer / shinmama) — 子どもに申し訳ない…シンママの恋愛や再婚に悩むあなたへ
 - 2026-09-17 🔧 点検 `kosodate-okane-nenreibetsu-mokuyasu` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-17 ➕ 新規 `sns-happyoukai-dekinai-trend` (trend / sns) — SNSで見る園行事と比べて落ち込む夜に。他人の切り取りと比べなくて大丈夫
+- 2026-09-17 🔧 点検 `kyoudai-sainou-sa-kanjiru` — 問題なし（導入を軽くリライト・updatedDate 更新）
