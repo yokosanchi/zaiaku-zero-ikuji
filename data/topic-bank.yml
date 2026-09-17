@@ -1395,12 +1395,14 @@
   type: cheer
   category: shinmama
   stage: gakudo
-  status: queued
+  status: published
   ref_urls: []
   title_seed: シンママの恋愛・再婚、子どもに申し訳ないと感じてしまう気持ちについて
   angle: 親が満たされていることは子どもにとってもマイナスではないとされる／タイミングやペースに正解はない
   official_sources:
   - https://www.cfa.go.jp/policies/hitori-oya
+  published_slug: shinmama-renai-saikon-zaiakukan
+  published: '2026-09-17'
 - slug: shinmama-hataraki-kata-genjitsuteki
   type: basics
   category: shinmama

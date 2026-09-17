@@ -49,3 +49,5 @@
 - 2026-09-16 🔧 点検 `kienaku-naritai-yoru` — 問題なし（産後うつカテゴリのためリライトは行わず）
 - 2026-09-16 ➕ 新規 `toukou-shiburi-hajimattara-voice` (voice / kokoro) — 登校しぶり・行き渋りが始まったら。無理に行かせない選択と親の心を守る考え方
 - 2026-09-16 🔧 点検 `kizutsuketa-to-kizuitara-soudan` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-17 ➕ 新規 `shinmama-renai-saikon-zaiakukan` (cheer / shinmama) — 子どもに申し訳ない…シンママの恋愛や再婚に悩むあなたへ
+- 2026-09-17 🔧 点検 `kosodate-okane-nenreibetsu-mokuyasu` — 問題なし（導入を軽くリライト・updatedDate 更新）

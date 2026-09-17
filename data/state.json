@@ -1,6 +1,6 @@
 {
-  "rotation_index": 24,
-  "last_run": "2026-09-16",
+  "rotation_index": 25,
+  "last_run": "2026-09-17",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -145,6 +145,12 @@
       "type": "voice",
       "category": "kokoro",
       "date": "2026-09-16"
+    },
+    {
+      "slug": "shinmama-renai-saikon-zaiakukan",
+      "type": "cheer",
+      "category": "shinmama",
+      "date": "2026-09-17"
     }
   ],
   "improve": {
@@ -171,6 +177,7 @@
     "hoikuen-youchien-erabikata": "2026-09-15",
     "jouken-tsuki-no-aijou-voice": "2026-09-16",
     "kienaku-naritai-yoru": "2026-09-16",
-    "kizutsuketa-to-kizuitara-soudan": "2026-09-16"
+    "kizutsuketa-to-kizuitara-soudan": "2026-09-16",
+    "kosodate-okane-nenreibetsu-mokuyasu": "2026-09-17"
   }
 }
