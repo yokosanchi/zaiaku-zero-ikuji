@@ -57,3 +57,5 @@
 - 2026-09-17 🔧 点検 `hanashi-wo-saigo-made-kiku` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-18 ➕ 新規 `jido-teate-seido-service` (service / kurashi) — 子育て支援や割引の申請は後回しでOK！制度を活用して頼るのは甘えじゃない
 - 2026-09-18 🔧 点検 `jido-teate-seido-service` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-18 ➕ 新規 `gakudo-houkago-mawashikata-voice` (voice / wanope) — 学童の長期休みが怖い…昼ご飯と預け先をワンオペで乗り切る割り切り思考
+- 2026-09-18 🔧 点検 `gakudo-houkago-mawashikata-voice` — 問題なし

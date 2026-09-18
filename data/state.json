@@ -1,5 +1,5 @@
 {
-  "rotation_index": 28,
+  "rotation_index": 29,
   "last_run": "2026-09-18",
   "published": [
     {
@@ -169,6 +169,12 @@
       "type": "service",
       "category": "kurashi",
       "date": "2026-09-18"
+    },
+    {
+      "slug": "gakudo-houkago-mawashikata-voice",
+      "type": "voice",
+      "category": "wanope",
+      "date": "2026-09-18"
     }
   ],
   "improve": {
@@ -199,6 +205,7 @@
     "kosodate-okane-nenreibetsu-mokuyasu": "2026-09-17",
     "kyoudai-sainou-sa-kanjiru": "2026-09-17",
     "hanashi-wo-saigo-made-kiku": "2026-09-17",
-    "jido-teate-seido-service": "2026-09-18"
+    "jido-teate-seido-service": "2026-09-18",
+    "gakudo-houkago-mawashikata-voice": "2026-09-18"
   }
 }
