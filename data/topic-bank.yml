@@ -260,7 +260,9 @@
   - https://www.cfa.go.jp/policies/kokoseido
   - https://www.cfa.go.jp/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: jido-teate-seido-service
+  published: '2026-09-18'
 - slug: sns-toilet-training-trend
   type: trend
   title_seed: 「2歳でトイトレ完了」投稿に焦らされているあなたへ

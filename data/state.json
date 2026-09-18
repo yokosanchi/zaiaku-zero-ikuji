@@ -1,6 +1,6 @@
 {
-  "rotation_index": 27,
-  "last_run": "2026-09-17",
+  "rotation_index": 28,
+  "last_run": "2026-09-18",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -163,6 +163,12 @@
       "type": "basics",
       "category": "kakawari",
       "date": "2026-09-17"
+    },
+    {
+      "slug": "jido-teate-seido-service",
+      "type": "service",
+      "category": "kurashi",
+      "date": "2026-09-18"
     }
   ],
   "improve": {
@@ -192,6 +198,7 @@
     "kizutsuketa-to-kizuitara-soudan": "2026-09-16",
     "kosodate-okane-nenreibetsu-mokuyasu": "2026-09-17",
     "kyoudai-sainou-sa-kanjiru": "2026-09-17",
-    "hanashi-wo-saigo-made-kiku": "2026-09-17"
+    "hanashi-wo-saigo-made-kiku": "2026-09-17",
+    "jido-teate-seido-service": "2026-09-18"
   }
 }

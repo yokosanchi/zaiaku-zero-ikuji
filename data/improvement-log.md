@@ -55,3 +55,5 @@
 - 2026-09-17 🔧 点検 `kyoudai-sainou-sa-kanjiru` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-17 ➕ 新規 `hanashi-wo-saigo-made-kiku` (basics / kakawari) — 話を最後まで聞く・約束を守る基本｜小さな信頼の積み方
 - 2026-09-17 🔧 点検 `hanashi-wo-saigo-made-kiku` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-18 ➕ 新規 `jido-teate-seido-service` (service / kurashi) — 子育て支援や割引の申請は後回しでOK！制度を活用して頼るのは甘えじゃない
+- 2026-09-18 🔧 点検 `jido-teate-seido-service` — 問題なし（導入を軽くリライト・updatedDate 更新）
