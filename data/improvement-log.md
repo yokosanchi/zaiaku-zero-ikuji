@@ -59,3 +59,5 @@
 - 2026-09-18 🔧 点検 `jido-teate-seido-service` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-18 ➕ 新規 `gakudo-houkago-mawashikata-voice` (voice / wanope) — 学童の長期休みが怖い…昼ご飯と預け先をワンオペで乗り切る割り切り思考
 - 2026-09-18 🔧 点検 `gakudo-houkago-mawashikata-voice` — 問題なし
+- 2026-09-19 ➕ 新規 `shussan-kowai-fuan-cheer` (cheer / kokoro) — 「出産が怖い」「うまく産めるか不安」と思っているあなたへ
+- 2026-09-19 🔧 点検 `maltreatment-toha-nanika` — 問題なし（導入を軽くリライト・updatedDate 更新）
