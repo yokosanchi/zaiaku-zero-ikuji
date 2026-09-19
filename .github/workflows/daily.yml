@@ -61,7 +61,10 @@ jobs:
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
         run: |
-          ARGS="--daily"
+          # --no-threads: Threadsへの投稿はここではしない。ここで使う画像URL(ogImage)は
+          # まだCloudflareにデプロイされておらず404になるため、投稿は"Deploy to Cloudflare Pages"の
+          # 後の専用ステップで行う（image_urlがライブになってから）。
+          ARGS="--daily --no-threads"
           if [ -n "${{ github.event.inputs.type }}" ]; then ARGS="$ARGS --type ${{ github.event.inputs.type }}"; fi
           python scripts/pipeline.py $ARGS
 
@@ -94,10 +97,8 @@ jobs:
           if [ "$X" = "failed" ]; then
             echo "::warning::X 投稿に失敗しました（記事公開には影響なし）。ログの 'X: 投稿失敗' を確認してください。"
           fi
-          TH=$(python -c "import json;print(json.load(open('data/last_result.json')).get('threads',''))")
-          if [ "$TH" = "failed" ]; then
-            echo "::warning::Threads 投稿に失敗しました（記事公開には影響なし）。ログの 'Threads: 投稿失敗' を確認してください。"
-          fi
+          # Threadsの投稿結果は、デプロイ後の "Post to Threads" ステップで確認する
+          # （--no-threads を指定しているので、ここでの result.threads は常に disabled）。
 
       - name: Verify build
         run: npm run build
@@ -128,3 +129,24 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: npx --yes wrangler@3 pages deploy dist --project-name=zaiaku-zero-ikuji --branch=main --commit-dirty=true
+
+      # デプロイ完了後、画像(ogImage)がライブになってから投稿する。
+      # ここより前(Generate today's article)でpost_threadsを呼ぶと、まだ
+      # Cloudflareにデプロイされていない画像URLをThreads側が取得できず失敗するため。
+      - name: Post to Threads (image is live now)
+        if: ${{ env.THREADS_ACCESS_TOKEN != '' && env.THREADS_USER_ID != '' }}
+        env:
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          R=$(python -c "import json;print(json.load(open('data/last_result.json'))['result'])")
+          if [ "$R" != "published" ]; then
+            echo "新規記事なし（result=$R）のためThreads投稿はスキップします。"
+            exit 0
+          fi
+          SLUG=$(python -c "import json;print(json.load(open('data/last_result.json'))['slug'])")
+          # CDNへの伝搬を少し待つ（保険。wranglerのdeployはCDN反映を待たず戻ることがあるため）
+          sleep 15
+          if ! python scripts/threads_check.py --slug "$SLUG" --post; then
+            echo "::warning::Threads 投稿に失敗しました（記事公開には影響なし）。上のログの 'Threads: 投稿失敗' を確認してください。"
+          fi

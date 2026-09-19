@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Threads 投稿の単体チェック。パイプライン全体を回さずに確認できる。
+"""Threads 投稿の単体チェック・実投稿に使う。パイプライン全体を回さずに確認できる。
 
-    python scripts/threads_check.py            # 鍵の有無 + 最新記事の投稿文を表示（投稿しない）
-    python scripts/threads_check.py --post     # 最新記事の投稿文を実際に投稿する（鍵が必要）
+    python scripts/threads_check.py                    # 鍵の有無 + 最新記事(mtime基準)の投稿文を表示（投稿しない）
+    python scripts/threads_check.py --post              # 最新記事の投稿文を実際に投稿する（鍵が必要）
+    python scripts/threads_check.py --slug foo --post   # slugを明示指定（daily.ymlのデプロイ後投稿で使用。
+                                                          # mtime基準だとimproveパスが触った既存記事を誤って
+                                                          # 拾うことがあるため、確実にこちらを使う）
     python scripts/threads_check.py --text "..." --post
 """
 from __future__ import annotations
@@ -28,25 +31,41 @@ def _load_dotenv() -> None:
             os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
 
-def _latest_meta() -> tuple[dict, str]:
-    posts = sorted((_ROOT / "src/content/blog").glob("*.md"), key=lambda p: p.stat().st_mtime)
-    posts += sorted((_ROOT / "src/content/blog").glob("*.mdx"), key=lambda p: p.stat().st_mtime)
-    if not posts:
-        raise SystemExit("記事がありません")
-    p = max(posts, key=lambda x: x.stat().st_mtime)
+def _meta_from_path(p: pathlib.Path) -> dict:
     fm = p.read_text(encoding="utf-8").split("---", 2)[1]
 
     def g(k: str) -> str:
         m = re.search(rf'^{k}:\s*"?(.+?)"?\s*$', fm, re.M)
         return m.group(1) if m else ""
 
-    return {"title": g("title"), "description": g("description"), "ogImage": g("ogImage")}, p.stem
+    return {"title": g("title"), "description": g("description"), "ogImage": g("ogImage")}
+
+
+def _meta_by_slug(slug: str) -> tuple[dict, str]:
+    for ext in (".md", ".mdx"):
+        p = _ROOT / "src/content/blog" / f"{slug}{ext}"
+        if p.exists():
+            return _meta_from_path(p), p.stem
+    raise SystemExit(f"記事が見つかりません: {slug}")
+
+
+def _latest_meta() -> tuple[dict, str]:
+    """mtime基準で最新の記事を拾う。improveパスが既存記事を触ると
+    そちらのmtimeが新しくなり得るため、確実性が必要な場面（daily.ymlの
+    デプロイ後投稿）では --slug を使うこと。"""
+    posts = sorted((_ROOT / "src/content/blog").glob("*.md"), key=lambda p: p.stat().st_mtime)
+    posts += sorted((_ROOT / "src/content/blog").glob("*.mdx"), key=lambda p: p.stat().st_mtime)
+    if not posts:
+        raise SystemExit("記事がありません")
+    p = max(posts, key=lambda x: x.stat().st_mtime)
+    return _meta_from_path(p), p.stem
 
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--post", action="store_true")
     ap.add_argument("--text")
+    ap.add_argument("--slug", help="この slug の記事を明示的に使う（mtime基準の推測をしない）")
     args = ap.parse_args()
 
     _load_dotenv()
@@ -59,10 +78,10 @@ def main() -> None:
     if args.text:
         text = args.text
     else:
-        meta, slug = _latest_meta()
+        meta, slug = _meta_by_slug(args.slug) if args.slug else _latest_meta()
         text = compose_post(meta, slug)
         img = meta.get("ogImage") or None
-        print(f"\n--- 最新記事: {slug} ---")
+        print(f"\n--- 対象記事: {slug} ---")
 
     print("\n----- 投稿予定の本文 -----")
     print(text)

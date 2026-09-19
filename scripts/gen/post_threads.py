@@ -34,7 +34,8 @@ def _creds() -> dict | None:
 def compose_post(meta: dict, slug: str, tags: list[str] | None = None) -> str:
     """記事メタから投稿本文を組み立てる（500字以内）。"""
     tagline = " ".join(tags or DEFAULT_TAGS)
-    url = f"{SITE}/blog/{slug.lstrip('/')}"
+    # Threads経由の流入をCloudflare Web Analytics等で追えるようUTMを付与
+    url = f"{SITE}/blog/{slug.lstrip('/')}?utm_source=threads&utm_medium=social&utm_campaign=auto_post"
     title = (meta.get("title") or "").strip()
     desc = (meta.get("description") or "").strip()
 
