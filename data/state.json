@@ -1,5 +1,5 @@
 {
-  "rotation_index": 30,
+  "rotation_index": 31,
   "last_run": "2026-09-19",
   "published": [
     {
@@ -181,6 +181,12 @@
       "type": "cheer",
       "category": "kokoro",
       "date": "2026-09-19"
+    },
+    {
+      "slug": "seikousha-interview-goudoku",
+      "type": "trend",
+      "category": "saino",
+      "date": "2026-09-19"
     }
   ],
   "improve": {
@@ -213,6 +219,7 @@
     "hanashi-wo-saigo-made-kiku": "2026-09-17",
     "jido-teate-seido-service": "2026-09-18",
     "gakudo-houkago-mawashikata-voice": "2026-09-18",
-    "maltreatment-toha-nanika": "2026-09-19"
+    "maltreatment-toha-nanika": "2026-09-19",
+    "narai-goto-tokubetsu-na-ko-dake": "2026-09-19"
   }
 }

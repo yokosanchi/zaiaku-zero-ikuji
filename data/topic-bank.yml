@@ -1328,12 +1328,14 @@
   type: trend
   category: saino
   stage: age3_pre
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「成功者インタビュー」の子育てエピソードを読むときの注意点
   angle: 実在の個人名は出さず"ジャンルとしての特徴"を扱う／後付けの物語化・記憶の美化が起きやすい／再現性の証拠にはならない
   official_sources:
   - https://www.mext.go.jp/
+  published_slug: seikousha-interview-goudoku
+  published: '2026-09-19'
 - slug: hoikuen-youchien-erabikata
   type: basics
   category: saino

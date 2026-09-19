@@ -61,3 +61,5 @@
 - 2026-09-18 🔧 点検 `gakudo-houkago-mawashikata-voice` — 問題なし
 - 2026-09-19 ➕ 新規 `shussan-kowai-fuan-cheer` (cheer / kokoro) — 「出産が怖い」「うまく産めるか不安」と思っているあなたへ
 - 2026-09-19 🔧 点検 `maltreatment-toha-nanika` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-19 ➕ 新規 `seikousha-interview-goudoku` (trend / saino) — 「成功者の子育て論」に焦らなくて大丈夫。インタビューを読むときの心が軽くなる視点
+- 2026-09-19 🔧 点検 `narai-goto-tokubetsu-na-ko-dake` — 問題なし（導入を軽くリライト・updatedDate 更新）
