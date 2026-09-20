@@ -65,3 +65,5 @@
 - 2026-09-19 🔧 点検 `narai-goto-tokubetsu-na-ko-dake` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-20 ➕ 新規 `okane-nai-kodomo-tsutaekata` (basics / okane) — 子どもに「お金がない」と伝える時の基本｜不安にさせない優しい言い換え
 - 2026-09-20 🔧 点検 `nenne-hirune-ikou-basics` — 問題なし
+- 2026-09-20 ➕ 新規 `wanope-homehelp-support-service` (service / wanope) — 産後ケアや家事代行は甘えじゃない！限界を迎える前に知っておきたい探し方と使い方
+- 2026-09-20 🔧 点検 `nenne-hoikuen-seikatsu-service` — 問題なし（導入を軽くリライト・updatedDate 更新）

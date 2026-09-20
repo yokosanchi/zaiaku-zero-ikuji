@@ -429,7 +429,9 @@
   - https://www.cfa.go.jp/policies/boshihoken
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: wanope-homehelp-support-service
+  published: '2026-09-20'
 - slug: wanope-hasseki-basics
   type: basics
   title_seed: ワンオペで体調を崩した日の「最低限」の回し方

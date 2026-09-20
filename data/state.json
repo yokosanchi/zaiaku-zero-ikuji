@@ -1,5 +1,5 @@
 {
-  "rotation_index": 32,
+  "rotation_index": 33,
   "last_run": "2026-09-20",
   "published": [
     {
@@ -193,6 +193,12 @@
       "type": "basics",
       "category": "okane",
       "date": "2026-09-20"
+    },
+    {
+      "slug": "wanope-homehelp-support-service",
+      "type": "service",
+      "category": "wanope",
+      "date": "2026-09-20"
     }
   ],
   "improve": {
@@ -227,6 +233,7 @@
     "gakudo-houkago-mawashikata-voice": "2026-09-18",
     "maltreatment-toha-nanika": "2026-09-19",
     "narai-goto-tokubetsu-na-ko-dake": "2026-09-19",
-    "nenne-hirune-ikou-basics": "2026-09-20"
+    "nenne-hirune-ikou-basics": "2026-09-20",
+    "nenne-hoikuen-seikatsu-service": "2026-09-20"
   }
 }
