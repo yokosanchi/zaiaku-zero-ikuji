@@ -1517,12 +1517,14 @@
   type: basics
   category: okane
   stage: age3_pre
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 子どもへの「お金がない」の伝え方、言っていいのか
   angle: 家計状況を隠しすぎず不安にさせすぎない伝え方の考え方
   official_sources:
   - https://www.j-flec.go.jp/
+  published_slug: okane-nai-kodomo-tsutaekata
+  published: '2026-09-20'
 - slug: shingaku-juken-okane-junbi-jiki
   type: basics
   category: okane

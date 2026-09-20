@@ -63,3 +63,5 @@
 - 2026-09-19 🔧 点検 `maltreatment-toha-nanika` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-19 ➕ 新規 `seikousha-interview-goudoku` (trend / saino) — 「成功者の子育て論」に焦らなくて大丈夫。インタビューを読むときの心が軽くなる視点
 - 2026-09-19 🔧 点検 `narai-goto-tokubetsu-na-ko-dake` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-20 ➕ 新規 `okane-nai-kodomo-tsutaekata` (basics / okane) — 子どもに「お金がない」と伝える時の基本｜不安にさせない優しい言い換え
+- 2026-09-20 🔧 点検 `nenne-hirune-ikou-basics` — 問題なし
