@@ -21,7 +21,8 @@ class LLMError(Exception):
 
 
 class LLMRateLimited(LLMError):
-    """無料枠の1日上限など、時間をおけば回復する 429。ジョブを赤にしない扱いにする。"""
+    """無料枠の1日上限（429）や、Gemini側の一時的な混雑（503 UNAVAILABLE等）。
+    どちらも時間をおけば回復するので、ジョブを赤にしない・REVIEW.mdにも積まない扱いにする。"""
 
 
 def is_mock() -> bool:
@@ -87,8 +88,10 @@ def generate(prompt: str, *, system: str | None = None, json_mode: bool = False,
         except (urllib.error.URLError, TimeoutError) as e:  # noqa: PERF203
             last = str(e)
             time.sleep(min(2 ** attempt, 30))
-    if "HTTP 429" in last:
-        raise LLMRateLimited(f"LLM rate limited: {last}")
+    # 429(無料枠上限) と 503(UNAVAILABLE/高負荷)・500/502/504 は、こちら側の不具合ではなく
+    # Gemini側の一時的な事情。リトライを使い切ってもこれらなら「今回は見送り」扱いにする。
+    if any(f"HTTP {code}" in last for code in (429, 500, 502, 503, 504)):
+        raise LLMRateLimited(f"LLM temporarily unavailable: {last}")
     raise LLMError(f"LLM failed after retries: {last}")
 
 
