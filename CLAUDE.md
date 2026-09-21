@@ -297,3 +297,18 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
 - [x] Phase 2：多段パイプライン（5タイプ・ローテーション）＋カテゴリ受け皿＋関連記事＋記事別OGP生成＋毎日の自己改善＋GitHub Actions＋ロゴ
 - [ ] Phase 2 の残：GitHub リポ作成 → `GEMINI_API_KEY` 登録 → 初回 workflow_dispatch（ユーザー作業）
 - [ ] Phase 3：`ref_urls` を実際の競合記事で埋める、トレンド自動収集（`00_collect_trends`）、アクセス解析ベースの改善、RSS/sitemap
+
+---
+
+## 11. SEO自動改善PDCA（`scripts/gsc_report.py` / `sachiko_analyzer.py` / `auto_refine.py`）
+
+Google Search Console のデータを元に、改善ポテンシャルが高い記事を見つけてタイトル/説明文・
+追記セクションの改善案をGeminiで生成する仕組み。詳細は `scripts/SEO_README.md`。
+
+- `gsc_report.py`：手動でパフォーマンスレポートを見るだけの単発ツール
+- `sachiko_analyzer.py`（Plan/Check）→ `auto_refine.py`（Act）が自動改善PDCAの本体。
+  週次で `.github/workflows/seo-pdca.yml` が実行
+- **安全設計**：記事本体（`src/content/blog/`）への変更は必ずPR経由。`main` への直接pushはしない。
+  `category: sango` は対象外。生成結果は毎回 `gen/guardrails.py` を通す
+- 認証情報（`scripts/.gsc/credentials.json` 等）は `.gitignore` 済み。Secretsは
+  `GSC_SERVICE_ACCOUNT_JSON`（GitHub Actions用）

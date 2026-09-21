@@ -1,0 +1,115 @@
+name: seo-pdca
+
+# Search Consoleデータに基づく自動改善PDCA。
+# Plan/Check（データ取得・フラグ判定）→ Act（Geminiでタイトル/説明文・追記案を生成）→
+# Do（記事ファイルへの反映はPR経由。人が確認してマージするまで公開には反映されない）。
+#
+# 安全設計:
+#   - タイトル/説明文・本文の変更は必ずPRになる。mainへの直接pushはしない
+#   - 集計データ（data/seo/以下）だけは追跡用としてmainに直接コミットする（記事の内容ではないため）
+#   - category: sango（産後うつ・YMYL）の記事は最初から対象外（sachiko_analyzer.py / auto_refine.py 両方でチェック）
+#   - 生成結果は毎回 gen/guardrails.py の禁止語・YMYLチェックを通す
+
+on:
+  schedule:
+    - cron: "30 22 * * 1" # 毎週月曜 07:30 JST（SEOデータは日次では大きく動かないため週次）
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "記事ファイルに反映してPRを作る？（false なら提案生成のみで終わる）"
+        type: boolean
+        default: true
+      limit:
+        description: "1回に処理する記事数の上限"
+        type: string
+        default: "3"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: seo-pdca
+  cancel-in-progress: false
+
+jobs:
+  analyze-and-refine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r scripts/requirements.txt -r scripts/requirements-seo.txt
+
+      - name: Restore GSC service account key
+        env:
+          GSC_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -z "$GSC_KEY" ]; then
+            echo "::error::GSC_SERVICE_ACCOUNT_JSON が未設定です。scripts/SEO_README.md の手順でサービスアカウントを作成し、Secretsに登録してください。"
+            exit 1
+          fi
+          mkdir -p scripts/.gsc
+          printf '%s' "$GSC_KEY" > scripts/.gsc/credentials.json
+
+      - name: Plan / Check — Search Console データ取得・フラグ判定
+        run: python scripts/sachiko_analyzer.py
+
+      - name: 集計データをmainに直接コミット（記事内容ではないため）
+        run: |
+          git config user.name "seo-pdca-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seo/pages_*.json data/seo/flagged_*.json data/seo/history.jsonl 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "chore(seo): Search Console データ取得 $(date -u +%F)"
+            git push
+          fi
+
+      - name: Act — Gemini でタイトル/説明文・追記案を生成
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+        run: |
+          ARGS="--limit ${{ github.event.inputs.limit || '3' }}"
+          if [ "${{ github.event.inputs.apply }}" != "false" ]; then
+            ARGS="$ARGS --apply"
+          fi
+          python scripts/auto_refine.py $ARGS
+
+      - name: 提案ログをmainに直接コミット
+        run: |
+          git add data/seo/proposals data/seo/refined_log.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "chore(seo): リライト提案ログ $(date -u +%F)"
+            git push
+          fi
+
+      - name: Do — 記事に変更があればPRを作成（mainには直接反映しない）
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- src/content/blog; then
+            echo "記事本体の変更なし。PRは作らない。"
+            exit 0
+          fi
+          BRANCH="seo-refine/$(date -u +%Y%m%d-%H%M%S)"
+          git checkout -b "$BRANCH"
+          git add src/content/blog
+          git commit -m "seo: タイトル/説明文・追記セクションの改善案 $(date -u +%F)"
+          git push origin "$BRANCH"
+          gh pr create --title "SEO改善案 $(date -u +%F)" --base main --body "$(cat <<'EOF'
+          sachiko_analyzer.py が検出した改善候補記事に対して、Geminiが生成したタイトル/メタ
+          ディスクリプション・追記セクションの提案です。
+
+          - 禁止語・YMYLガードレールは通過済みですが、**トーンと事実の正確さは必ず人の目で確認してからマージしてください**
+          - 詳細（変更前後の値・判定理由）は `data/seo/proposals/` 以下のJSONを参照
+          - このPRをcloseしても、次回の実行結果には影響しません
+          EOF
+          )"

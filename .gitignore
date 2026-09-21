@@ -33,3 +33,6 @@ scripts/local-run.out
 scripts/local-run.err
 
 push-once.sh
+
+# Search Console 連携（scripts/gsc_report.py 等）― 認証情報は絶対にコミットしない
+scripts/.gsc/
