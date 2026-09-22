@@ -67,3 +67,5 @@
 - 2026-09-20 🔧 点検 `nenne-hirune-ikou-basics` — 問題なし
 - 2026-09-20 ➕ 新規 `wanope-homehelp-support-service` (service / wanope) — 産後ケアや家事代行は甘えじゃない！限界を迎える前に知っておきたい探し方と使い方
 - 2026-09-20 🔧 点検 `nenne-hoikuen-seikatsu-service` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-22 ➕ 新規 `toen-shiburi-nukedashi-voice` (voice / kokoro) — 登園しぶりで毎朝バトル…罪悪感を手放し抜け出すための心の整え方
+- 2026-09-22 🔧 点検 `nenne-shogaku-asagata-cheer` — 問題なし（導入を軽くリライト・updatedDate 更新）

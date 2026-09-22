@@ -680,8 +680,10 @@
   official_sources:
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: published
   stage: age3_pre
+  published_slug: toen-shiburi-nukedashi-voice
+  published: '2026-09-22'
 - slug: nando-ittemo-tsutawaranai-cheer
   type: cheer
   title_seed: 何度言っても伝わらない、で消耗している年少〜年長期の親へ

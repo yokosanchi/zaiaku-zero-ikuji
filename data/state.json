@@ -1,6 +1,6 @@
 {
-  "rotation_index": 33,
-  "last_run": "2026-09-20",
+  "rotation_index": 34,
+  "last_run": "2026-09-22",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -199,6 +199,12 @@
       "type": "service",
       "category": "wanope",
       "date": "2026-09-20"
+    },
+    {
+      "slug": "toen-shiburi-nukedashi-voice",
+      "type": "voice",
+      "category": "kokoro",
+      "date": "2026-09-22"
     }
   ],
   "improve": {
@@ -234,6 +240,7 @@
     "maltreatment-toha-nanika": "2026-09-19",
     "narai-goto-tokubetsu-na-ko-dake": "2026-09-19",
     "nenne-hirune-ikou-basics": "2026-09-20",
-    "nenne-hoikuen-seikatsu-service": "2026-09-20"
+    "nenne-hoikuen-seikatsu-service": "2026-09-20",
+    "nenne-shogaku-asagata-cheer": "2026-09-22"
   }
 }
