@@ -45,15 +45,17 @@ jobs:
       - run: pip install -r scripts/requirements.txt -r scripts/requirements-seo.txt
 
       - name: Restore GSC service account key
-        env:
-          GSC_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        # 複数行のJSONシークレットは env: に直接書くとYAMLのスカラー展開でうまく通らないことがあるため、
+        # run: のヒアドキュメント内で展開する（GitHub公式ドキュメントが推奨する書き方）。
         run: |
-          if [ -z "$GSC_KEY" ]; then
-            echo "::error::GSC_SERVICE_ACCOUNT_JSON が未設定です。scripts/SEO_README.md の手順でサービスアカウントを作成し、Secretsに登録してください。"
+          mkdir -p scripts/.gsc
+          cat > scripts/.gsc/credentials.json << 'GSC_KEY_EOF'
+          ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_KEY_EOF
+          if ! python3 -c "import json; json.load(open('scripts/.gsc/credentials.json'))" 2>/dev/null; then
+            echo "::error::GSC_SERVICE_ACCOUNT_JSON が未設定、または有効なJSONではありません。scripts/SEO_README.md の手順でサービスアカウントのJSONキーを作成し、Secretsにそのまま登録してください。"
             exit 1
           fi
-          mkdir -p scripts/.gsc
-          printf '%s' "$GSC_KEY" > scripts/.gsc/credentials.json
 
       - name: Plan / Check — Search Console データ取得・フラグ判定
         run: python scripts/sachiko_analyzer.py
