@@ -51,20 +51,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     const results = document.getElementById('search-results') as HTMLDivElement;
 
     let pagefind: Pagefind | null = null;
-    let pagefindError = false;
+    let pagefindLoading: Promise<Pagefind | null> | null = null;
 
     async function loadPagefind(): Promise<Pagefind | null> {
-      if (pagefind || pagefindError) return pagefind;
-      try {
-        // @ts-ignore ビルド後にのみ生成されるファイル（astro devでは存在しない）
-        pagefind = await import(/* @vite-ignore */ '/pagefind/pagefind.js');
-        return pagefind;
-      } catch {
-        pagefindError = true;
-        status.textContent =
-          '検索機能を読み込めませんでした（開発環境ではビルド後にのみ利用できます）。';
-        return null;
+      if (pagefind) return pagefind;
+      // 読み込み中のPromiseを使い回す（同時に複数回呼ばれても一度しかimportしない）。
+      // 失敗しても状態を恒久的にキャッシュしない＝次の検索でもう一度試せる
+      // （一時的なネットワーク不調などで検索機能が永久に壊れたままにならないように）。
+      if (!pagefindLoading) {
+        pagefindLoading = (async () => {
+          try {
+            // @ts-ignore ビルド後にのみ生成されるファイル（astro devでは存在しない）
+            const mod = await import(/* @vite-ignore */ '/pagefind/pagefind.js');
+            pagefind = mod;
+            return mod;
+          } catch {
+            status.textContent =
+              '検索機能を読み込めませんでした（開発環境ではビルド後にのみ利用できます）。';
+            return null;
+          } finally {
+            pagefindLoading = null;
+          }
+        })();
       }
+      return pagefindLoading;
     }
 
     function escapeHtml(s: string): string {
@@ -92,10 +102,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         .join('');
     }
 
+    // 直前より後に打ち込まれた検索クエリの結果だけを表示する（古い検索が非同期処理の都合で
+    // 後から返ってきて、新しい入力の結果を上書きしてしまうのを防ぐ）。
+    // 日本語入力（IME）は変換確定までに 'input' イベントが何度も飛ぶため、特に起きやすい。
+    let latestQuery = '';
     let debounceTimer: ReturnType<typeof setTimeout>;
+
     input?.addEventListener('input', () => {
       clearTimeout(debounceTimer);
       const q = input.value.trim();
+      latestQuery = q;
       if (!q) {
         results.innerHTML = '';
         status.textContent = '';
@@ -105,8 +121,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         status.textContent = '検索中…';
         const pf = await loadPagefind();
         if (!pf) return;
+        if (q !== latestQuery) return; // 待っている間にさらに入力が進んでいたら破棄
+
         const search = await pf.search(q);
+        if (q !== latestQuery) return; // 検索中にさらに入力が進んでいたら破棄
+
         const items = await Promise.all(search.results.slice(0, 20).map((r) => r.data()));
+        if (q !== latestQuery) return; // data() 取得中にさらに入力が進んでいたら破棄
+
         renderResults(items);
       }, 250);
     });
