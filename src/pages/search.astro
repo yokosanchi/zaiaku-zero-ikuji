@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="記事を検索"
+  description="『罪悪感ゼロ育児』の全記事から、知りたいキーワードで検索できます。"
+>
+  <div class="mx-auto max-w-2xl px-5">
+    <p
+      class="inline-flex -rotate-2 items-center gap-1.5 rounded-full border-2 border-ink/5 bg-sky-soft px-4 py-1.5 font-hand text-xs text-ink shadow-pop"
+    >
+      <span>🔍</span> 気になることを検索してみてください
+    </p>
+    <h1 class="mt-4 font-heading text-2xl font-bold text-ink sm:text-3xl">記事を検索</h1>
+
+    <div class="mt-6">
+      <div class="relative">
+        <span
+          aria-hidden="true"
+          class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-lg"
+          >🔍</span
+        >
+        <input
+          id="search-input"
+          type="search"
+          placeholder="例）夜泣き、保育園、学資保険"
+          class="w-full rounded-full border-2 border-ink/10 bg-white py-3 pl-11 pr-4 text-ink shadow-pop outline-none transition-colors focus:border-coral"
+          autocomplete="off"
+        />
+      </div>
+    </div>
+
+    <div id="search-status" class="mt-4 text-sm text-ink-soft"></div>
+    <div id="search-results" class="mt-4 grid gap-4"></div>
+  </div>
+
+  <script>
+    type PagefindResultData = {
+      url: string;
+      meta: { title?: string };
+      excerpt: string;
+    };
+    type PagefindSearchResult = { data: () => Promise<PagefindResultData> };
+    type Pagefind = {
+      search: (query: string) => Promise<{ results: PagefindSearchResult[] }>;
+    };
+
+    const input = document.getElementById('search-input') as HTMLInputElement;
+    const status = document.getElementById('search-status') as HTMLDivElement;
+    const results = document.getElementById('search-results') as HTMLDivElement;
+
+    let pagefind: Pagefind | null = null;
+    let pagefindError = false;
+
+    async function loadPagefind(): Promise<Pagefind | null> {
+      if (pagefind || pagefindError) return pagefind;
+      try {
+        // @ts-ignore ビルド後にのみ生成されるファイル（astro devでは存在しない）
+        pagefind = await import(/* @vite-ignore */ '/pagefind/pagefind.js');
+        return pagefind;
+      } catch {
+        pagefindError = true;
+        status.textContent =
+          '検索機能を読み込めませんでした（開発環境ではビルド後にのみ利用できます）。';
+        return null;
+      }
+    }
+
+    function escapeHtml(s: string): string {
+      const div = document.createElement('div');
+      div.textContent = s;
+      return div.innerHTML;
+    }
+
+    function renderResults(items: PagefindResultData[]) {
+      if (items.length === 0) {
+        results.innerHTML = '';
+        status.textContent = '該当する記事が見つかりませんでした。別のキーワードもお試しください。';
+        return;
+      }
+      status.textContent = `${items.length}件見つかりました`;
+      results.innerHTML = items
+        .map(
+          (r) => `
+        <a href="${r.url}" class="block rounded-[1.5rem] border-2 border-ink/5 bg-white p-5 shadow-pop transition-all hover:-translate-y-1 hover:shadow-pop-lg">
+          <h2 class="font-heading text-base font-bold text-ink">${escapeHtml(r.meta.title || '')}</h2>
+          <p class="mt-1.5 line-clamp-2 text-sm leading-relaxed text-ink-soft">${r.excerpt}</p>
+          <span class="mt-2 inline-block font-hand text-sm text-coral-deep">よむ →</span>
+        </a>`
+        )
+        .join('');
+    }
+
+    let debounceTimer: ReturnType<typeof setTimeout>;
+    input?.addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      const q = input.value.trim();
+      if (!q) {
+        results.innerHTML = '';
+        status.textContent = '';
+        return;
+      }
+      debounceTimer = setTimeout(async () => {
+        status.textContent = '検索中…';
+        const pf = await loadPagefind();
+        if (!pf) return;
+        const search = await pf.search(q);
+        const items = await Promise.all(search.results.slice(0, 20).map((r) => r.data()));
+        renderResults(items);
+      }, 250);
+    });
+
+    // ?q=... で直接検索した状態にリンクできるようにする
+    const initialQuery = new URLSearchParams(location.search).get('q');
+    if (initialQuery) {
+      input.value = initialQuery;
+      input.dispatchEvent(new Event('input'));
+    }
+  </script>
+</BaseLayout>

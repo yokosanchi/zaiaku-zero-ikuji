@@ -9,7 +9,7 @@ export async function GET({ site }) {
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   );
 
-  const staticUrls = ['/', '/about/', '/contact/', '/blog/', '/categories/', '/stages/'];
+  const staticUrls = ['/', '/about/', '/contact/', '/search/', '/blog/', '/categories/', '/stages/'];
   const catUrls = CATEGORIES.map((c) => `/categories/${c.key}/`);
   const stageUrls = STAGES.map((s) => `/stages/${s.key}/`);
 

@@ -1,6 +1,5 @@
 ---
 import Logo from './Logo.astro';
-import { CATEGORIES } from '../lib/site';
 ---
 
 <header class="sticky top-0 z-30 border-b-2 border-coral-soft bg-cream/95 backdrop-blur">
@@ -19,26 +18,30 @@ import { CATEGORIES } from '../lib/site';
       </span>
     </a>
 
-    <nav class="flex flex-wrap items-center gap-1 text-sm text-ink-soft">
-      {
-        CATEGORIES.map((c) => (
-          <a
-            href={`/categories/${c.key}`}
-            class="rounded-full px-3 py-1.5 font-medium transition-colors hover:bg-sun-soft hover:text-ink"
-          >
-            {c.short}
-          </a>
-        ))
-      }
+    <nav class="flex flex-wrap items-center gap-1 text-sm">
+      <a
+        href="/search"
+        aria-label="記事を検索"
+        title="記事を検索"
+        class="grid h-9 w-9 shrink-0 place-items-center rounded-full border-2 border-ink/10 bg-white text-base shadow-pop transition-all hover:-translate-y-0.5 hover:bg-sky-soft"
+      >
+        🔍
+      </a>
+      <a
+        href="/categories"
+        class="whitespace-nowrap rounded-full bg-coral px-4 py-1.5 font-bold text-white shadow-pop transition-all hover:-translate-y-0.5 hover:bg-coral-deep"
+      >
+        記事をさがす
+      </a>
       <a
         href="/about"
-        class="rounded-full px-3 py-1.5 font-medium transition-colors hover:bg-sun-soft hover:text-ink"
+        class="whitespace-nowrap rounded-full px-3 py-1.5 font-medium text-ink-soft transition-colors hover:bg-sun-soft hover:text-ink"
       >
         このサイトについて
       </a>
       <a
         href="/contact"
-        class="rounded-full px-3 py-1.5 font-medium transition-colors hover:bg-sun-soft hover:text-ink"
+        class="whitespace-nowrap rounded-full px-3 py-1.5 font-medium text-ink-soft transition-colors hover:bg-sun-soft hover:text-ink"
       >
         お問い合わせ
       </a>

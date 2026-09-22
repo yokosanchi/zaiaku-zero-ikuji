@@ -6,4 +6,12 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   site: 'https://zaiaku-zero-ikuji.pages.dev',
   integrations: [tailwind(), mdx()],
+  vite: {
+    build: {
+      // /pagefind/pagefind.js は npm run build の postbuild(pagefind CLI)が
+      // dist/pagefind/ に生成する実行時専用ファイルで、ソースツリーには存在しない。
+      // Rollup にバンドル解決させず、ブラウザ上のfetchに任せる。
+      rollupOptions: { external: ['/pagefind/pagefind.js'] },
+    },
+  },
 });
