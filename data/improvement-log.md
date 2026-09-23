@@ -69,3 +69,5 @@
 - 2026-09-20 🔧 点検 `nenne-hoikuen-seikatsu-service` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-22 ➕ 新規 `toen-shiburi-nukedashi-voice` (voice / kokoro) — 登園しぶりで毎朝バトル…罪悪感を手放し抜け出すための心の整え方
 - 2026-09-22 🔧 点検 `nenne-shogaku-asagata-cheer` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-23 ➕ 新規 `shinmama-otousan-wa-kikareta` (cheer / shinmama) — 「お父さんは？」と聞かれて答えに迷ったあなたへ｜即答できなくて全然大丈夫
+- 2026-09-23 🔧 点検 `nenne-soine-anzen-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
