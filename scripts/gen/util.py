@@ -34,6 +34,20 @@ TYPE_LABEL = {
     "voice": "リアルな声 × 事実",
     "cheer": "今日のあなたへ",
 }
+CATEGORY_LABEL = {
+    "sns": "SNSバズ",
+    "gohan": "ごはん",
+    "nenne": "ねんね",
+    "kokoro": "心のケア",
+    "sango": "産後うつ",
+    "kakawari": "関わり方",
+    "saino": "才能・教育",
+    "wanope": "ワンオペ",
+    "hatsuiku": "発育・健康",
+    "kurashi": "暮らし",
+    "shinmama": "シンママ",
+    "okane": "子どもとお金",
+}
 CATEGORY_ACCENT = {
     "sns": "sky",
     "gohan": "sun",

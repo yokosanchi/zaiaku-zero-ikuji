@@ -123,6 +123,11 @@ def run_daily(args) -> dict:
     )
     art["heroImage"] = img.get("heroImage")
     art["ogImage"] = img["ogImage"]
+    # サムネ用に生成したペイン起点のキャッチ(thumb.headline)をfrontmatterにも残す。
+    # これまでサムネ画像の描画にしか使われず、記事のthumbHookには書き込まれていなかった
+    # （Threads投稿文がSEO用descriptionしか使えなかった原因のひとつ）。
+    if th.get("headline"):
+        art["thumbHook"] = th["headline"]
 
     slug = publish_mod.publish(art, tp, img["ogImage"], model_label=model_label())
 

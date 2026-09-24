@@ -17,9 +17,12 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-from .util import log
+import re
+
+from .util import CATEGORY_LABEL, log
 
 SITE = "https://zaiaku-zero-ikuji.pages.dev"
+BRAND_TAG = "#罪悪感ゼロ育児"
 DEFAULT_TAGS = ["#育児", "#新米ママ", "#新米パパ", "#罪悪感ゼロ育児"]
 _BASE = "https://graph.threads.net/v1.0"
 _LIMIT = 480  # 公式上限500。余裕をみる
@@ -31,15 +34,40 @@ def _creds() -> dict | None:
     return {"user_id": uid, "token": tok} if uid and tok else None
 
 
+def _hashtag_safe(s: str) -> str:
+    """ハッシュタグに使えない区切り文字・空白を除去する。"""
+    return re.sub(r"[・/／\s#]", "", s or "")
+
+
+def _build_tags(meta: dict) -> list[str]:
+    """カテゴリ＋記事タグから毎回変わるハッシュタグを組み立てる。
+    ブランドタグ(#罪悪感ゼロ育児)は毎回固定で入れ、それ以外を記事内容に応じて変える
+    （固定4つの繰り返しだと発見されにくく、フォロワーにも同じ投稿の繰り返しに見えるため）。"""
+    out: list[str] = []
+    cat_label = CATEGORY_LABEL.get(meta.get("category") or "", "")
+    cat_tag = _hashtag_safe(cat_label)
+    if cat_tag:
+        out.append(f"#{cat_tag}")
+    for t in meta.get("tags") or []:
+        tag = _hashtag_safe(t)
+        if tag and f"#{tag}" not in out and len(out) < 3:
+            out.append(f"#{tag}")
+    out.append(BRAND_TAG)
+    return out
+
+
 def compose_post(meta: dict, slug: str, tags: list[str] | None = None) -> str:
     """記事メタから投稿本文を組み立てる（500字以内）。"""
-    tagline = " ".join(tags or DEFAULT_TAGS)
+    tag_list = tags or _build_tags(meta) or DEFAULT_TAGS
+    tagline = " ".join(tag_list)
     # Threads経由の流入を GA4 / Cloudflare Web Analytics で追えるようUTMを付与。
     # 末尾スラッシュ付きにして、Cloudflare Pages の /slug → /slug/ リダイレクトを挟まない
     # （リダイレクトを経由しないので UTM が確実にそのまま着地ページに届く）。
     url = f"{SITE}/blog/{slug.strip('/')}/?utm_source=threads&utm_medium=social&utm_campaign=auto_post"
     title = (meta.get("title") or "").strip()
-    desc = (meta.get("description") or "").strip()
+    # thumbHookはサムネ用に設計済みの「読み手のペイン起点のキャッチ」。
+    # SEO向けのdescriptionよりSNSの一文として自然なので優先する。
+    hook_text = (meta.get("thumbHook") or meta.get("description") or "").strip()
 
     def build(hook: str) -> str:
         parts = [title]
@@ -48,7 +76,7 @@ def compose_post(meta: dict, slug: str, tags: list[str] | None = None) -> str:
         parts += [url, tagline]
         return "\n\n".join(parts)
 
-    hook = desc
+    hook = hook_text
     text = build(hook)
     while hook and len(text) > _LIMIT:
         hook = hook[: max(1, len(hook) - 6)]

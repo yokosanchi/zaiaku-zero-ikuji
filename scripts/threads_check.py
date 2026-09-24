@@ -38,7 +38,20 @@ def _meta_from_path(p: pathlib.Path) -> dict:
         m = re.search(rf'^{k}:\s*"?(.+?)"?\s*$', fm, re.M)
         return m.group(1) if m else ""
 
-    return {"title": g("title"), "description": g("description"), "ogImage": g("ogImage")}
+    def g_list(k: str) -> list[str]:
+        m = re.search(rf'^{k}:\s*\[(.*?)\]\s*$', fm, re.M)
+        if not m:
+            return []
+        return [s.strip().strip('"').strip("'") for s in m.group(1).split(",") if s.strip()]
+
+    return {
+        "title": g("title"),
+        "description": g("description"),
+        "ogImage": g("ogImage"),
+        "thumbHook": g("thumbHook"),
+        "category": g("category"),
+        "tags": g_list("tags"),
+    }
 
 
 def _meta_by_slug(slug: str) -> tuple[dict, str]:

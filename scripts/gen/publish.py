@@ -36,6 +36,7 @@ def publish(article: dict, topic: dict, og_image: str, *, model_label: str) -> s
         "tags": article.get("tags", [])[:5],
         "emoji": article.get("emoji", "") or "",
         "heroImage": article.get("heroImage") or "",
+        "thumbHook": article.get("thumbHook") or "",
         "ogImage": og_image,
         "sources": article.get("sources", []),
         "author": "管理人",
@@ -49,6 +50,8 @@ def publish(article: dict, topic: dict, og_image: str, *, model_label: str) -> s
         meta.pop("emoji")
     if not meta["heroImage"]:
         meta.pop("heroImage")
+    if not meta["thumbHook"]:
+        meta.pop("thumbHook")
 
     body = article["body_md"].strip()
     if affiliate:
