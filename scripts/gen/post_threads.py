@@ -42,7 +42,9 @@ def _hashtag_safe(s: str) -> str:
 def _build_tags(meta: dict) -> list[str]:
     """カテゴリ＋記事タグから毎回変わるハッシュタグを組み立てる。
     ブランドタグ(#罪悪感ゼロ育児)は毎回固定で入れ、それ以外を記事内容に応じて変える
-    （固定4つの繰り返しだと発見されにくく、フォロワーにも同じ投稿の繰り返しに見えるため）。"""
+    （固定4つの繰り返しだと発見されにくく、フォロワーにも同じ投稿の繰り返しに見えるため）。
+    Threadsはハッシュタグを大量に付けるほど伸びるわけではなく、むしろ多すぎると
+    "いかにも自動投稿"に見えて逆効果になりやすいため、最大3つ（カテゴリ1＋記事タグ1＋ブランド）に絞る。"""
     out: list[str] = []
     cat_label = CATEGORY_LABEL.get(meta.get("category") or "", "")
     cat_tag = _hashtag_safe(cat_label)
@@ -50,7 +52,7 @@ def _build_tags(meta: dict) -> list[str]:
         out.append(f"#{cat_tag}")
     for t in meta.get("tags") or []:
         tag = _hashtag_safe(t)
-        if tag and f"#{tag}" not in out and len(out) < 3:
+        if tag and f"#{tag}" not in out and len(out) < 2:
             out.append(f"#{tag}")
     out.append(BRAND_TAG)
     return out
@@ -70,10 +72,16 @@ def compose_post(meta: dict, slug: str, tags: list[str] | None = None) -> str:
     hook_text = (meta.get("thumbHook") or meta.get("description") or "").strip()
 
     def build(hook: str) -> str:
-        parts = [title]
+        # 「タイトル→説明文→リンク→タグ」という並びは、いかにもRSS自動転載ボットの
+        # テンプレに見えやすく、Threadsでは人間の投稿に比べて伸びにくい傾向がある。
+        # ペイン起点の一文を最初に置いて共感で止めてから、タイトルとリンクをひとまとまりで
+        # 添える方が、実際に人が書いた投稿に近い流れになる。
+        parts = []
         if hook:
             parts.append(hook)
-        parts += [url, tagline]
+        title_and_url = f"{title}\n{url}" if title else url
+        parts.append(title_and_url)
+        parts.append(tagline)
         return "\n\n".join(parts)
 
     hook = hook_text
