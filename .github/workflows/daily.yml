@@ -54,10 +54,6 @@ jobs:
           IMPROVE_MODE: ${{ vars.IMPROVE_MODE || 'full' }}
           THUMB_HEADLINE: ${{ vars.THUMB_HEADLINE }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          X_API_SECRET: ${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
         run: |
@@ -78,8 +74,7 @@ jobs:
       - name: Check result
         run: |
           R=$(python -c "import json;print(json.load(open('data/last_result.json'))['result'])")
-          X=$(python -c "import json;print(json.load(open('data/last_result.json')).get('x',''))")
-          echo "result=$R  x=$X"
+          echo "result=$R"
           if [ "$R" = "no_key" ]; then
             echo "::error::GEMINI_API_KEY (Secret) が未設定です。Settings → Secrets and variables → Actions で登録してください。"
             exit 1
@@ -91,17 +86,14 @@ jobs:
           if [ "$R" = "rate_limited" ]; then
             echo "::warning::Gemini の無料枠上限に達したため今回は記事を作りませんでした。次回の実行で回復します。"
           fi
-          if [ "$X" = "no_keys" ]; then
-            echo "::warning::X 投稿キー4種が未設定のため投稿をスキップしました（記事公開には影響なし）。"
-          fi
-          if [ "$X" = "failed" ]; then
-            echo "::warning::X 投稿に失敗しました（記事公開には影響なし）。ログの 'X: 投稿失敗' を確認してください。"
-          fi
           # Threadsの投稿結果は、デプロイ後の "Post to Threads" ステップで確認する
           # （--no-threads を指定しているので、ここでの result.threads は常に disabled）。
 
       - name: Verify build
         run: npm run build
+        env:
+          # GA4 測定ID（リポジトリの Actions Variables に登録。未登録ならGAタグなしでビルドされる）
+          PUBLIC_GA_MEASUREMENT_ID: ${{ vars.PUBLIC_GA_MEASUREMENT_ID }}
 
       - name: Commit & push
         run: |

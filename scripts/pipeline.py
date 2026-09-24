@@ -126,17 +126,6 @@ def run_daily(args) -> dict:
 
     slug = publish_mod.publish(art, tp, img["ogImage"], model_label=model_label())
 
-    tweet_id = None
-    x_status = "disabled" if args.no_x else "skipped"
-    if not args.no_x and not is_mock():
-        from gen import post_x as x_mod
-
-        if x_mod._creds():
-            tweet_id = x_mod.post_tweet(x_mod.compose_tweet(art, slug))
-            x_status = "posted" if tweet_id else "failed"
-        else:
-            x_status = "no_keys"
-
     threads_id = None
     threads_status = "disabled" if args.no_threads else "skipped"
     if not args.no_threads and not is_mock():
@@ -157,8 +146,6 @@ def run_daily(args) -> dict:
         "result": "published",
         "slug": slug,
         "type": art["articleType"],
-        "tweet_id": tweet_id,
-        "x": x_status,
         "threads_id": threads_id,
         "threads": threads_status,
         "governance": governance,
@@ -196,8 +183,6 @@ def preflight() -> dict:
     unsplash = bool(os.environ.get("UNSPLASH_ACCESS_KEY"))
     checks.append(("UNSPLASH_ACCESS_KEY（任意）", True, "設定すると写真アイキャッチ、無ければカード生成" if not unsplash else "OK"))
 
-    x_keys = all(os.environ.get(k) for k in ("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET"))
-    checks.append(("X 投稿キー4種（任意）", True, "4つ揃うと新着記事を X へ自動投稿" if not x_keys else "OK"))
     th_keys = all(os.environ.get(k) for k in ("THREADS_USER_ID", "THREADS_ACCESS_TOKEN"))
     checks.append(("Threads キー2種（任意）", True, "2つ揃うと新着記事を Threads へ自動投稿" if not th_keys else "OK"))
 
@@ -216,7 +201,6 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true", help="生成物を表示するだけで保存しない")
     ap.add_argument("--improve-only", action="store_true", help="既存記事の点検・改善だけ実行")
     ap.add_argument("--no-improve", action="store_true", help="改善パスをスキップ")
-    ap.add_argument("--no-x", action="store_true", help="X（Twitter）への自動投稿をスキップ")
     ap.add_argument("--no-threads", action="store_true", help="Threads への自動投稿をスキップ")
     ap.add_argument("--check", action="store_true", help="公開せず、動かせる状態か点検する")
     ap.add_argument("--allow-mock", action="store_true", help="APIキー無し(MOCK)でも --daily で保存する（テスト用）")

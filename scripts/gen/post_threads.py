@@ -34,8 +34,10 @@ def _creds() -> dict | None:
 def compose_post(meta: dict, slug: str, tags: list[str] | None = None) -> str:
     """記事メタから投稿本文を組み立てる（500字以内）。"""
     tagline = " ".join(tags or DEFAULT_TAGS)
-    # Threads経由の流入をCloudflare Web Analytics等で追えるようUTMを付与
-    url = f"{SITE}/blog/{slug.lstrip('/')}?utm_source=threads&utm_medium=social&utm_campaign=auto_post"
+    # Threads経由の流入を GA4 / Cloudflare Web Analytics で追えるようUTMを付与。
+    # 末尾スラッシュ付きにして、Cloudflare Pages の /slug → /slug/ リダイレクトを挟まない
+    # （リダイレクトを経由しないので UTM が確実にそのまま着地ページに届く）。
+    url = f"{SITE}/blog/{slug.strip('/')}/?utm_source=threads&utm_medium=social&utm_campaign=auto_post"
     title = (meta.get("title") or "").strip()
     desc = (meta.get("description") or "").strip()
 
