@@ -1,6 +1,6 @@
 {
-  "rotation_index": 35,
-  "last_run": "2026-09-23",
+  "rotation_index": 36,
+  "last_run": "2026-09-24",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -211,6 +211,12 @@
       "type": "cheer",
       "category": "shinmama",
       "date": "2026-09-23"
+    },
+    {
+      "slug": "sns-kanpeki-nyuinbag-trend",
+      "type": "trend",
+      "category": "kurashi",
+      "date": "2026-09-24"
     }
   ],
   "improve": {
@@ -248,6 +254,7 @@
     "nenne-hirune-ikou-basics": "2026-09-20",
     "nenne-hoikuen-seikatsu-service": "2026-09-20",
     "nenne-shogaku-asagata-cheer": "2026-09-22",
-    "nenne-soine-anzen-basics": "2026-09-23"
+    "nenne-soine-anzen-basics": "2026-09-23",
+    "nenne-yofukashi-modori-basics": "2026-09-24"
   }
 }

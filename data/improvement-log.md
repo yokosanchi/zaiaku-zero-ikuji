@@ -71,3 +71,5 @@
 - 2026-09-22 🔧 点検 `nenne-shogaku-asagata-cheer` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-23 ➕ 新規 `shinmama-otousan-wa-kikareta` (cheer / shinmama) — 「お父さんは？」と聞かれて答えに迷ったあなたへ｜即答できなくて全然大丈夫
 - 2026-09-23 🔧 点検 `nenne-soine-anzen-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-24 ➕ 新規 `sns-kanpeki-nyuinbag-trend` (trend / kurashi) — SNSの完璧な入院バッグを見て焦るあなたへ。本当に必要な物は驚くほどシンプルです
+- 2026-09-24 🔧 点検 `nenne-yofukashi-modori-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）

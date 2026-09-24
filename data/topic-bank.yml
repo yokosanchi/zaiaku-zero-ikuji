@@ -645,8 +645,10 @@
   official_sources:
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: published
   stage: ninshin
+  published_slug: sns-kanpeki-nyuinbag-trend
+  published: '2026-09-24'
 - slug: ninshin-kaji-tayori-service
   type: service
   title_seed: 妊娠中、家事がしんどい時期の宅配・時短の頼り方
