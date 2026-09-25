@@ -134,3 +134,44 @@ python scripts/auto_refine.py --apply --limit 3
    （`workflow_dispatch` で手動実行も可能。`apply: false` にすると提案生成だけで止められる）
 4. 記事の変更があれば `seo-refine/YYYYMMDD-HHMMSS` というブランチでPRが作られるので、
    内容を確認してからマージする（マージ後、通常の `deploy.yml` の push トリガーで公開される）
+
+---
+
+## GA4アクセス解析レポート（`ga4_report.py`）
+
+Google Analytics 4 のデータを取得して、全体サマリー・ページ別閲覧数・流入元・キャンペーン別の
+セッション数を出すツール。Search Consoleは「検索での実績」しか見られないが、こちらは
+**実際にサイトに来た人がどう動いたか**（Threads経由か検索経由か、記事ごとに読まれているか）が分かる。
+
+認証は `gsc_report.py` と**同じ**サービスアカウント・同じ認証情報ファイル
+（`scripts/.gsc/credentials.json`）を使い回す。新しい鍵を作る必要はない。
+
+### 1. Google Analytics Data API を有効化（GCP側、1回だけ）
+
+Search Console APIを有効化したのと同じプロジェクトで：
+```
+https://console.cloud.google.com/apis/library/analyticsdata.googleapis.com
+```
+「有効にする」をクリック。
+
+### 2. サービスアカウントをGA4のプロパティに追加
+
+1. GA4管理画面 → 対象プロパティ → 「プロパティのアクセス管理」
+2. 右上の「+」→「ユーザーを追加」
+3. `gsc_report.py` のセットアップで使ったサービスアカウントのメールアドレス
+   （`...@...iam.gserviceaccount.com`）を入力
+4. 役割は **「閲覧者」** で追加
+
+### 3. プロパティIDを確認
+
+GA4管理画面 → プロパティ設定 → プロパティの詳細 に表示される、数字だけのID
+（測定ID `G-XXXXXXXXXX` とは別物）。`ga4_report.py` の `DEFAULT_PROPERTY_ID` に設定済みだが、
+`--property-id` で都度指定もできる。
+
+### 4. 実行
+
+```bash
+pip install -r scripts/requirements-seo.txt
+python scripts/ga4_report.py
+python scripts/ga4_report.py --days 60
+```

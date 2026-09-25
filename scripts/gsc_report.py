@@ -55,7 +55,12 @@ _SERVICE_ACCOUNT_FILE = _CRED_DIR / "credentials.json"
 _OAUTH_CLIENT_FILE = _CRED_DIR / "client_secret.json"
 _OAUTH_TOKEN_FILE = _CRED_DIR / "token.json"
 
-SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
+# Search ConsoleとGA4(Analytics Data API)を同じサービスアカウント・同じ認証情報ファイルで
+# 使い回せるよう、両方のスコープをまとめて要求する（scripts/ga4_report.py もこれを import して使う）。
+SCOPES = [
+    "https://www.googleapis.com/auth/webmasters.readonly",
+    "https://www.googleapis.com/auth/analytics.readonly",
+]
 
 # 対象ドメイン（Search Console に登録した「プロパティ」の文字列と完全一致させること。
 # URLプレフィックス型なら末尾スラッシュ込みの完全なURL）。--site-url で上書き可。

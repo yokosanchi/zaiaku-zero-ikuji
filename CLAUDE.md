@@ -300,15 +300,19 @@ pick_topic → research → draft → concept_rewrite → thumbnail → publish 
 
 ---
 
-## 11. SEO自動改善PDCA（`scripts/gsc_report.py` / `sachiko_analyzer.py` / `auto_refine.py`）
+## 11. SEO自動改善PDCA + アクセス解析（`scripts/gsc_report.py` / `ga4_report.py` / `sachiko_analyzer.py` / `auto_refine.py`）
 
 Google Search Console のデータを元に、改善ポテンシャルが高い記事を見つけてタイトル/説明文・
 追記セクションの改善案をGeminiで生成する仕組み。詳細は `scripts/SEO_README.md`。
 
-- `gsc_report.py`：手動でパフォーマンスレポートを見るだけの単発ツール
+- `gsc_report.py`：検索パフォーマンス（サマリー/上位クエリ/改善候補/指名検索）を見る単発ツール
+- `ga4_report.py`：GA4のアクセス解析（全体サマリー/ページ別閲覧数/流入元/キャンペーン別）を見る単発ツール。
+  `gsc_report.py` と同じサービスアカウント・同じ認証情報ファイル（`scripts/.gsc/credentials.json`）を共用
 - `sachiko_analyzer.py`（Plan/Check）→ `auto_refine.py`（Act）が自動改善PDCAの本体。
   週次で `.github/workflows/seo-pdca.yml` が実行
 - **安全設計**：記事本体（`src/content/blog/`）への変更は必ずPR経由。`main` への直接pushはしない。
   `category: sango` は対象外。生成結果は毎回 `gen/guardrails.py` を通す
 - 認証情報（`scripts/.gsc/credentials.json` 等）は `.gitignore` 済み。Secretsは
   `GSC_SERVICE_ACCOUNT_JSON`（GitHub Actions用）
+- GA4計測タグは `src/components/Analytics.astro`（別セッションが2026-09-24に追加）。
+  測定IDは Actions Variable `PUBLIC_GA_MEASUREMENT_ID`（Secretsではない、非機密情報のため）

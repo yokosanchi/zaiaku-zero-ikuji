@@ -1,9 +1,11 @@
-# scripts/gsc_report.py 専用の依存。メインの自動記事パイプライン（requirements.txt）には
-# 混ぜない（daily.yml の毎回の pip install を無駄に重くしないため）。
+# scripts/gsc_report.py・ga4_report.py・sachiko_analyzer.py・auto_refine.py 専用の依存。
+# メインの自動記事パイプライン（requirements.txt）には混ぜない
+# （daily.yml の毎回の pip install を無駄に重くしないため）。
 #
 #   pip install -r scripts/requirements-seo.txt
 #
 google-api-python-client>=2.100
 google-auth-httplib2>=0.2
 google-auth-oauthlib>=1.2
+google-analytics-data>=0.18
 pandas>=2.0
