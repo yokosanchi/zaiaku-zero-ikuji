@@ -1,0 +1,37 @@
+name: ga4-report-test
+
+# 手動専用。ga4_report.py が実際にGA4データを取得できるかを確認するためのテスト。
+# gsc_report.py / seo-pdca.yml と同じ GSC_SERVICE_ACCOUNT_JSON を使い回す
+# （GA4のAnalytics Data APIとSearch Console APIは同じサービスアカウントで両対応）。
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "何日分さかのぼるか"
+        required: false
+        type: string
+        default: "30"
+
+jobs:
+  ga4-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r scripts/requirements-seo.txt
+
+      - name: Restore GSC/GA4 service account key
+        run: |
+          mkdir -p scripts/.gsc
+          cat > scripts/.gsc/credentials.json << 'GSC_KEY_EOF'
+          ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_KEY_EOF
+          if ! python3 -c "import json; json.load(open('scripts/.gsc/credentials.json'))" 2>/dev/null; then
+            echo "::error::GSC_SERVICE_ACCOUNT_JSON が未設定、または有効なJSONではありません。"
+            exit 1
+          fi
+
+      - name: Run ga4_report.py
+        run: python scripts/ga4_report.py --days "${{ github.event.inputs.days || '30' }}"
