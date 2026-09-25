@@ -49,8 +49,10 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
-          # 既存記事を毎回1本、軽くリライト（導入をペインに寄せて締める）。Variable で上書き可。
-          IMPROVE_MODE: ${{ vars.IMPROVE_MODE || 'full' }}
+          # 2026-09-25: Gemini無料枠の消費を抑えるため既定を links（LLM不要のリンクチェックのみ）に変更。
+          # 新規記事生成には影響しない。既存記事の軽いリライトをまた有効にしたい場合は
+          # Actions Variables の IMPROVE_MODE を full に設定すれば上書きできる。
+          IMPROVE_MODE: ${{ vars.IMPROVE_MODE || 'links' }}
           THUMB_HEADLINE: ${{ vars.THUMB_HEADLINE }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}

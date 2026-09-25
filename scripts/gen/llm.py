@@ -79,7 +79,11 @@ def generate(prompt: str, *, system: str | None = None, json_mode: bool = False,
                     swapped = True
                     log(f"  LLM: モデルを {model} に自動切替（廃止の案内による）")
                     continue
-            if e.code in (408, 429, 500, 502, 503, 504):
+            # 429(無料枠の1日上限)は待っても直らない（枠のリセットは翌日）ため、
+            # リトライで時間を無駄にせず即座に諦めて「今回は見送り」扱いにする。
+            if e.code == 429:
+                raise LLMRateLimited(f"LLM rate limited (no retry): {last}")
+            if e.code in (408, 500, 502, 503, 504):
                 wait = min(2 ** attempt, 30)
                 log(f"  LLM retry {attempt} in {wait}s ({e.code})")
                 time.sleep(wait)
@@ -88,9 +92,9 @@ def generate(prompt: str, *, system: str | None = None, json_mode: bool = False,
         except (urllib.error.URLError, TimeoutError) as e:  # noqa: PERF203
             last = str(e)
             time.sleep(min(2 ** attempt, 30))
-    # 429(無料枠上限) と 503(UNAVAILABLE/高負荷)・500/502/504 は、こちら側の不具合ではなく
-    # Gemini側の一時的な事情。リトライを使い切ってもこれらなら「今回は見送り」扱いにする。
-    if any(f"HTTP {code}" in last for code in (429, 500, 502, 503, 504)):
+    # 503(UNAVAILABLE/高負荷)・500/502/504 は、こちら側の不具合ではなくGemini側の一時的な事情。
+    # リトライを使い切ってもこれらなら「今回は見送り」扱いにする（429は上でリトライなしに即座にここへは来ず処理済み）。
+    if any(f"HTTP {code}" in last for code in (500, 502, 503, 504)):
         raise LLMRateLimited(f"LLM temporarily unavailable: {last}")
     raise LLMError(f"LLM failed after retries: {last}")
 
