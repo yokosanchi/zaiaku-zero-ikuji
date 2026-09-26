@@ -1,6 +1,6 @@
 {
-  "rotation_index": 36,
-  "last_run": "2026-09-24",
+  "rotation_index": 37,
+  "last_run": "2026-09-26",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -217,6 +217,12 @@
       "type": "trend",
       "category": "kurashi",
       "date": "2026-09-24"
+    },
+    {
+      "slug": "shussan-junbi-atode-ii-basics",
+      "type": "basics",
+      "category": "kurashi",
+      "date": "2026-09-26"
     }
   ],
   "improve": {
@@ -255,6 +261,7 @@
     "nenne-hoikuen-seikatsu-service": "2026-09-20",
     "nenne-shogaku-asagata-cheer": "2026-09-22",
     "nenne-soine-anzen-basics": "2026-09-23",
-    "nenne-yofukashi-modori-basics": "2026-09-24"
+    "nenne-yofukashi-modori-basics": "2026-09-24",
+    "nenne-yonaki-piiku-voice": "2026-09-26"
   }
 }

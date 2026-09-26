@@ -73,3 +73,5 @@
 - 2026-09-23 🔧 点検 `nenne-soine-anzen-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-24 ➕ 新規 `sns-kanpeki-nyuinbag-trend` (trend / kurashi) — SNSの完璧な入院バッグを見て焦るあなたへ。本当に必要な物は驚くほどシンプルです
 - 2026-09-24 🔧 点検 `nenne-yofukashi-modori-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
+- 2026-09-26 ➕ 新規 `shussan-junbi-atode-ii-basics` (basics / kurashi) — 出産準備品は「産んでから」で大丈夫！後悔しない買い方の基本
+- 2026-09-26 🔧 点検 `nenne-yonaki-piiku-voice` — 問題なし

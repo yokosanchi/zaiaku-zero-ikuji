@@ -623,8 +623,10 @@
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
   stage: ninshin
+  published_slug: shussan-junbi-atode-ii-basics
+  published: '2026-09-26'
 - slug: satogaeri-suru-shinai-voice
   type: voice
   title_seed: 里帰りする・しない、みんなどう決めたか
