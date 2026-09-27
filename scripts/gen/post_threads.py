@@ -5,7 +5,9 @@
     THREADS_ACCESS_TOKEN  … 長期アクセストークン（約60日・要リフレッシュ）
 
 Threads Graph API（https://graph.threads.net/v1.0）を使う。標準ライブラリのみ。
-投稿は2段階: メディアコンテナ作成 → publish。
+投稿は3段階: メディアコンテナ作成 → 処理完了(status=FINISHED)をポーリングで待つ → publish。
+（作成直後は Meta 側で画像取り込み中(IN_PROGRESS)のことが多く、待たずに publish すると
+"Media Not Found" エラーになることがあるため。2026-09-27 に実際にこの失敗が発生し追加した）
 本文は最大500字。画像URL（記事のOGP）を付けると表示・到達が良くなる。
 """
 
@@ -13,6 +15,7 @@ from __future__ import annotations
 
 import json
 import os
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -128,6 +131,28 @@ def refresh_token() -> str | None:
         return None
 
 
+def _wait_for_container_ready(container_id: str, token: str, *, timeout: int = 60, interval: int = 3) -> tuple[bool, str]:
+    """メディアコンテナの処理完了(status=FINISHED)を待つ。(準備できたか, 状態) を返す。
+
+    作成直後のコンテナは Meta 側で画像の取り込み等を非同期処理中(IN_PROGRESS)であり、
+    それを待たずに publish すると「Media Not Found」エラーになることがある
+    （公式ドキュメントが status のポーリングを推奨している）。"""
+    waited = 0
+    while waited < timeout:
+        try:
+            resp = _get(f"{_BASE}/{container_id}", {"fields": "status,error_message", "access_token": token})
+        except Exception as e:  # noqa: BLE001
+            return False, f"status確認に失敗: {e}"
+        status = resp.get("status")
+        if status == "FINISHED":
+            return True, status
+        if status in ("ERROR", "EXPIRED"):
+            return False, f"{status}: {resp.get('error_message', '')}"
+        time.sleep(interval)
+        waited += interval
+    return False, "TIMEOUT"
+
+
 def post(text: str, image_url: str | None = None) -> str | None:
     """投稿する。成功で投稿ID、キー未設定や失敗で None。"""
     c = _creds()
@@ -148,6 +173,12 @@ def post(text: str, image_url: str | None = None) -> str | None:
         if not cid:
             log(f"  Threads: コンテナ作成に失敗 {json.dumps(created)[:200]}")
             return None
+
+        ready, status = _wait_for_container_ready(cid, c["token"])
+        if not ready:
+            log(f"  Threads: コンテナの処理待ちに失敗（{status}） → 公開を中止")
+            return None
+
         published = _post_form(
             f"{_BASE}/{c['user_id']}/threads_publish",
             {"access_token": c["token"], "creation_id": cid},
