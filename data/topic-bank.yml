@@ -732,8 +732,10 @@
   - https://www.cfa.go.jp/policies/boshihoken
   - https://www.jpeds.or.jp/
   ref_urls: []
-  status: queued
+  status: published
   stage: age3_pre
+  published_slug: tomodachi-tataku-kamitsuku-voice
+  published: '2026-09-27'
 - slug: hoikuen-ikitakunai-asa-cheer
   type: cheer
   title_seed: 「行きたくない」と泣かれた朝に、後ろ髪を引かれているあなたへ
