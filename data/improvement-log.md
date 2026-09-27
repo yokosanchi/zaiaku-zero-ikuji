@@ -75,3 +75,5 @@
 - 2026-09-24 🔧 点検 `nenne-yofukashi-modori-basics` — 問題なし（導入を軽くリライト・updatedDate 更新）
 - 2026-09-26 ➕ 新規 `shussan-junbi-atode-ii-basics` (basics / kurashi) — 出産準備品は「産んでから」で大丈夫！後悔しない買い方の基本
 - 2026-09-26 🔧 点検 `nenne-yonaki-piiku-voice` — 問題なし
+- 2026-09-27 ➕ 新規 `kurashi-robot-souji-service` (service / kurashi) — ロボット掃除機と食洗機で「毎日の判断」を減らして心を軽やかに
+- 2026-09-27 🔧 点検 `kurashi-robot-souji-service` — 問題なし

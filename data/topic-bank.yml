@@ -560,7 +560,9 @@
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: kurashi-robot-souji-service
+  published: '2026-09-27'
 - slug: dakko-koshi-tsurai-chakuatsu-service
   type: service
   title_seed: 抱っこや授乳で腰・骨盤まわりがつらい時期の、体をラクにする道具
