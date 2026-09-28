@@ -1,6 +1,6 @@
 {
-  "rotation_index": 39,
-  "last_run": "2026-09-27",
+  "rotation_index": 40,
+  "last_run": "2026-09-28",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -235,6 +235,12 @@
       "type": "voice",
       "category": "kokoro",
       "date": "2026-09-27"
+    },
+    {
+      "slug": "ondoku-shukudai-tsurai-cheer",
+      "type": "cheer",
+      "category": "kokoro",
+      "date": "2026-09-28"
     }
   ],
   "improve": {
@@ -276,6 +282,7 @@
     "nenne-yofukashi-modori-basics": "2026-09-24",
     "nenne-yonaki-piiku-voice": "2026-09-26",
     "kurashi-robot-souji-service": "2026-09-27",
-    "nenreibetsu-odekake-teiban-spot": "2026-09-27"
+    "nenreibetsu-odekake-teiban-spot": "2026-09-27",
+    "netsuper-hikaku-kokoro": "2026-09-28"
   }
 }

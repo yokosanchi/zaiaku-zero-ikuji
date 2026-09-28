@@ -778,8 +778,10 @@
   official_sources:
   - https://www.mext.go.jp/
   ref_urls: []
-  status: queued
+  status: published
   stage: gakudo
+  published_slug: ondoku-shukudai-tsurai-cheer
+  published: '2026-09-28'
 - slug: sns-shougakusei-game-jikan-trend
   type: trend
   title_seed: 「小学生のスマホ・ゲーム時間」論争で疲れたら

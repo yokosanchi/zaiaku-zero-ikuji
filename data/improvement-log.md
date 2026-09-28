@@ -79,3 +79,5 @@
 - 2026-09-27 🔧 点検 `kurashi-robot-souji-service` — 問題なし
 - 2026-09-27 ➕ 新規 `tomodachi-tataku-kamitsuku-voice` (voice / kokoro) — 友だちを叩く・かみつく時どうする？自分を責めずに乗り越える安心ステップ
 - 2026-09-27 🔧 点検 `nenreibetsu-odekake-teiban-spot` — 問題なし
+- 2026-09-28 ➕ 新規 `ondoku-shukudai-tsurai-cheer` (cheer / kokoro) — 音読や宿題チェックがしんどい夜のあなたへ
+- 2026-09-28 🔧 点検 `netsuper-hikaku-kokoro` — 問題なし
