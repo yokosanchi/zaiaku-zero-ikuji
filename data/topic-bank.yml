@@ -283,7 +283,9 @@
   - https://www.cfa.go.jp/policies/boshihoken
   - https://www.jpeds.or.jp/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: sns-mokuyoku-ittai-trend
+  published: '2026-09-30'
 - slug: sns-suimin-training-genron-trend
   type: trend
   title_seed: 「ネントレ賛成／反対」がXで燃えるたび、しんどくなる人へ

@@ -81,3 +81,5 @@
 - 2026-09-27 🔧 点検 `nenreibetsu-odekake-teiban-spot` — 問題なし
 - 2026-09-28 ➕ 新規 `ondoku-shukudai-tsurai-cheer` (cheer / kokoro) — 音読や宿題チェックがしんどい夜のあなたへ
 - 2026-09-28 🔧 点検 `netsuper-hikaku-kokoro` — 問題なし
+- 2026-09-30 ➕ 新規 `sns-mokuyoku-ittai-trend` (trend / sns) — 「毎日お風呂に入れないなんて」SNSの議論に傷ついたあなたへ伝える大切なこと
+- 2026-09-30 🔧 点検 `ninshin-kaji-tayori-service` — 問題なし
