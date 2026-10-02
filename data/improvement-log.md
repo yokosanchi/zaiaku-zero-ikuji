@@ -83,3 +83,5 @@
 - 2026-09-28 🔧 点検 `netsuper-hikaku-kokoro` — 問題なし
 - 2026-09-30 ➕ 新規 `sns-mokuyoku-ittai-trend` (trend / sns) — 「毎日お風呂に入れないなんて」SNSの議論に傷ついたあなたへ伝える大切なこと
 - 2026-09-30 🔧 点検 `ninshin-kaji-tayori-service` — 問題なし
+- 2026-10-02 ➕ 新規 `shinmama-kyouikuhi-shougakukin-fuan` (basics / shinmama) — 教育費の不安を吹き飛ばす！知っておきたい奨学金と就学援助の基本
+- 2026-10-02 🔧 点検 `nisa_furusato_kosodate_muzukashiku_nai` — 問題なし

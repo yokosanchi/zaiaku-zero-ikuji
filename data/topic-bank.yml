@@ -1469,13 +1469,15 @@
   type: basics
   category: shinmama
   stage: gakudo
-  status: queued
+  status: published
   ref_urls: []
   title_seed: シンママの教育費・貯金の不安と、知っておきたい奨学金・就学援助制度
   angle: ひとりで全額備える前提にしない／奨学金・就学援助・自治体の支援制度の存在
   official_sources:
   - https://www.jasso.go.jp/
   - https://www.mext.go.jp/
+  published_slug: shinmama-kyouikuhi-shougakukin-fuan
+  published: '2026-10-02'
 - slug: shinmama-yoikuhi-todokoru-kihon
   type: basics
   category: shinmama

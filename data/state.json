@@ -1,6 +1,6 @@
 {
-  "rotation_index": 41,
-  "last_run": "2026-09-30",
+  "rotation_index": 42,
+  "last_run": "2026-10-02",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -247,6 +247,12 @@
       "type": "trend",
       "category": "sns",
       "date": "2026-09-30"
+    },
+    {
+      "slug": "shinmama-kyouikuhi-shougakukin-fuan",
+      "type": "basics",
+      "category": "shinmama",
+      "date": "2026-10-02"
     }
   ],
   "improve": {
@@ -290,6 +296,7 @@
     "kurashi-robot-souji-service": "2026-09-27",
     "nenreibetsu-odekake-teiban-spot": "2026-09-27",
     "netsuper-hikaku-kokoro": "2026-09-28",
-    "ninshin-kaji-tayori-service": "2026-09-30"
+    "ninshin-kaji-tayori-service": "2026-09-30",
+    "nisa_furusato_kosodate_muzukashiku_nai": "2026-10-02"
   }
 }
