@@ -86,7 +86,9 @@
   official_sources:
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: hoikuen-narashi-voice
+  published: '2026-10-03'
 - slug: hikakutte-shimau-hi-cheer
   type: cheer
   title_seed: よその子と比べて落ち込んだ日へ

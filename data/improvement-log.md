@@ -87,3 +87,5 @@
 - 2026-10-02 🔧 点検 `nisa_furusato_kosodate_muzukashiku_nai` — 問題なし
 - 2026-10-03 ➕ 新規 `dakko-koshi-tsurai-chakuatsu-service` (service / kurashi) — 抱っこで腰がつらい時期の骨盤サポートは甘えじゃない！体を守るスマートな選択
 - 2026-10-03 🔧 点検 `obento-shogaku-tenuki-service` — 問題なし
+- 2026-10-03 ➕ 新規 `hoikuen-narashi-voice` (voice / kokoro) — 慣らし保育で毎日大泣き…「私のせい？」と責めてしまうあなたへ伝えたいこと
+- 2026-10-03 🔧 点検 `hoikuen-narashi-voice` — 問題なし
