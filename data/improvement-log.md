@@ -85,3 +85,5 @@
 - 2026-09-30 🔧 点検 `ninshin-kaji-tayori-service` — 問題なし
 - 2026-10-02 ➕ 新規 `shinmama-kyouikuhi-shougakukin-fuan` (basics / shinmama) — 教育費の不安を吹き飛ばす！知っておきたい奨学金と就学援助の基本
 - 2026-10-02 🔧 点検 `nisa_furusato_kosodate_muzukashiku_nai` — 問題なし
+- 2026-10-03 ➕ 新規 `dakko-koshi-tsurai-chakuatsu-service` (service / kurashi) — 抱っこで腰がつらい時期の骨盤サポートは甘えじゃない！体を守るスマートな選択
+- 2026-10-03 🔧 点検 `obento-shogaku-tenuki-service` — 問題なし
