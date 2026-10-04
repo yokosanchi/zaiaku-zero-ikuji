@@ -883,12 +883,14 @@
   type: cheer
   stage: age0
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「〜だからえらい」より「いてくれてうれしい」を言えない日へ
   angle: 条件つきでない肯定を言葉に／言えなくても態度で伝わる／自分がされてこなかった人ほど難しくて当然
   official_sources:
   - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: iru-dake-de-ureshii-cheer
+  published: '2026-10-04'
 - slug: kyou-dekinakatta-kakawari-cheer
   type: cheer
   stage: age1_2

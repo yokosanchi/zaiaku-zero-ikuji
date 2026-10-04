@@ -89,3 +89,5 @@
 - 2026-10-03 🔧 点検 `obento-shogaku-tenuki-service` — 問題なし
 - 2026-10-03 ➕ 新規 `hoikuen-narashi-voice` (voice / kokoro) — 慣らし保育で毎日大泣き…「私のせい？」と責めてしまうあなたへ伝えたいこと
 - 2026-10-03 🔧 点検 `hoikuen-narashi-voice` — 問題なし
+- 2026-10-04 ➕ 新規 `iru-dake-de-ureshii-cheer` (cheer / kakawari) — 「いてくれてうれしい」と言えなくて落ち込んでいるあなたへ
+- 2026-10-04 🔧 点検 `iru-dake-de-ureshii-cheer` — 問題なし
