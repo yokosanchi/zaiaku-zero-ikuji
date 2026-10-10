@@ -297,7 +297,9 @@
   - https://www.jpeds.or.jp/
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: sns-suimin-training-genron-trend
+  published: '2026-10-10'
 - slug: sns-smartphone-ikuji-trend
   type: trend
   title_seed: 「スマホ育児は悪」投稿がバズるたび、自分を責めてしまう人へ

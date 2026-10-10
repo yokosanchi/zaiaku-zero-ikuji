@@ -1,6 +1,6 @@
 {
-  "rotation_index": 45,
-  "last_run": "2026-10-04",
+  "rotation_index": 46,
+  "last_run": "2026-10-10",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -271,6 +271,12 @@
       "type": "cheer",
       "category": "kakawari",
       "date": "2026-10-04"
+    },
+    {
+      "slug": "sns-suimin-training-genron-trend",
+      "type": "trend",
+      "category": "sns",
+      "date": "2026-10-10"
     }
   ],
   "improve": {
@@ -318,6 +324,7 @@
     "nisa_furusato_kosodate_muzukashiku_nai": "2026-10-02",
     "obento-shogaku-tenuki-service": "2026-10-03",
     "hoikuen-narashi-voice": "2026-10-03",
-    "iru-dake-de-ureshii-cheer": "2026-10-04"
+    "iru-dake-de-ureshii-cheer": "2026-10-04",
+    "ofuro-yasumu-hi": "2026-10-10"
   }
 }

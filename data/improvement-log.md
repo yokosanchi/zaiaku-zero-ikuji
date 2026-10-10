@@ -91,3 +91,5 @@
 - 2026-10-03 🔧 点検 `hoikuen-narashi-voice` — 問題なし
 - 2026-10-04 ➕ 新規 `iru-dake-de-ureshii-cheer` (cheer / kakawari) — 「いてくれてうれしい」と言えなくて落ち込んでいるあなたへ
 - 2026-10-04 🔧 点検 `iru-dake-de-ureshii-cheer` — 問題なし
+- 2026-10-10 ➕ 新規 `sns-suimin-training-genron-trend` (trend / sns) — 「ネントレ賛成・反対」の論争に疲れたら。SNSの情報に振り回されない心の保ち方
+- 2026-10-10 🔧 点検 `ofuro-yasumu-hi` — 問題なし
