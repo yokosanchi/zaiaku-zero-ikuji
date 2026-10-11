@@ -1,6 +1,6 @@
 {
-  "rotation_index": 46,
-  "last_run": "2026-10-10",
+  "rotation_index": 47,
+  "last_run": "2026-10-11",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -277,6 +277,12 @@
       "type": "trend",
       "category": "sns",
       "date": "2026-10-10"
+    },
+    {
+      "slug": "okane-kakeru-hodo-yuuri-gokai",
+      "type": "basics",
+      "category": "saino",
+      "date": "2026-10-11"
     }
   ],
   "improve": {
@@ -325,6 +331,7 @@
     "obento-shogaku-tenuki-service": "2026-10-03",
     "hoikuen-narashi-voice": "2026-10-03",
     "iru-dake-de-ureshii-cheer": "2026-10-04",
-    "ofuro-yasumu-hi": "2026-10-10"
+    "ofuro-yasumu-hi": "2026-10-10",
+    "okane-kakeru-hodo-yuuri-gokai": "2026-10-11"
   }
 }

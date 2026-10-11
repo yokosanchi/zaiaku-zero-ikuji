@@ -1308,12 +1308,14 @@
   type: basics
   category: saino
   stage: age3_pre
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 音楽・スポーツの早期教育、お金をかけるほど有利という誤解
   angle: 高額投資と継続・成果は必ずしも比例しないとされる／本人の意欲と機会の質が重要／家計を犠牲にする必要はない
   official_sources:
   - https://www.mext.go.jp/
+  published_slug: okane-kakeru-hodo-yuuri-gokai
+  published: '2026-10-11'
 - slug: dilligence-doryoku-shinwa-gokai
   type: basics
   category: saino

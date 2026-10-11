@@ -93,3 +93,5 @@
 - 2026-10-04 🔧 点検 `iru-dake-de-ureshii-cheer` — 問題なし
 - 2026-10-10 ➕ 新規 `sns-suimin-training-genron-trend` (trend / sns) — 「ネントレ賛成・反対」の論争に疲れたら。SNSの情報に振り回されない心の保ち方
 - 2026-10-10 🔧 点検 `ofuro-yasumu-hi` — 問題なし
+- 2026-10-11 ➕ 新規 `okane-kakeru-hodo-yuuri-gokai` (basics / saino) — 早期教育はお金をかけるほど有利？習い事に悩むパパママへ贈る考え方の基本
+- 2026-10-11 🔧 点検 `okane-kakeru-hodo-yuuri-gokai` — 問題なし
