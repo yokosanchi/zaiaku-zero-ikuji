@@ -1,6 +1,6 @@
 {
-  "rotation_index": 47,
-  "last_run": "2026-10-11",
+  "rotation_index": 48,
+  "last_run": "2026-10-15",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -283,6 +283,12 @@
       "type": "basics",
       "category": "saino",
       "date": "2026-10-11"
+    },
+    {
+      "slug": "takai-babygoods-rental-service",
+      "type": "service",
+      "category": "kurashi",
+      "date": "2026-10-15"
     }
   ],
   "improve": {
@@ -332,6 +338,7 @@
     "hoikuen-narashi-voice": "2026-10-03",
     "iru-dake-de-ureshii-cheer": "2026-10-04",
     "ofuro-yasumu-hi": "2026-10-10",
-    "okane-kakeru-hodo-yuuri-gokai": "2026-10-11"
+    "okane-kakeru-hodo-yuuri-gokai": "2026-10-11",
+    "okane-nai-kodomo-tsutaekata": "2026-10-15"
   }
 }

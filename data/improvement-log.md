@@ -95,3 +95,5 @@
 - 2026-10-10 🔧 点検 `ofuro-yasumu-hi` — 問題なし
 - 2026-10-11 ➕ 新規 `okane-kakeru-hodo-yuuri-gokai` (basics / saino) — 早期教育はお金をかけるほど有利？習い事に悩むパパママへ贈る考え方の基本
 - 2026-10-11 🔧 点検 `okane-kakeru-hodo-yuuri-gokai` — 問題なし
+- 2026-10-15 ➕ 新規 `takai-babygoods-rental-service` (service / kurashi) — 高額なベビー用品は「買う前に借りる」でOK！失敗を防いで心が軽くなる選択
+- 2026-10-15 🔧 点検 `okane-nai-kodomo-tsutaekata` — 問題なし

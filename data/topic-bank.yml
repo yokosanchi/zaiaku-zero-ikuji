@@ -591,7 +591,9 @@
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: takai-babygoods-rental-service
+  published: '2026-10-15'
 - slug: chairbelt-gaishoku-raku-service
   type: service
   title_seed: 子ども用の椅子がない場所での食事を、チェアベルトでラクにする
