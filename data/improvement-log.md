@@ -97,3 +97,5 @@
 - 2026-10-11 🔧 点検 `okane-kakeru-hodo-yuuri-gokai` — 問題なし
 - 2026-10-15 ➕ 新規 `takai-babygoods-rental-service` (service / kurashi) — 高額なベビー用品は「買う前に借りる」でOK！失敗を防いで心が軽くなる選択
 - 2026-10-15 🔧 点検 `okane-nai-kodomo-tsutaekata` — 問題なし
+- 2026-10-16 ➕ 新規 `wanope-fufu-bungyo-voice` (voice / wanope) — 「見えない家事」の偏りに悩んだら？罪悪感を捨てて夫婦で共有する工夫
+- 2026-10-16 🔧 点検 `okozukai-itsukara-ikura-mokuyasu` — 問題なし
