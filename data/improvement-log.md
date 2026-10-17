@@ -99,3 +99,5 @@
 - 2026-10-15 🔧 点検 `okane-nai-kodomo-tsutaekata` — 問題なし
 - 2026-10-16 ➕ 新規 `wanope-fufu-bungyo-voice` (voice / wanope) — 「見えない家事」の偏りに悩んだら？罪悪感を捨てて夫婦で共有する工夫
 - 2026-10-16 🔧 点検 `okozukai-itsukara-ikura-mokuyasu` — 問題なし
+- 2026-10-17 ➕ 新規 `okane-kyoudai-heikin-nayami` (cheer / okane) — きょうだいのお小遣い・お年玉の差で悩むあなたへ｜「平等」より「納得感」で罪悪感を手放す考え方
+- 2026-10-17 🔧 点検 `okane-kyoudai-heikin-nayami` — 問題なし

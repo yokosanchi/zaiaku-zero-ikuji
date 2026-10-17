@@ -1531,12 +1531,14 @@
   type: cheer
   category: okane
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: きょうだいでお小遣いやお年玉に差をつけることの悩み
   angle: 年齢差があれば金額差があって当然という前提の整理／平等より納得感
   official_sources:
   - https://www.shiruporuto.jp/
+  published_slug: okane-kyoudai-heikin-nayami
+  published: '2026-10-17'
 - slug: jidoulate-tsukaimichi-seikai-nai
   type: basics
   category: okane
