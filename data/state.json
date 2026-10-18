@@ -1,6 +1,6 @@
 {
-  "rotation_index": 50,
-  "last_run": "2026-10-17",
+  "rotation_index": 51,
+  "last_run": "2026-10-18",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -301,6 +301,12 @@
       "type": "cheer",
       "category": "okane",
       "date": "2026-10-17"
+    },
+    {
+      "slug": "wanope-genkai-trend",
+      "type": "trend",
+      "category": "wanope",
+      "date": "2026-10-18"
     }
   ],
   "improve": {
@@ -353,6 +359,7 @@
     "okane-kakeru-hodo-yuuri-gokai": "2026-10-11",
     "okane-nai-kodomo-tsutaekata": "2026-10-15",
     "okozukai-itsukara-ikura-mokuyasu": "2026-10-16",
-    "okane-kyoudai-heikin-nayami": "2026-10-17"
+    "okane-kyoudai-heikin-nayami": "2026-10-17",
+    "ondoku-shukudai-tsurai-cheer": "2026-10-18"
   }
 }

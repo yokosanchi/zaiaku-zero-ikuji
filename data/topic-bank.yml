@@ -169,7 +169,9 @@
   official_sources:
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: wanope-genkai-trend
+  published: '2026-10-18'
 - slug: wanope-tasukeru-service
   type: service
   title_seed: ワンオペを助ける宅食・見守り・預かりサービスの選び方

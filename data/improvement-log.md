@@ -101,3 +101,5 @@
 - 2026-10-16 🔧 点検 `okozukai-itsukara-ikura-mokuyasu` — 問題なし
 - 2026-10-17 ➕ 新規 `okane-kyoudai-heikin-nayami` (cheer / okane) — きょうだいのお小遣い・お年玉の差で悩むあなたへ｜「平等」より「納得感」で罪悪感を手放す考え方
 - 2026-10-17 🔧 点検 `okane-kyoudai-heikin-nayami` — 問題なし
+- 2026-10-18 ➕ 新規 `wanope-genkai-trend` (trend / wanope) — 「ワンオペ限界」に共感が集まる理由。一人で抱え込まずに乗り切る現実的なアイデア
+- 2026-10-18 🔧 点検 `ondoku-shukudai-tsurai-cheer` — 問題なし
