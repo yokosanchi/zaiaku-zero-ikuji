@@ -1,6 +1,6 @@
 {
-  "rotation_index": 51,
-  "last_run": "2026-10-18",
+  "rotation_index": 52,
+  "last_run": "2026-10-21",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -307,6 +307,12 @@
       "type": "trend",
       "category": "wanope",
       "date": "2026-10-18"
+    },
+    {
+      "slug": "shou1-no-kabe-hazusu-basics",
+      "type": "basics",
+      "category": "kurashi",
+      "date": "2026-10-21"
     }
   ],
   "improve": {
@@ -360,6 +366,7 @@
     "okane-nai-kodomo-tsutaekata": "2026-10-15",
     "okozukai-itsukara-ikura-mokuyasu": "2026-10-16",
     "okane-kyoudai-heikin-nayami": "2026-10-17",
-    "ondoku-shukudai-tsurai-cheer": "2026-10-18"
+    "ondoku-shukudai-tsurai-cheer": "2026-10-18",
+    "otoshidama-souba-shinseki-nayami": "2026-10-21"
   }
 }

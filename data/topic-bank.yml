@@ -769,8 +769,10 @@
   - https://www.mext.go.jp/
   - https://www.cfa.go.jp/
   ref_urls: []
-  status: queued
+  status: published
   stage: gakudo
+  published_slug: shou1-no-kabe-hazusu-basics
+  published: '2026-10-21'
 - slug: gakudo-houkago-mawashikata-voice
   type: voice
   title_seed: 学童の長期休み、昼ごはんと預け先をどう回したか

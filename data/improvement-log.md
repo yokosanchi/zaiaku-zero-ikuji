@@ -103,3 +103,5 @@
 - 2026-10-17 🔧 点検 `okane-kyoudai-heikin-nayami` — 問題なし
 - 2026-10-18 ➕ 新規 `wanope-genkai-trend` (trend / wanope) — 「ワンオペ限界」に共感が集まる理由。一人で抱え込まずに乗り切る現実的なアイデア
 - 2026-10-18 🔧 点検 `ondoku-shukudai-tsurai-cheer` — 問題なし
+- 2026-10-21 ➕ 新規 `shou1-no-kabe-hazusu-basics` (basics / kurashi) — 「小1の壁」に不安なパパママへ！手放していい完璧と乗り越える基本
+- 2026-10-21 🔧 点検 `otoshidama-souba-shinseki-nayami` — 問題なし
