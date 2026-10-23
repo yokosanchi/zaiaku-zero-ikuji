@@ -607,7 +607,9 @@
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: chairbelt-gaishoku-raku-service
+  published: '2026-10-23'
 - slug: online-eikaiwa-erabikata-service
   type: service
   title_seed: 子どものオンライン英会話、体験してから決める。楽しく続けられるかの見極め方

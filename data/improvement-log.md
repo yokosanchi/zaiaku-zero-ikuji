@@ -105,3 +105,5 @@
 - 2026-10-18 🔧 点検 `ondoku-shukudai-tsurai-cheer` — 問題なし
 - 2026-10-21 ➕ 新規 `shou1-no-kabe-hazusu-basics` (basics / kurashi) — 「小1の壁」に不安なパパママへ！手放していい完璧と乗り越える基本
 - 2026-10-21 🔧 点検 `otoshidama-souba-shinseki-nayami` — 問題なし
+- 2026-10-23 ➕ 新規 `chairbelt-gaishoku-raku-service` (service / kurashi) — 外食や帰省で抱っこ食事に限界を感じたら。チェアベルトで心がラクになる
+- 2026-10-23 🔧 点検 `oya-ga-gomen-to-ieru` — 問題なし

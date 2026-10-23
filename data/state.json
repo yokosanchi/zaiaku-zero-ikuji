@@ -1,6 +1,6 @@
 {
-  "rotation_index": 52,
-  "last_run": "2026-10-21",
+  "rotation_index": 53,
+  "last_run": "2026-10-23",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -313,6 +313,12 @@
       "type": "basics",
       "category": "kurashi",
       "date": "2026-10-21"
+    },
+    {
+      "slug": "chairbelt-gaishoku-raku-service",
+      "type": "service",
+      "category": "kurashi",
+      "date": "2026-10-23"
     }
   ],
   "improve": {
@@ -367,6 +373,7 @@
     "okozukai-itsukara-ikura-mokuyasu": "2026-10-16",
     "okane-kyoudai-heikin-nayami": "2026-10-17",
     "ondoku-shukudai-tsurai-cheer": "2026-10-18",
-    "otoshidama-souba-shinseki-nayami": "2026-10-21"
+    "otoshidama-souba-shinseki-nayami": "2026-10-21",
+    "oya-ga-gomen-to-ieru": "2026-10-23"
   }
 }
