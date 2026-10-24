@@ -488,7 +488,9 @@
   - https://www.cfa.go.jp/
   - https://www.mext.go.jp/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: wanope-shogaku-kaeriuchi-voice
+  published: '2026-10-24'
 - slug: hatsuiku-kotoba-osoi-basics
   type: basics
   title_seed: 「ことばが遅い気がする」時に知っておきたい基本と相談先

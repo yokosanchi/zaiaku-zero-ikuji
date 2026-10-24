@@ -107,3 +107,5 @@
 - 2026-10-21 🔧 点検 `otoshidama-souba-shinseki-nayami` — 問題なし
 - 2026-10-23 ➕ 新規 `chairbelt-gaishoku-raku-service` (service / kurashi) — 外食や帰省で抱っこ食事に限界を感じたら。チェアベルトで心がラクになる
 - 2026-10-23 🔧 点検 `oya-ga-gomen-to-ieru` — 問題なし
+- 2026-10-24 ➕ 新規 `wanope-shogaku-kaeriuchi-voice` (voice / wanope) — 学童と習い事のワンオペ乗り切り術！送迎の限界と罪悪感を手放すヒント
+- 2026-10-24 🔧 点検 `oya-kara-aisareta-jikkan-nai` — 問題なし
