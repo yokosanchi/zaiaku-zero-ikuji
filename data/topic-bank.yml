@@ -716,8 +716,10 @@
   official_sources:
   - https://www.cfa.go.jp/
   ref_urls: []
-  status: queued
+  status: published
   stage: age3_pre
+  published_slug: nando-ittemo-tsutawaranai-cheer
+  published: '2026-10-24'
 - slug: omutsu-torenai-nyuen-basics
   type: basics
   title_seed: おむつが外れないまま入園、でも大丈夫の基本

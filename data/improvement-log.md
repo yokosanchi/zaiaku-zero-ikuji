@@ -109,3 +109,5 @@
 - 2026-10-23 🔧 点検 `oya-ga-gomen-to-ieru` — 問題なし
 - 2026-10-24 ➕ 新規 `wanope-shogaku-kaeriuchi-voice` (voice / wanope) — 学童と習い事のワンオペ乗り切り術！送迎の限界と罪悪感を手放すヒント
 - 2026-10-24 🔧 点検 `oya-kara-aisareta-jikkan-nai` — 問題なし
+- 2026-10-24 ➕ 新規 `nando-ittemo-tsutawaranai-cheer` (cheer / kokoro) — 「何度言っても伝わらない」と消耗しているあなたへ
+- 2026-10-24 🔧 点検 `nando-ittemo-tsutawaranai-cheer` — 問題なし
