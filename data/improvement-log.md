@@ -111,3 +111,5 @@
 - 2026-10-24 🔧 点検 `oya-kara-aisareta-jikkan-nai` — 問題なし
 - 2026-10-24 ➕ 新規 `nando-ittemo-tsutawaranai-cheer` (cheer / kokoro) — 「何度言っても伝わらない」と消耗しているあなたへ
 - 2026-10-24 🔧 点検 `nando-ittemo-tsutawaranai-cheer` — 問題なし
+- 2026-10-26 ➕ 新規 `sns-smartphone-ikuji-trend` (trend / sns) — 「スマホ育児は悪」に落ち込まないで。親の心を守るスマートな付き合い方
+- 2026-10-26 🔧 点検 `partner-ga-sango-utsu` — 問題なし（産後うつカテゴリのためリライトは行わず）

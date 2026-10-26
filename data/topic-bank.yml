@@ -311,7 +311,9 @@
   - https://www.cfa.go.jp/
   - https://www.mext.go.jp/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: sns-smartphone-ikuji-trend
+  published: '2026-10-26'
 - slug: sns-birthday-enshutsu-trend
   type: trend
   title_seed: バズる「豪華すぎる誕生日会・飾りつけ」を見て消耗する人へ

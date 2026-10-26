@@ -1,6 +1,6 @@
 {
-  "rotation_index": 55,
-  "last_run": "2026-10-24",
+  "rotation_index": 56,
+  "last_run": "2026-10-26",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -331,6 +331,12 @@
       "type": "cheer",
       "category": "kokoro",
       "date": "2026-10-24"
+    },
+    {
+      "slug": "sns-smartphone-ikuji-trend",
+      "type": "trend",
+      "category": "sns",
+      "date": "2026-10-26"
     }
   ],
   "improve": {
@@ -388,6 +394,7 @@
     "otoshidama-souba-shinseki-nayami": "2026-10-21",
     "oya-ga-gomen-to-ieru": "2026-10-23",
     "oya-kara-aisareta-jikkan-nai": "2026-10-24",
-    "nando-ittemo-tsutawaranai-cheer": "2026-10-24"
+    "nando-ittemo-tsutawaranai-cheer": "2026-10-24",
+    "partner-ga-sango-utsu": "2026-10-26"
   }
 }
