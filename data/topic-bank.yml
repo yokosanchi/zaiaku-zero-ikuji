@@ -891,12 +891,14 @@
   type: basics
   stage: age3_pre
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 子どもの前で親同士が否定し合わない理由と、つい言ってしまった時
   angle: 子は板ばさみで自分を責めやすい／言い合いは別室で／言ってしまったらフォローする
   official_sources:
   - https://www.cfa.go.jp/policies/jidougyakutai
+  published_slug: kodomo-no-mae-de-hitei-shiai
+  published: '2026-10-27'
 - slug: iru-dake-de-ureshii-cheer
   type: cheer
   stage: age0
