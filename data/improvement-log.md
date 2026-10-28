@@ -117,3 +117,5 @@
 - 2026-10-27 🔧 点検 `kodomo-no-mae-de-hitei-shiai` — 問題なし
 - 2026-10-28 ➕ 新規 `online-eikaiwa-erabikata-service` (service / kurashi) — 「習い事の送迎がつらい…」オンライン英会話は体験だけで選んで大丈夫
 - 2026-10-28 🔧 点検 `rinyushoku-freezing-basics` — 問題なし
+- 2026-10-28 ➕ 新規 `tayoru-wo-oboeru-jikan-ga-kakatta` (voice / kokoro) — 「人に頼る」のが苦手なパパ・ママへ。周りを頼るのは自分と赤ちゃんを守る大切な選択
+- 2026-10-28 🔧 点検 `rinyushoku-hajimekata-kihon` — 問題なし

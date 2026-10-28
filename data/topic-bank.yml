@@ -1226,12 +1226,14 @@
   type: voice
   category: kokoro
   stage: age0
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「頼る」を覚えるのに時間がかかった、という話
   angle: 管理人視点／頼れなかった理由・最初の一歩・頼ったあとの変化／頼るのは技術
   official_sources:
   - https://www.cfa.go.jp/policies/boshihoken
+  published_slug: tayoru-wo-oboeru-jikan-ga-kakatta
+  published: '2026-10-28'
 - slug: kanpeki-akirameta-hi-kara
   type: cheer
   category: kokoro

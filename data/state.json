@@ -1,5 +1,5 @@
 {
-  "rotation_index": 58,
+  "rotation_index": 59,
   "last_run": "2026-10-28",
   "published": [
     {
@@ -349,6 +349,12 @@
       "type": "service",
       "category": "kurashi",
       "date": "2026-10-28"
+    },
+    {
+      "slug": "tayoru-wo-oboeru-jikan-ga-kakatta",
+      "type": "voice",
+      "category": "kokoro",
+      "date": "2026-10-28"
     }
   ],
   "improve": {
@@ -409,6 +415,7 @@
     "nando-ittemo-tsutawaranai-cheer": "2026-10-24",
     "partner-ga-sango-utsu": "2026-10-26",
     "kodomo-no-mae-de-hitei-shiai": "2026-10-27",
-    "rinyushoku-freezing-basics": "2026-10-28"
+    "rinyushoku-freezing-basics": "2026-10-28",
+    "rinyushoku-hajimekata-kihon": "2026-10-28"
   }
 }
