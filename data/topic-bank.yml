@@ -623,7 +623,9 @@
   official_sources:
   - https://www.mext.go.jp/a_menu/kokusai/gaikokugo/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: online-eikaiwa-erabikata-service
+  published: '2026-10-28'
 - slug: tsuwari-nete-bakari-cheer
   type: cheer
   title_seed: つわりで一日中横になっている自分を、責めている人へ

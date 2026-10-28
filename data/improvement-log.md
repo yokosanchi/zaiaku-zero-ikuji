@@ -115,3 +115,5 @@
 - 2026-10-26 🔧 点検 `partner-ga-sango-utsu` — 問題なし（産後うつカテゴリのためリライトは行わず）
 - 2026-10-27 ➕ 新規 `kodomo-no-mae-de-hitei-shiai` (basics / kakawari) — 子どもの前で夫婦喧嘩をしてしまった時の基本のき｜影響と優しいフォロー法
 - 2026-10-27 🔧 点検 `kodomo-no-mae-de-hitei-shiai` — 問題なし
+- 2026-10-28 ➕ 新規 `online-eikaiwa-erabikata-service` (service / kurashi) — 「習い事の送迎がつらい…」オンライン英会話は体験だけで選んで大丈夫
+- 2026-10-28 🔧 点検 `rinyushoku-freezing-basics` — 問題なし
