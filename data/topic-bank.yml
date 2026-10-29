@@ -768,8 +768,10 @@
   official_sources:
   - https://www.cfa.go.jp/
   ref_urls: []
-  status: queued
+  status: published
   stage: age3_pre
+  published_slug: hoikuen-ikitakunai-asa-cheer
+  published: '2026-10-29'
 - slug: shou1-no-kabe-hazusu-basics
   type: basics
   title_seed: 小1の壁、まず外していい「完璧」の基本

@@ -119,3 +119,5 @@
 - 2026-10-28 🔧 点検 `rinyushoku-freezing-basics` — 問題なし
 - 2026-10-28 ➕ 新規 `tayoru-wo-oboeru-jikan-ga-kakatta` (voice / kokoro) — 「人に頼る」のが苦手なパパ・ママへ。周りを頼るのは自分と赤ちゃんを守る大切な選択
 - 2026-10-28 🔧 点検 `rinyushoku-hajimekata-kihon` — 問題なし
+- 2026-10-29 ➕ 新規 `hoikuen-ikitakunai-asa-cheer` (cheer / kokoro) — 「行きたくない」と泣かれた朝に後ろ髪を引かれるあなたへ
+- 2026-10-29 🔧 点検 `hoikuen-ikitakunai-asa-cheer` — 問題なし

@@ -1,6 +1,6 @@
 {
-  "rotation_index": 59,
-  "last_run": "2026-10-28",
+  "rotation_index": 60,
+  "last_run": "2026-10-29",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -355,6 +355,12 @@
       "type": "voice",
       "category": "kokoro",
       "date": "2026-10-28"
+    },
+    {
+      "slug": "hoikuen-ikitakunai-asa-cheer",
+      "type": "cheer",
+      "category": "kokoro",
+      "date": "2026-10-29"
     }
   ],
   "improve": {
@@ -416,6 +422,7 @@
     "partner-ga-sango-utsu": "2026-10-26",
     "kodomo-no-mae-de-hitei-shiai": "2026-10-27",
     "rinyushoku-freezing-basics": "2026-10-28",
-    "rinyushoku-hajimekata-kihon": "2026-10-28"
+    "rinyushoku-hajimekata-kihon": "2026-10-28",
+    "hoikuen-ikitakunai-asa-cheer": "2026-10-29"
   }
 }
