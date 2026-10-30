@@ -1691,12 +1691,14 @@
   type: basics
   category: shinmama
   stage: gakudo
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 思春期・反抗期に、ひとりで向き合う不安
   angle: 相談相手がいない中での対応の重さと相談窓口の案内
   official_sources:
   - https://www.cfa.go.jp/policies/hitori-oya
+  published_slug: shinmama-hansei-hankouki-hitori
+  published: '2026-10-30'
 - slug: shinmama-yowane-mieru-zaiakukan
   type: cheer
   category: shinmama

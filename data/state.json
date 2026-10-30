@@ -1,5 +1,5 @@
 {
-  "rotation_index": 61,
+  "rotation_index": 62,
   "last_run": "2026-10-30",
   "published": [
     {
@@ -367,6 +367,12 @@
       "type": "trend",
       "category": "sns",
       "date": "2026-10-30"
+    },
+    {
+      "slug": "shinmama-hansei-hankouki-hitori",
+      "type": "basics",
+      "category": "shinmama",
+      "date": "2026-10-30"
     }
   ],
   "improve": {
@@ -430,6 +436,7 @@
     "rinyushoku-freezing-basics": "2026-10-28",
     "rinyushoku-hajimekata-kihon": "2026-10-28",
     "hoikuen-ikitakunai-asa-cheer": "2026-10-29",
-    "sango-kaifuku-taikendan": "2026-10-30"
+    "sango-kaifuku-taikendan": "2026-10-30",
+    "sango-namida-ga-tomaranai": "2026-10-30"
   }
 }

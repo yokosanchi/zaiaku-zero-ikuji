@@ -123,3 +123,5 @@
 - 2026-10-29 🔧 点検 `hoikuen-ikitakunai-asa-cheer` — 問題なし
 - 2026-10-30 ➕ 新規 `sns-birthday-enshutsu-trend` (trend / sns) — SNSの豪華な誕生日会を見て落ち込むあなたへ。子どもが本当に喜ぶお祝いの形
 - 2026-10-30 🔧 点検 `sango-kaifuku-taikendan` — 問題なし（産後うつカテゴリのためリライトは行わず）
+- 2026-10-30 ➕ 新規 `shinmama-hansei-hankouki-hitori` (basics / shinmama) — 【思春期・反抗期】ひとりで抱え込まない基本／相談先と気持ちの守り方
+- 2026-10-30 🔧 点検 `sango-namida-ga-tomaranai` — 問題なし（産後うつカテゴリのためリライトは行わず）
