@@ -121,3 +121,5 @@
 - 2026-10-28 🔧 点検 `rinyushoku-hajimekata-kihon` — 問題なし
 - 2026-10-29 ➕ 新規 `hoikuen-ikitakunai-asa-cheer` (cheer / kokoro) — 「行きたくない」と泣かれた朝に後ろ髪を引かれるあなたへ
 - 2026-10-29 🔧 点検 `hoikuen-ikitakunai-asa-cheer` — 問題なし
+- 2026-10-30 ➕ 新規 `sns-birthday-enshutsu-trend` (trend / sns) — SNSの豪華な誕生日会を見て落ち込むあなたへ。子どもが本当に喜ぶお祝いの形
+- 2026-10-30 🔧 点検 `sango-kaifuku-taikendan` — 問題なし（産後うつカテゴリのためリライトは行わず）
