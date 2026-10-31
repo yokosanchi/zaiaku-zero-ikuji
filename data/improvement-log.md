@@ -125,3 +125,5 @@
 - 2026-10-30 🔧 点検 `sango-kaifuku-taikendan` — 問題なし（産後うつカテゴリのためリライトは行わず）
 - 2026-10-30 ➕ 新規 `shinmama-hansei-hankouki-hitori` (basics / shinmama) — 【思春期・反抗期】ひとりで抱え込まない基本／相談先と気持ちの守り方
 - 2026-10-30 🔧 点検 `sango-namida-ga-tomaranai` — 問題なし（産後うつカテゴリのためリライトは行わず）
+- 2026-10-31 ➕ 新規 `omutsu-torenai-nyuen-basics` (basics / hatsuiku) — おむつが外れないまま入園しても大丈夫！焦らないトイトレの基本
+- 2026-10-31 🔧 点検 `omutsu-torenai-nyuen-basics` — 問題なし

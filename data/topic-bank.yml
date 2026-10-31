@@ -735,8 +735,10 @@
   - https://www.jpeds.or.jp/
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: published
   stage: age3_pre
+  published_slug: omutsu-torenai-nyuen-basics
+  published: '2026-10-31'
 - slug: sns-happyoukai-dekinai-trend
   type: trend
   title_seed: 「うちの子だけできない」発表会・行事のSNS投稿に落ち込む人へ
