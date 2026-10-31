@@ -127,3 +127,5 @@
 - 2026-10-30 🔧 点検 `sango-namida-ga-tomaranai` — 問題なし（産後うつカテゴリのためリライトは行わず）
 - 2026-10-31 ➕ 新規 `omutsu-torenai-nyuen-basics` (basics / hatsuiku) — おむつが外れないまま入園しても大丈夫！焦らないトイトレの基本
 - 2026-10-31 🔧 点検 `omutsu-torenai-nyuen-basics` — 問題なし
+- 2026-10-31 ➕ 新規 `partner-ni-kitai-yameta-hanashi` (voice / kokoro) — パートナーに期待するのをやめてもいい？夫婦のモヤモヤを減らす「仕組み化」の考え方
+- 2026-10-31 🔧 点検 `partner-ni-kitai-yameta-hanashi` — 問題なし

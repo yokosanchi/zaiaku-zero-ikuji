@@ -1,5 +1,5 @@
 {
-  "rotation_index": 63,
+  "rotation_index": 64,
   "last_run": "2026-10-31",
   "published": [
     {
@@ -379,6 +379,12 @@
       "type": "basics",
       "category": "hatsuiku",
       "date": "2026-10-31"
+    },
+    {
+      "slug": "partner-ni-kitai-yameta-hanashi",
+      "type": "voice",
+      "category": "kokoro",
+      "date": "2026-10-31"
     }
   ],
   "improve": {
@@ -444,6 +450,7 @@
     "hoikuen-ikitakunai-asa-cheer": "2026-10-29",
     "sango-kaifuku-taikendan": "2026-10-30",
     "sango-namida-ga-tomaranai": "2026-10-30",
-    "omutsu-torenai-nyuen-basics": "2026-10-31"
+    "omutsu-torenai-nyuen-basics": "2026-10-31",
+    "partner-ni-kitai-yameta-hanashi": "2026-10-31"
   }
 }

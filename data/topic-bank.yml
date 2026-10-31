@@ -1274,12 +1274,14 @@
   type: voice
   category: kokoro
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: パートナーに期待するのをやめたら、少しラクになった話
   angle: 期待→落胆の消耗／「察して」をやめて具体で頼む・外注も選択肢／諦めではなく仕組み化
   official_sources:
   - https://www.cfa.go.jp/
+  published_slug: partner-ni-kitai-yameta-hanashi
+  published: '2026-10-31'
 - slug: uchi-wa-uchi-karada-de-omoeru-made
   type: cheer
   category: kokoro
