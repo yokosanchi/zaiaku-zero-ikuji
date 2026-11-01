@@ -1152,12 +1152,14 @@
   type: trend
   category: sns
   stage: age0
-  status: queued
+  status: published
   ref_urls: []
   title_seed: なぜ「ワンオペ限界」の投稿は毎回バズるのか、構造で読む
   angle: 共感で終わらせず「なぜ拡散するか」を分析／孤立の構造・共有される痛み・変わらない社会／読者が巻き込まれず情報だけ持ち帰る方法
   official_sources:
   - https://www.cfa.go.jp/policies/boshihoken
+  published_slug: sns-wanope-genkai-naze-bazuru
+  published: '2026-11-01'
 - slug: sns-kosodate-tataki-shikumi
   type: trend
   category: sns

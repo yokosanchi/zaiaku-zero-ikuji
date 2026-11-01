@@ -131,3 +131,5 @@
 - 2026-10-31 🔧 点検 `partner-ni-kitai-yameta-hanashi` — 問題なし
 - 2026-11-01 ➕ 新規 `shinmama-yowane-mieru-zaiakukan` (cheer / shinmama) — 子どもの前で泣いてしまった、と自分を責めているあなたへ
 - 2026-11-01 🔧 点検 `sango-utsu-atokara` — 問題なし（産後うつカテゴリのためリライトは行わず）
+- 2026-11-01 ➕ 新規 `sns-wanope-genkai-naze-bazuru` (trend / sns) — なぜ「ワンオペ限界」はバズるのか？SNSの深掘りと心の守り方
+- 2026-11-01 🔧 点検 `sango-utsu-sain-soudan` — 問題なし（産後うつカテゴリのためリライトは行わず）
