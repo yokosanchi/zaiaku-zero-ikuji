@@ -1707,12 +1707,14 @@
   type: cheer
   category: shinmama
   stage: age3_pre
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 子どもの前で弱音や涙を見せてしまうことへの罪悪感
   angle: 完璧に見せ続けなくていい／それも子どもに伝わる誠実さという捉え方
   official_sources:
   - https://www.cfa.go.jp/policies/hitori-oya
+  published_slug: shinmama-yowane-mieru-zaiakukan
+  published: '2026-11-01'
 - slug: shinmama_aijou_tarinai_fuan
   type: cheer
   category: shinmama

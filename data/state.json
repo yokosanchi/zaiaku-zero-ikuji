@@ -1,6 +1,6 @@
 {
-  "rotation_index": 64,
-  "last_run": "2026-10-31",
+  "rotation_index": 65,
+  "last_run": "2026-11-01",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -385,6 +385,12 @@
       "type": "voice",
       "category": "kokoro",
       "date": "2026-10-31"
+    },
+    {
+      "slug": "shinmama-yowane-mieru-zaiakukan",
+      "type": "cheer",
+      "category": "shinmama",
+      "date": "2026-11-01"
     }
   ],
   "improve": {
@@ -451,6 +457,7 @@
     "sango-kaifuku-taikendan": "2026-10-30",
     "sango-namida-ga-tomaranai": "2026-10-30",
     "omutsu-torenai-nyuen-basics": "2026-10-31",
-    "partner-ni-kitai-yameta-hanashi": "2026-10-31"
+    "partner-ni-kitai-yameta-hanashi": "2026-10-31",
+    "sango-utsu-atokara": "2026-11-01"
   }
 }
