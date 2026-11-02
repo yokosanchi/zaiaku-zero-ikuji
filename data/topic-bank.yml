@@ -943,12 +943,14 @@
   type: basics
   stage: age3_pre
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: つい人格を否定した（「だからあなたはダメ」）後の、言い直し方
   angle: 気づいた時点で十分／「さっきの言い方はよくなかった」と伝える／行動の指摘に置き換える
   official_sources:
   - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: jinkaku-hitei-shita-ato-iinaoshi
+  published: '2026-11-02'
 - slug: batsu-toshite-mushi-yametai
   type: basics
   stage: age3_pre
