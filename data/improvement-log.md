@@ -135,3 +135,5 @@
 - 2026-11-01 🔧 点検 `sango-utsu-sain-soudan` — 問題なし（産後うつカテゴリのためリライトは行わず）
 - 2026-11-02 ➕ 新規 `jinkaku-hitei-shita-ato-iinaoshi` (basics / kakawari) — つい子どもを否定した後の言い直し方と気持ちのリセットの基本
 - 2026-11-02 🔧 点検 `jinkaku-hitei-shita-ato-iinaoshi` — 問題なし
+- 2026-11-02 ➕ 新規 `batsu-toshite-mushi-yametai` (basics / kakawari) — 子どもを無視して罪悪感…「罰」から「数分間のクールダウン」に変える親子の心のリセット法
+- 2026-11-02 🔧 点検 `batsu-toshite-mushi-yametai` — 問題なし

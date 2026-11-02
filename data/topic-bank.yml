@@ -955,12 +955,14 @@
   type: basics
   stage: age3_pre
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 罰として長く無視する、をやめたい時に代わりにできること
   angle: 長時間の無視は不安を与える／クールダウンは短く・予告して／戻ってきたら受け止める
   official_sources:
   - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: batsu-toshite-mushi-yametai
+  published: '2026-11-02'
 - slug: jouken-tsuki-no-aijou-voice
   type: voice
   stage: age1_2
