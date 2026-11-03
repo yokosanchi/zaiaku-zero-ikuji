@@ -137,3 +137,5 @@
 - 2026-11-02 🔧 点検 `jinkaku-hitei-shita-ato-iinaoshi` — 問題なし
 - 2026-11-02 ➕ 新規 `batsu-toshite-mushi-yametai` (basics / kakawari) — 子どもを無視して罪悪感…「罰」から「数分間のクールダウン」に変える親子の心のリセット法
 - 2026-11-02 🔧 点検 `batsu-toshite-mushi-yametai` — 問題なし
+- 2026-11-03 ➕ 新規 `hininchi-nouryoku-toha` (basics / saino) — 「非認知能力」ってなに？親ができる範囲で無理なく育む基本のき
+- 2026-11-03 🔧 点検 `hininchi-nouryoku-toha` — 問題なし

@@ -1312,12 +1312,14 @@
   type: basics
   category: saino
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「非認知能力」って結局なに？親ができる範囲で
   angle: 意欲・粘り強さ・自制心などを指す言葉の整理／特別なメソッドではなく日常の関わりが土台とされる／過度な専用教材は不要
   official_sources:
   - https://www.mext.go.jp/
+  published_slug: hininchi-nouryoku-toha
+  published: '2026-11-03'
 - slug: narai-goto-tokubetsu-na-ko-dake
   type: basics
   category: saino
