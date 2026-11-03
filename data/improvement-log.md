@@ -139,3 +139,5 @@
 - 2026-11-02 🔧 点検 `batsu-toshite-mushi-yametai` — 問題なし
 - 2026-11-03 ➕ 新規 `hininchi-nouryoku-toha` (basics / saino) — 「非認知能力」ってなに？親ができる範囲で無理なく育む基本のき
 - 2026-11-03 🔧 点検 `hininchi-nouryoku-toha` — 問題なし
+- 2026-11-03 ➕ 新規 `kyodai-wanpaku-cheer` (cheer / kokoro) — きょうだいゲンカの仲裁で疲れ果てた夜のあなたへ
+- 2026-11-03 🔧 点検 `kyodai-wanpaku-cheer` — 問題なし
