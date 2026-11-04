@@ -1,6 +1,6 @@
 {
-  "rotation_index": 70,
-  "last_run": "2026-11-03",
+  "rotation_index": 71,
+  "last_run": "2026-11-04",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -421,6 +421,12 @@
       "type": "cheer",
       "category": "kokoro",
       "date": "2026-11-03"
+    },
+    {
+      "slug": "sns-kosodate-tataki-shikumi",
+      "type": "trend",
+      "category": "sns",
+      "date": "2026-11-04"
     }
   ],
   "improve": {
@@ -493,6 +499,7 @@
     "jinkaku-hitei-shita-ato-iinaoshi": "2026-11-02",
     "batsu-toshite-mushi-yametai": "2026-11-02",
     "hininchi-nouryoku-toha": "2026-11-03",
-    "kyodai-wanpaku-cheer": "2026-11-03"
+    "kyodai-wanpaku-cheer": "2026-11-03",
+    "sango-yohaku-service": "2026-11-04"
   }
 }

@@ -1170,12 +1170,14 @@
   type: trend
   category: sns
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「子育て叩き」がSNSで燃える仕組みと、巻き込まれない距離
   angle: 正義感・切り取り・アルゴリズムが燃料／当事者が消耗するだけの構図／通知を切る・反応しない・見る時間を決める
   official_sources:
   - https://www.cfa.go.jp/
+  published_slug: sns-kosodate-tataki-shikumi
+  published: '2026-11-04'
 - slug: sns-lifehack-sono-katei-dakara
   type: trend
   category: sns

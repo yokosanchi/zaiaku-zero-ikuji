@@ -141,3 +141,5 @@
 - 2026-11-03 🔧 点検 `hininchi-nouryoku-toha` — 問題なし
 - 2026-11-03 ➕ 新規 `kyodai-wanpaku-cheer` (cheer / kokoro) — きょうだいゲンカの仲裁で疲れ果てた夜のあなたへ
 - 2026-11-03 🔧 点検 `kyodai-wanpaku-cheer` — 問題なし
+- 2026-11-04 ➕ 新規 `sns-kosodate-tataki-shikumi` (trend / sns) — 「子育て叩き」に傷つかなくて大丈夫！SNSの炎上と上手に距離を置くコツ
+- 2026-11-04 🔧 点検 `sango-yohaku-service` — 問題なし（産後うつカテゴリのためリライトは行わず）
