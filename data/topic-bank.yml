@@ -1581,12 +1581,14 @@
   type: basics
   category: okane
   stage: age0
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 児童手当、結局何に使うのが正解か
   angle: 使い道に唯一の正解はない／貯蓄も生活費充当もどちらも妥当という整理
   official_sources:
   - https://www.cfa.go.jp/
+  published_slug: jidoulate-tsukaimichi-seikai-nai
+  published: '2026-11-05'
 - slug: okane-nai-kodomo-tsutaekata
   type: basics
   category: okane

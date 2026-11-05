@@ -143,3 +143,5 @@
 - 2026-11-03 🔧 点検 `kyodai-wanpaku-cheer` — 問題なし
 - 2026-11-04 ➕ 新規 `sns-kosodate-tataki-shikumi` (trend / sns) — 「子育て叩き」に傷つかなくて大丈夫！SNSの炎上と上手に距離を置くコツ
 - 2026-11-04 🔧 点検 `sango-yohaku-service` — 問題なし（産後うつカテゴリのためリライトは行わず）
+- 2026-11-05 ➕ 新規 `jidoulate-tsukaimichi-seikai-nai` (basics / okane) — 児童手当は何に使うのが正解？貯金と生活費充当の考え方【基本のき】
+- 2026-11-05 🔧 点検 `jidoulate-tsukaimichi-seikai-nai` — 問題なし
