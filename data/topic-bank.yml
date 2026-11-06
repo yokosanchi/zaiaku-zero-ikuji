@@ -1489,12 +1489,14 @@
   type: basics
   category: shinmama
   stage: age3_pre
-  status: queued
+  status: published
   ref_urls: []
   title_seed: シンママの働き方、今のままでいいのか迷った時に整理したいこと
   angle: 収入・時間・キャリアのトレードオフの整理軸／資格取得支援制度の存在に触れる
   official_sources:
   - https://www.cfa.go.jp/policies/hitori-oya
+  published_slug: shinmama-hataraki-kata-genjitsuteki
+  published: '2026-11-06'
 - slug: shinmama-mensetsu-kouryu-sen-hiki
   type: basics
   category: shinmama

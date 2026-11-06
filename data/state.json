@@ -1,6 +1,6 @@
 {
-  "rotation_index": 72,
-  "last_run": "2026-11-05",
+  "rotation_index": 73,
+  "last_run": "2026-11-06",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -433,6 +433,12 @@
       "type": "basics",
       "category": "okane",
       "date": "2026-11-05"
+    },
+    {
+      "slug": "shinmama-hataraki-kata-genjitsuteki",
+      "type": "basics",
+      "category": "shinmama",
+      "date": "2026-11-06"
     }
   ],
   "improve": {
@@ -507,6 +513,7 @@
     "hininchi-nouryoku-toha": "2026-11-03",
     "kyodai-wanpaku-cheer": "2026-11-03",
     "sango-yohaku-service": "2026-11-04",
-    "jidoulate-tsukaimichi-seikai-nai": "2026-11-05"
+    "jidoulate-tsukaimichi-seikai-nai": "2026-11-05",
+    "sanpu-kenshin-epds": "2026-11-06"
   }
 }
