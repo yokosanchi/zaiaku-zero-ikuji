@@ -147,3 +147,5 @@
 - 2026-11-05 🔧 点検 `jidoulate-tsukaimichi-seikai-nai` — 問題なし
 - 2026-11-06 ➕ 新規 `shinmama-hataraki-kata-genjitsuteki` (basics / shinmama) — シンママの働き方どうする？今のままでいいのか迷った時に整理したい基本
 - 2026-11-06 🔧 点検 `sanpu-kenshin-epds` — 問題なし（産後うつカテゴリのためリライトは行わず）
+- 2026-11-07 ➕ 新規 `guzzu-anzen-kihon` (basics / kurashi) — 【基本のき】ベビーグッズ選びで見落としがちな「安全」の基本とマークの知識
+- 2026-11-07 🔧 点検 `guzzu-anzen-kihon` — 問題なし

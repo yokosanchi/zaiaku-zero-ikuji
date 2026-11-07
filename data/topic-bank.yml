@@ -117,7 +117,9 @@
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: guzzu-anzen-kihon
+  published: '2026-11-07'
 - slug: sns-tabenai-daikyoukan-trend
   type: trend
   title_seed: 「離乳食を食べない」投稿への大量の共感、実際どうする
