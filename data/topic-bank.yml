@@ -258,7 +258,9 @@
   official_sources:
   - https://www.cfa.go.jp/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: hoikuen-okuri-namida-cheer
+  published: '2026-11-07'
 - slug: jido-teate-seido-service
   type: service
   title_seed: 使い忘れがちな子育て支援・手当・割引をまとめて確認する

@@ -149,3 +149,5 @@
 - 2026-11-06 🔧 点検 `sanpu-kenshin-epds` — 問題なし（産後うつカテゴリのためリライトは行わず）
 - 2026-11-07 ➕ 新規 `guzzu-anzen-kihon` (basics / kurashi) — 【基本のき】ベビーグッズ選びで見落としがちな「安全」の基本とマークの知識
 - 2026-11-07 🔧 点検 `guzzu-anzen-kihon` — 問題なし
+- 2026-11-07 ➕ 新規 `hoikuen-okuri-namida-cheer` (cheer / kokoro) — 登園で泣く我が子に罪悪感を持つあなたへ
+- 2026-11-07 🔧 点検 `hoikuen-okuri-namida-cheer` — 問題なし
