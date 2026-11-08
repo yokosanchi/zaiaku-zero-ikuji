@@ -151,3 +151,5 @@
 - 2026-11-07 🔧 点検 `guzzu-anzen-kihon` — 問題なし
 - 2026-11-07 ➕ 新規 `hoikuen-okuri-namida-cheer` (cheer / kokoro) — 登園で泣く我が子に罪悪感を持つあなたへ
 - 2026-11-07 🔧 点検 `hoikuen-okuri-namida-cheer` — 問題なし
+- 2026-11-08 ➕ 新規 `sns-lifehack-sono-katei-dakara` (trend / sns) — SNSで話題の育児ハックがうまくいかなくても大丈夫。「我が家専用」で選ぶヒント
+- 2026-11-08 🔧 点検 `satogaeri-suru-shinai-voice` — 問題なし

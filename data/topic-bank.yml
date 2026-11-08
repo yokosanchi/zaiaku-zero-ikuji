@@ -1186,12 +1186,14 @@
   type: trend
   category: sns
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: バズる育児ライフハックの多くが「その家庭だから」回る理由
   angle: 住環境・きょうだい構成・親の働き方が前提として抜けている／再現できなくて当然／自分の条件に合うものだけ拾う
   official_sources:
   - https://www.cfa.go.jp/
+  published_slug: sns-lifehack-sono-katei-dakara
+  published: '2026-11-08'
 - slug: sns-kanpeki-na-ichinichi-uragawa
   type: trend
   category: sns
