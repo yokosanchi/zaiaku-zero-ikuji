@@ -153,3 +153,5 @@
 - 2026-11-07 🔧 点検 `hoikuen-okuri-namida-cheer` — 問題なし
 - 2026-11-08 ➕ 新規 `sns-lifehack-sono-katei-dakara` (trend / sns) — SNSで話題の育児ハックがうまくいかなくても大丈夫。「我が家専用」で選ぶヒント
 - 2026-11-08 🔧 点検 `satogaeri-suru-shinai-voice` — 問題なし
+- 2026-11-08 ➕ 新規 `shogakko-asa-junbi-basics` (basics / kurashi) — 小学生の朝の支度が回らない！手放していい「完璧」の基本
+- 2026-11-08 🔧 点検 `sedaikan-rensa-tachikiru` — 問題なし
