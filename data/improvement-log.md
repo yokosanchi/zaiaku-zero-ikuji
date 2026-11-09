@@ -155,3 +155,5 @@
 - 2026-11-08 🔧 点検 `satogaeri-suru-shinai-voice` — 問題なし
 - 2026-11-08 ➕ 新規 `shogakko-asa-junbi-basics` (basics / kurashi) — 小学生の朝の支度が回らない！手放していい「完璧」の基本
 - 2026-11-08 🔧 点検 `sedaikan-rensa-tachikiru` — 問題なし
+- 2026-11-09 ➕ 新規 `ninshin-tsuwari-tenuki-basics` (basics / kokoro) — つわりで動けない時の乗り切り方！家事も食事も削って乗り切る基本
+- 2026-11-09 🔧 点検 `ninshin-tsuwari-tenuki-basics` — 問題なし
