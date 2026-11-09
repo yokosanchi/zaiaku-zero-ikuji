@@ -1,5 +1,5 @@
 {
-  "rotation_index": 78,
+  "rotation_index": 79,
   "last_run": "2026-11-09",
   "published": [
     {
@@ -469,6 +469,12 @@
       "type": "basics",
       "category": "kokoro",
       "date": "2026-11-09"
+    },
+    {
+      "slug": "wanope-hasseki-basics",
+      "type": "basics",
+      "category": "wanope",
+      "date": "2026-11-09"
     }
   ],
   "improve": {
@@ -549,6 +555,7 @@
     "hoikuen-okuri-namida-cheer": "2026-11-07",
     "satogaeri-suru-shinai-voice": "2026-11-08",
     "sedaikan-rensa-tachikiru": "2026-11-08",
-    "ninshin-tsuwari-tenuki-basics": "2026-11-09"
+    "ninshin-tsuwari-tenuki-basics": "2026-11-09",
+    "seikousha-interview-goudoku": "2026-11-09"
   }
 }

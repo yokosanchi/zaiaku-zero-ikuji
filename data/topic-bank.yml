@@ -462,7 +462,9 @@
   official_sources:
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: wanope-hasseki-basics
+  published: '2026-11-09'
 - slug: wanope-fufu-bungyo-voice
   type: voice
   title_seed: 「見えない家事」の偏りを相手に伝えられた人・伝わらなかった人

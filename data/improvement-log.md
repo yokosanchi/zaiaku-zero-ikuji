@@ -157,3 +157,5 @@
 - 2026-11-08 🔧 点検 `sedaikan-rensa-tachikiru` — 問題なし
 - 2026-11-09 ➕ 新規 `ninshin-tsuwari-tenuki-basics` (basics / kokoro) — つわりで動けない時の乗り切り方！家事も食事も削って乗り切る基本
 - 2026-11-09 🔧 点検 `ninshin-tsuwari-tenuki-basics` — 問題なし
+- 2026-11-09 ➕ 新規 `wanope-hasseki-basics` (basics / wanope) — ワンオペで体調を崩した日の乗り切り方｜最低限で過ごす育児の基本
+- 2026-11-09 🔧 点検 `seikousha-interview-goudoku` — 問題なし
