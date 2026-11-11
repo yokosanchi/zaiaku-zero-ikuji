@@ -1206,12 +1206,14 @@
   type: trend
   category: sns
   stage: age0
-  status: queued
+  status: published
   ref_urls: []
   title_seed: インフルエンサーの「完璧な1日」が非日常な理由、撮影と編集の話
   angle: 撮れた瞬間だけが投稿される／段取り・小道具・複数テイク／日常の8割は映さない／比較対象として不適切
   official_sources:
   - https://www.cfa.go.jp/
+  published_slug: sns-kanpeki-na-ichinichi-uragawa
+  published: '2026-11-11'
 - slug: sns-hikaku-no-rensa-tachikata
   type: trend
   category: sns
