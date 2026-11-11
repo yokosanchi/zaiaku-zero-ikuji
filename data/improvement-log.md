@@ -159,3 +159,5 @@
 - 2026-11-09 🔧 点検 `ninshin-tsuwari-tenuki-basics` — 問題なし
 - 2026-11-09 ➕ 新規 `wanope-hasseki-basics` (basics / wanope) — ワンオペで体調を崩した日の乗り切り方｜最低限で過ごす育児の基本
 - 2026-11-09 🔧 点検 `seikousha-interview-goudoku` — 問題なし
+- 2026-11-11 ➕ 新規 `wanope-doronko-cheer` (cheer / wanope) — 自分の時間がゼロの毎日に限界を感じているあなたへ
+- 2026-11-11 🔧 点検 `shingaku-juken-okane-junbi-jiki` — 問題なし
