@@ -163,3 +163,5 @@
 - 2026-11-11 🔧 点検 `shingaku-juken-okane-junbi-jiki` — 問題なし
 - 2026-11-11 ➕ 新規 `sns-kanpeki-na-ichinichi-uragawa` (trend / sns) — SNSの「完璧なワンオペ育児」に落ち込む必要がない理由
 - 2026-11-11 🔧 点検 `shinmama-danjo-sodatekata-fuan` — 問題なし
+- 2026-11-12 ➕ 新規 `wanope-jishin-saigai-basics` (basics / wanope) — ワンオペ中の地震・災害どうする？赤ちゃんと生き延びる防災の基本
+- 2026-11-12 🔧 点検 `shinmama-hansei-hankouki-hitori` — 問題なし

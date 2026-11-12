@@ -485,7 +485,9 @@
   - https://www.bousai.go.jp/
   - https://www.cfa.go.jp/policies/boshihoken
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: wanope-jishin-saigai-basics
+  published: '2026-11-12'
 - slug: wanope-doronko-cheer
   type: cheer
   title_seed: ワンオペで自分の時間がゼロの毎日に、限界を感じているあなたへ
