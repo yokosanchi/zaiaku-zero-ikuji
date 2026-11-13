@@ -583,7 +583,9 @@
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
   ref_urls: []
-  status: queued
+  status: published
+  published_slug: kurashi-kataduke-akirame-basics
+  published: '2026-11-13'
 - slug: kurashi-robot-souji-service
   type: service
   title_seed: ロボット掃除機・食洗機で「毎日の判断」を減らす

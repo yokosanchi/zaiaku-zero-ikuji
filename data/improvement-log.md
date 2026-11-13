@@ -165,3 +165,5 @@
 - 2026-11-11 🔧 点検 `shinmama-danjo-sodatekata-fuan` — 問題なし
 - 2026-11-12 ➕ 新規 `wanope-jishin-saigai-basics` (basics / wanope) — ワンオペ中の地震・災害どうする？赤ちゃんと生き延びる防災の基本
 - 2026-11-12 🔧 点検 `shinmama-hansei-hankouki-hitori` — 問題なし
+- 2026-11-13 ➕ 新規 `kurashi-kataduke-akirame-basics` (basics / kurashi) — 「片付かない家」を責めない！子育て期の部屋づくり基本のき
+- 2026-11-13 🔧 点検 `kurashi-kataduke-akirame-basics` — 問題なし

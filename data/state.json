@@ -1,6 +1,6 @@
 {
-  "rotation_index": 82,
-  "last_run": "2026-11-12",
+  "rotation_index": 83,
+  "last_run": "2026-11-13",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -493,6 +493,12 @@
       "type": "basics",
       "category": "wanope",
       "date": "2026-11-12"
+    },
+    {
+      "slug": "kurashi-kataduke-akirame-basics",
+      "type": "basics",
+      "category": "kurashi",
+      "date": "2026-11-13"
     }
   ],
   "improve": {
@@ -577,6 +583,7 @@
     "seikousha-interview-goudoku": "2026-11-09",
     "shingaku-juken-okane-junbi-jiki": "2026-11-11",
     "shinmama-danjo-sodatekata-fuan": "2026-11-11",
-    "shinmama-hansei-hankouki-hitori": "2026-11-12"
+    "shinmama-hansei-hankouki-hitori": "2026-11-12",
+    "kurashi-kataduke-akirame-basics": "2026-11-13"
   }
 }
