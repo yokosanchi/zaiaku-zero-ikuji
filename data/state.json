@@ -1,5 +1,5 @@
 {
-  "rotation_index": 84,
+  "rotation_index": 85,
   "last_run": "2026-11-14",
   "published": [
     {
@@ -505,6 +505,12 @@
       "type": "basics",
       "category": "kakawari",
       "date": "2026-11-14"
+    },
+    {
+      "slug": "kyou-dekinakatta-kakawari-cheer",
+      "type": "cheer",
+      "category": "kakawari",
+      "date": "2026-11-14"
     }
   ],
   "improve": {
@@ -591,6 +597,7 @@
     "shinmama-danjo-sodatekata-fuan": "2026-11-11",
     "shinmama-hansei-hankouki-hitori": "2026-11-12",
     "kurashi-kataduke-akirame-basics": "2026-11-13",
-    "kanjou-ni-namae-wo-tsukeru": "2026-11-14"
+    "kanjou-ni-namae-wo-tsukeru": "2026-11-14",
+    "kyou-dekinakatta-kakawari-cheer": "2026-11-14"
   }
 }

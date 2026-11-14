@@ -943,12 +943,14 @@
   type: cheer
   stage: age1_2
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 今日できなかった関わりは、明日から戻せる
   angle: 一日の失敗で関係は決まらない／修復可能性／完璧な親は存在しない
   official_sources:
   - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: kyou-dekinakatta-kakawari-cheer
+  published: '2026-11-14'
 - slug: kibun-de-shikaru-kijun
   type: basics
   stage: age1_2

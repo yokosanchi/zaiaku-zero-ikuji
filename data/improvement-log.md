@@ -169,3 +169,5 @@
 - 2026-11-13 🔧 点検 `kurashi-kataduke-akirame-basics` — 問題なし
 - 2026-11-14 ➕ 新規 `kanjou-ni-namae-wo-tsukeru` (basics / kakawari) — 感情に名前をつける関わり方の基本｜疲れた日は「そっか」だけで大丈夫
 - 2026-11-14 🔧 点検 `kanjou-ni-namae-wo-tsukeru` — 問題なし
+- 2026-11-14 ➕ 新規 `kyou-dekinakatta-kakawari-cheer` (cheer / kakawari) — 今日子どもに向き合えなかったと落ち込んでいるあなたへ
+- 2026-11-14 🔧 点検 `kyou-dekinakatta-kakawari-cheer` — 問題なし
