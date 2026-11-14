@@ -885,12 +885,14 @@
   type: basics
   stage: age1_2
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 感情に名前をつける関わり（「くやしかったね」）と、疲れた日の最小版
   angle: 気持ちを言葉にして返すだけでいい／正論やアドバイスは後回し／余裕がない日は「そっか」だけでも
   official_sources:
   - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: kanjou-ni-namae-wo-tsukeru
+  published: '2026-11-14'
 - slug: hanashi-wo-saigo-made-kiku
   type: basics
   stage: age3_pre

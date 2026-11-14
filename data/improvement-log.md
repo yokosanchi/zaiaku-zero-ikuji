@@ -167,3 +167,5 @@
 - 2026-11-12 🔧 点検 `shinmama-hansei-hankouki-hitori` — 問題なし
 - 2026-11-13 ➕ 新規 `kurashi-kataduke-akirame-basics` (basics / kurashi) — 「片付かない家」を責めない！子育て期の部屋づくり基本のき
 - 2026-11-13 🔧 点検 `kurashi-kataduke-akirame-basics` — 問題なし
+- 2026-11-14 ➕ 新規 `kanjou-ni-namae-wo-tsukeru` (basics / kakawari) — 感情に名前をつける関わり方の基本｜疲れた日は「そっか」だけで大丈夫
+- 2026-11-14 🔧 点検 `kanjou-ni-namae-wo-tsukeru` — 問題なし

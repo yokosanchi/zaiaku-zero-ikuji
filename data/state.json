@@ -1,6 +1,6 @@
 {
-  "rotation_index": 83,
-  "last_run": "2026-11-13",
+  "rotation_index": 84,
+  "last_run": "2026-11-14",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -499,6 +499,12 @@
       "type": "basics",
       "category": "kurashi",
       "date": "2026-11-13"
+    },
+    {
+      "slug": "kanjou-ni-namae-wo-tsukeru",
+      "type": "basics",
+      "category": "kakawari",
+      "date": "2026-11-14"
     }
   ],
   "improve": {
@@ -584,6 +590,7 @@
     "shingaku-juken-okane-junbi-jiki": "2026-11-11",
     "shinmama-danjo-sodatekata-fuan": "2026-11-11",
     "shinmama-hansei-hankouki-hitori": "2026-11-12",
-    "kurashi-kataduke-akirame-basics": "2026-11-13"
+    "kurashi-kataduke-akirame-basics": "2026-11-13",
+    "kanjou-ni-namae-wo-tsukeru": "2026-11-14"
   }
 }
