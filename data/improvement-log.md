@@ -173,3 +173,5 @@
 - 2026-11-14 🔧 点検 `kyou-dekinakatta-kakawari-cheer` — 問題なし
 - 2026-11-15 ➕ 新規 `sns-hikaku-no-rensa-tachikata` (trend / sns) — SNSで人と比較して落ち込む夜へ。不安のループを断ち切る3つの工夫
 - 2026-11-15 🔧 点検 `shinmama-hataraki-kata-genjitsuteki` — 問題なし
+- 2026-11-15 ➕ 新規 `dame-no-tsutaekata-koudou` (basics / kakawari) — 子どもへの「ダメ！」で落ち込むあなたへ｜人格を傷つけない叱り方の基本
+- 2026-11-15 🔧 点検 `dame-no-tsutaekata-koudou` — 問題なし

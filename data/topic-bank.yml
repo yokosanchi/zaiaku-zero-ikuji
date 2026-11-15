@@ -909,12 +909,14 @@
   type: basics
   stage: age1_2
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「ダメ」の伝え方 — 人格ではなく行動を指す
   angle: 「あなたはダメ」ではなく「その行動は危ない」／代わりの行動を示す／短く具体的に
   official_sources:
   - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: dame-no-tsutaekata-koudou
+  published: '2026-11-15'
 - slug: kodomo-no-mae-de-hitei-shiai
   type: basics
   stage: age3_pre
