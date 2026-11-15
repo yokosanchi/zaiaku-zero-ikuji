@@ -171,3 +171,5 @@
 - 2026-11-14 🔧 点検 `kanjou-ni-namae-wo-tsukeru` — 問題なし
 - 2026-11-14 ➕ 新規 `kyou-dekinakatta-kakawari-cheer` (cheer / kakawari) — 今日子どもに向き合えなかったと落ち込んでいるあなたへ
 - 2026-11-14 🔧 点検 `kyou-dekinakatta-kakawari-cheer` — 問題なし
+- 2026-11-15 ➕ 新規 `sns-hikaku-no-rensa-tachikata` (trend / sns) — SNSで人と比較して落ち込む夜へ。不安のループを断ち切る3つの工夫
+- 2026-11-15 🔧 点検 `shinmama-hataraki-kata-genjitsuteki` — 問題なし

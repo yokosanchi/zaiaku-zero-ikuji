@@ -1226,12 +1226,14 @@
   type: trend
   category: sns
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「#育児垢」で見かける比較の連鎖と、その断ち方
   angle: 比較→不安→さらに検索→さらに比較のループ／フォロー整理・ミュート・見る時間の固定／情報は公的サイトから直接
   official_sources:
   - https://www.cfa.go.jp/
+  published_slug: sns-hikaku-no-rensa-tachikata
+  published: '2026-11-15'
 - slug: sns-enjou-toukou-kara-manabu
   type: trend
   category: sns
