@@ -175,3 +175,5 @@
 - 2026-11-15 🔧 点検 `shinmama-hataraki-kata-genjitsuteki` — 問題なし
 - 2026-11-15 ➕ 新規 `dame-no-tsutaekata-koudou` (basics / kakawari) — 子どもへの「ダメ！」で落ち込むあなたへ｜人格を傷つけない叱り方の基本
 - 2026-11-15 🔧 点検 `dame-no-tsutaekata-koudou` — 問題なし
+- 2026-11-16 ➕ 新規 `kibun-de-shikaru-kijun` (basics / kakawari) — 「昨日と今日で叱る基準が変わる…」気分で怒ってしまう時の立て直し方の基本
+- 2026-11-16 🔧 点検 `kibun-de-shikaru-kijun` — 問題なし

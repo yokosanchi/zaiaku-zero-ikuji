@@ -957,12 +957,14 @@
   type: basics
   stage: age1_2
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 気分で叱る基準が変わってしまう時の、立て直し方
   angle: 誰でも疲れると起きる／「昨日はよくて今日ダメ」を減らす工夫／変わってしまった時は認めて伝える
   official_sources:
   - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: kibun-de-shikaru-kijun
+  published: '2026-11-16'
 - slug: jinkaku-hitei-shita-ato-iinaoshi
   type: basics
   stage: age3_pre
