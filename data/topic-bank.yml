@@ -1017,12 +1017,14 @@
   type: cheer
   stage: age1_2
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「今日は怒りすぎた」と落ち込む夜の、仲直りのしかた
   angle: 落ち込めるのは大切に思っている証／短く謝る／スキンシップで戻す／次への準備を1つだけ
   official_sources:
   - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: kyou-okorisugita-nakaonori-cheer
+  published: '2026-11-16'
 - slug: maltreatment-toha-nanika
   type: basics
   stage: age0

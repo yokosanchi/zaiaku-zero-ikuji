@@ -177,3 +177,5 @@
 - 2026-11-15 🔧 点検 `dame-no-tsutaekata-koudou` — 問題なし
 - 2026-11-16 ➕ 新規 `kibun-de-shikaru-kijun` (basics / kakawari) — 「昨日と今日で叱る基準が変わる…」気分で怒ってしまう時の立て直し方の基本
 - 2026-11-16 🔧 点検 `kibun-de-shikaru-kijun` — 問題なし
+- 2026-11-16 ➕ 新規 `kyou-okorisugita-nakaonori-cheer` (cheer / kakawari) — 今日、子どもに怒りすぎて落ち込んでいるあなたへ
+- 2026-11-16 🔧 点検 `kyou-okorisugita-nakaonori-cheer` — 問題なし

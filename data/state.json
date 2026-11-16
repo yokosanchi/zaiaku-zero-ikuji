@@ -1,5 +1,5 @@
 {
-  "rotation_index": 88,
+  "rotation_index": 89,
   "last_run": "2026-11-16",
   "published": [
     {
@@ -529,6 +529,12 @@
       "type": "basics",
       "category": "kakawari",
       "date": "2026-11-16"
+    },
+    {
+      "slug": "kyou-okorisugita-nakaonori-cheer",
+      "type": "cheer",
+      "category": "kakawari",
+      "date": "2026-11-16"
     }
   ],
   "improve": {
@@ -619,6 +625,7 @@
     "kyou-dekinakatta-kakawari-cheer": "2026-11-14",
     "shinmama-hataraki-kata-genjitsuteki": "2026-11-15",
     "dame-no-tsutaekata-koudou": "2026-11-15",
-    "kibun-de-shikaru-kijun": "2026-11-16"
+    "kibun-de-shikaru-kijun": "2026-11-16",
+    "kyou-okorisugita-nakaonori-cheer": "2026-11-16"
   }
 }
