@@ -1254,12 +1254,14 @@
   type: cheer
   category: kokoro
   stage: age0
-  status: queued
+  status: published
   ref_urls: []
   title_seed: できることが少ないからこそ分かった「やらなくても回る」こと
   angle: 管理人視点／手を動かせない立場で見えた家事の"やらなくていい"リスト／回っている事実が答え
   official_sources:
   - https://www.cfa.go.jp/
+  published_slug: dekiru-koto-sukunai-kara-wakatta
+  published: '2026-11-17'
 - slug: te-wo-ugokasenai-oya-no-ichiban
   type: cheer
   category: kokoro

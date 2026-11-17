@@ -179,3 +179,5 @@
 - 2026-11-16 🔧 点検 `kibun-de-shikaru-kijun` — 問題なし
 - 2026-11-16 ➕ 新規 `kyou-okorisugita-nakaonori-cheer` (cheer / kakawari) — 今日、子どもに怒りすぎて落ち込んでいるあなたへ
 - 2026-11-16 🔧 点検 `kyou-okorisugita-nakaonori-cheer` — 問題なし
+- 2026-11-17 ➕ 新規 `dekiru-koto-sukunai-kara-wakatta` (cheer / kokoro) — 今日「何もできていない」と自分を責めているあなたへ
+- 2026-11-17 🔧 点検 `dekiru-koto-sukunai-kara-wakatta` — 問題なし
