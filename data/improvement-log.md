@@ -181,3 +181,5 @@
 - 2026-11-16 🔧 点検 `kyou-okorisugita-nakaonori-cheer` — 問題なし
 - 2026-11-17 ➕ 新規 `dekiru-koto-sukunai-kara-wakatta` (cheer / kokoro) — 今日「何もできていない」と自分を責めているあなたへ
 - 2026-11-17 🔧 点検 `dekiru-koto-sukunai-kara-wakatta` — 問題なし
+- 2026-11-17 ➕ 新規 `sns-enjou-toukou-kara-manabu` (trend / sns) — SNSの発言で傷つかない・傷つけないために｜育児投稿で心をすり減らさない考え方
+- 2026-11-17 🔧 点検 `shinmama-hitori-de-kimeru-fuan` — 問題なし

@@ -1,5 +1,5 @@
 {
-  "rotation_index": 90,
+  "rotation_index": 91,
   "last_run": "2026-11-17",
   "published": [
     {
@@ -541,6 +541,12 @@
       "type": "cheer",
       "category": "kokoro",
       "date": "2026-11-17"
+    },
+    {
+      "slug": "sns-enjou-toukou-kara-manabu",
+      "type": "trend",
+      "category": "sns",
+      "date": "2026-11-17"
     }
   ],
   "improve": {
@@ -633,6 +639,7 @@
     "dame-no-tsutaekata-koudou": "2026-11-15",
     "kibun-de-shikaru-kijun": "2026-11-16",
     "kyou-okorisugita-nakaonori-cheer": "2026-11-16",
-    "dekiru-koto-sukunai-kara-wakatta": "2026-11-17"
+    "dekiru-koto-sukunai-kara-wakatta": "2026-11-17",
+    "shinmama-hitori-de-kimeru-fuan": "2026-11-17"
   }
 }

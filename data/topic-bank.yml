@@ -1244,12 +1244,14 @@
   type: trend
   category: sns
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 炎上した育児投稿から学ぶ、書いてはいけない一線
   angle: 他者下げ・安全軽視の断定・専門家領域の言い切り／自分が発信する時のチェックリスト／このサイトの方針とも重なる
   official_sources:
   - https://www.cfa.go.jp/
+  published_slug: sns-enjou-toukou-kara-manabu
+  published: '2026-11-17'
 - slug: dekiru-koto-sukunai-kara-wakatta
   type: cheer
   category: kokoro
