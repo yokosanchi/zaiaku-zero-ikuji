@@ -1041,12 +1041,14 @@
   type: basics
   stage: age1_2
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 暴言・威圧が続くと、子どもの自己肯定感に何が起きるか（公的研究の範囲で）
   angle: しんどい時は読まないで＋窓口／自己否定が内在化しやすい／回復は可能／気づいたら関わりを変えられる
   official_sources:
   - https://www.cfa.go.jp/policies/jidougyakutai
+  published_slug: bougen-izon-jiko-koutei-kan
+  published: '2026-11-19'
 - slug: neglect-aichaku-kaifuku
   type: basics
   stage: age0

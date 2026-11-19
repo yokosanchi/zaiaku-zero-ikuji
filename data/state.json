@@ -1,6 +1,6 @@
 {
-  "rotation_index": 91,
-  "last_run": "2026-11-17",
+  "rotation_index": 92,
+  "last_run": "2026-11-19",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -547,6 +547,12 @@
       "type": "trend",
       "category": "sns",
       "date": "2026-11-17"
+    },
+    {
+      "slug": "bougen-izon-jiko-koutei-kan",
+      "type": "basics",
+      "category": "kakawari",
+      "date": "2026-11-19"
     }
   ],
   "improve": {
@@ -640,6 +646,7 @@
     "kibun-de-shikaru-kijun": "2026-11-16",
     "kyou-okorisugita-nakaonori-cheer": "2026-11-16",
     "dekiru-koto-sukunai-kara-wakatta": "2026-11-17",
-    "shinmama-hitori-de-kimeru-fuan": "2026-11-17"
+    "shinmama-hitori-de-kimeru-fuan": "2026-11-17",
+    "bougen-izon-jiko-koutei-kan": "2026-11-19"
   }
 }
