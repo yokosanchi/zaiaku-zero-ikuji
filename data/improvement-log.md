@@ -185,3 +185,5 @@
 - 2026-11-17 🔧 点検 `shinmama-hitori-de-kimeru-fuan` — 問題なし
 - 2026-11-19 ➕ 新規 `bougen-izon-jiko-koutei-kan` (basics / kakawari) — 暴言・威圧と子どもの心｜知っておきたい自己肯定感と回復の基本
 - 2026-11-19 🔧 点検 `bougen-izon-jiko-koutei-kan` — 問題なし
+- 2026-11-20 ➕ 新規 `neglect-aichaku-kaifuku` (basics / kakawari) — 「放置しちゃった…」と悩むパパママへ。愛着と公的相談窓口の基本
+- 2026-11-20 🔧 点検 `neglect-aichaku-kaifuku` — 問題なし

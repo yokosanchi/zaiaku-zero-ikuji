@@ -1,6 +1,6 @@
 {
-  "rotation_index": 92,
-  "last_run": "2026-11-19",
+  "rotation_index": 93,
+  "last_run": "2026-11-20",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -553,6 +553,12 @@
       "type": "basics",
       "category": "kakawari",
       "date": "2026-11-19"
+    },
+    {
+      "slug": "neglect-aichaku-kaifuku",
+      "type": "basics",
+      "category": "kakawari",
+      "date": "2026-11-20"
     }
   ],
   "improve": {
@@ -647,6 +653,7 @@
     "kyou-okorisugita-nakaonori-cheer": "2026-11-16",
     "dekiru-koto-sukunai-kara-wakatta": "2026-11-17",
     "shinmama-hitori-de-kimeru-fuan": "2026-11-17",
-    "bougen-izon-jiko-koutei-kan": "2026-11-19"
+    "bougen-izon-jiko-koutei-kan": "2026-11-19",
+    "neglect-aichaku-kaifuku": "2026-11-20"
   }
 }

@@ -1053,12 +1053,14 @@
   type: basics
   stage: age0
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: ネグレクト（放置）が愛着に残すもの、と回復の可能性
   angle: しんどい時は読まないで＋窓口／安定した応答の積み重ねで愛着は育て直せる／保健センター・児相に相談していい
   official_sources:
   - https://www.cfa.go.jp/policies/jidougyakutai
+  published_slug: neglect-aichaku-kaifuku
+  published: '2026-11-20'
 - slug: sedaikan-rensa-tachikiru-voice
   type: voice
   stage: age1_2
