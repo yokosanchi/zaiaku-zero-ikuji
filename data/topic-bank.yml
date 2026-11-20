@@ -1077,12 +1077,14 @@
   type: basics
   stage: age1_2
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 体罰が「効いて見えて」実は逆効果な理由
   angle: しんどい時は読まないで＋窓口／その場は止まっても学びにならない・恐怖で覚える・関係が損なわれる／代わりの方法
   official_sources:
   - https://www.cfa.go.jp/policies/taibatsu
+  published_slug: taibatsu-gyakukouka-riyuu
+  published: '2026-11-20'
 - slug: menzen-dv-shinriteki-gyakutai
   type: basics
   stage: age0

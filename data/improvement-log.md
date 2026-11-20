@@ -187,3 +187,5 @@
 - 2026-11-19 🔧 点検 `bougen-izon-jiko-koutei-kan` — 問題なし
 - 2026-11-20 ➕ 新規 `neglect-aichaku-kaifuku` (basics / kakawari) — 「放置しちゃった…」と悩むパパママへ。愛着と公的相談窓口の基本
 - 2026-11-20 🔧 点検 `neglect-aichaku-kaifuku` — 問題なし
+- 2026-11-20 ➕ 新規 `taibatsu-gyakukouka-riyuu` (basics / kakawari) — 体罰が「効いて見えて」実は逆効果な理由と叩きそうになった時の対処法
+- 2026-11-20 🔧 点検 `shinmama-kawaisou-shisen-tsurai` — 問題なし
