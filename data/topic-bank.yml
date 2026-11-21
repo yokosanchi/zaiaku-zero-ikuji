@@ -1274,12 +1274,14 @@
   type: cheer
   category: kokoro
   stage: age0
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 手を動かせない親にできる、いちばん大事なこと
   angle: 管理人視点／調べて整理して置いておく・決める・見守る・言葉をかける／作業量＝愛情ではない
   official_sources:
   - https://www.cfa.go.jp/
+  published_slug: te-wo-ugokasenai-oya-no-ichiban
+  published: '2026-11-21'
 - slug: tayoru-wo-oboeru-jikan-ga-kakatta
   type: voice
   category: kokoro

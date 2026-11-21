@@ -189,3 +189,5 @@
 - 2026-11-20 🔧 点検 `neglect-aichaku-kaifuku` — 問題なし
 - 2026-11-20 ➕ 新規 `taibatsu-gyakukouka-riyuu` (basics / kakawari) — 体罰が「効いて見えて」実は逆効果な理由と叩きそうになった時の対処法
 - 2026-11-20 🔧 点検 `shinmama-kawaisou-shisen-tsurai` — 問題なし
+- 2026-11-21 ➕ 新規 `te-wo-ugokasenai-oya-no-ichiban` (cheer / kokoro) — 「手を動かせない」と自分を責めてしまうあなたへ
+- 2026-11-21 🔧 点検 `shinmama-kodoku-soudan-madoguchi` — 問題なし
