@@ -191,3 +191,5 @@
 - 2026-11-20 🔧 点検 `shinmama-kawaisou-shisen-tsurai` — 問題なし
 - 2026-11-21 ➕ 新規 `te-wo-ugokasenai-oya-no-ichiban` (cheer / kokoro) — 「手を動かせない」と自分を責めてしまうあなたへ
 - 2026-11-21 🔧 点検 `shinmama-kodoku-soudan-madoguchi` — 問題なし
+- 2026-11-22 ➕ 新規 `menzen-dv-shinriteki-gyakutai` (basics / kakawari) — 子どもの前の喧嘩が気になったら｜面前DVの基本と心を守る相談窓口
+- 2026-11-22 🔧 点検 `menzen-dv-shinriteki-gyakutai` — 問題なし

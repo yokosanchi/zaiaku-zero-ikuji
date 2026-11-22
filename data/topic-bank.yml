@@ -1089,13 +1089,15 @@
   type: basics
   stage: age0
   category: kakawari
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 面前DV（子どもの前での夫婦げんか）が心理的虐待にあたる、という話
   angle: しんどい時は読まないで＋窓口／子は見て強い不安を抱える／DV相談ナビ・児相／別室で・第三者を入れる
   official_sources:
   - https://www.cfa.go.jp/policies/jidougyakutai
   - https://www.gender.go.jp/policy/no_violence/
+  published_slug: menzen-dv-shinriteki-gyakutai
+  published: '2026-11-22'
 - slug: oya-kara-aisareta-jikkan-nai-cheer
   type: cheer
   stage: age0
