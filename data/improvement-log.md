@@ -193,3 +193,5 @@
 - 2026-11-21 🔧 点検 `shinmama-kodoku-soudan-madoguchi` — 問題なし
 - 2026-11-22 ➕ 新規 `menzen-dv-shinriteki-gyakutai` (basics / kakawari) — 子どもの前の喧嘩が気になったら｜面前DVの基本と心を守る相談窓口
 - 2026-11-22 🔧 点検 `menzen-dv-shinriteki-gyakutai` — 問題なし
+- 2026-11-22 ➕ 新規 `chanto-shita-oya-no-zou-doko-kara` (basics / kokoro) — 「ちゃんとした親」にならなくて大丈夫。理想像を手放す心のあり方の基本
+- 2026-11-22 🔧 点検 `chanto-shita-oya-no-zou-doko-kara` — 問題なし

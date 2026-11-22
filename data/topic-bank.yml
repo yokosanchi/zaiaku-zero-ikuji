@@ -1310,12 +1310,14 @@
   type: basics
   category: kokoro
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「ちゃんとした親」の像を、どこで刷り込まれたか
   angle: メディア・親世代・SNSがつくる理想像／その多くは現実離れ／自分の基準を意識的に下げ直す
   official_sources:
   - https://www.cfa.go.jp/
+  published_slug: chanto-shita-oya-no-zou-doko-kara
+  published: '2026-11-22'
 - slug: ikuji-no-kodoku-yowasa-to-yobanai
   type: cheer
   category: kokoro
