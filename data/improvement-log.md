@@ -195,3 +195,5 @@
 - 2026-11-22 🔧 点検 `menzen-dv-shinriteki-gyakutai` — 問題なし
 - 2026-11-22 ➕ 新規 `chanto-shita-oya-no-zou-doko-kara` (basics / kokoro) — 「ちゃんとした親」にならなくて大丈夫。理想像を手放す心のあり方の基本
 - 2026-11-22 🔧 点検 `chanto-shita-oya-no-zou-doko-kara` — 問題なし
+- 2026-11-23 ➕ 新規 `kanpeki-akirameta-hi-kara` (cheer / kokoro) — 「完璧な親」をちょっとお休み。家族の笑顔が増えるスマートな選択
+- 2026-11-23 🔧 点検 `kanpeki-akirameta-hi-kara` — 問題なし

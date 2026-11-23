@@ -1300,12 +1300,14 @@
   type: cheer
   category: kokoro
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 完璧をあきらめた日から、家族がラクになった
   angle: 管理人視点／何をあきらめたか・家族の反応・自分の変化／あきらめ＝選択
   official_sources:
   - https://www.cfa.go.jp/
+  published_slug: kanpeki-akirameta-hi-kara
+  published: '2026-11-23'
 - slug: chanto-shita-oya-no-zou-doko-kara
   type: basics
   category: kokoro
