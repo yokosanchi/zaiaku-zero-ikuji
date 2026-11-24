@@ -197,3 +197,5 @@
 - 2026-11-22 🔧 点検 `chanto-shita-oya-no-zou-doko-kara` — 問題なし
 - 2026-11-23 ➕ 新規 `kanpeki-akirameta-hi-kara` (cheer / kokoro) — 「完璧な親」をちょっとお休み。家族の笑顔が増えるスマートな選択
 - 2026-11-23 🔧 点検 `kanpeki-akirameta-hi-kara` — 問題なし
+- 2026-11-24 ➕ 新規 `ikuji-no-kodoku-yowasa-to-yobanai` (cheer / kokoro) — 育児の孤独を「自分の弱さ」だと思っているあなたへ
+- 2026-11-24 🔧 点検 `ikuji-no-kodoku-yowasa-to-yobanai` — 問題なし

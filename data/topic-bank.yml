@@ -1324,12 +1324,14 @@
   type: cheer
   category: kokoro
   stage: age0
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 育児の孤独を「弱さ」と呼ぶのをやめる
   angle: 孤立は構造の問題・核家族化と地域の希薄化／つながりを持つのは対策であって甘えではない
   official_sources:
   - https://www.mhlw.go.jp/mamorouyokokoro/
+  published_slug: ikuji-no-kodoku-yowasa-to-yobanai
+  published: '2026-11-24'
 - slug: partner-ni-kitai-yameta-hanashi
   type: voice
   category: kokoro
