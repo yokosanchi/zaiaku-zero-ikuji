@@ -1360,12 +1360,14 @@
   type: basics
   category: kurashi
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 便利グッズを「買う罪悪感」を手放すための考え方
   angle: お金＝時間と心の余裕を買う投資／親世代と条件が違う／全部買う必要はない・効く一点から
   official_sources:
   - https://www.caa.go.jp/policies/policy/consumer_safety/child/
+  published_slug: benri-goods-kau-zaiakukan-tebanasu
+  published: '2026-11-24'
 - slug: hininchi-nouryoku-toha
   type: basics
   category: saino

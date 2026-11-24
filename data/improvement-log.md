@@ -201,3 +201,5 @@
 - 2026-11-24 🔧 点検 `ikuji-no-kodoku-yowasa-to-yobanai` — 問題なし
 - 2026-11-24 ➕ 新規 `uchi-wa-uchi-karada-de-omoeru-made` (cheer / kokoro) — 「うちはうち」と思えない日があってもいい。心を守る比べない練習
 - 2026-11-24 🔧 点検 `shinmama-kouteki-shien-matome` — 問題なし
+- 2026-11-24 ➕ 新規 `benri-goods-kau-zaiakukan-tebanasu` (basics / kurashi) — 便利グッズに頼る罪悪感を手放すコツ！育児を楽にする選び方の基本のき
+- 2026-11-24 🔧 点検 `benri-goods-kau-zaiakukan-tebanasu` — 問題なし
