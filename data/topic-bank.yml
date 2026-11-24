@@ -1348,12 +1348,14 @@
   type: cheer
   category: kokoro
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「うちはうち」を、頭ではなく体で思えるようになるまで
   angle: 言い聞かせても比べてしまう／SNS断ち・比較対象の管理・小さな成功体験の積み上げ
   official_sources:
   - https://www.cfa.go.jp/
+  published_slug: uchi-wa-uchi-karada-de-omoeru-made
+  published: '2026-11-24'
 - slug: benri-goods-kau-zaiakukan-tebanasu
   type: basics
   category: kurashi
