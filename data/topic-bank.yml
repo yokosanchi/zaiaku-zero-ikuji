@@ -1418,12 +1418,14 @@
   type: basics
   category: saino
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「努力すれば報われる」論の使われ方に気をつけたい理由
   angle: 努力の大切さを説く言説が、うまくいかない時に本人を追い詰める方向に使われがち／環境要因も大きい／努力を"評価"の道具にしない
   official_sources:
   - https://www.mext.go.jp/
+  published_slug: dilligence-doryoku-shinwa-gokai
+  published: '2026-11-25'
 - slug: kyoudai-sainou-sa-kanjiru
   type: voice
   category: saino
