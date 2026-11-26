@@ -1396,12 +1396,14 @@
   type: cheer
   category: saino
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 「うちの子には才能がない」と感じた時に、立ち止まりたいこと
   angle: 才能は多様な形で現れ比較しにくい／早熟・晩熟の差は大きい／「ない」と決めつける必要はない
   official_sources:
   - https://www.mext.go.jp/
+  published_slug: uchi-no-ko-sainou-nai-tachidomaru
+  published: '2026-11-26'
 - slug: okane-kakeru-hodo-yuuri-gokai
   type: basics
   category: saino

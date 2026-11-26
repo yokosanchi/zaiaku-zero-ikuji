@@ -205,3 +205,5 @@
 - 2026-11-24 🔧 点検 `benri-goods-kau-zaiakukan-tebanasu` — 問題なし
 - 2026-11-25 ➕ 新規 `dilligence-doryoku-shinwa-gokai` (basics / saino) — 「努力すれば報われる」に縛られない育児の基本｜心を守る考え方
 - 2026-11-25 🔧 点検 `dilligence-doryoku-shinwa-gokai` — 問題なし
+- 2026-11-26 ➕ 新規 `uchi-no-ko-sainou-nai-tachidomaru` (cheer / saino) — 「うちの子には才能がない」と感じたときに立ち止まりたい考え方
+- 2026-11-26 🔧 点検 `shinmama-kyouikuhi-shougakukin-fuan` — 問題なし

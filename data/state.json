@@ -1,6 +1,6 @@
 {
-  "rotation_index": 102,
-  "last_run": "2026-11-25",
+  "rotation_index": 103,
+  "last_run": "2026-11-26",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -613,6 +613,12 @@
       "type": "basics",
       "category": "saino",
       "date": "2026-11-25"
+    },
+    {
+      "slug": "uchi-no-ko-sainou-nai-tachidomaru",
+      "type": "cheer",
+      "category": "saino",
+      "date": "2026-11-26"
     }
   ],
   "improve": {
@@ -717,6 +723,7 @@
     "ikuji-no-kodoku-yowasa-to-yobanai": "2026-11-24",
     "shinmama-kouteki-shien-matome": "2026-11-24",
     "benri-goods-kau-zaiakukan-tebanasu": "2026-11-24",
-    "dilligence-doryoku-shinwa-gokai": "2026-11-25"
+    "dilligence-doryoku-shinwa-gokai": "2026-11-25",
+    "shinmama-kyouikuhi-shougakukin-fuan": "2026-11-26"
   }
 }
