@@ -1,6 +1,6 @@
 {
-  "rotation_index": 103,
-  "last_run": "2026-11-26",
+  "rotation_index": 104,
+  "last_run": "2026-11-27",
   "published": [
     {
       "slug": "sns-neteru-aida-ni-kaji",
@@ -619,6 +619,12 @@
       "type": "cheer",
       "category": "saino",
       "date": "2026-11-26"
+    },
+    {
+      "slug": "shinmama-hoikuen-yuusen-kouryo",
+      "type": "basics",
+      "category": "shinmama",
+      "date": "2026-11-27"
     }
   ],
   "improve": {
@@ -724,6 +730,7 @@
     "shinmama-kouteki-shien-matome": "2026-11-24",
     "benri-goods-kau-zaiakukan-tebanasu": "2026-11-24",
     "dilligence-doryoku-shinwa-gokai": "2026-11-25",
-    "shinmama-kyouikuhi-shougakukin-fuan": "2026-11-26"
+    "shinmama-kyouikuhi-shougakukin-fuan": "2026-11-26",
+    "shinmama-hoikuen-yuusen-kouryo": "2026-11-27"
   }
 }

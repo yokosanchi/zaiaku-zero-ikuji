@@ -1515,12 +1515,14 @@
   type: basics
   category: shinmama
   stage: age0
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 保育園に「入りやすい」と言われることの実態と、後ろめたさの手放し方
   angle: 選考の点数制度は生活状況を反映したもので優遇ではない／後ろめたく思わなくていい
   official_sources:
   - https://www.cfa.go.jp/policies/hitori-oya
+  published_slug: shinmama-hoikuen-yuusen-kouryo
+  published: '2026-11-27'
 - slug: shinmama-otousan-wa-kikareta
   type: cheer
   category: shinmama
