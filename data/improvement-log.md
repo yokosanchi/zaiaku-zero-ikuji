@@ -209,3 +209,5 @@
 - 2026-11-26 🔧 点検 `shinmama-kyouikuhi-shougakukin-fuan` — 問題なし
 - 2026-11-27 ➕ 新規 `shinmama-hoikuen-yuusen-kouryo` (basics / shinmama) — ひとり親の保活で感じる「入りやすさ」の後ろめたさを手放す基本
 - 2026-11-27 🔧 点検 `shinmama-hoikuen-yuusen-kouryo` — 問題なし
+- 2026-11-27 ➕ 新規 `shinmama_aijou_tarinai_fuan` (cheer / shinmama) — 「愛情、足りてるかな」と不安になっているあなたへ
+- 2026-11-27 🔧 点検 `shinmama-otousan-wa-kikareta` — 問題なし
