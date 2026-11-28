@@ -1563,12 +1563,14 @@
   type: basics
   category: shinmama
   stage: age1_2
-  status: queued
+  status: published
   ref_urls: []
   title_seed: 元パートナーとの面会交流がしんどい時の考え方と線引き
   angle: 子どものための制度である一方、無理をしてまで続ける必要はない／第三者機関の存在
   official_sources:
   - https://www.moj.go.jp/content/001399926.pdf
+  published_slug: shinmama-mensetsu-kouryu-sen-hiki
+  published: '2026-11-28'
 - slug: shinmama-kodoku-soudan-madoguchi
   type: cheer
   category: shinmama

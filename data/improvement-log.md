@@ -211,3 +211,5 @@
 - 2026-11-27 🔧 点検 `shinmama-hoikuen-yuusen-kouryo` — 問題なし
 - 2026-11-27 ➕ 新規 `shinmama_aijou_tarinai_fuan` (cheer / shinmama) — 「愛情、足りてるかな」と不安になっているあなたへ
 - 2026-11-27 🔧 点検 `shinmama-otousan-wa-kikareta` — 問題なし
+- 2026-11-28 ➕ 新規 `shinmama-mensetsu-kouryu-sen-hiki` (basics / shinmama) — 元パートナーとの面会交流がしんどい時の考え方と心の線引きの基本
+- 2026-11-28 🔧 点検 `shinmama-mensetsu-kouryu-sen-hiki` — 問題なし
